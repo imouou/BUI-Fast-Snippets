@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+var ${1:data} = bui.filterArray(${2:"王"}, ${3:["王","区"]});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-filterArray</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>过滤数组,返回符合条件的数组,支持json</description>
+</snippet>

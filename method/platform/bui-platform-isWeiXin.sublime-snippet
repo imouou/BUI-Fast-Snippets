@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+bui.platform().isWeiXin();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-platform-isWeiXin</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>是否是微信浏览器</description>
+</snippet>

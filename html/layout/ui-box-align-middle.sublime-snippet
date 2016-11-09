@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+<div class="bui-box-align-middle">
+	${1:<div>内容水平居中</div>}
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-box-align-middle</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>内容垂直居中</description>
+</snippet>

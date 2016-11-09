@@ -1,0 +1,40 @@
+
+<snippet>
+    <content><![CDATA[
+var uiSelect = bui.select({
+    id:"#${1:uiSelect}",
+    type:"${2:checkbox}",
+    data: [{
+      "name":"广东",
+      "value":"11"
+    }],
+    onChange: function (module,index) {
+      //改变的时候触发
+    },
+    
+    // 可选参数
+    popup: true,
+    trigger: "",  
+    triggerChildren: ".span1",  
+    className: "",
+    title: "",
+    autoClose: false,        
+    mask: true,         
+    change: true,
+    effect: "fadeInUp",
+    type: "radio", //radio | checkbox | select
+    direction: "right", 
+    position: "bottom",
+    fullscreen: false,
+    buttons: [],// {name: "确定",className: "primary"}
+    callback: function(){
+        // 点击底部按钮的时候回调
+    }
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-select-arguments</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>选择列表-All参数-初始化</description>
+</snippet>

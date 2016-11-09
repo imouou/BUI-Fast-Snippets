@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+<div id="${1:uiSearchbar}" class="bui-searchbar">
+    <div class="bui-input">
+        <i class="icon-search"></i>
+        <input type="text" placeholder="${2:请输入关键字搜索}" value="$3"/>
+    </div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-searchbar</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>搜索控件结构</description> 
+</snippet>

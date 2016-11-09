@@ -1,0 +1,33 @@
+<snippet>
+    <content><![CDATA[
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>${1:BUI}</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="${2:../}css/bui.css" />
+    <!-- 依赖库 手机调试的js引用顺序如下 -->
+    <script src="${2:../}js/zepto.js"></script>
+    <script src="${2:../}js/plugins/fastclick.js"></script>
+    <!-- BUI库 -->
+    <script src="${2:../}js/bui.js"></script>
+    <script src="${2:../}js/app/_config.js"></script>
+    <script>
+        bui.ready(function (viewport) {
+            
+        })
+    </script>
+</head>
+<body>
+    $3
+</body>
+</html>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-html</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>bui-html结构</description>
+</snippet>

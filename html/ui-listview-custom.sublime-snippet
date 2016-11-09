@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+<ul id="${1:uiListview}" class="bui-listview">
+    <li status="1">
+        <div class="bui-btn bui-box">
+            <div class="span1">${2:手动渲染}</div>
+            <i class="icon-listright"></i>
+        </div>
+        <div class="bui-listview-menu" style="width:${3:100px};">
+            <div class="bui-btn btn-red">${4:删除}</div>
+        </div>
+    </li>
+</ul>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-listview-custom</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>侧滑列表-静态渲染结构</description> 
+</snippet>

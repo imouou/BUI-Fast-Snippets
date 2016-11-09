@@ -1,0 +1,23 @@
+
+<snippet>
+    <content><![CDATA[
+var uiListview = bui.listview({
+    id: "#${1:uiListview}",
+    data: [{ "text": "删除", "classname":"btn-red"}],
+    callback: function (e,ui) {
+        // this 滑动出来的操作按钮
+        var text = \$(this).text();
+        if( text == "删除" ){
+            //do something
+        }
+        ${2:ui.close();}
+    }
+});
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-listview</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>侧滑列表-初始化-动态</description>
+</snippet>

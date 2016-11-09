@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+var uiSidebarActive = uiSidebar.active();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-sidebar-active</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>侧边栏-激活的侧边栏</description>
+</snippet>

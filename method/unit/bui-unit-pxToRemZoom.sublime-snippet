@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+var rem = bui.unit.pxToRemZoom(${1:200});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-unit-pxToRemZoom</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>px等比转换为rem单位</description>
+</snippet>

@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+var uiListScroll = uiList.widget("scroll");
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-list-scroll</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>列表控件-引用scroll</description>
+</snippet>

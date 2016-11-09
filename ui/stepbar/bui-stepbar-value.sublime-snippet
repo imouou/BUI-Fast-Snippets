@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+var uiStepbarValue = uiStepbar.value($1);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-stepbar-next</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>步骤条-获取当前-设置第几步</description>
+</snippet>

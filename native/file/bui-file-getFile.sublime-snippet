@@ -1,0 +1,22 @@
+
+<snippet>
+    <content><![CDATA[
+uiFile.getFile({
+    fileName: "${1:bui.docx}",
+    folderName: "${2:download}",
+    create: true,   // create = false 则是获取文件,获取不到会进入onFail
+    onSuccess: function(folder){
+        // console.log(folder.fullPath);
+        $3
+    },
+    onFail: function(err){
+        // console.log(err);
+    }
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-file-getFile</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>文件管理-创建文件</description>
+</snippet>

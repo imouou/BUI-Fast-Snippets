@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+uiPickerdate.reset();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-pickerdate-reset</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>日期控件-重新渲染</description>
+</snippet>

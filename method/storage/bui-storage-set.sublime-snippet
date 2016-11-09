@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+bui.storage($1).set("${2:username}","${3:wangwsh}");
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-storage-set</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>本地存储,保存某个值,支持JSON存储</description>
+</snippet>

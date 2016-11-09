@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[
+bui.btn("${1:#btn}").submit(function(loading){
+	${2:loading.stop();}
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-btn-submit</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>绑定按钮提交,有进度条效果</description>
+</snippet>

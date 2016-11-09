@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+<div id="${1:uiDropdown}" class="bui-dropdown">
+    <div class="bui-btn bui-box" >
+        <div class="span1">${2:菜单名称}</div>
+        <i class="icon-dropdown"></i>
+    </div>
+    <ul class="bui-list">
+        <li class="bui-btn bui-box" value="$3">
+            <div class="span1">
+                ${4:下拉菜单1}
+            </div>
+            <i class="icon-listright"></i>
+        </li>
+    </ul>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-dropdown</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>下拉菜单控件静态结构</description> 
+</snippet>

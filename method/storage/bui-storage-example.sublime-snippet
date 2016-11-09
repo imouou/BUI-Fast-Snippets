@@ -1,0 +1,27 @@
+
+<snippet>
+    <content><![CDATA[
+// 允许存储2条数据,默认1条
+var ${1:uiStorage} = bui.storage($2);
+
+// 保存第1条数据
+uiStorage.set("code","123");
+
+// 保存第2条数据
+uiStorage.set("code","456");
+
+// 获取数据
+var data = uiStorage.get("code");
+
+// 移除某条数据
+uiStorage.remove("code","123");
+
+// 移除某个字段的所有数据
+uiStorage.remove("code");
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-storage-example</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>本地存储-示例</description>
+</snippet>

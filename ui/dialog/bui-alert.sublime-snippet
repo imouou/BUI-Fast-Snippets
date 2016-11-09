@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+bui.alert("${1:提醒内容}");
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-alert</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>消息提醒,支持回调</description>
+</snippet>

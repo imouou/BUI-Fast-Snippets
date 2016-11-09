@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+<input type="text" class="bui-input" value="${1:请输入关键字}" placeholder="${2:请输入关键字}">
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-input</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>input输入框</description>
+</snippet>

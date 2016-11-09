@@ -1,0 +1,14 @@
+
+<snippet>
+    <content><![CDATA[
+var uiRating = bui.rating({
+    id: "#uiRating",
+    value: 3
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-rating</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>星级评分-初始化</description>
+</snippet>

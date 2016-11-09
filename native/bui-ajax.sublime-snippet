@@ -1,0 +1,22 @@
+
+<snippet>
+    <content><![CDATA[
+bui.ajax({
+    url: "${1:http://}",
+    data: {$2},//接口请求的参数
+
+    // 可选参数
+    method: "GET",
+    timeout: 20000
+}).done(function(result){
+    $3
+}).fail(function(result,status){
+    //console.log(status)//"timeout"
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-ajax</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>异步请求数据</description>
+</snippet>

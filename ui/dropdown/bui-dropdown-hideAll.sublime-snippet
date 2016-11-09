@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+${1:uiDropdown}.hideAll();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-dropdown-hideAll</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>下拉菜单-隐藏所有</description>
+</snippet>

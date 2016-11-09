@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+uiActionsheet.hide($1);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-actionsheet-hide</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>上拉菜单-隐藏</description>
+</snippet>

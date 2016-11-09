@@ -1,0 +1,20 @@
+
+<snippet>
+    <content><![CDATA[
+var uiActionsheet = bui.actionsheet({
+    trigger: "#${1:uiActionsheet}",
+    buttons: [{ name:"分享到微博",value:"weibo" }],
+    callback: function (e,ui) {
+        var val = \$(this).attr("value");
+        if( val == "cancel"){
+            ui.hide();
+        }
+    }
+})
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-actionsheet</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>上拉菜单-初始化</description>
+</snippet>

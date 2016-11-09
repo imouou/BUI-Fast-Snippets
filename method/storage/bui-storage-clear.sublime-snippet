@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+bui.storage().clear();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-storage-clear</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>清除所有本地数据</description>
+</snippet>

@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+bui.platform().isIos();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-platform-isIos</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>是否是Ios系统,包含Ipad,Iphone,Ipod</description>
+</snippet>

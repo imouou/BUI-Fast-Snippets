@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+bui.btn({id:"${1:#page}",handle:"${2:.bui-btn}"}).load($3);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-btn-load</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>绑定页面跳转,支持单个按钮绑定</description>
+</snippet>

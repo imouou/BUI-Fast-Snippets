@@ -1,0 +1,57 @@
+
+<snippet>
+    <content><![CDATA[
+var uiScroll = bui.scroll({
+    id: "#${1:uiScroll}",
+    page:1,
+    pageSize:10,
+    onRefresh: onRefreshData,
+    onLoad: onLoadData,
+    
+    //可选参数
+    children: ".bui-list li",
+    childrenTop: ".bui-scroll-head",
+    childrenMain: ".bui-scroll-main",
+    childrenBottom: ".bui-scroll-foot",
+    distance: 100, 
+    endDistance: 1, 
+    height: 0,
+    page: 1,
+    pageSize: 10,
+    lastUpdated:true,
+    autoRefresh: false,
+    autoNext: true,
+    autoScroll: true,
+    scrollTips:{
+        start:"正在加载,请稍候...",
+        end:"上拉加载更多",
+        nodata: "暂无数据",
+        last: "最后一页",
+        fail:"点击重新加载"
+    },
+    refreshTips:{
+        start:"正在加载,请稍候...",
+        release: "释放刷新",
+        end:"继续下拉刷新",
+        fail:"点击重新加载",
+        success: "刷新成功"
+    },
+    onScrolling: null
+});
+
+// 下拉刷新
+function onRefreshData(){
+  $2
+};
+
+// 上拉加载
+function onLoadData(){
+  $3
+};
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-scroll-arguments</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>列表滚动加载-All参数-初始化</description>
+</snippet>

@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+var px = bui.unit.remToPx(${1:2});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-unit-remToPx</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>rem等值转换为px单位</description>
+</snippet>

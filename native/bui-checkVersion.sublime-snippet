@@ -1,0 +1,15 @@
+
+<snippet>
+    <content><![CDATA[
+bui.checkVersion({
+    id: "${1:#checkVersion}",
+    url: "${2:http://}",
+    data: "${3:接口请求的参数}"
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-checkVersion</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>检测是否新版本</description>
+</snippet>

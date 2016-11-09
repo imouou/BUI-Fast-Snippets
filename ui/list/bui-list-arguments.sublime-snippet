@@ -1,0 +1,54 @@
+
+<snippet>
+    <content><![CDATA[
+var uiList = bui.list({
+    id: "#${1:uiScroll}",
+    url: "${2:userlist.json}",
+    data: {},
+    template: template,
+    onLoad: function (scroll) {
+        // 自定义渲染
+    },
+    callback: function (e) {
+        // 点击单行回调 console.log(\$(this).text())
+    },
+    // 可选参数
+    onRefresh: function (scroll) {
+        // 自定义渲染
+    },
+    height: 0,
+    page:1,
+    pageSize:10,
+    field: {
+        page: "page",        // 分页字段
+        size: "pageSize",    // 页数字段
+        data: "data"         // 数据字段
+    },
+    method: "GET",
+    timeout: 20000,
+    autoNext: true,
+    autoScroll: true,
+    children:".bui-list",
+    handle: ".bui-btn"
+});
+
+//生成列表的模板
+function template (data) {
+
+    var html = "";
+
+        \$(data).each(function(index, el) {
+
+            html += '<li class="bui-btn"><i class="icon-facefill"></i>'+el.name+'</li>';
+        });
+
+    return html;
+};
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-list-init</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>列表控件-All参数-初始化</description>
+</snippet>

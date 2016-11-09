@@ -1,0 +1,18 @@
+
+<snippet>
+    <content><![CDATA[
+bui.confirm("${1:提醒内容}",function(ui){
+    // this 为底部按钮
+    var text = \$(this).text();
+    if( text == "确定" ){
+    	//do something
+    }
+	${2:ui.close();}
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-confirm</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>消息确认提醒,支持参数配置</description>
+</snippet>

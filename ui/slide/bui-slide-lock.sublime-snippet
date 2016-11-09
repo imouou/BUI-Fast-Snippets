@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+uiSlide.lock();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-slide-lock</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>焦点图-不允许拖动</description>
+</snippet>

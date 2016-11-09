@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+${1:uiDialog}.open();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-dialog-open</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>弹出框-打开-支持回调</description>
+</snippet>

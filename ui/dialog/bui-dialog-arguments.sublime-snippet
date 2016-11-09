@@ -1,0 +1,34 @@
+
+<snippet>
+    <content><![CDATA[
+var uiDialog = bui.dialog({
+    id: "#${1:uiDialog}",
+
+    //可选参数
+    effect: "fadeInDown",
+    position:"center", 
+    fullscreen: false,
+    width: 0,
+    height: 0,
+    mask: true,    
+    opacity: 0.1,
+    zoom: false,
+    render: false,
+    //render: true 以下参数才有效
+    title: "",          
+    content: "",    
+    autoClose: true,
+    close: true,      
+    closeText: "",
+    buttons: [],
+    onMask: null,
+    onClose: null,
+    callback: null
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-dialog-init</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>弹出框-All参数-初始化</description>
+</snippet>

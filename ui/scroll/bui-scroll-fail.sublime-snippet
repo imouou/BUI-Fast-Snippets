@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+uiScroll.fail();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-scroll-fail</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>列表滚动加载-请求失败改为点击</description>
+</snippet>

@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[
+var uiDialog = bui.dialog({
+    id: "#${1:uiDialog}"
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-dialog</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>弹出框-初始化</description>
+</snippet>

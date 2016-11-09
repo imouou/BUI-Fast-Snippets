@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+uiFileSelect.remove("$1");
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-fileselect-remove</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>文件选择-删除选择的文件</description>
+</snippet>

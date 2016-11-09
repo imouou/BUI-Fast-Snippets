@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+var uiScrollPullrefresh = uiScroll.widget("pullrefresh");
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-scroll-pullrefresh</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>列表滚动加载-引用下拉刷新控件</description>
+</snippet>
