@@ -1,8 +1,8 @@
 <snippet>
     <content><![CDATA[
 <div class="bui-btn bui-box-vertical" href="$1">
-    <i class="${2:icon-home}"></i>
-    <div class="span1">${3:菜单}</div>
+    <i class="icon-home"></i>
+    <div class="span1">菜单</div>
 </div>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

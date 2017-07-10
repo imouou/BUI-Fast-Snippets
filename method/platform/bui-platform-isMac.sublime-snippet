@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-bui.platform().isMac();
+var isMac = bui.platform.isMac();
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-platform-isMac</tabTrigger>

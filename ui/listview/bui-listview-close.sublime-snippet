@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[
+// 关闭打开的菜单        
+uiListview.close();
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-listview-close</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>关闭侧滑列表</description>
+</snippet>

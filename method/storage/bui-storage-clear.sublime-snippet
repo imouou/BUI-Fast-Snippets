@@ -1,7 +1,8 @@
 
 <snippet>
     <content><![CDATA[
-bui.storage().clear();
+var uiStorage = bui.storage();
+    uiStorage.clear();
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-storage-clear</tabTrigger>

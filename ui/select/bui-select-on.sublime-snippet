@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[
+uiSelectValue.on("${1:show}",function(){
+    //显示时触发
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-select-on</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>选择列表-绑定事件</description>
+</snippet>

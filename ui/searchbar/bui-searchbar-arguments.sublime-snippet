@@ -2,23 +2,18 @@
 <snippet>
     <content><![CDATA[
 var uiSearchbar = bui.searchbar({
-    id:"#${1:uiSearchbar}",
-    handle : ".${2:icon-search}",
+    id:"#${1:uiSearchbar}",   
+    handle: ".icon-search,.btn-search",
     handleRemove: ".icon-remove",
-    callback: function (ui,keyword) {
-      // 点击搜索
-    },
-    onInput: function(ui,keyword) {
-      // 输入实时搜索
-    },
-    onRemove: function(ui,keyword) {
-      // 删除关键词需要做什么其它处理
-    }
+    delayTime: 400,
+    onInput: null,
+    onRemove: null,
+    callback: null
 });
 
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-searchbar-arguments</tabTrigger>
+    <tabTrigger>bui-searchbar-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
     <description>搜索条-All参数-初始化</description>

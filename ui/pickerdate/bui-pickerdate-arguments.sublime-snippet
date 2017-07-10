@@ -4,6 +4,7 @@
 var uiPickerdateInput = \$("#uiPickerdate");
 var uiPickerdate = bui.pickerdate({
     handle: "#${1:uiPickerdate}",
+    formatValue: "yyyy-MM-dd hh:mm:ss",
     value: '${2:2015/8/10 9:00}',
     min: '${3:2014/4/5 9:00}',
     max: '${4:2016/4/5 10:00}',
@@ -18,7 +19,7 @@ var uiPickerdate = bui.pickerdate({
 });
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-pickerdate-arguments</tabTrigger>
+    <tabTrigger>bui-pickerdate-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
     <description>日期控件-All参数-初始化</description>

@@ -2,12 +2,12 @@
     <content><![CDATA[
 <div class="bui-bar bui-bar-side">
     <div class="bui-bar-left">
-        ${1:<a class="bui-btn"><i class="icon-back"></i></a>}
+        <a class="bui-btn"><i class="icon-back"></i></a>
     </div>
-    <div class="bui-bar-main">${2:标题}</div>
+    <div class="bui-bar-main">标题</div>
     <div class="bui-bar-right">
-        ${3:<a class="bui-btn"><i class="icon-search"></i></a>}
-        ${4:<a class="bui-btn"><i class="icon-menu"></i></a>}
+        <a class="bui-btn"><i class="icon-search"></i></a>
+        <a class="bui-btn"><i class="icon-menu"></i></a>
     </div>
 </div>
 ]]></content>

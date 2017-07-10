@@ -3,16 +3,7 @@
     <content><![CDATA[
 var uiScroll = bui.scroll({
     id: "#${1:uiScroll}",
-    page:1,
-    pageSize:10,
-    onRefresh: onRefreshData,
-    onLoad: onLoadData,
-    
-    //可选参数
-    children: ".bui-list li",
-    childrenTop: ".bui-scroll-head",
-    childrenMain: ".bui-scroll-main",
-    childrenBottom: ".bui-scroll-foot",
+    handle: "li",
     distance: 100, 
     endDistance: 1, 
     height: 0,
@@ -22,21 +13,29 @@ var uiScroll = bui.scroll({
     autoRefresh: false,
     autoNext: true,
     autoScroll: true,
+    refresh: true,
+    delayTime:100,
+    // 底下的文本提醒
     scrollTips:{
-        start:"正在加载,请稍候...",
+        start:"努力加载中..",
         end:"上拉加载更多",
-        nodata: "暂无数据",
-        last: "最后一页",
+        nodata: "没有更多内容",
+        last: "没有更多内容",
         fail:"点击重新加载"
     },
+    // 刷新的文本提醒
     refreshTips:{
-        start:"正在加载,请稍候...",
-        release: "释放刷新",
-        end:"继续下拉刷新",
-        fail:"点击重新加载",
+        start:"刷新中..",
+        release: "松开刷新",
+        end:"下拉刷新",
+        fail:"点击加载",
         success: "刷新成功"
     },
-    onScrolling: null
+    onScrolling: null,
+    // 上拉执行
+    onRefresh: null,
+    // 请求数据, 传页码及多少条数据
+    onLoad: null
 });
 
 // 下拉刷新
@@ -50,7 +49,7 @@ function onLoadData(){
 };
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-scroll-arguments</tabTrigger>
+    <tabTrigger>bui-scroll-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
     <description>列表滚动加载-All参数-初始化</description>

@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+// 下拉菜单 js 初始化:
+var uiDropdown = bui.dropdown({
+    id: "#uiDropdown"
+})
+                
+// 下拉菜单 html 对应的结构:
+<div id="uiDropdown" class="bui-dropdown">
+  <div class="bui-btn bui-box" >
+    <div class="span1">下拉菜单</div>
+    <i class="icon-dropdown"></i>
+  </div>
+  <ul class="bui-list">
+    <li class="bui-btn" value="11">
+      下拉的选项
+    </li>
+  </ul>
+</div>       
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-dropdown-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>下拉菜单-完整示例</description> 
+</snippet>

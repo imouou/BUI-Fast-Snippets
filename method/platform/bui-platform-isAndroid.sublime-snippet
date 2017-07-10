@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-bui.platform().isAndroid();
+var isAndroid = bui.platform.isAndroid();
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-platform-isAndroid</tabTrigger>

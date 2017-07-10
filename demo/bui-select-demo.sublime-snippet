@@ -1,0 +1,38 @@
+<snippet>
+    <content><![CDATA[
+// 选择列表 js 初始化:
+var uiSelect = bui.select({
+  trigger:"#uiSelect",
+  title: "请选择区域",
+  data: [{
+    "name":"广东",
+    "value":"11"
+  },{"name":"广西",
+    "value":"22"
+  }],
+  //如果需要点击再进行操作,增加按钮
+  buttons: [{name:"重置",className:""},{name:"确定",className:"primary-reverse"}],
+  callback: function (argument) {
+
+    var index = $(this).parent().index();
+    if( index == 0 ){
+      uiSelect.selectNone();
+    }else{
+      uiSelect.hide();
+    }
+  }
+})
+                
+// 选择列表 html 对应的结构:
+<div id="uiSelect" class="bui-select bui-box">
+  <div class="span1"></div>
+  <i class="icon-listright"></i>
+</div>
+   
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-select-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>选择列表-完整示例</description> 
+</snippet>

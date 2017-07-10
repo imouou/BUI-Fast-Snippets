@@ -1,0 +1,37 @@
+<snippet>
+    <content><![CDATA[
+// 选项卡 js 初始化:
+var uiTab = bui.slide({
+    id:"#uiTab",
+    menu:".bui-nav",
+    children:".bui-tab-main ul",
+    scroll: true
+})  
+                
+// 选项卡 html 对应的结构:
+<div id="uiTab" class="bui-tab">
+  <!-- 按钮较少时,这里是平分宽度 -->
+  <div class="bui-tab-head">
+    <ul class="bui-nav">
+      <li class="bui-btn active">首页</li>
+      <li class="bui-btn ">新闻</li>
+    </ul>
+  </div>
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        滑动的内容
+      </li>
+      <li>
+        滑动的内容
+      </li>
+    </ul>
+  </div>
+</div>      
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-slide-tab-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>选项卡-完整示例</description> 
+</snippet>

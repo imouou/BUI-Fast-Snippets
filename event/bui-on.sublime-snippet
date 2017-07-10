@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+bui.on("pagebefore",function(){
+    //DOM 初始完毕
+})
+bui.on("pageinit",function(){
+    //DOM 及 BUI 初始完毕
+})
+bui.on("pageready",function(){
+    //DOM 及 BUI 及 原生方法 初始完毕
+})
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-on</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>全局事件监听</description> 
+</snippet>

@@ -6,7 +6,7 @@
             <!-- 左边按钮 -->
             <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
         </div>
-        <div class="bui-bar-main">${1:页面标题}</div>
+        <div class="bui-bar-main">页面标题</div>
         <div class="bui-bar-right">
             <!-- 右边按钮 -->
         </div>

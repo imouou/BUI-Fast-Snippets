@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-${1:uiAccordion}.show(${2:0});
+uiAccordion.show(${1:0});
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-accordion-show</tabTrigger>

@@ -1,0 +1,14 @@
+
+<snippet>
+    <content><![CDATA[  
+uiListview.on("${1:open}",function(){
+    //显示的时候触发
+});
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-listview-on</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>侧滑列表-绑定事件</description>
+</snippet>

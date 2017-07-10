@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<input type="range" class="bui-range" min="${1:0}" max="${2:255}" value="${3:100}">
+<input type="range" class="bui-range" min="0" max="255" value="100">
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>ui-range</tabTrigger>

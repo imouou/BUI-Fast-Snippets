@@ -1,0 +1,42 @@
+<snippet>
+    <content><![CDATA[
+// 列表控件 js 初始化: 
+
+var uiList = bui.list({
+    id: "#uiList",
+    url: "",
+    data: {},             // 数据请求带过去的参数,分页在field配置
+    template: listTemplate,
+    field: {
+        page: "page",     // 分页参数名
+        size: "pageSize", // 分页大小参数名
+        data: ""          // 数据字段名
+    }
+});
+// 列表模板
+function listTemplate (data) {
+    var html = "";
+    \$.each(data,function(index, el) {
+        html += '<li class="bui-btn" href="index.html"><i class="icon-facefill"></i>'+el.name+'</li>';
+    });
+
+    return html;
+}
+
+// 列表控件 html 对应的结构: 
+
+<div id="uiList" class="bui-scroll">
+    <div class="bui-scroll-head"></div>
+    <div class="bui-scroll-main">
+        <ul class="bui-list">
+        </ul>
+    </div>
+    <div class="bui-scroll-foot"></div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-list-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>列表控件-完整示例</description> 
+</snippet>

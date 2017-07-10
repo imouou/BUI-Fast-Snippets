@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<input type="${1:checkbox}" class="bui-choose" name="$2" value="$3">
+<input type="${1:checkbox}" class="bui-choose" name="" value="">
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>ui-choose</tabTrigger>

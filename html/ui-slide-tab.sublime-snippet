@@ -3,14 +3,14 @@
 <div id="${1:uiSlide}" class="bui-tab">
     <div class="bui-tab-head">
         <ul class="bui-nav">
-            <!-- 分屏菜单 -->
-            <li class="bui-btn active">${2:Tab1}</li>
+            <!-- 分屏菜单 active 是激活的TAB样式 -->
+            <li class="bui-btn active">Tab1</li>
         </ul>
     </div>
     <div class="bui-tab-main">
         <ul>
             <li>
-                ${3:<!--第1屏-->}
+                第1屏
             </li>
         </ul>
     </div>

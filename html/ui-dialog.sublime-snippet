@@ -1,8 +1,8 @@
 <snippet>
     <content><![CDATA[
 <div id="${1:uiDialog}" class="bui-dialog">
-    <div class="bui-dialog-head">${2:对话框标题}</div>
-    <div class="bui-dialog-main">${3:对话框内容}</div>
+    <div class="bui-dialog-head">对话框标题</div>
+    <div class="bui-dialog-main">对话框内容</div>
     <div class="bui-dialog-close"><i class="icon-close"></i></div>
 </div>
 ]]></content>

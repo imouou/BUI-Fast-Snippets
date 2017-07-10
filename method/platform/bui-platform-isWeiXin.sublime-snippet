@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-bui.platform().isWeiXin();
+var isWeiXin = bui.platform.isWeiXin();
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-platform-isWeiXin</tabTrigger>

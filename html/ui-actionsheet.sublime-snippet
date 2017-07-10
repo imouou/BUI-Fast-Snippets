@@ -2,9 +2,9 @@
     <content><![CDATA[
 <div id="${1:uiActionsheet}" class="bui-actionsheet container-x">
     <ul class="bui-list round">
-        <li class="bui-btn">${2:示例菜单}</li>
+        <li class="bui-btn">示例菜单</li>
     </ul>
-    <div class="bui-btn round">${3:取消}</div>
+    <div class="bui-btn round">取消</div>
 </div>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

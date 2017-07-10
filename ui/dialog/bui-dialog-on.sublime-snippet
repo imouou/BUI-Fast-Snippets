@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[
+uiDialog.on("open",function(){
+    //打开以后触发
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-dialog-on</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>弹出框-绑定事件</description>
+</snippet>

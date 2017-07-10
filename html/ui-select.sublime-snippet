@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 <div id="${1:uiSelect}" class="bui-select bui-box">
-    <div class="span1">${2:请选择}</div>
+    <div class="span1">请选择</div>
     <i class="icon-listright"></i>
 </div>
 ]]></content>

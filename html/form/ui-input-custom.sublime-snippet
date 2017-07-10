@@ -2,8 +2,7 @@
     <content><![CDATA[
 <div class="bui-input">
     ${1:<i class="icon-search"></i>}
-    <input type="text" value="" placeholder="${2:请输入关键字}">
-    ${3:<i class="icon-remove"></i>}
+    <input type="text" value="" placeholder="请输入关键字">
 </div>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

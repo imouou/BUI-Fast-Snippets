@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<input type="checkbox" class="bui-checkbox" name="$1" value="$2">
+<input type="checkbox" class="bui-checkbox" name="" value="">
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>ui-checkbox</tabTrigger>

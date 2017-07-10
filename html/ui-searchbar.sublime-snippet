@@ -3,7 +3,7 @@
 <div id="${1:uiSearchbar}" class="bui-searchbar">
     <div class="bui-input">
         <i class="icon-search"></i>
-        <input type="text" placeholder="${2:请输入关键字搜索}" value="$3"/>
+        <input type="text" placeholder="请输入关键字搜索" value=""/>
     </div>
 </div>
 ]]></content>

@@ -1,7 +1,9 @@
 
 <snippet>
     <content><![CDATA[
-var ${1:username} = bui.storage().get("${2:username}");
+var uiStorage = bui.storage();
+var username = uiStorage.get("${1:username}");
+
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-storage-get</tabTrigger>

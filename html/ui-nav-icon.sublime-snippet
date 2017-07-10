@@ -2,8 +2,8 @@
     <content><![CDATA[
 <ul class="bui-nav">
     <li class="bui-btn bui-box-vertical">
-        <i class="${1:icon-home}"></i>
-        <div class="span1">${2:文本}</div>
+        <i class="icon-home"></i>
+        <div class="span1">文本</div>
     </li>
 </ul>
 ]]></content>

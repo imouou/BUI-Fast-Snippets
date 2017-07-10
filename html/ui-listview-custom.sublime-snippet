@@ -3,11 +3,11 @@
 <ul id="${1:uiListview}" class="bui-listview">
     <li status="1">
         <div class="bui-btn bui-box">
-            <div class="span1">${2:手动渲染}</div>
+            <div class="span1">手动渲染</div>
             <i class="icon-listright"></i>
         </div>
-        <div class="bui-listview-menu" style="width:${3:100px};">
-            <div class="bui-btn btn-red">${4:删除}</div>
+        <div class="bui-listview-menu swipeleft" data-moving="200">
+            <div class="bui-btn btn-red">删除</div>
         </div>
     </li>
 </ul>

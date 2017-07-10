@@ -3,7 +3,8 @@
     <content><![CDATA[
 var uiSlide = bui.slide({
     id:"#${1:uiSlide}",
-    height:${2:200}
+    height:${2:200},
+    zoom: true
 })
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

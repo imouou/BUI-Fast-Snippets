@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-${1:uiDropdown}.text("$2");
+uiDropdown.text("$1");
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-dropdown-text</tabTrigger>

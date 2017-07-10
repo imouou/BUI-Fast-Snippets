@@ -16,7 +16,7 @@ var uiAccordion = bui.accordion({
 });
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-accordion-arguments</tabTrigger>
+    <tabTrigger>bui-accordion-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
     <description>折叠菜单-所有参数</description>

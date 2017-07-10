@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<input type="text" id="${1:uiPickerdate}" readonly>
+<input type="text" id="uiPickerdate" readonly>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>ui-pickerdate</tabTrigger>

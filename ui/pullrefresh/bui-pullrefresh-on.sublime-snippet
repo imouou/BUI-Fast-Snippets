@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[
+uiPullrefresh.on("${1:refresh}",function(){
+    //刷新时触发
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-pullrefresh-on</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>下拉刷新-绑定事件</description>
+</snippet>

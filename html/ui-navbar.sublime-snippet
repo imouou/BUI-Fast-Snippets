@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+<div class="bui-navbar">
+  <ul class="bui-nav">
+    <!-- <li>之间不能有空隙 -->
+    <li class="bui-btn">首页</li><li class="bui-btn">新闻</li>
+  </ul>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-navbar</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>导航菜单-横向滚动结构</description> 
+</snippet>

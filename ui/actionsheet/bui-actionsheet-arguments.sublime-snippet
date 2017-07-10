@@ -23,7 +23,7 @@ var uiActionsheet = bui.actionsheet({
 })
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-actionsheet-arguments</tabTrigger>
+    <tabTrigger>bui-actionsheet-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
     <description>上拉菜单-All参数-初始化</description>

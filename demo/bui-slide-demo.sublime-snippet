@@ -1,0 +1,35 @@
+<snippet>
+    <content><![CDATA[
+// 焦点图 js 初始化:
+var uiSlide = bui.slide({
+    id:"#uiSlide",
+    height:200,
+    zoom: true
+})
+                
+// 焦点图 html 对应的结构:
+<div id="uiSlide" class="bui-slide">
+  <div class="bui-slide-main">
+    <ul>
+      <!-- 有多少个li则有多少个滑动 -->
+      <li>
+        <img src="slideshow.png" alt="">
+        <div class="bui-slide-title">
+          标题
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="bui-slide-head">
+    <ul>
+      <li>1</li>
+    </ul>
+  </div>
+</div>          
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-slide-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>焦点图-完整示例</description> 
+</snippet>

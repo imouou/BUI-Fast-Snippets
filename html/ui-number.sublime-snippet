@@ -2,7 +2,7 @@
     <content><![CDATA[
 <div id="${1:uiNumber}" class="bui-number">
     <div class="bui-number-prev"><i class="icon-minus"></i></div>
-    <input type="text" value="$2"/>
+    <input type="text" value=""/>
     <div class="bui-number-next"><i class="icon-plus"></i></div>
 </div>
 ]]></content>

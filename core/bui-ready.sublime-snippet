@@ -1,8 +1,10 @@
 <snippet>
     <content><![CDATA[
 bui.ready(function(){
+    // 业务逻辑需要在这里写
     ${1}
 });
+
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-ready</tabTrigger>

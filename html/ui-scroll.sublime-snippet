@@ -1,9 +1,10 @@
 <snippet>
     <content><![CDATA[
-<div id="${1:uiScroll}" class="bui-scroll">
+<div id="uiScroll" class="bui-scroll">
     <div class="bui-scroll-head"></div>
     <div class="bui-scroll-main">
-        ${2:<!--内容区-->}
+        <!-- 这里是滚动的内容区,如果不是ul,则需要修改对应的参数 -->
+        <ul class="bui-list"></ul>
     </div>
     <div class="bui-scroll-foot"></div>
 </div>

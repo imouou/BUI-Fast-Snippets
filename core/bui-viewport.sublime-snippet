@@ -1,10 +1,10 @@
 
 <snippet>
     <content><![CDATA[
-// 控制页面的缩放比例
+// 控制页面的缩放比例,需要赋值给window.viewport 其它控件才能正常缩放
 window.viewport = bui.viewport(${1:80});
 // 初始化main的高度
-window.viewport.init();
+bui.init();d
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-viewport</tabTrigger>

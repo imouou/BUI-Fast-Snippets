@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-bui.platform().isIos();
+var isIos = bui.platform.isIos();
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-platform-isIos</tabTrigger>

@@ -1,9 +1,9 @@
 <snippet>
     <content><![CDATA[
 <div class="bui-panel">
-    <div class="bui-panel-head">${1:面板标题}</div>
-    <div class="bui-panel-main">${2:面板内容}</div>
-    <div class="bui-panel-foot">${2:面板底部}</div>
+    <div class="bui-panel-head">面板标题</div>
+    <div class="bui-panel-main">面板内容</div>
+    <div class="bui-panel-foot">面板底部</div>
 </div>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

@@ -7,16 +7,22 @@ var uiPullrefresh = bui.pullrefresh({
     
     // 可选参数
     handle: "",
-    childrenTop: ".bui-scroll-head",
-    childrenMain: ".bui-scroll-main",
+    childrenTop: childrenTop,
+    childrenMain: childrenMain,
+    // 滚动的距离要大于这个数才会触发
     distance:100,
+
+    //默认自动加载数据
     autoLoad: true,
-    lastUpdated: true,
+    lastUpdated: false,
+    height: 0,
+
+    // 底下的文本提醒
     refreshTips:{
-        start:"正在加载,请稍候...",
-        release: "释放刷新",
-        end:"继续下拉刷新",
-        fail:"点击重新加载",
+        start:"刷新中..",
+        release: "松开刷新",
+        end:"下拉刷新",
+        fail:"点击加载",
         success: "刷新成功"
     }
 });
@@ -28,7 +34,7 @@ function onRefresh () {
 
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-pullrefresh</tabTrigger>
+    <tabTrigger>bui-pullrefresh-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
     <description>下拉刷新-初始化</description>

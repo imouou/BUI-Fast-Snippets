@@ -2,9 +2,9 @@
     <content><![CDATA[
 <ul class="bui-list">
     <li class="bui-btn bui-box">
-        <label class="bui-label">${1:帐号}</label>
+        <label class="bui-label">帐号</label>
         <div class="span1">
-            <div class="bui-value">${2:wangwsh}</div>
+            <div class="bui-value">username</div>
         </div>
     </li>
 </ul>

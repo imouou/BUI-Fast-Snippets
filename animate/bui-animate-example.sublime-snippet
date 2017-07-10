@@ -1,9 +1,8 @@
 <snippet>
     <content><![CDATA[
 /* 动画示例,支持链式动画,最后需要执行start(); */
-bui.animate(${1:"#page"}).left(${2:100}).start(function(){
-    ${3:this.down(100).start();}
-});
+var uiAnimatePage = bui.animate(${1:"#page"});
+    uiAnimatePage.left(${2:100}).start();
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-animate-example</tabTrigger>

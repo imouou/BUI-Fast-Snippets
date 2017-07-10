@@ -4,19 +4,20 @@
 <html lang="en-US">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <title>${1:BUI}</title>
+    <title>BUI</title>
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="${2:../}css/bui.css" />
+    <link rel="stylesheet" href="../css/bui.css" />
     <!-- 依赖库 手机调试的js引用顺序如下 -->
-    <script src="${2:../}js/zepto.js"></script>
-    <script src="${2:../}js/plugins/fastclick.js"></script>
+    <script src="../js/zepto.js"></script>
+    <script src="../js/plugins/fastclick.js"></script>
     <!-- BUI库 -->
-    <script src="${2:../}js/bui.js"></script>
-    <script src="${2:../}js/app/_config.js"></script>
+    <script src="../js/bui.js"></script>
+    <script src="../js/app/_config.js"></script>
     <script>
-        bui.ready(function (viewport) {
-            
+        bui.ready(function () {
+            // 这里写业务及控件初始化
+            $1
         })
     </script>
 </head>

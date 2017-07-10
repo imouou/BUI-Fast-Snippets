@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 <div class="bui-progress">
-    <div class="bui-progress-cell" style="width:${1:30%};"></div>
+    <div class="bui-progress-cell" style="width:30%"></div>
 </div>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

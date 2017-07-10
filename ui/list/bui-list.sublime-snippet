@@ -27,7 +27,7 @@ function template (data) {
 
     var html = "";
 
-        \$(data).each(function(index, el) {
+        \$.each(data,function(index, el) {
 
             html += '<li class="bui-btn"><i class="icon-facefill"></i>'+el.name+'</li>';
         });

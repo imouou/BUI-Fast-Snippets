@@ -3,23 +3,19 @@
     <content><![CDATA[
 var uiRating = bui.rating({
     id: "#uiRating",
-    value: 3,
-
-    //可选参数
     handle: ".bui-rating-cell",
     fullClassName: "bui-rating-cell-full",
     halfClassName: "bui-rating-cell-half",
     half: false,   
     stars: 5,      
+    value: 0,      
     disabled: false,
     render: true,  
-    callback: function(){
-        // 点击星星的回调
-    }
+    callback: null
 });
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-rating-arguments</tabTrigger>
+    <tabTrigger>bui-rating-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
     <description>星级评分-All参数-初始化</description>

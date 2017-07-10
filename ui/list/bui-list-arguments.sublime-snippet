@@ -5,31 +5,49 @@ var uiList = bui.list({
     id: "#${1:uiScroll}",
     url: "${2:userlist.json}",
     data: {},
-    template: template,
-    onLoad: function (scroll) {
-        // 自定义渲染
-    },
-    callback: function (e) {
-        // 点击单行回调 console.log(\$(this).text())
-    },
-    // 可选参数
-    onRefresh: function (scroll) {
-        // 自定义渲染
-    },
-    height: 0,
-    page:1,
-    pageSize:10,
-    field: {
-        page: "page",        // 分页字段
-        size: "pageSize",    // 页数字段
-        data: "data"         // 数据字段
-    },
     method: "GET",
+    dataType: "json",
+    headers: {},
+    contentType: "",
     timeout: 20000,
+    field: {
+        page: "page",
+        size: "pageSize",
+        data: ""
+    },
+    // 底下的文本提醒
+    scrollTips:{
+        start:"努力加载中..",
+        end:"上拉加载更多",
+        nodata: "没有更多内容",
+        last: "没有更多内容",
+        fail:"点击重新加载"
+    },
+    // 底下的文本提醒
+    refreshTips:{
+        start:"刷新中..",
+        release: "松开刷新",
+        end:"下拉刷新",
+        fail:"点击加载",
+        success: "刷新成功"
+    },
+    lastUpdated: false,
+    page: 1,
+    pageSize: 10,
     autoNext: true,
     autoScroll: true,
+    native: true,
+    refresh : true,
     children:".bui-list",
-    handle: ".bui-btn"
+    handle: ".bui-btn",
+    height: 0,
+    commandRefresh: "html",
+    commandLoad: "append",
+    template: null,
+    onRefresh: null,
+    onLoad: null,
+    onFail: null,
+    callback: null
 });
 
 //生成列表的模板

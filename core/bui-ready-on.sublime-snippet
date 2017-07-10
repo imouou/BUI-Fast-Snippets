@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+bui.on("pageready",function(){
+    // 如果需要对ready多处调用,可以监听ready事件
+})
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-ready-on</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>监听多个ready事件</description> 
+</snippet>

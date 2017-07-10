@@ -3,9 +3,9 @@
 <ul class="bui-list">
     <li class="bui-btn bui-box bui-btn-line">
         <div class="span1">
-            <label for="${1:choose}">${2:单选}</label>
+            <label for="${1:choose}">单选</label>
         </div>
-        <input id="${1:choose}" type="${3:radio}" class="bui-choose" name="${4:interest}" value="$5" text="$6" checked="checked">
+        <input id="${1:choose}" type="radio" class="bui-choose" name="interest" value="" text="" checked="checked">
     </li>
 </ul>
 ]]></content>

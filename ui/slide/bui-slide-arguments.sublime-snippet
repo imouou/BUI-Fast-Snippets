@@ -6,21 +6,24 @@ var uiSlide = bui.slide({
     height:${2:200},
 
     // 可选参数
-    autoplay: true,
     menu:".bui-slide-head ul",        
-    children:".bui-slide-main ul",   
+    children:".bui-slide-main ul",
     prev:".bui-slide-prev",           
     next:".bui-slide-next",           
     width: 0,          
-    zoom: true,   
+    height: 0,         
+    zoom: false,
     transition: 200,         
     interval: 5000,   
     swipe:true,        
     animate:true,      
-    delay: false,      
+    delay: false,
+    bufferEffect: false, 
     distance: 80,      
     direction: "x",    
+    autoplay: false,   
     scroll: false,
+    index: 0,
     fullscreen: false, 
     autopage: false,  
     callback: null,
@@ -30,7 +33,7 @@ var uiSlide = bui.slide({
 })
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-slide-arguments</tabTrigger>
+    <tabTrigger>bui-slide-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
     <description>焦点图-All参数-初始化</description>

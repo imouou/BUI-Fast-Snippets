@@ -3,6 +3,8 @@
     <content><![CDATA[
 uiDownload.start({
     url: "$1",
+    // 为空则获取url的后缀名
+    fileName: "",
     onSuccess: function(url,file){
         console.log(url); // 本地地址
     },

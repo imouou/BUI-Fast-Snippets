@@ -1,0 +1,86 @@
+<snippet>
+    <content><![CDATA[
+
+// 搜索条 js 初始化:
+
+// 计算列表的高度
+var listHeight = \$(window).height() - \$("header").height() - \$("#uiSearchbar").height();
+
+// 搜索结果的列表初始化
+var uiList = bui.list({
+      id: "#uiScroll",
+      url: siteDir + "userlist.json",
+      data: {},
+      field: {
+        data:"data"
+      },
+      page:1,
+      pageSize:10,
+      height: listHeight,
+      template: template
+  });
+
+// 搜索条的初始化
+var uiSearchbar = bui.searchbar({
+  id:"#uiSearchbar",
+  onInput: function(ui,keyword) {
+    //实时搜索
+  },
+  onRemove: function(ui,keyword) {
+    //删除关键词需要做什么其它处理
+  },
+  callback: function (ui,keyword) {
+            
+      //点击搜索
+      \$("#uiScroll .bui-list").empty();
+
+      // 重新初始化数据
+      uiList.init({
+        page: 1,
+        data: {
+          "keyword":keyword
+        }
+      });
+    
+   }
+});
+
+
+
+// 列表生成模板
+function template (data) {
+    var html = "";
+
+    \$.each(data,function(index, el) {
+
+        html += '<li class="bui-btn"><i class="icon-facefill"></i>'+el.name+'</li>';
+    });
+
+    return html;
+}        
+// 搜索条 html 对应的结构:
+<div id="uiSearchbar" class="bui-searchbar bui-box">
+        <div class="span1">
+      <div class="bui-input">
+        <i class="icon-search"></i>
+        <input type="search" value="" placeholder="请输入关键字"/>
+            </div>
+        </div>
+        <div class="btn-search">搜索</div>
+</div>
+// 列表控件结构
+<div id="uiScroll" class="bui-scroll">
+  <div class="bui-scroll-head"></div>
+  <div class="bui-scroll-main">
+    <ul class="bui-list">
+    </ul> 
+  </div>
+  <div class="bui-scroll-foot"></div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-searchbar-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>列表滚动加载-完整示例</description> 
+</snippet>

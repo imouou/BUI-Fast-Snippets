@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 <ul class="bui-nav">
-    <li class="bui-btn">${1:<!--文本-->}</li>
+    <li class="bui-btn">文本</li>
 </ul>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

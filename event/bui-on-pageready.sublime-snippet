@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+bui.on("pageready",function(){
+    //DOM 及 BUI 及 原生方法 初始完毕
+})
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-on-pageready</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>原生事件初始完毕</description> 
+</snippet>

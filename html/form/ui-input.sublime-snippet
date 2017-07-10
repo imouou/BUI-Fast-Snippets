@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<input type="text" class="bui-input" value="${1:请输入关键字}" placeholder="${2:请输入关键字}">
+<input type="text" class="bui-input" value="" placeholder="请输入关键字">
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>ui-input</tabTrigger>

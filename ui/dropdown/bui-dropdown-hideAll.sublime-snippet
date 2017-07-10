@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-${1:uiDropdown}.hideAll();
+uiDropdown.hideAll();
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-dropdown-hideAll</tabTrigger>

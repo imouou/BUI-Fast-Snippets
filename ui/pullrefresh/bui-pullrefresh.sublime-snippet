@@ -8,7 +8,8 @@ var uiPullrefresh = bui.pullrefresh({
 
 //下拉的时候刷新数据
 function onRefresh () {
-  $1
+  // 执行往事件以后需要执行返回函数,第一次执行的时候,还没有返回对象,需要延迟执行
+  uiPullrefresh.reverse();
 };
 
 ]]></content>

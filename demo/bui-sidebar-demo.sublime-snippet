@@ -1,0 +1,24 @@
+<snippet>
+    <content><![CDATA[
+// 侧边栏 js 初始化: 
+var uiSidebar = bui.sidebar({
+    id: "#uiSidebar"
+})
+                
+// 侧边栏 html 对应的结构:
+<div id="uiSidebar" class="bui-sidebar-wrap">
+  <div class="bui-sidebar swiperight">
+    侧滑菜单
+  </div>
+  <div class="bui-page">
+    页面正文
+  </div>
+</div>
+                
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-sidebar-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>侧边栏-完整示例</description> 
+</snippet>

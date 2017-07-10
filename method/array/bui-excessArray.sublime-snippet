@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[
+var arr = ["王","区","王","杨"],
+    ${1:newArr} = bui.excessArray(${2:"王"}, ${3:["王","区"]});
+    
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-excessArray</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>去除数组的重复元素</description>
+</snippet>

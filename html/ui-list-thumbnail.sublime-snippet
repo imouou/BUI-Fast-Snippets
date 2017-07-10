@@ -2,10 +2,10 @@
     <content><![CDATA[
 <ul class="bui-list">
     <li class="bui-btn bui-box">
-        <div class="thumbnail">${1:<img src="../images/applogo.png" alt="">}</div>
+        <div class="thumbnail"><img src="../images/applogo.png" alt=""></div>
         <div class="span1">
-            <h3 class="item-title">${2:标题}</h3>
-            <p class="item-text">${3:内容描述}</p>
+            <h3 class="item-title">标题</h3>
+            <p class="item-text">内容描述</p>
         </div>
         <i class="icon-listright"></i>
     </li>

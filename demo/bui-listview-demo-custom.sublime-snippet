@@ -1,0 +1,38 @@
+<snippet>
+    <content><![CDATA[
+// 侧滑列表自定义结构 js 初始化: 
+var uiListview = bui.listview({
+    id: "#uiListview",
+    callback: function (e,menu) {
+        //关闭菜单
+        menu.close();
+    }
+});
+
+// 侧滑列表自定义结构 html 对应的结构:
+<ul id="uiListview" class="bui-listview">
+    <!-- 设置status属性可以避免重复渲染菜单 -->
+    <li status="1">
+        <div class="bui-btn bui-box">
+            <div class="span1">左右菜单</div>
+            <i class="icon-listright"></i>
+        </div>
+        <!-- data-moving 自定义左滑的距离 -->
+        <div class="bui-listview-menu swipeleft" data-moving="240">
+            <div class="bui-btn primary">置顶</div>
+            <div class="bui-btn primary">修改</div>
+            <div class="bui-btn danger">删除</div>
+        </div>
+        <div class="bui-listview-menu swiperight">
+            <div class="bui-btn primary">修改</div>
+            <div class="bui-btn danger">删除</div>
+        </div>
+    </li>
+</ul>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-listview-demo-custom</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>侧滑列表自定义结构-完整示例</description> 
+</snippet>

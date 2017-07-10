@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 <div class="bui-check">
-    <input id="${1:uid}" type="${2:radio}" ><label for="${1:uid}">${3:50元}</label>
+    <input id="${1:uid}" type="radio" ><label for="${1:uid}">3:50元</label>
 </div>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

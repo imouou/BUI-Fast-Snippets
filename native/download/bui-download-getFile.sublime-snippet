@@ -3,6 +3,8 @@
     <content><![CDATA[
 uiDownload.getFile({
     url: "${1:http://}",
+    // 为空则获取url的后缀名
+    fileName: "",
     onSuccess: function(data){
         // 找不到文件自动下载
     },

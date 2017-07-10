@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+<div id="uiPullrefresh" class="bui-scroll">
+    <div class="bui-scroll-head"></div>
+    <div class="bui-scroll-main">
+        <!-- 这里是滚动的内容区,如果不是ul,则需要修改对应的参数 -->
+    </div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-pullrefresh</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>下拉刷新控件结构</description> 
+</snippet>

@@ -4,6 +4,8 @@
 bui.checkVersion({
     id: "${1:#checkVersion}",
     url: "${2:http://}",
+    currentVersion: "",
+    currentVersionCode: "",
     data: "${3:接口请求的参数}"
 });
 ]]></content>

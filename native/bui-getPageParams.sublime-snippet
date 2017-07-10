@@ -1,9 +1,10 @@
 
 <snippet>
     <content><![CDATA[
-bui.getPageParams(function(result){
-	${1:console.log(result);}
-});
+var getParams = bui.getPageParams();
+    getParams.done(function(result){
+        ${1:console.log(result);}
+    })
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-getPageParams</tabTrigger>

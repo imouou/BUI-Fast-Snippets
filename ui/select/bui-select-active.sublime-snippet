@@ -1,0 +1,12 @@
+
+<snippet>
+    <content><![CDATA[
+// 如果type是checkbox, 支持激活多个 "1,2,3" ,索引从0开始
+uiSelect.active(0);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-select-active</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>选择列表-设置默认值</description>
+</snippet>

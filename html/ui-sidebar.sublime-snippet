@@ -1,11 +1,11 @@
 <snippet>
     <content><![CDATA[
-<div class="bui-sidebar-wrap">
-	<div id="uiSidebar" class="bui-sidebar">
-		${1:<!-- 侧滑栏内容 -->}
+<div id="uiSidebar" class="bui-sidebar-wrap">
+	<div class="bui-sidebar swiperight">
+		侧滑栏内容 swiperight 为滑动的方向,不同位置修改不同方向
 	</div>
-	<div id="page" class="bui-page">
-		${2:<!-- 页面内容 -->}
+	<div class="bui-page">
+		页面内容
 	</div>
 </div>
 ]]></content>

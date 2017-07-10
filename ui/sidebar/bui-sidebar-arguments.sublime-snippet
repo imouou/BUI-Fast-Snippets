@@ -2,27 +2,20 @@
 <snippet>
     <content><![CDATA[
 var uiSidebar = bui.sidebar({
-    id: "#${1:uiSidebar}", 
-    trigger : "#${2:menu}",
-
-    // 可选参数 
+    id: "#${1:uiSidebar}",             
+    trigger:"",            
     handle:".bui-page",
+    swiperight:".swiperight",
+    swipeleft:".swipeleft",
+    handleMove : true,
     width: 280,
-    height: 0,         
-    position:"left",   
-    fullHeight:true,       
-    mask:true,      
+    height: 0,
     zoom: true,
-    swipe:true,     
-    delay: false,   
-    distance: 80,
-    autoTrigger: false,
-    maxDistance: 280,
-    onLoad: null
+    distance: 80
 });
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-sidebar-arguments</tabTrigger>
+    <tabTrigger>bui-sidebar-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
     <description>侧边栏-All参数-初始化</description>

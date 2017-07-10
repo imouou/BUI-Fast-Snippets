@@ -6,7 +6,7 @@
             <li>
                 <!--第1屏-->
                 <img src="$2" alt="">
-                <div class="bui-slide-title">${3:<!--图片标题-->}</div>
+                <div class="bui-slide-title">图片标题</div>
             </li>
         </ul>
     </div>

@@ -1,0 +1,28 @@
+<snippet>
+    <content><![CDATA[
+// 数字条 js 初始化:
+var uiNumber = bui.number({
+  id: '#uiNumber',
+  value: 5,
+  min: 1,
+  max: 10,
+  render: false,
+})
+                
+// 数字条 html 对应的结构:
+<div id="uiNumber" class="bui-number">
+  <div class="bui-number-prev">
+    <i class="icon-minus"></i>
+  </div>
+  <input type="text" value="2"/>
+  <div class="bui-number-next">
+    <i class="icon-plus"></i>
+  </div>
+</div>  
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-number-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>数字条-完整示例</description> 
+</snippet>

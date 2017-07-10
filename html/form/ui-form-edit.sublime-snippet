@@ -2,11 +2,9 @@
     <content><![CDATA[
 <ul class="bui-list">
     <li class="bui-btn bui-box clearactive">
-        <label class="bui-label" for="${1:username}">
-            ${2:帐号}
-            </label>
+        <label class="bui-label" for="${1:username}">帐号</label>
         <div class="span1">
-            <input id="${1:username}" type="text" class="bui-input" value="" placeholder="${3:请输入帐号}">
+            <input id="${1:username}" type="text" class="bui-input" value="" placeholder="请输入帐号">
         </div>
     </li>
 </ul>

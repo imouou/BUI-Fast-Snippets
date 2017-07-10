@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-bui.platform().isIphone();
+var isIphone = bui.platform.isIphone();
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-platform-isIphone</tabTrigger>

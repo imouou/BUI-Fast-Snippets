@@ -1,0 +1,15 @@
+
+<snippet>
+    <content><![CDATA[
+bui.confirm({
+    "title": "",
+    "content":'<div class="bui-box-center"><i class="icon-success"></i><p>提交成功</p></div>',
+    "buttons":[{name:"确定",className:"primary-reverse"}]
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-confirm-success</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>成功图标提醒</description>
+</snippet>
