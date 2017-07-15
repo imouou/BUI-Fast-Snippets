@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+<ul class="bui-fluid-5">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+	<li>5</li>
+</ul>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-fluid-5</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>等列布局</description>
+</snippet>

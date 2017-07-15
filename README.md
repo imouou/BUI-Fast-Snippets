@@ -9,6 +9,7 @@
 | 王伟深       | 取消大部分自动定位到预编辑的内容   | 2017-03-30    |
 | 王伟深       | 修改 bui-slide-demo-pic,bui-slide-demo-tab 为bui-slide-pic-demo,bui-slide-tab-demo   | 2017-05-27    |
 | 王伟深       | 修改 bui-searchbar-demo ui-list  | 2017-06-08    |
+| 王伟深       | 新增 bui-fluid-5 流式等列布局  | 2017-07-15    |
 
 ## 目录
 [TOC]
