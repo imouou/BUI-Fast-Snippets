@@ -23,11 +23,9 @@ BUI Fast 是BUI提供的Sublime扩展插件，在Sublime中集成BUI控件及方
 ## 安装说明
 ### 下载插件及编辑器
 ** 1. 插件 **
-[点击下载 BUI Fast 插件](http://eid.bingosoft.net:82/bui/downloads/bui_fast_latest.zip)
+<a href="https://github.com/imouou/BUI-Fast-Snippets/releases/latest" target="_blank">点击下载 BUI Fast 插件</a>
 ** 2. Sublimetext3 编辑器**
-[点击下载 Sublimetext3 编辑器 MAC版](https://download.sublimetext.com/Sublime%20Text%20Build%203126.dmg)
-[点击下载 Sublimetext3 编辑器 Windows版_64位](https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64.zip)
-[点击下载 Sublimetext3 编辑器 Windows版_32位](https://download.sublimetext.com/Sublime%20Text%20Build%203126.zip)
+<a href="https://www.sublimetext.com/" target="_blank">点击进入 Sublimetext官网下载</a>
 #### 手动安装
 **Windows**: 复制BUI Fast目录到 sublime text的安装目录\Data\Packages\
 **Mac**: 打开顶部 Sublime Text 菜单 --> Preferences --> Browse Packages ,复制BUI Fast目录进去就好
@@ -355,6 +353,7 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 
 | **缩写代码**   | **描述**            |
 |:------------- |:-------------------|
+| bui-router-on <span style="color:red">新</span> | 路由监听事件       |
 | bui-accordion-on  | 折叠菜单监听事件       |
 | bui-actionsheet-on  | 上拉菜单监听事件       |
 | bui-dialog-on  | 弹出框监听事件       |
@@ -369,6 +368,5 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 | bui-sidebar-on  | 滚动控件监听事件       |
 | bui-slide-on  | 滑动控件监听事件       |
 | bui-swipe-on  | 抽屉菜单监听事件       |
-| bui-router-on <span style="color:red">新</span> | 路由监听事件       |
 
 
