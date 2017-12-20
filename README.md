@@ -9,7 +9,7 @@
 | 王伟深       | 取消大部分自动定位到预编辑的内容   | 2017-03-30    |
 | 王伟深       | 修改 bui-slide-demo-pic,bui-slide-demo-tab 为bui-slide-pic-demo,bui-slide-tab-demo   | 2017-05-27    |
 | 王伟深       | 修改 bui-searchbar-demo ui-list  | 2017-06-08    |
-| 王伟深       | 新增 bui-fluid-5 流式等列布局  | 2017-07-15    |
+| 王伟深       | 新增 ui-router bui-router bui-loader 等相关内容  | 2017-12-20    |
 
 ## 目录
 [TOC]
@@ -190,6 +190,7 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 
 | **缩写代码**   | **描述**            |
 |:------------- |:-------------------|
+| ui-router  <span style="color:red">新</span>     | BUI 单页标准结构    |
 | ui-html       | BUI HTML标准结构    |
 | ui-page       | BUI 页面标准结构    |
 | ui-bar        | 生成横条结构        |
@@ -263,6 +264,18 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 
 | **缩写代码**   | **描述**            |
 |:------------- |:-------------------|
+| bui-router  <span style="color:red">新</span> | BUI 单页初始化 |
+| bui-router-load  <span style="color:red">新</span> | 单页跳转 |
+| bui-router-refresh  <span style="color:red">新</span> | 单页刷新 |
+| bui-router-replace  <span style="color:red">新</span> | 单页替换 |
+| bui-router-back  <span style="color:red">新</span> | 单页后退 |
+| bui-router-getPageParams  <span style="color:red">新</span> | 获取页面参数 |
+| bui-router-loadPart  <span style="color:red">新</span> | 局部加载 |
+| bui-loader-define  <span style="color:red">新</span> | 模块定义 |
+| bui-loader-require  <span style="color:red">新</span> | 模块加载 |
+| bui-loader-import  <span style="color:red">新</span> | 脚本及样式资源动态引入 |
+| bui-loader-map  <span style="color:red">新</span> | 单个模块配置 |
+| bui-loader-mapall  <span style="color:red">新</span> | 多个模块配置 |
 | bui-accordion  | 折叠菜单初始化       |
 | bui-actionsheet  | 上拉菜单初始化       |
 | bui-dialog  | 弹出框初始化       |
@@ -356,5 +369,6 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 | bui-sidebar-on  | 滚动控件监听事件       |
 | bui-slide-on  | 滑动控件监听事件       |
 | bui-swipe-on  | 抽屉菜单监听事件       |
+| bui-router-on <span style="color:red">新</span> | 路由监听事件       |
 
 

@@ -1,16 +1,20 @@
 
 <snippet>
     <content><![CDATA[
-var uiSlideTab = bui.slide({
-    id:"#${1:uiSlideTab}",
-    menu:".bui-nav",
-    children:".bui-tab-main ul",
-    scroll: true
+window.router = bui.router();
+
+bui.on("pageinit",function(){
+
+    // 初始化路由
+    router.init({
+        id: "#bui-router"
+    })
 })
+
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-slide-tab</tabTrigger>
+    <tabTrigger>bui-router</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
-    <description>选项卡-初始化</description>
+    <description>路由-初始化</description>
 </snippet>

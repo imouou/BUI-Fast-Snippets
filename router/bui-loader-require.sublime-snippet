@@ -1,16 +1,13 @@
 
 <snippet>
     <content><![CDATA[
-var uiSlideTab = bui.slide({
-    id:"#${1:uiSlideTab}",
-    menu:".bui-nav",
-    children:".bui-tab-main ul",
-    scroll: true
+loader.require(["$1"],function(){
+    // 加载某个模块
 })
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-slide-tab</tabTrigger>
+    <tabTrigger>bui-loader-require</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
-    <description>选项卡-初始化</description>
+    <description>模块-加载模块</description>
 </snippet>

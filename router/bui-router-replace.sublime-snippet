@@ -1,11 +1,11 @@
 
 <snippet>
     <content><![CDATA[
-var ${1:param} = bui.getUrlParams();
+router.replace({url:"$1",param:{}});
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-getUrlParams</tabTrigger>
+    <tabTrigger>bui-router-replace</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
-    <description>获取URL的所有参数</description>
+    <description>单页路由-替换当前页</description>
 </snippet>

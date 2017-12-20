@@ -1,0 +1,31 @@
+
+<snippet>
+    <content><![CDATA[
+loader.define([],function(){
+
+    var pageview = {};
+
+    // 页面初始化
+    pageview.init = function(){
+        
+        // 页面的事件绑定
+        pageview.bind();
+    };
+    
+    // 事件绑定
+    pageview.bind = function(){
+
+    };
+    
+    // 初始化
+    pageview.init();
+
+    return pageview;
+})
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-loader-define</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>模块-定义模块</description>
+</snippet>

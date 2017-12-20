@@ -2,9 +2,9 @@
 <snippet>
     <content><![CDATA[
 // 日期初始化
-var pickerdateInput = $("#pickerdateInput");
+var pickerdateInput = \$("#pickerdateInput");
 var uiPickerdate = bui.pickerdate({
-      handle:"#pickerdateBtn",
+      handle:"#uiPickerdate",
       onChange: function(value) {
         pickerdateInput.val(value);
       }

@@ -13,7 +13,6 @@
     <script src="../js/plugins/fastclick.js"></script>
     <!-- BUI库 -->
     <script src="../js/bui.js"></script>
-    <script src="../js/app/_config.js"></script>
     <script>
         bui.ready(function () {
             // 这里写业务及控件初始化
