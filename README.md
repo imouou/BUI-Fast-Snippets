@@ -17,6 +17,7 @@
 ---
 ## 简介
 
+
 BUI Fast 是BUI提供的Sublime扩展插件，在Sublime中集成BUI控件及方法的代码提示，为快速开发助力. 里面封装了控件的常用参数及常用方法的语法补全, 版本对应 BUI的版本, 1.3.1版本新增 控件名加"-demo" 快速生成控件初始化及结构,只要把结构复制到body对应的位置就行.
 
 ---
@@ -37,6 +38,19 @@ BUI Fast 是BUI提供的Sublime扩展插件，在Sublime中集成BUI控件及方
 
 ---
 ### 简单使用示例
+
+**ui-html 演示: **
+
+![ui-html](http://eid.bingosoft.net:82/bui/docs/images/ui-html.gif)
+
+**ui-page 演示: **
+
+![ui-page](http://eid.bingosoft.net:82/bui/docs/images/ui-page.gif)
+
+**bui-slide-demo 演示: **
+
+![bui-slide-demo](http://eid.bingosoft.net:82/bui/docs/images/bui-slide-demo.gif)
+
 
 html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kbd>Tab</kbd>键即可进行补全
 JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab</kbd>键即可进行补全

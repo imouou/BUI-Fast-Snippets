@@ -1,20 +1,13 @@
 
 <snippet>
     <content><![CDATA[
-loader.define([],function(){
+loader.define(function(require,exports,module){
 
     var pageview = {};
 
-    // 页面初始化
+    // 页面初始化定义
     pageview.init = function(){
         
-        // 页面的事件绑定
-        pageview.bind();
-    };
-    
-    // 事件绑定
-    pageview.bind = function(){
-
     };
     
     // 初始化
