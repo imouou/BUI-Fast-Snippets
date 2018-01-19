@@ -41,15 +41,15 @@ BUI Fast 是BUI提供的Sublime扩展插件，在Sublime中集成BUI控件及方
 
 **ui-html 演示: **
 
-![ui-html](http://eid.bingosoft.net:82/bui/docs/images/ui-html.gif)
+![ui-html](http://www.easybui.com/docs/images/ui-html.gif)
 
 **ui-page 演示: **
 
-![ui-page](http://eid.bingosoft.net:82/bui/docs/images/ui-page.gif)
+![ui-page](http://www.easybui.com/docs/images/ui-page.gif)
 
 **bui-slide-demo 演示: **
 
-![bui-slide-demo](http://eid.bingosoft.net:82/bui/docs/images/bui-slide-demo.gif)
+![bui-slide-demo](http://www.easybui.com/docs/images/bui-slide-demo.gif)
 
 
 html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kbd>Tab</kbd>键即可进行补全
