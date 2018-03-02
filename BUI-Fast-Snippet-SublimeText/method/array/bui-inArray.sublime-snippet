@@ -1,0 +1,12 @@
+
+<snippet>
+    <content><![CDATA[
+var arr = ["a","b"],
+    index = bui.inArray("a", arr);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-inArray</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>检测数组,返回索引值,支持json的字段检测</description>
+</snippet>

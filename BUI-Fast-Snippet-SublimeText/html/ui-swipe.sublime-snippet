@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+<div id="uiSwipe" class="bui-swipe">
+  <div class="swiperight">
+    菜单在左边
+  </div>
+  <div class="swipeleft">
+    菜单在右边
+  </div>
+  <div class="swipeup">
+    菜单在上边
+  </div>
+  <div class="swipedown">
+    菜单在下边
+  </div>
+  <div class="bui-page">
+    页面正文
+  </div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-swipe</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>抽屉滑动菜单结构</description> 
+</snippet>

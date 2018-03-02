@@ -1,0 +1,1980 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+#----- BUI Fast Snippets----start ----------
+# v 1.4.2 20180301
+# UI 控件
+'.source.js':
+   '折叠菜单初始化':
+     'prefix': 'bui-accordion'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.accordion.html'
+     'body': """
+ var uiAccordion = bui.accordion({
+  id:"#uiAccordion"
+ });
+"""
+   '折叠菜单事件监听':
+     'prefix': 'bui-accordion-on'
+     'body': """
+uiAccordion.on("${1:show}",function(){
+    //显示的时候触发
+});
+"""
+
+   '折叠菜单-示例':
+     'prefix': 'bui-accordion-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.accordion.html'
+     'body': """
+// 折叠菜单 js 初始化:
+var uiAccordion = bui.accordion({
+    id:"#uiAccordion"
+});
+
+
+// 折叠菜单 html 对应的结构:
+<dl id="uiAccordion" class="bui-accordion">
+  <dt class="bui-btn bui-box">
+    <div class="span1">折叠菜单</div>
+    <i class="icon-accordion"></i>
+  </dt>
+  <dd>
+   折叠内容
+  </dd>
+</dl>
+"""
+
+   '上拉菜单初始化':
+     'prefix': 'bui-actionsheet'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.actionsheet.html'
+     'body': """
+var uiActionsheet = bui.actionsheet({
+    trigger: "#${1:uiActionsheet}",
+    buttons: [{ name:"分享到微博",value:"weibo" }],
+    callback: function (e,ui) {
+        var val = \$(this).attr("value");
+        if( val == "cancel"){
+            ui.hide();
+        }
+    }
+})
+"""
+
+   '上拉菜单-示例':
+     'prefix': 'bui-actionsheet-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.actionsheet.html'
+     'body': """
+// 上拉菜单 js 初始化:
+var uiActionsheet = bui.actionsheet({
+  trigger: "#btnOpen",
+  buttons: [{ name:"分享到微博",value:"weibo" },{ name:"分享到微信",value:"weixin" },{ name:"分享到QQ",value:"QQ" }],
+  callback: function (e,ui) {
+
+    var val = $(this).attr("value");
+
+    if( val == "cancel"){
+      ui.hide();
+    }
+  }
+})
+
+// 上拉菜单 html 对应的结构:
+<div id="btnOpen" class="bui-btn">打开下拉菜单</div>
+
+"""
+
+   '绑定按钮跳转':
+     'prefix': 'bui-btn-load'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.btn.html'
+     'body': """
+bui.btn({id:"${1:#page}",handle:"${2:.bui-btn}"}).load();
+"""
+
+   '绑定按钮提交':
+     'prefix': 'bui-btn-submit'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.btn.html'
+     'body': """
+bui.btn("${1:#btn}").submit(function(loading){
+	${2:loading.stop();}
+});
+"""
+
+   '对话框':
+     'prefix': 'bui-alert'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.alert.html'
+     'body': """
+bui.alert("${1:提醒内容}");
+"""
+
+   '确认框':
+     'prefix': 'bui-confirm'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.confirm.html'
+     'body': """
+bui.confirm("${1:提醒内容}",function(ui){
+    // this 为底部按钮
+    var text = \$(this).text();
+    if( text == "确定" ){
+    	//do something
+    }
+	${2:ui.close();}
+});
+"""
+
+   '自定义对话框初始化':
+     'prefix': 'bui-dialog'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.dialog.html'
+     'body': """
+var uiDialog = bui.dialog({
+    id: "#${1:uiDialog}"
+});
+"""
+
+   '自定义对话框-示例':
+     'prefix': 'bui-dialog-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.dialog.html'
+     'body': """
+// 弹出框 js 初始化:// 计算列表的高度
+var uiDialog = bui.dialog({
+    id: "#uiDialog"
+});
+
+
+// 弹出框 html 对应的结构:
+<div id="uiDialog" class="bui-dialog" style="display:none;">
+  <div class="bui-dialog-head">标题</div>
+  <div class="bui-dialog-main">提示内容</div>
+  <div class="bui-dialog-close">
+    <i class="icon-close"></i>
+  </div>
+</div>
+"""
+
+   '自动消失提醒':
+     'prefix': 'bui-hint'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.hint.html'
+     'body': """
+bui.hint("${1:提醒内容}");
+"""
+
+   '下拉菜单初始化':
+     'prefix': 'bui-dropdown'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.dropdown.html'
+     'body': """
+var uiDropdown = bui.dropdown({
+    id: "#${1:uiDropdown}"
+});
+"""
+
+   '下拉菜单初始化-示例':
+     'prefix': 'bui-dropdown-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.dropdown.html'
+     'body': """
+// 下拉菜单 js 初始化:
+var uiDropdown = bui.dropdown({
+    id: "#uiDropdown"
+})
+
+// 下拉菜单 html 对应的结构:
+<div id="uiDropdown" class="bui-dropdown">
+  <div class="bui-btn bui-box" >
+    <div class="span1">下拉菜单</div>
+    <i class="icon-dropdown"></i>
+  </div>
+  <ul class="bui-list">
+    <li class="bui-btn" value="11">
+      下拉的选项
+    </li>
+  </ul>
+</div>
+"""
+
+   '下拉刷新加载列表初始化':
+     'prefix': 'bui-list'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.list.html'
+     'body': """
+var uiList = bui.list({
+    id: "#${1:uiScroll}",
+    url: "${2:userlist.json}",
+    data: {},
+    template: template,
+    onLoad: function (scroll) {
+        // 自定义渲染
+    },
+    callback: function (e) {
+        // 点击单行回调 console.log(\$(this).text())
+    },
+    height: 0,
+    page:1,
+    pageSize:10,
+    field: {
+        page: "page",        // 分页字段
+        size: "pageSize",    // 页数字段
+        data: "data"         // 数据
+    }
+});
+
+//生成列表的模板
+function template (data) {
+    var html = "";
+        \$.each(data,function(index, el) {
+            html += '<li class="bui-btn"><i class="icon-facefill"></i>'+el.name+'</li>';
+        });
+    return html;
+};
+
+"""
+
+   '下拉刷新加载列表-示例':
+     'prefix': 'bui-list-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.list.html'
+     'body': """
+// 列表控件 js 初始化:
+
+var uiList = bui.list({
+    id: "#uiList",
+    url: "",
+    data: {},             // 数据请求带过去的参数,分页在field配置
+    template: listTemplate,
+    field: {
+        page: "page",     // 分页参数名
+        size: "pageSize", // 分页大小参数名
+        data: ""          // 数据字段名
+    }
+});
+// 列表模板
+function listTemplate (data) {
+    var html = "";
+    \$.each(data,function(index, el) {
+        html += '<li class="bui-btn" href="index.html"><i class="icon-facefill"></i>'+el.name+'</li>';
+    });
+
+    return html;
+}
+
+// 列表控件 html 对应的结构:
+
+<div id="uiList" class="bui-scroll">
+    <div class="bui-scroll-head"></div>
+    <div class="bui-scroll-main">
+        <ul class="bui-list">
+        </ul>
+    </div>
+    <div class="bui-scroll-foot"></div>
+</div>
+"""
+
+   '侧滑列表初始化':
+     'prefix': 'bui-listview'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.listview.html'
+     'body': """
+var uiListview = bui.listview({
+    id: "#${1:uiListview}",
+    data: [{ "text": "删除", "classname":"danger"}],
+    callback: function (e,ui) {
+        // this 滑动出来的操作按钮
+        var text = \$(this).text();
+        if( text == "删除" ){
+            //do something
+        }
+        ${2:ui.close();}
+    }
+});
+
+"""
+
+   '侧滑列表-示例':
+     'prefix': 'bui-listview-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.listview.html'
+     'body': """
+// 侧滑列表 js 初始化:
+var uiListview = bui.listview({
+    id: "#uiListview",
+    data: [{
+        "text": "修改",
+        "classname":"primary"
+    },{ "text": "删除",
+        "classname":"danger"
+    }],
+    callback: function (e,menu) {
+        var text = \$(this).text().trim();
+        if( text == "删除"){
+            // 删除
+        }
+        //关闭菜单
+        menu.close();
+    }
+});
+
+// 侧滑列表 html 对应的结构:
+<ul id="uiListview" class="bui-listview">
+  <li>
+    <div class="bui-btn bui-box">
+      <div class="span1">左滑动出现菜单</div>
+      <i class="icon-listright"></i>
+    </div>
+  </li>
+</ul>
+
+"""
+
+   '侧滑列表-demo-自定义按钮':
+     'prefix': 'bui-listview-demo-custom'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.listview.html'
+     'body': """
+// 侧滑列表自定义结构 js 初始化:
+var uiListview = bui.listview({
+    id: "#uiListview",
+    callback: function (e,menu) {
+        //关闭菜单
+        menu.close();
+    }
+});
+
+// 侧滑列表自定义结构 html 对应的结构:
+<ul id="uiListview" class="bui-listview">
+    <!-- 设置status属性可以避免重复渲染菜单 -->
+    <li status="1">
+        <div class="bui-btn bui-box">
+            <div class="span1">左右菜单</div>
+            <i class="icon-listright"></i>
+        </div>
+        <!-- data-moving 自定义左滑的距离 -->
+        <div class="bui-listview-menu swipeleft" data-moving="240">
+            <div class="bui-btn primary">置顶</div>
+            <div class="bui-btn primary">修改</div>
+            <div class="bui-btn danger">删除</div>
+        </div>
+        <div class="bui-listview-menu swiperight">
+            <div class="bui-btn primary">修改</div>
+            <div class="bui-btn danger">删除</div>
+        </div>
+    </li>
+</ul>
+
+"""
+
+   '正在加载初始化':
+     'prefix': 'bui-loading'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.loading.html'
+     'body': """
+var uiLoading = bui.loading($1);
+    uiLoading.show();
+"""
+
+   '页面遮罩初始化':
+     'prefix': 'bui-mask'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.mask.html'
+     'body': """
+var uiMask = bui.mask($1);
+    uiMask.show();
+"""
+
+   '数字加减条初始化':
+     'prefix': 'bui-number'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.number.html'
+     'body': """
+var uiNumber = bui.number({
+    id: '#uiNumber',
+    value: 5,
+    step: 2,
+    min: 1,
+    max: 10
+});
+"""
+
+   '数字加减条-示例':
+     'prefix': 'bui-number-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.number.html'
+     'body': """
+// 数字条 js 初始化:
+var uiNumber = bui.number({
+  id: '#uiNumber',
+  value: 5,
+  min: 1,
+  max: 10,
+  render: false,
+})
+
+// 数字条 html 对应的结构:
+<div id="uiNumber" class="bui-number">
+  <div class="bui-number-prev">
+    <i class="icon-minus"></i>
+  </div>
+  <input type="text" value="2"/>
+  <div class="bui-number-next">
+    <i class="icon-plus"></i>
+  </div>
+</div>
+"""
+
+   '日期控件初始化':
+     'prefix': 'bui-pickerdate'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.pickerdate.html'
+     'body': """
+var pickerdateInput = \$("#pickerdateInput");
+var uiPickerdate = bui.pickerdate({
+      handle:"#uiPickerdate",
+      onChange: function(value) {
+        pickerdateInput.val(value);
+      }
+    });
+"""
+
+   '日期控件-示例':
+     'prefix': 'bui-pickerdate-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.pickerdate.html'
+     'body': """
+// 日期控件 js 初始化:
+var input = $("#datepicker_input");
+var uiPickerdate = bui.pickerdate({
+  handle:"#datepicker_input",
+  onChange: function(value) {
+    input.val(value);
+  }
+});
+
+// 日期控件 html 对应的结构:
+<input type="text" id="datepicker_input" readonly>
+
+"""
+
+   '下拉刷新初始化':
+     'prefix': 'bui-pullrefresh'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.pullrefresh.html'
+     'body': """
+var uiPullrefresh = bui.pullrefresh({
+    id: "#uiPullrefresh",
+    onRefresh: onRefresh
+});
+
+//下拉的时候刷新数据
+function onRefresh () {
+  // 执行往事件以后需要执行返回函数,第一次执行的时候,还没有返回对象,需要延迟执行
+  uiPullrefresh.reverse();
+};
+
+"""
+
+   '下拉刷新-示例':
+     'prefix': 'bui-pullrefresh-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.pullrefresh.html'
+     'body': """
+// 下拉刷新 js 初始化:
+
+var uiPullRefresh = bui.pullrefresh({
+    id: "#uiPullrefresh",
+    onRefresh: getData
+})
+
+//请求数据 或者其它操作
+function getData(){
+    bui.ajax({
+      url: "",
+      data: {}
+    }).done(function(res){
+
+      //请求成功以后还原刷新前状态
+      uiPullRefresh.reverse();
+    })
+}
+
+// 下拉刷新 html 对应的结构:
+
+<div id="uiPullrefresh" class="bui-scroll">
+    <div class="bui-scroll-head"></div>
+    <div class="bui-scroll-main">
+        <ul class="bui-list">
+        </ul>
+    </div>
+</div>
+
+"""
+
+   '星级评分初始化':
+     'prefix': 'bui-rating'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.rating.html'
+     'body': """
+var uiRating = bui.rating({
+    id: "#uiRating",
+    value: 3
+});
+"""
+
+   '星级评分-示例':
+     'prefix': 'bui-rating-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.rating.html'
+     'body': """
+// 评分星星 js 初始化:
+var uiRating = bui.rating({
+    id: "#uiRating",
+    value: 3
+});
+
+// 评分星星 html 对应的结构:
+<div id="uiRating" class="bui-rating"></div>
+"""
+
+   '列表滚动加载初始化':
+     'prefix': 'bui-scroll'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.scroll.html'
+     'body': """
+var uiScroll = bui.scroll({
+    id: "#${1:uiScroll}",
+    page:1,
+    pageSize:10,
+    //children: ".bui-list li",
+    onRefresh: onRefreshData,
+    onLoad: onLoadData
+});
+
+// 下拉刷新
+function onRefreshData(){
+  $2
+};
+
+// 上拉加载
+function onLoadData(){
+  $3
+};
+"""
+
+   '列表滚动加载-示例':
+     'prefix': 'bui-scroll-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.scroll.html'
+     'body': """
+// 列表滚动加载 js 初始化:
+var uiScroll = bui.scroll({
+    id: "#uiScroll",
+    children: ".bui-list",
+    page:1,
+    pageSize:5,
+    onRefresh: refresh,
+    onLoad: getData
+})
+
+//刷新数据
+function refresh () {
+    var page = 1;
+    var pagesize = 5;
+    getData(page,pagesize,"html");
+}
+
+//新增下一页数据
+function getData(page,pagesize,command){
+  var command = command || "append";
+
+  // 更新分页信息,如果高度不足会自动请求下一页
+  uiScroll.updateCache(page,res.data);
+
+  // 刷新的时候返回位置
+  uiScroll.reverse();
+
+}
+
+// 列表滚动加载 html 对应的结构:
+<div id="uiScroll" class="bui-scroll">
+    <div class="bui-scroll-head"></div>
+    <div class="bui-scroll-main">
+        <ul class="bui-list">
+        </ul>
+    </div>
+    <div class="bui-scroll-foot"></div>
+</div>
+"""
+
+   '搜索条初始化':
+     'prefix': 'bui-searchbar'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.searchbar.html'
+     'body': """
+var uiSearchbar = bui.searchbar({
+    id:"#${1:uiSearchbar}",
+    callback: function (ui,keyword) {
+      // 点击搜索
+    },
+    onInput: function(ui,keyword) {
+      // 输入实时搜索
+    },
+    onRemove: function(ui,keyword) {
+      // 删除关键词需要做什么其它处理
+    }
+});
+"""
+
+   '搜索条-示例':
+     'prefix': 'bui-searchbar-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.searchbar.html'
+     'body': """
+// 搜索条 js 初始化:
+
+// 计算列表的高度
+var listHeight = \$(window).height() - \$("header").height() - \$("#uiSearchbar").height();
+
+// 搜索结果的列表初始化
+var uiList = bui.list({
+      id: "#uiScroll",
+      url: "userlist.json",
+      data: {},
+      field: {
+        data:"data"
+      },
+      page:1,
+      pageSize:10,
+      height: listHeight,
+      template: template
+  });
+
+// 搜索条的初始化
+var uiSearchbar = bui.searchbar({
+  id:"#uiSearchbar",
+  onInput: function(ui,keyword) {
+    //实时搜索
+  },
+  onRemove: function(ui,keyword) {
+    //删除关键词需要做什么其它处理
+  },
+  callback: function (ui,keyword) {
+
+      //点击搜索
+      \$("#uiScroll .bui-list").empty();
+
+      // 重新初始化数据
+      uiList.init({
+        page: 1,
+        data: {
+          "keyword":keyword
+        }
+      });
+
+   }
+});
+
+
+
+// 列表生成模板
+function template (data) {
+    var html = "";
+
+    \$.each(data,function(index, el) {
+
+        html += '<li class="bui-btn"><i class="icon-facefill"></i>'+el.name+'</li>';
+    });
+
+    return html;
+}
+// 搜索条 html 对应的结构:
+<div id="uiSearchbar" class="bui-searchbar bui-box">
+        <div class="span1">
+      <div class="bui-input">
+        <i class="icon-search"></i>
+        <input type="search" value="" placeholder="请输入关键字"/>
+            </div>
+        </div>
+        <div class="btn-search">搜索</div>
+</div>
+// 列表控件结构
+<div id="uiScroll" class="bui-scroll">
+  <div class="bui-scroll-head"></div>
+  <div class="bui-scroll-main">
+    <ul class="bui-list">
+    </ul>
+  </div>
+  <div class="bui-scroll-foot"></div>
+</div>
+"""
+
+   '选择列表初始化':
+     'prefix': 'bui-select'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.select.html'
+     'body': """
+var uiSelect = bui.select({
+    id:"#${1:uiSelect}",
+    type:"${2:checkbox}",
+    popup: ${3:false},
+    data: [{
+      "name":"广东",
+      "value":"11"
+    }],
+    onChange: function (module,index) {
+      //改变的时候触发
+    }
+});
+"""
+
+   '选择列表-示例':
+     'prefix': 'bui-select-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.select.html'
+     'body': """
+// 选择列表 js 初始化:
+var uiSelect = bui.select({
+  trigger:"#uiSelect",
+  title: "请选择区域",
+  data: [{
+    "name":"广东",
+    "value":"11"
+  },{"name":"广西",
+    "value":"22"
+  }],
+  //如果需要点击再进行操作,增加按钮
+  buttons: [{name:"重置",className:""},{name:"确定",className:"primary-reverse"}],
+  callback: function (argument) {
+
+    var index = $(this).parent().index();
+    if( index == 0 ){
+      uiSelect.selectNone();
+    }else{
+      uiSelect.hide();
+    }
+  }
+})
+
+// 选择列表 html 对应的结构:
+<div id="uiSelect" class="bui-select bui-box">
+  <div class="span1"></div>
+  <i class="icon-listright"></i>
+</div>
+"""
+
+   '侧滑栏初始化':
+     'prefix': 'bui-sidebar'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.sidebar.html'
+     'body': """
+var uiSidebar = bui.sidebar({
+    id: "#${1:uiSidebar}",
+    trigger : "#${2:menu}"
+});
+"""
+
+   '侧滑栏-示例':
+     'prefix': 'bui-sidebar-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.sidebar.html'
+     'body': """
+// 侧边栏 js 初始化:
+var uiSidebar = bui.sidebar({
+    id: "#uiSidebar"
+})
+
+// 侧边栏 html 对应的结构:
+<div id="uiSidebar" class="bui-sidebar-wrap">
+  <div class="bui-sidebar swiperight">
+    侧滑菜单
+  </div>
+  <div class="bui-page">
+    页面正文
+  </div>
+</div>
+"""
+
+   '焦点图初始化':
+     'prefix': 'bui-slide'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.slide.html'
+     'body': """
+var uiSlide = bui.slide({
+    id:"#${1:uiSlide}",
+    height:${2:200},
+    zoom: true
+})
+"""
+
+   '焦点图-示例':
+     'prefix': 'bui-slide-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.slide.html'
+     'body': """
+// 焦点图 js 初始化:
+var uiSlide = bui.slide({
+    id:"#uiSlide",
+    height:200,
+    zoom: true
+})
+
+// 焦点图 html 对应的结构:
+<div id="uiSlide" class="bui-slide">
+  <div class="bui-slide-main">
+    <ul>
+      <!-- 有多少个li则有多少个滑动 -->
+      <li>
+        <img src="slideshow.png" alt="">
+        <div class="bui-slide-title">
+          标题
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="bui-slide-head">
+    <ul>
+      <li>1</li>
+    </ul>
+  </div>
+</div>
+"""
+
+   '选项卡初始化':
+     'prefix': 'bui-slide-tab'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.slide.html'
+     'body': """
+var uiSlideTab = bui.slide({
+    id:"#${1:uiSlideTab}",
+    menu:".bui-nav",
+    children:".bui-tab-main ul",
+    scroll: true
+})
+"""
+
+   '选项卡-示例':
+     'prefix': 'bui-slide-tab-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.slide.html'
+     'body': """
+// 选项卡 js 初始化:
+var uiTab = bui.slide({
+    id:"#uiTab",
+    menu:".bui-nav",
+    children:".bui-tab-main ul",
+    scroll: true
+})
+
+// 选项卡 html 对应的结构:
+<div id="uiTab" class="bui-tab">
+  <!-- 按钮较少时,这里是平分宽度 -->
+  <div class="bui-tab-head">
+    <ul class="bui-nav">
+      <li class="bui-btn active">首页</li>
+      <li class="bui-btn ">新闻</li>
+    </ul>
+  </div>
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        滑动的内容
+      </li>
+      <li>
+        滑动的内容
+      </li>
+    </ul>
+  </div>
+</div>
+"""
+
+   '步骤条初始化':
+     'prefix': 'bui-stepbar'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.stepbar.html'
+     'body': """
+var uiStepbar = bui.stepbar({
+  id: "#${1:uiStepbar}",
+  data: [{
+    title: "预立项申请",
+    subtitle: "2016-04-2 10:30",
+    content: "成功创建申请,已经提交至XX部门经理审批,请耐心等待"
+  },{
+    title: "立项审批",
+    subtitle: "2016-04-21 10:30",
+    content: "审批完成,资料递交中"
+  }]
+});
+"""
+
+   '步骤条-示例':
+     'prefix': 'bui-stepbar-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.stepbar.html'
+     'body': """
+// 步骤条 js 初始化:
+var uiStepbar = bui.stepbar({
+  id: "#uiStepbar",
+  data: [{
+    title: "预立项申请",
+    subtitle: "2016-04-2 10:30",
+    content: "成功创建申请,已经提交至XX部门经理审批,请耐心等待"
+  },{
+    title: "立项审批",
+    subtitle: "2016-04-21 10:30",
+    content: "审批完成,资料递交中"
+  }]
+});
+
+//激活第2步
+uiStepbar.value(1);
+
+// 步骤条 html 对应的结构:
+<div id="uiStepbar" class="bui-stepbar"></div>
+"""
+
+   '抽屉滑动控件初始化':
+     'prefix': 'bui-swipe'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.swipe.html'
+     'body': """
+var uiSwipe = bui.swipe({
+    id: "#uiSwipe",
+    handle: ".bui-page",
+    movingDistance: 200,
+    direction: "xy",
+});
+"""
+
+   '抽屉滑动控件-示例':
+     'prefix': 'bui-swipe-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.swipe.html'
+     'body': """
+// 抽屉滑动控件 js 初始化:
+var uiSwipe = bui.swipe({
+    id: "#uiSwipe",
+    handle: ".bui-page",
+    movingDistance: 200,
+    direction: "xy",
+});
+
+// 抽屉滑动控件 html 对应的结构:
+<div id="uiSwipe" class="wrap">
+    <!-- 侧滑菜单 -->
+    <div class="swipeleft" data-moving="200">
+        右边菜单
+    </div>
+    <div class="swiperight" >
+        左边菜单
+    </div>
+    <div class="swipeup" >
+        底部菜单
+    </div>
+    <div class="swipedown">
+        顶部菜单
+    </div>
+    <!-- 正文内容 -->
+    <div id="page" class="bui-page">
+        正文内容
+    </div>
+</div>
+"""
+
+# bui native
+
+   '页面刷新':
+     'prefix': 'bui-refresh'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.refresh.html'
+     'body': """
+bui.refresh();
+"""
+
+   '页面跳转传参':
+     'prefix': 'bui-load'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.load.html'
+     'body': """
+bui.load({url:"$1",param:${2:{\} }});
+"""
+
+   '页面接收参数':
+     'prefix': 'bui-getPageParams'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.getPageParams.html'
+     'body': """
+var getParams = bui.getPageParams();
+    getParams.done(function(result){
+        ${1:console.log(result);}
+    })
+"""
+
+   '页面后退':
+     'prefix': 'bui-back'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.back.html'
+     'body': """
+bui.back($1);
+"""
+
+   '页面刷新':
+     'prefix': 'bui-refresh'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.refresh.html'
+     'body': """
+bui.refresh();
+"""
+
+   '数据请求':
+     'prefix': 'bui-ajax'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.ajax.html'
+     'body': """
+bui.ajax({
+    url: "${1:http://}",
+    data: {$2},//接口请求的参数
+    // 可选参数
+    method: "GET"
+}).done(function(result){
+    $3
+}).fail(function(result,status){
+    //console.log(status)//"timeout"
+});
+"""
+
+   '设备都准备完毕-原生事件初始化':
+     'prefix': 'bui-ready'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.ready.html'
+     'body': """
+var uiReady = bui.ready(function(){
+    // 原生事件初始化
+});
+"""
+
+   '检查新版':
+     'prefix': 'bui-checkVersion'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.checkVersion.html'
+     'body': """
+bui.checkVersion({
+    id: "${1:#checkVersion}",
+    url: "${2:http://}",
+    currentVersion: "",
+    currentVersionCode: "",
+    data: "${3:接口请求的参数}"
+});
+"""
+
+# bui method
+
+   '动画处理':
+     'prefix': 'bui-animate'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.animate.html'
+     'body': """
+/* 动画示例,支持链式动画,最后需要执行start(); */
+var uiAnimatePage = bui.animate(${1:"#page"});
+    uiAnimatePage.left(${2:100}).start();
+"""
+
+   '动画切换':
+     'prefix': 'bui-toggle'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.toggle.html'
+     'body': """
+/* toggle动画示例 */
+var ${1:uiToggle} = bui.toggle(${2:"#page"});
+    //在需要的地方使用显示隐藏效果,支持自定义动画
+    //uiToggle.show();
+    //uiToggle.hide();
+"""
+
+   '数据存储':
+     'prefix': 'bui-storage'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.storage.html'
+     'body': """
+// 允许存储2条数据,默认1条
+var ${1:uiStorage} = bui.storage($2);
+    // 保存第1条数据
+    uiStorage.set("code","123");
+"""
+
+   '检测字符是否存在数组,返回索引':
+     'prefix': 'bui-inArray'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.inArray.html'
+     'body': """
+var arr = ["a","b"],
+    index = bui.inArray("a", arr);
+"""
+
+   '检测字符是否存在数组,返回所有索引的数组':
+     'prefix': 'bui-indexArray'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.indexArray.html'
+     'body': """
+var arr = ["a","b","a"],
+    index = bui.indexArray("a", arr);
+"""
+
+   '检测字符是否存在数组,返回布尔值':
+     'prefix': 'bui-compareArray'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.compareArray.html'
+     'body': """
+var arr = ["a","b"],
+    index = bui.compareArray(a, arr);
+"""
+
+   '去除数组的重复值,返回数组':
+     'prefix': 'bui-excessArray'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.excessArray.html'
+     'body': """
+var arr = ["a","b","a","c"],
+    ${1:newArr} = bui.excessArray("a", arr);
+"""
+
+   '过滤数组,返回符合条件的数组':
+     'prefix': 'bui-filterArray'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.filterArray.html'
+     'body': """
+var arr = ["a","b"],
+    data = bui.filterArray("a",arr);
+"""
+
+   '删除数组的某个值,返回剩下的数组':
+     'prefix': 'bui-removeArray'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.removeArray.html'
+     'body': """
+var arr = ["a","b"],
+    data = bui.removeArray("a", arr);
+"""
+
+# bui event
+
+   '图片及文件资源初始完毕触发onload事件':
+     'prefix': 'bui-on-onload'
+     'description': ''
+     'body': """
+bui.on("onload",function(){
+    //图片及文件资源初始完毕
+})
+"""
+
+   'DOM及BUI初始完毕触发pageinit事件':
+     'prefix': 'bui-on-pageinit'
+     'description': ''
+     'body': """
+bui.on("pageinit",function(){
+    //DOM及BUI初始完毕
+})
+"""
+
+   '原生事件初始完毕触发pageready事件':
+     'prefix': 'bui-on-pageready'
+     'description': ''
+     'body': """
+bui.on("pageready",function(){
+    //DOM 及 BUI 及 原生方法 初始完毕
+})
+"""
+
+   'DOM初始完毕触发pagebefore事件':
+     'prefix': 'bui-on-pagebefore'
+     'description': ''
+     'body': """
+bui.on("pagebefore",function(){
+    //DOM初始完毕
+})
+"""
+
+# bui core
+
+   '单页路由':
+     'prefix': 'bui-router'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+window.router = bui.router();
+
+bui.on("pageinit",function(){
+    // 初始化路由
+    router.init({
+        id: "#bui-router"
+    })
+})
+"""
+
+   '单页路由--跳转传参':
+     'prefix': 'bui-router-load'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+router.load({url:"$1",param:{}});
+"""
+
+   '单页路由--获取参数':
+     'prefix': 'bui-router-getPageParams'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+var pageParams = router.getPageParams();
+"""
+
+   '单页路由--局部加载':
+     'prefix': 'bui-router-loadPart'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+router.loadPart({id:"$1",url:""});
+"""
+
+   '单页路由--页面替换':
+     'prefix': 'bui-router-replace'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+router.replace({url:"$1",param:{}});
+"""
+
+   '单页路由--页面刷新':
+     'prefix': 'bui-router-refresh'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+router.replace({url:"$1",param:{}});
+"""
+
+   '单页路由--页面后退':
+     'prefix': 'bui-router-back'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+router.back();
+"""
+
+   '模块定义':
+     'prefix': 'bui-loader-define'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.loader.html'
+     'body': """
+loader.define(function(require,exports,module){
+
+    var pageview = {};
+    // 页面初始化定义
+    pageview.init = function(){
+
+    };
+
+    // 初始化
+    pageview.init();
+
+    return pageview;
+})
+"""
+
+   '模块加载':
+     'prefix': 'bui-loader-require'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.loader.html'
+     'body': """
+loader.require(["$1"],function(){
+    // 加载某个模块
+})
+"""
+
+   '模块资源引入':
+     'prefix': 'bui-loader-import'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.loader.html'
+     'body': """
+loader.import(["$1"],function(){
+  // 创建成功以后执行回调
+});
+"""
+
+   '模块配置':
+     'prefix': 'bui-loader-map'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.loader.html'
+     'body': """
+loader.map({
+    moduleName: "$1",
+    template: "",
+    script: ""
+})
+"""
+
+   '模块配置多个':
+     'prefix': 'bui-loader-mapall'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.loader.html'
+     'body': """
+loader.map({
+    modules: {
+        main: {
+            moduleName: "main",
+            template: "",
+            script: ""
+        }
+    }
+})
+"""
+#----- BUI 控件-end ----------
+
+#----- BUI 常用html结构-start ----------
+'.text.html.basic':
+    '页面依赖加载':
+      'prefix': 'ui-html'
+      'body': """
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>BUI</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bui.css" />
+</head>
+<body>
+
+    <!-- 依赖库 手机调试的js引用顺序如下 -->
+    <script src="js/zepto.js"></script>
+    <script src="js/plugins/fastclick.js"></script>
+    <script src="js/bui.js"></script>
+    <script>
+        bui.ready(function () {
+            // 这里写业务及控件初始化
+            $1
+        })
+    </script>
+</body>
+</html>
+"""
+
+    '页面上中下结构':
+      'prefix': 'ui-page'
+      'body': """
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <!-- 左边按钮 -->
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">页面标题</div>
+        <div class="bui-bar-right">
+            <!-- 右边按钮 -->
+        </div>
+    </header>
+    <main>
+        <!-- 正文内容 -->
+    </main>
+    <footer>
+        <!-- 底部内容 -->
+    </footer>
+</div>
+"""
+
+    '折叠菜单结构':
+      'prefix': 'ui-accordion'
+      'body': """
+<dl id="uiAccordion" class="bui-accordion">
+    <dt class="bui-btn bui-box">
+        <div class="span1">折叠菜单</div>
+        <i class="icon-accordion"></i>
+    </dt>
+    <dd>
+        折叠菜单内容
+    </dd>
+</dl>
+"""
+
+    '路由结构':
+      'prefix': 'ui-router'
+      'body': """
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>BUI-单页模板</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bui.css" />
+</head>
+<body>
+    <div id="bui-router"></div>
+    <script src="js/zepto.js"></script>
+    <script src="js/plugins/fastclick.js"></script>
+    <script src="js/bui.js"></script>
+</body>
+</html>
+"""
+
+    '下拉刷新列表结构':
+      'prefix': 'ui-list'
+      'body': """
+<div id="uiScroll" class="bui-scroll">
+    <div class="bui-scroll-head"></div>
+    <div class="bui-scroll-main">
+        <!-- 这里是滚动的内容区,如果不是ul,则需要修改对应的参数 -->
+        <ul class="bui-list">
+        </ul>
+    </div>
+    <div class="bui-scroll-foot"></div>
+</div>
+"""
+
+    '缩略图列表':
+      'prefix': 'ui-list-thumbnail'
+      'body': """
+<ul class="bui-list">
+    <li class="bui-btn bui-box">
+        <div class="thumbnail"><img src="../images/applogo.png" alt=""></div>
+        <div class="span1">
+            <h3 class="item-title">标题</h3>
+            <p class="item-text">内容描述</p>
+        </div>
+        <i class="icon-listright"></i>
+    </li>
+</ul>
+"""
+
+    '单选列表':
+      'prefix': 'ui-list-radio'
+      'body': """
+<ul class="bui-list">
+    <li class="bui-btn bui-box bui-btn-line">
+        <div class="span1">
+            <label for="${1:choose}">单选</label>
+        </div>
+        <input id="${1:choose}" type="radio" class="bui-choose" name="interest" value="" text="" checked="checked">
+    </li>
+</ul>
+"""
+
+    '图标列表':
+      'prefix': 'ui-list-icon'
+      'body': """
+<ul class="bui-list">
+    <li class="bui-btn bui-box">
+        <div class="icon"><img src="../images/applogo.png" alt=""></div>
+        <div class="span1">文本</div>
+        <i class="icon-listright"></i>
+    </li>
+</ul>
+"""
+
+    '箭头列表':
+      'prefix': 'ui-list-arrow'
+      'body': """
+<ul class="bui-list">
+    <li class="bui-btn bui-box">
+        <div class="span1">文本</div>
+        <i class="icon-listright"></i>
+    </li>
+</ul>
+"""
+
+    '多选列表':
+      'prefix': 'ui-list-checkbox'
+      'body': """
+<ul class="bui-list">
+    <li class="bui-btn bui-box bui-btn-line">
+        <div class="span1">
+            <label for="${1:choose}">多选</label>
+        </div>
+        <input id="${1:choose}" type="checkbox" class="bui-choose" name="interest" value="" text="" checked="checked">
+    </li>
+</ul>
+"""
+
+    '分组列表':
+      'prefix': 'ui-list-group'
+      'body': """
+<ul class="bui-list">
+    <li class="bui-btn bui-btn-title">
+        分组标题
+    </li>
+    <li class="bui-btn bui-box">
+        <div class="span1">文本</div>
+        <i class="icon-listright"></i>
+    </li>
+</ul>
+"""
+
+    '横向滚动导航':
+      'prefix': 'ui-navbar'
+      'body': """
+<div class="bui-navbar">
+  <ul class="bui-nav">
+    <!-- <li>之间不能有空隙 -->
+    <li class="bui-btn">首页</li><li class="bui-btn">新闻</li>
+  </ul>
+</div>
+"""
+
+    '导航菜单结构':
+      'prefix': 'ui-nav'
+      'body': """
+<ul class="bui-nav">
+    <li class="bui-btn bui-box-vertical">
+        <i class="icon-home"></i>
+        <div class="span1">文本</div>
+    </li>
+</ul>
+"""
+
+    '表单展示':
+      'prefix': 'ui-form'
+      'body': """
+<ul class="bui-list">
+    <li class="bui-btn bui-box">
+        <label class="bui-label">帐号</label>
+        <div class="span1">
+            <div class="bui-value">username</div>
+        </div>
+    </li>
+</ul>
+"""
+
+    '表单编辑':
+      'prefix': 'ui-form-edit'
+      'body': """
+<ul class="bui-list">
+    <li class="bui-btn bui-box clearactive">
+        <label class="bui-label" for="${1:username}">帐号</label>
+        <div class="span1">
+            <input id="${1:username}" type="text" class="bui-input" value="" placeholder="请输入帐号">
+        </div>
+    </li>
+</ul>
+"""
+
+    '表单底部按钮':
+      'prefix': 'ui-form-btn'
+      'body': """
+<div class="container-y">
+    <div class="bui-box-space">
+        <div class="span1">
+            <div class="bui-btn round">重置</div>
+        </div>
+        <div class="span1">
+            <div class="bui-btn round primary">提交</div>
+        </div>
+    </div>
+</div>
+"""
+
+    '单选框':
+      'prefix': 'ui-radio'
+      'body': """
+<input type="radio" class="bui-radio" name="$1" value="">
+"""
+
+    '多选框-圆圈':
+      'prefix': 'ui-choose'
+      'body': """
+<input type="${1:checkbox}" class="bui-choose" name="" value="">
+"""
+
+    '多选框':
+      'prefix': 'ui-checkbox'
+      'body': """
+<input type="checkbox" class="bui-checkbox" name="" value="">
+"""
+
+    '自定义多选框':
+      'prefix': 'ui-checkbox-custom'
+      'body': """
+<div class="bui-check">
+    <input id="${1:uid}" type="radio" ><label for="${1:uid}">3:50元</label>
+</div>
+"""
+
+    '输入框':
+      'prefix': 'ui-input'
+      'body': """
+<input type="text" class="bui-input" value="" placeholder="请输入关键字">
+"""
+
+    '图标输入框':
+      'prefix': 'ui-input'
+      'body': """
+<div class="bui-input">
+    ${1:<i class="icon-search"></i>}
+    <input type="text" value="" placeholder="请输入关键字">
+</div>
+"""
+
+    '滑动条':
+      'prefix': 'ui-range'
+      'body': """
+<input type="range" class="bui-range" min="0" max="255" value="100">
+"""
+
+    '切换按钮':
+      'prefix': 'ui-switch'
+      'body': """
+<input type="checkbox" class="bui-switch" name="$1" value="">
+"""
+
+    '按钮':
+      'prefix': 'ui-btn'
+      'body': """
+<div class="bui-btn" href="$1">按钮</div>
+"""
+
+    '弹性布局':
+      'prefix': 'ui-box'
+      'body': """
+<div class="bui-box">
+	<div class="span1">${1:<!--自适应内容-->}</div>
+</div>
+"""
+
+    '弹性布局有间隙':
+      'prefix': 'ui-box-space'
+      'body': """
+<div class="bui-box-space">
+    <div class="span1">${1:<!--自适应内容-->}</div>
+</div>
+"""
+
+    '百分比布局-12等分':
+      'prefix': 'ui-fluid'
+      'body': """
+<div class="bui-fluid">
+	<div class="span6">${1:内容}</div>
+	<div class="span6">${1:内容}</div>
+</div>
+"""
+
+    '百分比布局-间隙':
+      'prefix': 'ui-fluid-space'
+      'body': """
+<div class="bui-fluid-space">
+	<div class="span6">${1:内容}</div>
+	<div class="span6">${1:内容}</div>
+</div>
+"""
+
+
+    '折叠菜单结构':
+      'prefix': 'ui-accordion'
+      'body': """
+<dl id="uiAccordion" class="bui-accordion">
+    <dt class="bui-btn bui-box">
+        <div class="span1">折叠菜单</div>
+        <i class="icon-accordion"></i>
+    </dt>
+    <dd>
+        折叠菜单内容
+    </dd>
+</dl>
+"""
+
+    '上拉菜单结构':
+      'prefix': 'ui-actionsheet'
+      'body': """
+
+<div id="${1:uiActionsheet}" class="bui-actionsheet container-x">
+    <ul class="bui-list round">
+        <li class="bui-btn">示例菜单</li>
+    </ul>
+    <div class="bui-btn round">取消</div>
+</div>
+"""
+
+    '顶部横条结构':
+      'prefix': 'ui-bar'
+      'body': """
+<div class="bui-bar">
+    <div class="bui-bar-left">
+        <a class="bui-btn"><i class="icon-back"></i></a>
+    </div>
+    <div class="bui-bar-main">标题</div>
+    <div class="bui-bar-right">
+        <a class="bui-btn"><i class="icon-menu"></i></a>
+    </div>
+</div>
+"""
+
+    '顶部横条-左对齐结构':
+      'prefix': 'ui-bar-side'
+      'body': """
+<div class="bui-bar bui-bar-side">
+    <div class="bui-bar-left">
+        <a class="bui-btn"><i class="icon-back"></i></a>
+    </div>
+    <div class="bui-bar-main">标题</div>
+    <div class="bui-bar-right">
+        <a class="bui-btn"><i class="icon-search"></i></a>
+        <a class="bui-btn"><i class="icon-menu"></i></a>
+    </div>
+</div>
+"""
+
+    '自定义对话框结构':
+      'prefix': 'ui-dialog'
+      'body': """
+<div id="${1:uiDialog}" class="bui-dialog">
+    <div class="bui-dialog-head">对话框标题</div>
+    <div class="bui-dialog-main">对话框内容</div>
+    <div class="bui-dialog-close"><i class="icon-close"></i></div>
+</div>
+"""
+
+    '下拉菜单结构':
+      'prefix': 'ui-dropdown'
+      'body': """
+<div id="${1:uiDropdown}" class="bui-dropdown">
+    <div class="bui-btn bui-box" >
+        <div class="span1">菜单名称</div>
+        <i class="icon-dropdown"></i>
+    </div>
+    <ul class="bui-list">
+        <li class="bui-btn bui-box" value="">
+            <div class="span1">
+                下拉菜单1
+            </div>
+            <i class="icon-listright"></i>
+        </li>
+    </ul>
+</div>
+"""
+
+    '侧滑列表结构':
+      'prefix': 'ui-listview'
+      'body': """
+<ul id="${1:uiListview}" class="bui-listview">
+    <li>
+        <div class="bui-btn bui-box">
+            <div class="span1">左滑动出现菜单</div>
+            <i class="icon-listright"></i>
+        </div>
+    </li>
+</ul>
+"""
+
+    '侧滑列表结构-自定义按钮':
+      'prefix': 'ui-listview-custom'
+      'body': """
+<ul id="${1:uiListview}" class="bui-listview">
+    <li status="1">
+        <div class="bui-btn bui-box">
+            <div class="span1">手动渲染</div>
+            <i class="icon-listright"></i>
+        </div>
+        <div class="bui-listview-menu swipeleft" data-moving="200">
+            <div class="bui-btn btn-red">删除</div>
+        </div>
+    </li>
+</ul>
+"""
+
+    '数字条结构':
+      'prefix': 'ui-number'
+      'body': """
+<div id="${1:uiNumber}" class="bui-number">
+    <div class="bui-number-prev"><i class="icon-minus"></i></div>
+    <input type="text" value=""/>
+    <div class="bui-number-next"><i class="icon-plus"></i></div>
+</div>
+"""
+
+    '面板结构':
+      'prefix': 'ui-panel'
+      'body': """
+<div class="bui-panel">
+    <div class="bui-panel-head">面板标题</div>
+    <div class="bui-panel-main">面板内容</div>
+    <div class="bui-panel-foot">面板底部</div>
+</div>
+"""
+
+    '日期控件结构':
+      'prefix': 'ui-pickerdate'
+      'body': """
+<input type="text" id="uiPickerdate" readonly>
+"""
+
+    '进度条结构':
+      'prefix': 'ui-progress'
+      'body': """
+<div class="bui-progress">
+    <div class="bui-progress-cell" style="width:30%"></div>
+</div>
+"""
+
+    '滚动加载列表结构':
+      'prefix': 'ui-scroll'
+      'body': """
+<div id="uiScroll" class="bui-scroll">
+    <div class="bui-scroll-head"></div>
+    <div class="bui-scroll-main">
+        <ul class="bui-list"></ul>
+    </div>
+    <div class="bui-scroll-foot"></div>
+</div>
+"""
+
+    '搜索条结构':
+      'prefix': 'ui-searchbar'
+      'body': """
+<div id="${1:uiSearchbar}" class="bui-searchbar">
+    <div class="bui-input">
+        <i class="icon-search"></i>
+        <input type="text" placeholder="请输入关键字搜索" value=""/>
+    </div>
+</div>
+"""
+
+    '选择列表按钮结构':
+      'prefix': 'ui-select'
+      'body': """
+<div id="${1:uiSelect}" class="bui-select bui-box">
+    <div class="span1">请选择</div>
+    <i class="icon-listright"></i>
+</div>
+"""
+
+    '选择列表自定义结构':
+      'prefix': 'ui-select-list'
+      'body': """
+<ul id="${1:uiSelect}" class="bui-list">
+    <li class="bui-btn bui-box bui-btn-line">
+        <div class="span1">
+            <label for="${1:choose}">多选</label>
+        </div>
+        <input id="${1:choose}" type="checkbox" class="bui-choose" name="interest" value="" text="" checked="checked">
+    </li>
+</ul>
+"""
+
+    '侧滑栏结构':
+      'prefix': 'ui-sidebar'
+      'body': """
+<div id="uiSidebar" class="bui-sidebar-wrap">
+	<div class="bui-sidebar swiperight">
+		侧滑栏内容 swiperight 为滑动的方向,不同位置修改不同方向
+	</div>
+	<div class="bui-page">
+		页面内容
+	</div>
+</div>
+"""
+
+    '选项卡结构':
+      'prefix': 'ui-slide-tab'
+      'body': """
+<div id="${1:uiSlide}" class="bui-tab">
+    <div class="bui-tab-head">
+        <ul class="bui-nav">
+            <!-- 分屏菜单 active 是激活的TAB样式 -->
+            <li class="bui-btn active">Tab1</li>
+        </ul>
+    </div>
+    <div class="bui-tab-main">
+        <ul>
+            <li>
+                第1屏
+            </li>
+        </ul>
+    </div>
+</div>
+"""
+
+    '焦点图结构':
+      'prefix': 'ui-slide'
+      'body': """
+<div id="${1:uiSlide}" class="bui-slide">
+    <div class="bui-slide-main">
+        <ul>
+            <li>
+                <!--第1屏-->
+                <img src="$2" alt="">
+                <div class="bui-slide-title">图片标题</div>
+            </li>
+        </ul>
+    </div>
+    <!-- 分屏菜单 -->
+    <div class="bui-slide-head">
+        <ul >
+            <li>1</li>
+        </ul>
+    </div>
+</div>
+"""
+
+    '步骤条结构':
+      'prefix': 'ui-stepbar'
+      'body': """
+<div id="${1:uiStepbar}" class="bui-stepbar"></div>
+
+"""
+
+    '抽屉滑动结构':
+      'prefix': 'ui-swipe'
+      'body': """
+<div id="uiSwipe" class="bui-swipe">
+  <div class="swiperight">
+    菜单在左边
+  </div>
+  <div class="swipeleft">
+    菜单在右边
+  </div>
+  <div class="swipeup">
+    菜单在上边
+  </div>
+  <div class="swipedown">
+    菜单在下边
+  </div>
+  <div class="bui-page">
+    页面正文
+  </div>
+</div>
+"""
+
+    '表格结构':
+      'prefix': 'ui-table'
+      'body': """
+<table class="bui-table">
+    <tr>
+        <td>1</td>
+    </tr>
+</table>
+"""
+
+
+#----- BUI 常用html结构-end ----------
+
+#----- BUI Fast Snippets----end ----------

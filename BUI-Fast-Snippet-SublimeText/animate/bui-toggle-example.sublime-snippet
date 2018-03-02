@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+/* toggle动画示例 */
+var ${1:uiToggle} = bui.toggle(${2:"#page"});
+    //在需要的地方使用显示隐藏效果,支持自定义动画
+    //uiToggle.show();
+    //uiToggle.hide();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-toggle</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>动画切换示例,更多请查看api</description> 
+</snippet>
