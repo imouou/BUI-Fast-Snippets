@@ -1241,6 +1241,13 @@ bui.on("pageinit",function(){
      'body': """
 router.load({url:"$1",param:{}});
 """
+   '单页路由--预加载':
+     'prefix': 'bui-router-preload'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+router.preload([{url:"$1"}]);
+"""
 
    '单页路由--获取参数':
      'prefix': 'bui-router-getPageParams'
@@ -1357,7 +1364,7 @@ loader.map({
       'prefix': 'ui-html'
       'body': """
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>BUI</title>

@@ -10,6 +10,8 @@
 | 王伟深       | 修改 bui-slide-demo-pic,bui-slide-demo-tab 为bui-slide-pic-demo,bui-slide-tab-demo   | 2017-05-27    |
 | 王伟深       | 修改 bui-searchbar-demo ui-list  | 2017-06-08    |
 | 王伟深       | 新增 ui-router bui-router bui-loader 等相关内容  | 2017-12-20    |
+| 王伟深       | 新增 ATOM, APICloud 插件支持  | 2018-03-14   |
+| 王伟深       | 新增 router preload 方法  | 2018-03-27   |
 
 ## 目录
 [TOC]
@@ -31,7 +33,9 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 
 ** Sublimetext 安装 BUI-Fast **
 
-**Windows**: 复制BUI Fast目录中的`BUI-Fast-Snippet-SublimeText`文件夹到 sublime text的安装目录 `\Data\Packages\`
+**Windows**: 打开顶部 Sublime Text 菜单 --> Preferences --> Browse Packages , 
+复制`BUI-Fast-Snippet-SublimeText`目录进去就好.
+
 
 **Mac**: 打开顶部 Sublime Text 菜单 --> Preferences --> Browse Packages ,复制`BUI-Fast-Snippet-SublimeText`目录进去就好
 
