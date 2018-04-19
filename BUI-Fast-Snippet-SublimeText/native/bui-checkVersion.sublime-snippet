@@ -2,12 +2,24 @@
 <snippet>
     <content><![CDATA[
 bui.checkVersion({
-    id: "${1:#checkVersion}",
-    url: "${2:http://}",
+    id: "#checkVersion",
+    url: "versionUpdate.json",
     currentVersion: "",
-    currentVersionCode: "",
-    data: "${3:接口请求的参数}"
+    currentVersionCode: ""
 });
+
+// versionUpdate.json 示例
+/*
+{
+    "versionName" : "1.4.1",
+    "versionCode" : 20180118,
+    "minVersionCode" : 20171010,
+    "isForced" : false,
+    "downloadUrl" : "http://www.easybui.com/downloads/source/bui/bui_latest.zip",
+    "iosDownloadUrl" : "https://itunes.apple.com/cn/app/id1362470378?mt=8",
+    "remark" : "<div style='text-align:left;'><p>1. 新增单页路由</p><p>2. 新增模块化开发</p><p>3. 支持路由切换动画</p><p>4. 修复已知bug</p></div>"
+}
+*/
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-checkVersion</tabTrigger>

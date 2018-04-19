@@ -12,6 +12,7 @@
 | 王伟深       | 新增 ui-router bui-router bui-loader 等相关内容  | 2017-12-20    |
 | 王伟深       | 新增 ATOM, APICloud 插件支持  | 2018-03-14   |
 | 王伟深       | 新增 router preload 方法  | 2018-03-27   |
+| 王伟深       | 新增 webstorm插件  | 2018-04-19   |
 
 ## 目录
 [TOC]
@@ -51,6 +52,24 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 3.2. 输入`open your snippets`, 回车;
 打开下载的 `bui-fast-snippet-atom/snippets.cson` 文件, 复制内容到 `snippets.cson` 文件里面, 保存即可.
 
+
+#### 4. Webstorm 编辑器
+
+** Webstorm 安装 BUI-Fast **
+
+4.1. 打开顶部菜单 `File` -> `Export Settings` , 
+> Mac 会弹出一个 Export Complete 的对话框, 可以点击Reveal in Finder,打开导出的路径,一般默认是跟Webstorm的配置路径;
+
+4.2. 打开配置的目录以后
+打开下载的 `bui-fast-snippet-webstorm` 目录, 复制内容到 `settingsRepository/repository/templates` 目录里面, 重新启动 webstorm 即可, 如果没有 templates 目录, 新建一个.
+
+MAC完整的目录应该是:
+```
+~/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/JavaScript.xml
+~/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/html_xml.xml
+```
+
+windows 也是类似的. 
 
 ---
 ### 简单使用示例
@@ -221,8 +240,8 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 | ui-router  <span style="color:red">新</span>     | BUI 单页标准结构    |
 | ui-html       | BUI HTML标准结构    |
 | ui-page       | BUI 页面标准结构    |
-| ui-bar        | 生成横条结构        |
-| ui-bar-side   | 生成横条左对齐结构   |
+| ui-header        | 生成header结构        |
+| ui-header-side   | 生成header左对齐结构   |
 | ui-btn             | 按钮                         |
 | ui-btn-icon        | 图标按钮                         |
 | ui-btn-round        | 圆角按钮                         |

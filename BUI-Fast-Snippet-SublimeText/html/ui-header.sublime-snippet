@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+<header class="bui-bar">
+    <div class="bui-bar-left">
+        <a class="bui-btn"><i class="icon-back"></i></a>
+    </div>
+    <div class="bui-bar-main">标题</div>
+    <div class="bui-bar-right">
+        <a class="bui-btn"><i class="icon-menu"></i></a>
+    </div>
+</header>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-header</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>header</description> 
+</snippet>
