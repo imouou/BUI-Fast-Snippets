@@ -21,7 +21,7 @@
 ## 简介
 
 
-BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APICloud Studio2 中集成BUI控件及方法的代码提示，为快速开发助力. 里面封装了控件的常用参数及常用方法的语法补全, 版本对应 BUI的版本.
+BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APICloud Studio2 ,Webstorm中集成BUI控件及方法的代码提示，为快速开发助力. 里面封装了控件的常用参数及常用方法的语法补全, 版本对应 BUI的版本.
 > 1.3.1版本新增 控件名加"-demo" 快速生成控件初始化及结构,只要把结构复制到body对应的位置就行.
 
 ---
@@ -57,19 +57,29 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 
 ** Webstorm 安装 BUI-Fast **
 
-4.1. 打开顶部菜单 `File` -> `Export Settings` , 
-> Mac 会弹出一个 Export Complete 的对话框, 可以点击Reveal in Finder,打开导出的路径,一般默认是跟Webstorm的配置路径;
+mac 安装 BUI-Fast: 
 
-4.2. 打开配置的目录以后
-打开下载的 `bui-fast-snippet-webstorm` 目录, 复制内容到 `settingsRepository/repository/templates` 目录里面, 重新启动 webstorm 即可, 如果没有 templates 目录, 新建一个.
+4.1.1 打开 WebStorm2017 配置目录
+```
+~/Library/Preferences/WebStorm2017.2/settingsRepository/repository/
+```
 
-MAC完整的目录应该是:
+4.1.2 打开下载的 `bui-fast-snippet-webstorm` mac 目录, 复制 templates 目录到 `WebStorm2017.2/settingsRepository/repository/` 目录里面, 重新启动 webstorm 即可.
+
+复制以后的完整的目录应该是:
 ```
 ~/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/JavaScript.xml
 ~/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/html_xml.xml
 ```
 
-windows 也是类似的. 
+windows 安装 BUI-Fast.
+
+4.2.1 打开下载的 `bui-fast-snippet-webstorm` windows 目录, 复制 settings.jar 到桌面.
+
+4.2.2 打开顶部菜单 `File` -> `Import Settings`, 找到刚刚的 settings.jar 
+
+4.2.3 重新启动webstorm 就可以了
+
 
 ---
 ### 简单使用示例
