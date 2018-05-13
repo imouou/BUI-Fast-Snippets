@@ -4,7 +4,7 @@
 var uiSlideTab = bui.slide({
     id:"#${1:uiSlideTab}",
     menu:".bui-nav",
-    children:".bui-tab-main ul",
+    children:".bui-tab-main > ul",
     scroll: true
 })
 ]]></content>

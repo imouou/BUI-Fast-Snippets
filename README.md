@@ -59,17 +59,17 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 
 mac 安装 BUI-Fast: 
 
-4.1.1 打开 WebStorm2017 配置目录
+4.1.1 打开 WebStorm2017 配置目录, `XXX` 为你的MAC用户名
 ```
-~/Library/Preferences/WebStorm2017.2/settingsRepository/repository/
+/Users/XXX/Library/Preferences/WebStorm2017.2/settingsRepository/repository/
 ```
 
 4.1.2 打开下载的 `bui-fast-snippet-webstorm` mac 目录, 复制 templates 目录到 `WebStorm2017.2/settingsRepository/repository/` 目录里面, 重新启动 webstorm 即可.
 
 复制以后的完整的目录应该是:
 ```
-~/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/JavaScript.xml
-~/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/html_xml.xml
+/Users/XXX/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/JavaScript.xml
+/Users/XXX/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/html_xml.xml
 ```
 
 windows 安装 BUI-Fast.
@@ -83,6 +83,8 @@ windows 安装 BUI-Fast.
 
 ---
 ### 简单使用示例
+
+?> 需要保存文件后缀为.html以后才能生效
 
 **ui-html 演示: **
 

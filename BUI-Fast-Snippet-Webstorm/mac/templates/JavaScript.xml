@@ -227,13 +227,13 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-slide-tab" value="var uiSlideTab = bui.slide({&#10;    id:&quot;#uiSlideTab&quot;,&#10;    menu:&quot;.bui-nav&quot;,&#10;    children:&quot;.bui-tab-main ul&quot;,&#10;    scroll: true&#10;})" description="选项卡初始化" toReformat="false" toShortenFQNames="true">
+  <template name="bui-slide-tab" value="var uiSlideTab = bui.slide({&#10;    id:&quot;#uiSlideTab&quot;,&#10;    menu:&quot;.bui-nav&quot;,&#10;    children:&quot;.bui-tab-main &gt; ul&quot;,&#10;    scroll: true&#10;})" description="选项卡初始化" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-slide-tab-demo" value="// 选项卡 js 初始化:&#10;var uiTab = bui.slide({&#10;    id:&quot;#uiTab&quot;,&#10;    menu:&quot;.bui-nav&quot;,&#10;    children:&quot;.bui-tab-main ul&quot;,&#10;    scroll: true&#10;})&#10;&#10;// 选项卡 html 对应的结构:&#10;&lt;div id=&quot;uiTab&quot; class=&quot;bui-tab&quot;&gt;&#10;  &lt;!-- 按钮较少时,这里是平分宽度 --&gt;&#10;  &lt;div class=&quot;bui-tab-head&quot;&gt;&#10;    &lt;ul class=&quot;bui-nav&quot;&gt;&#10;      &lt;li class=&quot;bui-btn active&quot;&gt;首页&lt;/li&gt;&#10;      &lt;li class=&quot;bui-btn &quot;&gt;新闻&lt;/li&gt;&#10;    &lt;/ul&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;bui-tab-main&quot;&gt;&#10;    &lt;ul&gt;&#10;      &lt;li&gt;&#10;        滑动的内容&#10;      &lt;/li&gt;&#10;      &lt;li&gt;&#10;        滑动的内容&#10;      &lt;/li&gt;&#10;    &lt;/ul&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;" description="选项卡-demo" toReformat="false" toShortenFQNames="true">
+  <template name="bui-slide-tab-demo" value="// 选项卡 js 初始化:&#10;var uiTab = bui.slide({&#10;    id:&quot;#uiTab&quot;,&#10;    menu:&quot;.bui-nav&quot;,&#10;    children:&quot;.bui-tab-main &gt; ul&quot;,&#10;    scroll: true&#10;})&#10;&#10;// 选项卡 html 对应的结构:&#10;&lt;div id=&quot;uiTab&quot; class=&quot;bui-tab&quot;&gt;&#10;  &lt;!-- 按钮较少时,这里是平分宽度 --&gt;&#10;  &lt;div class=&quot;bui-tab-head&quot;&gt;&#10;    &lt;ul class=&quot;bui-nav&quot;&gt;&#10;      &lt;li class=&quot;bui-btn active&quot;&gt;首页&lt;/li&gt;&#10;      &lt;li class=&quot;bui-btn &quot;&gt;新闻&lt;/li&gt;&#10;    &lt;/ul&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;bui-tab-main&quot;&gt;&#10;    &lt;ul&gt;&#10;      &lt;li&gt;&#10;        滑动的内容&#10;      &lt;/li&gt;&#10;      &lt;li&gt;&#10;        滑动的内容&#10;      &lt;/li&gt;&#10;    &lt;/ul&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;" description="选项卡-demo" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />

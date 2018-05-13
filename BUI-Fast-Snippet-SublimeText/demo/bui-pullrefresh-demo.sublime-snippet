@@ -12,9 +12,13 @@ function getData(){
     bui.ajax({
       url: "",
       data: {}
-    }).done(function(res){
+    }).then(function(res){
 
       //请求成功以后还原刷新前状态
+      uiPullRefresh.reverse();
+    },function(res){
+
+      //请求失败以后还原刷新前状态
       uiPullRefresh.reverse();
     })
 }

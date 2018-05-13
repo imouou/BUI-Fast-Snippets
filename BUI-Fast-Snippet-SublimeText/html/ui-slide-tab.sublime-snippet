@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<div id="${1:uiSlide}" class="bui-tab">
+<div id="${1:uiSlideTab}" class="bui-tab">
     <div class="bui-tab-head">
         <ul class="bui-nav">
             <!-- 分屏菜单 active 是激活的TAB样式 -->

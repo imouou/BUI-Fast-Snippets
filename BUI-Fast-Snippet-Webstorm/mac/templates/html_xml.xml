@@ -214,7 +214,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-slide-tab" value="&lt;div id=&quot;uiSlide&quot; class=&quot;bui-tab&quot;&gt;&#10;    &lt;div class=&quot;bui-tab-head&quot;&gt;&#10;        &lt;ul class=&quot;bui-nav&quot;&gt;&#10;            &lt;!-- 分屏菜单 active 是激活的TAB样式 --&gt;&#10;            &lt;li class=&quot;bui-btn active&quot;&gt;Tab1&lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;bui-tab-main&quot;&gt;&#10;        &lt;ul&gt;&#10;            &lt;li&gt;&#10;                第1屏&#10;            &lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="选项卡结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-slide-tab" value="&lt;div id=&quot;uiSlideTab&quot; class=&quot;bui-tab&quot;&gt;&#10;    &lt;div class=&quot;bui-tab-head&quot;&gt;&#10;        &lt;ul class=&quot;bui-nav&quot;&gt;&#10;            &lt;!-- 分屏菜单 active 是激活的TAB样式 --&gt;&#10;            &lt;li class=&quot;bui-btn active&quot;&gt;Tab1&lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;bui-tab-main&quot;&gt;&#10;        &lt;ul&gt;&#10;            &lt;li&gt;&#10;                第1屏&#10;            &lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="选项卡结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>

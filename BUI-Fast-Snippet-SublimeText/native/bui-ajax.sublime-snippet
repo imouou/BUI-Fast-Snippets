@@ -3,14 +3,12 @@
     <content><![CDATA[
 bui.ajax({
     url: "${1:http://}",
-    data: {$2},//接口请求的参数
-
+    data: {},//接口请求的参数
     // 可选参数
-    method: "GET",
-    timeout: 20000
-}).done(function(result){
-    $3
-}).fail(function(result,status){
+    method: "GET"
+}).then(function(result){
+    // 成功
+},function(result,status){
     //console.log(status)//"timeout"
 });
 ]]></content>
