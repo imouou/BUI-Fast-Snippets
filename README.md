@@ -1,6 +1,6 @@
 # BUI Fast 使用说明
 
-| **作者**   | **描述**            | **修改日期**            |
+| **修订者**   | **描述**            | **修改日期**            |
 |:------------- |:-------------------|-------------------:|
 | 王伟深       | 更新API 1.0.6    | 2016-07-25    |
 | 王伟深       | 更新API 1.0.7    | 2016-08-30    |
@@ -32,17 +32,17 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 
 #### 2. Sublimetext3 编辑器
 
-** Sublimetext 安装 BUI-Fast **
+*Sublimetext 安装 BUI-Fast*
 
-**Windows**: 打开顶部 Sublime Text 菜单 --> Preferences --> Browse Packages , 
+- *Windows*: 打开顶部 Sublime Text 菜单 --> Preferences --> Browse Packages , 
 复制`BUI-Fast-Snippet-SublimeText`目录进去就好.
 
 
-**Mac**: 打开顶部 Sublime Text 菜单 --> Preferences --> Browse Packages ,复制`BUI-Fast-Snippet-SublimeText`目录进去就好
+- *Mac*: 打开顶部 Sublime Text 菜单 --> Preferences --> Browse Packages ,复制`BUI-Fast-Snippet-SublimeText`目录进去就好
 
 #### 3. Atom 编辑器
 
-** Atom 安装 BUI-Fast **
+*Atom 安装 BUI-Fast*
 
 > 包含 APICloud Studio2 适用.
 
@@ -55,24 +55,7 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 
 #### 4. Webstorm 编辑器
 
-** Webstorm 安装 BUI-Fast **
-
-mac 安装 BUI-Fast: 
-
-4.1.1 打开 WebStorm2017 配置目录, `XXX` 为你的MAC用户名
-```
-/Users/XXX/Library/Preferences/WebStorm2017.2/settingsRepository/repository/
-```
-
-4.1.2 打开下载的 `bui-fast-snippet-webstorm` mac 目录, 复制 templates 目录到 `WebStorm2017.2/settingsRepository/repository/` 目录里面, 重新启动 webstorm 即可.
-
-复制以后的完整的目录应该是:
-```
-/Users/XXX/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/JavaScript.xml
-/Users/XXX/Library/Preferences/WebStorm2017.2/settingsRepository/repository/templates/html_xml.xml
-```
-
-windows 安装 BUI-Fast.
+*Webstorm 安装 BUI-Fast*
 
 4.2.1 打开下载的 `bui-fast-snippet-webstorm` windows 目录, 复制 settings.jar 到桌面.
 
@@ -86,15 +69,15 @@ windows 安装 BUI-Fast.
 
 ?> 需要保存文件后缀为.html以后才能生效
 
-**ui-html 演示: **
+*ui-html 演示:*
 
 ![ui-html](http://www.easybui.com/docs/images/ui-html.gif)
 
-**ui-page 演示: **
+*ui-page 演示:*
 
 ![ui-page](http://www.easybui.com/docs/images/ui-page.gif)
 
-**bui-slide-demo 演示: **
+*bui-slide-demo 演示:*
 
 ![bui-slide-demo](http://www.easybui.com/docs/images/bui-slide-demo.gif)
 
