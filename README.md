@@ -20,17 +20,20 @@
 ---
 ## 简介
 
-
 BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APICloud Studio2 ,Webstorm中集成BUI控件及方法的代码提示，为快速开发助力. 里面封装了控件的常用参数及常用方法的语法补全, 版本对应 BUI的版本.
 > 1.3.1版本新增 控件名加"-demo" 快速生成控件初始化及结构,只要把结构复制到body对应的位置就行.
 
 ---
-## 安装说明
-### 下载bui-fast插件及编辑器
-#### 1. bui-fast 插件 
+## 安装
+
+### 1. bui-fast 插件
+
+> 下载解压以后,找到对应的编辑器插件
+
 <a href="https://github.com/imouou/BUI-Fast-Snippets/releases/latest" target="_blank">点击下载 BUI Fast 插件</a>
 
-#### 2. Sublimetext3 编辑器
+
+### 在Sublimetext安装
 
 *Sublimetext 安装 BUI-Fast*
 
@@ -40,32 +43,29 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 
 - *Mac*: 打开顶部 Sublime Text 菜单 --> Preferences --> Browse Packages ,复制`BUI-Fast-Snippet-SublimeText`目录进去就好
 
-#### 3. Atom 编辑器
+### 在Atom,APICloud安装
 
-*Atom 安装 BUI-Fast*
+*Atom ,APICloud Studio2 安装 BUI-Fast*
 
-> 包含 APICloud Studio2 适用.
-
-3.1. 打开顶部菜单 `Packages` -> `Command Palette`, 
+- 打开顶部菜单 `Packages` -> `Command Palette`, 
 > 也可以使用快捷键 mac: `command + shift + p` , windows: `ctrl + shift + p`;
 
-3.2. 输入`open your snippets`, 回车;
+- 输入`open your snippets`, 回车;
 打开下载的 `bui-fast-snippet-atom/snippets.cson` 文件, 复制内容到 `snippets.cson` 文件里面, 保存即可.
 
 
-#### 4. Webstorm 编辑器
+### 在Webstorm安装
 
 *Webstorm 安装 BUI-Fast*
 
-4.2.1 打开下载的 `bui-fast-snippet-webstorm` windows 目录, 复制 settings.jar 到桌面.
+- 打开下载的 `bui-fast-snippet-webstorm` windows 目录, 复制 settings.jar 到桌面.
 
-4.2.2 打开顶部菜单 `File` -> `Import Settings`, 找到刚刚的 settings.jar 
+- 打开顶部菜单 `File` -> `Import Settings`, 找到刚刚的 settings.jar 
 
-4.2.3 重新启动webstorm 就可以了
-
+- 重新启动webstorm 就可以了
 
 ---
-### 简单使用示例
+## 简单使用示例
 
 ?> 需要保存文件后缀为.html以后才能生效
 
