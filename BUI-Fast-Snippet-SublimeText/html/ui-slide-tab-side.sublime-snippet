@@ -1,0 +1,40 @@
+<snippet>
+    <content><![CDATA[
+<style>
+    #tabSideNav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 10;
+        width:2rem;
+    }
+    #tabSide {
+        margin-left: 2rem;
+    }
+</style>
+<ul id="tabSideNav" class="bui-list">
+    <li class="bui-btn active">Tab1</li>
+    <li class="bui-btn ">Tab2</li>
+</ul>
+<div id="tabSide" class="bui-tab">
+    <div class="bui-tab-main">
+        <ul>
+            <li>
+                第1个tab
+            </li>
+            <li>
+                第2个tab
+            </li>
+        </ul>
+
+    </div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-slide-tab-side</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>TAB选项卡结构</description>
+</snippet>

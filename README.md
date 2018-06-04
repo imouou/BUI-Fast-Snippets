@@ -13,6 +13,8 @@
 | 王伟深       | 新增 ATOM, APICloud 插件支持  | 2018-03-14   |
 | 王伟深       | 新增 router preload 方法  | 2018-03-27   |
 | 王伟深       | 新增 webstorm插件  | 2018-04-19   |
+| 王伟深       | 新增 tab 的几种不同位置, bui-slide-tab-head-demo,bui-slide-tab-foot-demo,bui-slide-tab-side-demo,bui-slide-tab-scroll-demo,  | 2018-05-30   |
+| 王伟深       | 去除生成控件方法,比方之前有 bui-accordion-show 现在只有 bui-accordion ,只保留最简单的初始化,其它查API   | 2018-06-04   |
 
 ## 目录
 [TOC]
@@ -58,11 +60,20 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 
 *Webstorm 安装 BUI-Fast*
 
+方法1: 
+
 - 打开下载的 `bui-fast-snippet-webstorm` windows 目录, 复制 settings.jar 到桌面.
 
 - 打开顶部菜单 `File` -> `Import Settings`, 找到刚刚的 settings.jar 
 
 - 重新启动webstorm 就可以了
+
+方法2:
+
+> mac 的安装有可能会出现 import Settings 导入成功,但是无法使用的情况, 是因为webstorm的导入把templates导入在根目录了`WebStorm2017.3/templates`, 正确的目录应该是 `WebStorm2017.3/settingsRepository/repository/templates`. 
+
+复制 `bui-fast-snippet-webstorm/templates` 目录,替换 `资源库/Preferences/WebStorm2017.3/settingsRepository/repository/templates`
+
 
 ---
 ## 简单使用示例
@@ -118,26 +129,6 @@ var uiAccordion = bui.accordion({
 
 ```
 
-### JS 调用初始化以后的方法
-(在script里面书写)
-
-__bui-accordion-show__ <kbd>Tab</kbd>  
-
-```js
-uiAccordion.show(0);
-
-```
-#### JS 监听控件初始化以后的事件 ( 1.3.0 新增 )
-(在script里面书写)
-
-__bui-accordion-on__ <kbd>Tab</kbd>  
-
-```js
-uiAccordion.on("show",function(){
-    //显示的时候触发
-});
-
-```
 
 ### JS 快速生成完整demo  ( 推荐, 1.3.0 新增 )
 (在script里面书写)
@@ -220,8 +211,8 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 | ui-listview-custom  | 列表侧滑静态结构       |
 | ui-number  | 数字条结构       |
 | ui-pickerdate  | 日期结构       |
-| ui-progress  | 进度条结构       |
 | ui-rating  | 星级评分结构       |
+| ui-list  | 列表滚动控件结构       |
 | ui-scroll  | 滚动控件结构       |
 | ui-sidebar  | 滚动控件结构       |
 | ui-slide  | 滑动控件结构       |
@@ -258,7 +249,6 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 | ui-list-thumbnail  | 列表多行带缩略图结构       |
 
 
-
 ### 布局结构缩写
 
 | **缩写代码**   | **描述**            |
@@ -281,7 +271,6 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 | ui-fluid-4    | 4列布局结构        |
 
 
-
 ### 表单元素结构缩写
 
 | **缩写代码**        | **描述**                      |
@@ -294,6 +283,7 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 | ui-input-custom | 输入框弹性布局结构                   |
 | ui-switch | 开关切换                                  |
 | ui-range | 拖动条                                    |
+| ui-progress  | 进度条结构       |
 
 ## BUI JS方法及控件缩写
 
@@ -336,27 +326,6 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 | bui-swipe  | 抽屉菜单初始化       |
 
 
-
-### 控件参数配置初始化
-
-| **缩写代码**   | **描述**            |
-|:------------- |:-------------------|
-| bui-accordion-init  | 折叠菜单参数配置初始化       |
-| bui-actionsheet-init  | 上拉菜单参数配置初始化       |
-| bui-dialog-init  | 弹出框参数配置初始化       |
-| bui-dropdown-init  | 下拉菜单参数配置初始化       |
-| bui-list-init  | 列表参数配置初始化       |
-| bui-listview-init  | 列表侧滑参数配置初始化       |
-| bui-pullrefresh-init  | 下拉刷新参数配置初始化       |
-| bui-scroll-init  | 滚动加载参数配置初始化       |
-| bui-number-init  | 数字条参数配置初始化       |
-| bui-pickerdate-init  | 日期参数配置初始化       |
-| bui-rating-init  | 星级评分参数配置初始化       |
-| bui-sidebar-init  | 滚动控件参数配置初始化       |
-| bui-slide-init  | 滑动控件参数配置初始化       |
-| bui-swipe-init  | 抽屉菜单参数配置初始化       |
-
-
 ### 控件完整demo缩写一览 (推荐 1.3.0新增)
 
 | **缩写代码**   | **描述**            |
@@ -378,39 +347,10 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 | bui-slide-demo  | 焦点图滑动完整示例       |
 | bui-slide-pic-demo  | 多图滑动完整示例       |
 | bui-slide-tab-demo  | 选项卡完整示例       |
+| bui-slide-tab-scroll-demo  | Tab控件菜单滚动-示例  |
+| bui-slide-tab-head-demo  | Tab控件菜单在头部-示例  |
+| bui-slide-tab-foot-demo  | Tab控件菜单在底部滚动-示例  |
+| bui-slide-tab-side-demo  | Tab控件菜单在侧边滚动-示例  |
 | bui-swipe-demo  | 抽屉菜单完整示例       |
-
-
-## BUI 事件
-
-### 全局事件
-
-| **缩写代码**   | **描述**            |
-|:------------- |:-------------------|
-| bui-on-pagebefore  | DOM初始完毕 BUI 还没初始化       |
-| bui-on-pageinit  | DOM初始完毕 BUI 已经初始化       |
-| bui-on-pageready  | DOM初始完毕 BUI 已经初始化, 原生方法初始化 |
-| bui-on-onload  | DOM初始完毕 BUI 已经初始化, 原生方法初始化, 图片及脚本资源初始化 |
-
-
-### 控件事件监听缩写
-
-| **缩写代码**   | **描述**            |
-|:------------- |:-------------------|
-| bui-router-on <span style="color:red">新</span> | 路由监听事件       |
-| bui-accordion-on  | 折叠菜单监听事件       |
-| bui-actionsheet-on  | 上拉菜单监听事件       |
-| bui-dialog-on  | 弹出框监听事件       |
-| bui-dropdown-on  | 下拉菜单监听事件       |
-| bui-list-on  | 列表监听事件       |
-| bui-listview-on  | 列表侧滑监听事件       |
-| bui-pullrefresh-on  | 列表侧滑监听事件       |
-| bui-number-on  | 数字条监听事件       |
-| bui-pickerdate-on  | 日期监听事件       |
-| bui-rating-on  | 星级评分监听事件       |
-| bui-scroll-on  | 滚动控件监听事件       |
-| bui-sidebar-on  | 滚动控件监听事件       |
-| bui-slide-on  | 滑动控件监听事件       |
-| bui-swipe-on  | 抽屉菜单监听事件       |
 
 

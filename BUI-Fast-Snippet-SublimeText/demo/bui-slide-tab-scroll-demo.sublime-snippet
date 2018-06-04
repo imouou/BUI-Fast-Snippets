@@ -1,0 +1,42 @@
+<snippet>
+    <content><![CDATA[
+// 选项卡 js 初始化:
+var tabScroll = bui.slide({
+    id:"#tabScroll",
+    menu:"#nav",
+    children:".bui-tab-main > ul",
+    scroll: true
+})    
+
+// 让顶部导航滚动到可视位置
+tabScroll.on("to",function (index) {
+
+    var left = $("#nav li")[index].offsetLeft;
+    document.getElementById("uiSlideNavbar").scrollLeft = left;
+})
+
+// 选项卡 html 对应的结构:
+<div id="uiSlideNavbar" class="bui-navbar">
+  <ul id="nav" class="bui-nav">
+    <li class="bui-btn active">Tab1</li><li class="bui-btn ">Tab2</li><li class="bui-btn">Tab3</li><li class="bui-btn ">Tab4</li><li class="bui-btn">Tab5</li><li class="bui-btn ">Tab6</li><li class="bui-btn">Tab7</li><li class="bui-btn ">Tab8</li>
+  </ul>
+</div>
+<div id="tabScroll" class="bui-tab">
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        滑动的内容
+      </li>
+      <li>
+        滑动的内容
+      </li>
+    </ul>
+  </div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-slide-tab-scroll-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>选项卡菜单滚动-完整示例</description> 
+</snippet>

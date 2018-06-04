@@ -4,7 +4,7 @@
 // 日期初始化
 var pickerdateInput = \$("#pickerdateInput");
 var uiPickerdate = bui.pickerdate({
-      handle:"#uiPickerdate",
+      handle:"#pickerdateInput",
       onChange: function(value) {
         pickerdateInput.val(value);
       }

@@ -33,13 +33,6 @@
   id:"#uiAccordion"
  });
 """
-   '折叠菜单事件监听':
-     'prefix': 'bui-accordion-on'
-     'body': """
-uiAccordion.on("${1:show}",function(){
-    //显示的时候触发
-});
-"""
 
    '折叠菜单-示例':
      'prefix': 'bui-accordion-demo'
@@ -50,7 +43,6 @@ uiAccordion.on("${1:show}",function(){
 var uiAccordion = bui.accordion({
     id:"#uiAccordion"
 });
-
 
 // 折叠菜单 html 对应的结构:
 <dl id="uiAccordion" class="bui-accordion">
@@ -119,7 +111,7 @@ bui.btn({id:"${1:#page}",handle:"${2:.bui-btn}"}).load();
      'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.btn.html'
      'body': """
 bui.btn("${1:#btn}").submit(function(loading){
-	${2:loading.stop();}
+  ${2:loading.stop();}
 });
 """
 
@@ -140,9 +132,9 @@ bui.confirm("${1:提醒内容}",function(ui){
     // this 为底部按钮
     var text = \$(this).text();
     if( text == "确定" ){
-    	//do something
+      //do something
     }
-	${2:ui.close();}
+  ${2:ui.close();}
 });
 """
 
@@ -171,6 +163,7 @@ var uiDialog = bui.dialog({
 <div id="uiDialog" class="bui-dialog" style="display:none;">
   <div class="bui-dialog-head">标题</div>
   <div class="bui-dialog-main">提示内容</div>
+  <div class="bui-dialog-foot">底部</div>
   <div class="bui-dialog-close">
     <i class="icon-close"></i>
   </div>
@@ -454,7 +447,7 @@ var uiNumber = bui.number({
      'body': """
 var pickerdateInput = \$("#pickerdateInput");
 var uiPickerdate = bui.pickerdate({
-      handle:"#uiPickerdate",
+      handle:"#pickerdateInput",
       onChange: function(value) {
         pickerdateInput.val(value);
       }
@@ -880,7 +873,6 @@ var uiSlideTab = bui.slide({
     scroll: true
 })
 """
-
    '选项卡-示例':
      'prefix': 'bui-slide-tab-demo'
      'description': ''
@@ -896,13 +888,51 @@ var uiTab = bui.slide({
 
 // 选项卡 html 对应的结构:
 <div id="uiTab" class="bui-tab">
-  <!-- 按钮较少时,这里是平分宽度 -->
   <div class="bui-tab-head">
     <ul class="bui-nav">
-      <li class="bui-btn active">首页</li>
-      <li class="bui-btn ">新闻</li>
+      <li class="bui-btn active">Tab1</li>
+      <li class="bui-btn ">Tab2</li>
     </ul>
   </div>
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        Tab1内容
+      </li>
+      <li>
+        Tab2内容
+      </li>
+    </ul>
+  </div>
+</div>
+"""
+   '选项卡菜单滚动-示例':
+     'prefix': 'bui-slide-tab-scroll-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.slide.html'
+     'body': """
+// 选项卡 js 初始化:
+var tabScroll = bui.slide({
+    id:"#tabScroll",
+    menu:"#nav",
+    children:".bui-tab-main > ul",
+    scroll: true
+})
+
+// 让顶部导航滚动到可视位置
+tabScroll.on("to",function (index) {
+
+    var left = $("#nav li")[index].offsetLeft;
+    document.getElementById("uiSlideNavbar").scrollLeft = left;
+})
+
+// 选项卡 html 对应的结构:
+<div id="uiSlideNavbar" class="bui-navbar">
+  <ul id="nav" class="bui-nav">
+    <li class="bui-btn active">Tab1</li><li class="bui-btn ">Tab2</li><li class="bui-btn">Tab3</li><li class="bui-btn ">Tab4</li><li class="bui-btn">Tab5</li><li class="bui-btn ">Tab6</li><li class="bui-btn">Tab7</li><li class="bui-btn ">Tab8</li>
+  </ul>
+</div>
+<div id="tabScroll" class="bui-tab">
   <div class="bui-tab-main">
     <ul>
       <li>
@@ -911,6 +941,166 @@ var uiTab = bui.slide({
       <li>
         滑动的内容
       </li>
+    </ul>
+  </div>
+</div>
+"""
+   '多焦点图-示例':
+     'prefix': 'bui-slide-pic-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.slide.html'
+     'body': """
+// 焦点多图 js 初始化:
+var uiSlidePic = bui.slide({
+    id:"#uiSlidePic",
+    height:120
+})
+
+// 焦点多图 html 对应的结构:
+<div id="uiSlidePic" class="bui-slide">
+  <div class="bui-slide-main">
+    <ul>
+      <!-- 有多少个li则有多少个滑动 -->
+      <li>
+        <div class="bui-box-space">
+            <div class="span1">
+                <div style="background: yellow;height: 120px;"></div>
+            </div>
+            <div class="span1">
+                <div style="background: orange;height: 120px;"></div>
+            </div>
+            <div class="span1">
+                <div style="background: red;height: 120px;"></div>
+            </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="bui-slide-head">
+    <ul>
+      <li>1</li>
+    </ul>
+  </div>
+</div>
+"""
+   '选项卡头部-示例':
+     'prefix': 'bui-slide-tab-head-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.slide.html'
+     'body': """
+//按钮在tab外层,需要传id
+var tabHead = bui.slide({
+   id:"#tabHead",
+   menu:"#tabHeadNav",
+   children:".bui-tab-main > ul",
+   scroll: true
+})
+<!-- 替换对应的main标签内容及header标签内容 -->
+<header class="bui-bar">
+   <div class="bui-bar-left">
+       <a class="bui-btn"><i class="icon-back"></i></a>
+   </div>
+   <div class="bui-bar-main">
+       <ul id="tabHeadNav" class="bui-nav" style="width: 60%;">
+           <li class="bui-btn active">Tab1</li>
+           <li class="bui-btn ">Tab2</li>
+       </ul>
+   </div>
+   <div class="bui-bar-right"></div>
+</header>
+<main>
+   <div id="tabHead" class="bui-tab">
+     <div class="bui-tab-main">
+       <ul>
+         <li>
+           Tab1内容
+         </li>
+         <li>
+           Tab2内容
+         </li>
+       </ul>
+     </div>
+   </div>
+</main>
+
+"""
+
+   '选项卡底部-示例':
+     'prefix': 'bui-slide-tab-foot-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.slide.html'
+     'body': """
+//按钮在tab外层,需要传id
+var tabFoot = bui.slide({
+   id:"#tabFoot",
+   menu:"#tabFootNav",
+   children:".bui-tab-main > ul",
+   scroll: true
+})
+<!-- 替换对应的main标签内容及footer标签内容 -->
+<main>
+   <div id="tabFoot" class="bui-tab">
+     <div class="bui-tab-main">
+       <ul>
+         <li>
+           Tab1内容
+         </li>
+         <li>
+           Tab2内容
+         </li>
+       </ul>
+     </div>
+   </div>
+</main>
+<footer>
+    <ul id="tabFootNav" class="bui-nav">
+        <li class="bui-btn bui-box-vertical active"><i class="icon-home"><span class="bui-badges">15</span></i><div class="span1">Tab1</div></li>
+        <li class="bui-btn bui-box-vertical"><i class="icon-share"></i><div class="span1">Tab2</div></li>
+    </ul>
+</footer>
+
+"""
+
+   '选项卡侧边-示例':
+     'prefix': 'bui-slide-tab-side-demo'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.slide.html'
+     'body': """
+var tabWidth = $(window).width() - $("#tabNav").width();
+//按钮在tab外层,需要传id
+var tabSide = bui.slide({
+    id:"#tabSide",
+    menu:"#tabSideNav",
+    children:".bui-tab-main > ul",
+    width: tabWidth,
+    scroll: true,
+    animate: false,
+    delay: true
+})
+// html 结构
+<style>
+  #tabSideNav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 10;
+    width:2rem;
+  }
+  #tabSide {
+    margin-left: 2rem;
+  }
+</style>
+<ul id="tabSideNav" class="bui-list">
+  <li class="bui-btn active">Tab1</li>
+  <li class="bui-btn ">Tab2</li>
+</ul>
+<div id="tabSide" class="bui-tab">
+  <div class="bui-tab-main">
+    <ul>
+      <li>Tab1内容</li>
+      <li>Tab2内容</li>
     </ul>
   </div>
 </div>
@@ -1682,7 +1872,7 @@ loader.map({
       'prefix': 'ui-box'
       'body': """
 <div class="bui-box">
-	<div class="span1">${1:<!--自适应内容-->}</div>
+  <div class="span1">${1:<!--自适应内容-->}</div>
 </div>
 """
 
@@ -1698,8 +1888,8 @@ loader.map({
       'prefix': 'ui-fluid'
       'body': """
 <div class="bui-fluid">
-	<div class="span6">${1:内容}</div>
-	<div class="span6">${1:内容}</div>
+  <div class="span6">${1:内容}</div>
+  <div class="span6">${1:内容}</div>
 </div>
 """
 
@@ -1707,25 +1897,11 @@ loader.map({
       'prefix': 'ui-fluid-space'
       'body': """
 <div class="bui-fluid-space">
-	<div class="span6">${1:内容}</div>
-	<div class="span6">${1:内容}</div>
+  <div class="span6">${1:内容}</div>
+  <div class="span6">${1:内容}</div>
 </div>
 """
 
-
-    '折叠菜单结构':
-      'prefix': 'ui-accordion'
-      'body': """
-<dl id="uiAccordion" class="bui-accordion">
-    <dt class="bui-btn bui-box">
-        <div class="span1">折叠菜单</div>
-        <i class="icon-accordion"></i>
-    </dt>
-    <dd>
-        折叠菜单内容
-    </dd>
-</dl>
-"""
 
     '上拉菜单结构':
       'prefix': 'ui-actionsheet'
@@ -1937,12 +2113,12 @@ loader.map({
       'prefix': 'ui-sidebar'
       'body': """
 <div id="uiSidebar" class="bui-sidebar-wrap">
-	<div class="bui-sidebar swiperight">
-		侧滑栏内容 swiperight 为滑动的方向,不同位置修改不同方向
-	</div>
-	<div class="bui-page">
-		页面内容
-	</div>
+  <div class="bui-sidebar swiperight">
+    侧滑栏内容 swiperight 为滑动的方向,不同位置修改不同方向
+  </div>
+  <div class="bui-page">
+    页面内容
+  </div>
 </div>
 """
 
