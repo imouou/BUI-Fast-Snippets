@@ -21,7 +21,7 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
 #----- BUI Fast Snippets----start ----------
-# v 1.4.2 20180301
+# v 1.4.4 20180605
 # UI 控件
 '.source.js':
    '折叠菜单初始化':

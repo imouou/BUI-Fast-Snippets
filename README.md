@@ -49,8 +49,7 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 
 *Atom ,APICloud Studio2 安装 BUI-Fast*
 
-- 打开顶部菜单 `Packages` -> `Command Palette`, 
-> 也可以使用快捷键 mac: `command + shift + p` , windows: `ctrl + shift + p`;
+使用快捷键 mac: `command + shift + p` , windows: `ctrl + shift + p`;
 
 - 输入`open your snippets`, 回车;
 打开下载的 `bui-fast-snippet-atom/snippets.cson` 文件, 复制内容到 `snippets.cson` 文件里面, 保存即可.
