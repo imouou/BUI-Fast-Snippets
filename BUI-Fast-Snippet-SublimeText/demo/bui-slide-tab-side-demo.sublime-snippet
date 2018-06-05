@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-var tabWidth = $(window).width() - $("#tabNav").width();
+var tabWidth = \$(window).width() - \$("#tabNav").width();
 //按钮在tab外层,需要传id
 var tabSide = bui.slide({
     id:"#tabSide",
@@ -42,6 +42,6 @@ var tabSide = bui.slide({
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-slide-tab-side-demo</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <scope>source.js</scope>
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
     <description>选项卡侧边-完整示例</description> 
 </snippet>

@@ -11,7 +11,7 @@ var tabScroll = bui.slide({
 // 让顶部导航滚动到可视位置
 tabScroll.on("to",function (index) {
 
-    var left = $("#nav li")[index].offsetLeft;
+    var left = \$("#nav li")[index].offsetLeft;
     document.getElementById("uiSlideNavbar").scrollLeft = left;
 })
 
@@ -37,6 +37,6 @@ tabScroll.on("to",function (index) {
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-slide-tab-scroll-demo</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <scope>source.js</scope>
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
     <description>选项卡菜单滚动-完整示例</description> 
 </snippet>
