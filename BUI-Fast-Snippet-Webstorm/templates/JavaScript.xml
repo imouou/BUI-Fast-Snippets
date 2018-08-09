@@ -191,7 +191,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-select" value="var uiSelect = bui.select({&#10;    id:&quot;#uiSelect&quot;,&#10;    type:&quot;checkbox&quot;,&#10;    popup: false,&#10;    data: [{&#10;      &quot;name&quot;:&quot;广东&quot;,&#10;      &quot;value&quot;:&quot;11&quot;&#10;    }],&#10;    onChange: function (module,index) {&#10;      //改变的时候触发&#10;    }&#10;});" description="选择列表初始化" toReformat="false" toShortenFQNames="true">
+  <template name="bui-select" value="var uiSelect = bui.select({&#10;    trigger:&quot;#uiSelect&quot;,&#10;    type:&quot;checkbox&quot;,&#10;    popup: true,&#10;    data: [{&#10;      &quot;name&quot;:&quot;广东&quot;,&#10;      &quot;value&quot;:&quot;11&quot;&#10;    }],&#10;    onChange: function (module,index) {&#10;      //改变的时候触发&#10;    }&#10;});" description="选择列表初始化" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />

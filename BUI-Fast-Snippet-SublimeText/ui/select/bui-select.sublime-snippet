@@ -2,9 +2,8 @@
 <snippet>
     <content><![CDATA[
 var uiSelect = bui.select({
-    id:"#${1:uiSelect}",
+    trigger:"#${1:uiSelect}",
     type:"${2:checkbox}",
-    popup: ${3:false},
     data: [{
       "name":"广东",
       "value":"11"

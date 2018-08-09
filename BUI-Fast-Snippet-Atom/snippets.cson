@@ -736,9 +736,9 @@ function template (data) {
      'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.select.html'
      'body': """
 var uiSelect = bui.select({
-    id:"#${1:uiSelect}",
+    trigger:"#${1:uiSelect}",
     type:"${2:checkbox}",
-    popup: ${3:false},
+    popup: ${3:true},
     data: [{
       "name":"广东",
       "value":"11"

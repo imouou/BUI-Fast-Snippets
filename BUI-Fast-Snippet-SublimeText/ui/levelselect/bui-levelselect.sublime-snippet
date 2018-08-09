@@ -1,0 +1,22 @@
+
+<snippet>
+    <content><![CDATA[
+loader.import("http://www.easybui.com/demo/json/citys.js",function(){
+    var citySelect = bui.levelselect({
+       data: citys,
+       title: "所在地区",
+       trigger: ".selected-val",
+       level: 3,
+       field:{
+           name: "n",
+           data: ["c","a"],
+       }
+    })
+})
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-levelselect</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>层级列表</description>
+</snippet>

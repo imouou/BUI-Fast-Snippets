@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 // 日期控件 js 初始化:
-var input = $("#datepicker_input");
+var input = \$("#datepicker_input");
 var uiPickerdate = bui.pickerdate({
   handle:"#datepicker_input",
   onChange: function(value) {

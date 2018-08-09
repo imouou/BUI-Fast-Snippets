@@ -654,9 +654,9 @@
        desc: 
        code: |
         var uiSelect = bui.select({
-            id:"#${1:uiSelect}",
+            trigger:"#${1:uiSelect}",
             type:"${2:checkbox}",
-            popup: ${3:false},
+            popup: ${3:true},
             data: [{
               "name":"广东",
               "value":"11"
