@@ -1,0 +1,29 @@
+<snippet>
+    <content><![CDATA[
+// 侧边栏 js 初始化: 
+var uiSidebar = bui.sidebar({
+    id: "#sidebarWrap",
+    width: 644,
+    trigger : "#menu"
+})
+                
+// 侧边栏 html 对应的结构:
+<div id="sidebarWrap" class="bui-sidebar-wrap">
+  <!-- 侧滑菜单 -->
+  <div class="bui-sidebar swiperight">
+    <img src="images/placeholder-sidebar.jpg" alt="占位图">
+  </div>
+  <!-- 正文内容 -->
+  <div class="bui-page">
+      <div id="menu" class="menu"><i class="icon-menu"></i></div>
+  </div>
+</div>
+
+                
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-sidebar-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>侧滑栏-完整示例</description> 
+</snippet>

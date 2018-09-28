@@ -2,7 +2,7 @@
 <snippet>
     <content><![CDATA[
 var uiStorage = bui.storage();
-    uiStorage.set("${1:username}","${2:yourname}");
+    uiStorage.set("username","yourname");
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-storage-set</tabTrigger>

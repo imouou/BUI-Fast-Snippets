@@ -2,15 +2,25 @@
 <snippet>
     <content><![CDATA[
 var uiListview = bui.listview({
-    id: "#${1:uiListview}",
+    id: "#uiListview",
     data: [{ "text": "删除", "classname":"danger"}],
-    callback: function (e,ui) {
-        // this 滑动出来的操作按钮
-        var text = \$(this).text();
-        if( text == "删除" ){
-            //do something
-        }
-        ${2:ui.close();}
+    callback: function (e) {
+        // e.target 为滑动出来的操作按钮
+        var target = \$(e.target);
+        var text = target.text();
+            if( text == '删除' ){
+                bui.confirm("确定要删除吗",function (e) {
+                    var text2 = \$(e.target).text();
+                    if( text2 == "确定"){
+                        // 执行删除整行操作
+                        target.parents("li").fadeOut(300,function () {
+                            \$(this).remove();
+                        });
+                    }
+                })
+            }
+        // 不管做什么操作,先关闭按钮
+        this.close();
     }
 });
 

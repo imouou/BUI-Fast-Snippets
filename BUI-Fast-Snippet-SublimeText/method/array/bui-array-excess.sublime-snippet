@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[
+var arr = ["a","b","a","c"],
+    newArr = bui.array.excess("a", arr);
+    
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-array-excess</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>去除数组的重复值</description>
+</snippet>

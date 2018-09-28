@@ -1,8 +1,8 @@
 
 <snippet>
     <content><![CDATA[
-bui.btn("${1:#btn}").submit(function(loading){
-	${2:loading.stop();}
+bui.btn("#btn").submit(function(loading){
+	loading.stop();
 });
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

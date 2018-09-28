@@ -2,10 +2,12 @@
 <snippet>
     <content><![CDATA[
 var uiSlide = bui.slide({
-    id:"#${1:uiSlide}",
-    height:${2:200},
-    zoom: true
+    id:"#slide",
+    height:380,
+    autopage: true,
+    loop: true
 })
+
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-slide</tabTrigger>

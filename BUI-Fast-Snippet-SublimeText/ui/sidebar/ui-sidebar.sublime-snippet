@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+<div id="sidebarWrap" class="bui-sidebar-wrap">
+  <!-- 侧滑菜单 -->
+  <div class="bui-sidebar swiperight">
+    <img src="images/placeholder-sidebar.jpg" alt="占位图">
+  </div>
+  <!-- 正文内容 -->
+  <div class="bui-page">
+      <div id="menu" class="menu"><i class="icon-menu"></i></div>
+  </div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-sidebar</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>侧滑栏结构</description> 
+</snippet>

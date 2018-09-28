@@ -1,0 +1,15 @@
+
+<snippet>
+    <content><![CDATA[
+bui.hint({
+    content:"<i class='icon-check'></i><br />欢迎使用BUI", 
+    position:"center" , 
+    effect:"fadeInDown"
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-hint-center</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>自动消失提醒,支持参数配置</description>
+</snippet>

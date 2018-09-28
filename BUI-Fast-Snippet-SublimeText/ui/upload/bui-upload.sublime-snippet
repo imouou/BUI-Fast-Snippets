@@ -1,0 +1,69 @@
+
+<snippet>
+    <content><![CDATA[
+// 拍照上传
+var photos = \$("#buiPhoto");
+var uiUpload = bui.upload();
+
+
+// 上拉菜单 js 初始化: 
+var uiActionsheet = bui.actionsheet({
+  trigger: "#btnUpload",
+  buttons: [{ name:"拍照上传",value:"camera" },{ name:"从相册选取",value:"photo" }],
+  callback: function (e) {
+    var ui = this;
+    var val = \$(e.target).attr("value");
+    switch( val ){
+        case "camera":
+        ui.hide();
+        uiUpload.add({
+            "from": "camera",
+            "onSuccess": function (val,data) {
+                // 展示本地图片
+                this.toBase64({
+                    onSuccess: function (url) {
+                        photos.prepend(templatePhoto(url))
+                   
+                    }
+                });
+
+                // 也可以直接调用start上传图片
+            }
+        })
+        
+        break;
+        case "photo":
+        ui.hide();
+        uiUpload.add({
+            "from": "",
+            "onSuccess": function (val,data) {
+                // 展示本地图片
+                this.toBase64({
+                    onSuccess: function (url) {
+                        photos.prepend(templatePhoto(url))
+                    }
+                });
+                // 也可以直接调用start上传图片
+            }
+        })
+
+        break;
+        case "cancel":
+        ui.hide();
+        break;
+    }
+  }
+})
+
+function templatePhoto(url) {
+    return `<div class="span1">
+            <div class="bui-upload-thumbnail"><img src="\${url}" alt="" /></div>
+        </div>`
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-upload</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>文件上传-初始化</description>
+</snippet>

@@ -2,7 +2,7 @@
 <snippet>
     <content><![CDATA[
 var uiDialog = bui.dialog({
-    id: "#${1:uiDialog}"
+    id: "#uiDialog"
 });
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-var px = bui.unit.remToPx(${1:2});
+var px = bui.unit.remToPx(2);
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-unit-remToPx</tabTrigger>

@@ -1,0 +1,28 @@
+<snippet>
+    <content><![CDATA[
+// 上拉菜单 js 初始化: 
+var uiActionsheet = bui.actionsheet({
+  trigger: "#btnOpen",
+  buttons: [{ name:"分享到微博",value:"weibo" },{ name:"分享到微信",value:"weixin" },{ name:"分享到QQ",value:"QQ" }],
+  callback: function (e) {
+    
+    var val = \$(e.target).attr("value");
+    
+    if( val == "cancel"){
+      this.hide();
+    }
+  }
+})
+                
+
+<!-- 上拉菜单 html 对应的结构: -->
+<div id="btnOpen" class="bui-btn">打开下拉菜单</div>
+
+                
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-actionsheet-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>上拉菜单-完整示例</description> 
+</snippet>

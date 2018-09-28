@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+var url = bui.setUrlParams("index.html", {"id":"123"});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-setUrlParams</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>生成带参数的URL</description>
+</snippet>

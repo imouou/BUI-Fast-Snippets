@@ -1,0 +1,42 @@
+<snippet>
+    <content><![CDATA[
+// 选择列表 js 初始化:
+var uiSelect = bui.select({
+    trigger:"#uiSelect",
+    triggerChildren:".bui-value",
+    title:"请选择区域",
+    type:"checkbox",
+    data: [{
+        "name":"广东",
+        "value":"gd"
+    }],
+    buttons: [{name:"重置",className:""},{name:"确定",className:"primary-reverse"}],
+    callback: function (e) {
+
+        var text = \$(e.target).text();
+        if( text == "重置" ){
+            uiSelect.selectNone();
+        }else{
+            uiSelect.hide();
+        }
+    }
+})
+                
+<!-- // 选择列表 html 对应的结构: -->
+<ul class="bui-list">
+    <li class="bui-btn bui-box" id="uiSelect">
+        <label>请选择区域</label>
+        <div class="span1">
+            <div class="bui-value"></div>
+        </div>
+        <i class="icon-listright"></i>
+    </li>
+</ul>
+   
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-select-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>选择列表-完整示例</description> 
+</snippet>

@@ -3,7 +3,7 @@
 <content><![CDATA[
 var uiStorage = bui.storage();
 
-    uiStorage.set("${1:username}",${2:{"id":"n1","name":"wangwsh"\}},"${3:id}");
+    uiStorage.set("username","id":"n1","name":"wangwsh","id");
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-storage-set-json</tabTrigger>

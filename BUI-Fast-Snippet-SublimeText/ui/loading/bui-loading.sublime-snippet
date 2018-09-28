@@ -1,7 +1,7 @@
 
 <snippet>
     <content><![CDATA[
-var uiLoading = bui.loading($1);
+var uiLoading = bui.loading();
     uiLoading.show();
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

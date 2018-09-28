@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+<!-- dialog 结构 放在 bui-page结构后面 -->
+<div id="uiDialog" class="bui-dialog" style="display:none;">
+    <div class="bui-dialog-head">对话框标题</div>
+    <div class="bui-dialog-main">对话框内容</div>
+    <div class="bui-dialog-foot">底部</div>
+    <div class="bui-dialog-close"><i class="icon-close"></i></div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-dialog</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>dialog控件结构</description> 
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+// 折叠菜单 js 初始化: 
+var uiAccordion = bui.accordion({
+    id:"#uiAccordion"
+});
+                
+
+<!-- 折叠菜单 html 对应的结构: -->
+<dl id="uiAccordion" class="bui-accordion">
+  <dt class="bui-btn bui-box">
+    <div class="span1">标题</div>
+    <i class="icon-accordion"></i>
+  </dt>
+  <dd>
+   折叠内容
+  </dd>
+</dl>
+                
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-accordion-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>折叠菜单-完整示例</description> 
+</snippet>

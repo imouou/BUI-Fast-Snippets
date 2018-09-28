@@ -2,7 +2,7 @@
 <snippet>
     <content><![CDATA[
 // 允许存储2条数据,默认1条
-var ${1:uiStorage} = bui.storage($2);
+var uiStorage = bui.storage();
 
 // 保存第1条数据
 uiStorage.set("code","123");

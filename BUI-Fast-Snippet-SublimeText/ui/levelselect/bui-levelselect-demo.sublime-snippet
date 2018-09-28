@@ -1,0 +1,41 @@
+<snippet>
+    <content><![CDATA[
+// 级联菜单 js 初始化:
+var uiLevelSelect = bui.levelselect({
+   data: [{
+    "n":"北京",
+    "c":[{"a":["城区","城区以外"],"n":"密云区"}]
+    }],
+   title: "所在地区",
+   trigger: ".selected-val",
+   level: 3,
+   field:{
+       name: "n",
+       data: ["c","a"],
+   }
+})
+
+\$("#chooseCity").on("click",function (e) {
+    uiLevelSelect.show();
+})
+                
+<!-- // 级联菜单 html 对应的结构: -->
+<ul class="bui-list">
+    <li class="bui-btn bui-box clearactive">
+        <div class="bui-label">所在地区</div>
+        <div class="span1">
+            <div id="chooseCity" class="bui-box">
+                <div class="selected-val"></div>
+                <div class="selected-val"></div>
+                <div class="selected-val"></div>
+            </div>
+        </div>
+    </li>
+</ul>      
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-levelselect-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>级联菜单-完整示例</description> 
+</snippet>

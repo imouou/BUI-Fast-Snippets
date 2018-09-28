@@ -2,16 +2,25 @@
 <snippet>
     <content><![CDATA[
 var uiSelect = bui.select({
-    trigger:"#${1:uiSelect}",
-    type:"${2:checkbox}",
+    trigger:"#uiSelect",
+    triggerChildren:".bui-value",
+    title:"请选择区域",
+    type:"checkbox",
     data: [{
-      "name":"广东",
-      "value":"11"
+        "name":"广东",
+        "value":"gd"
     }],
-    onChange: function (module,index) {
-      //改变的时候触发
+    buttons: [{name:"重置",className:""},{name:"确定",className:"primary-reverse"}],
+    callback: function (e) {
+
+        var text = \$(e.target).text();
+        if( text == "重置" ){
+            uiSelect.selectNone();
+        }else{
+            uiSelect.hide();
+        }
     }
-});
+})
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-select</tabTrigger>
