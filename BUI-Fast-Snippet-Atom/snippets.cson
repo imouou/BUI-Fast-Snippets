@@ -1804,18 +1804,6 @@ loader.map({
     </li>
 </ul>
 """
-    '图片列表':
-      'prefix': 'ui-list-photo'
-      'body': """
-<ul class="bui-list-photo bui-fluid-space-2">
-    <li>
-        <div class="bui-thumbnail">
-            <img src="images/list-img1.png" alt="" >
-            <div class="bui-thumbnail-title">图片标题</div>
-        </div>
-    </li>
-</ul>
-"""
 
     '横向滚动导航':
       'prefix': 'ui-navbar'
@@ -2275,6 +2263,32 @@ loader.map({
         </ul>
     </div>
 </div>
+"""
+
+    '图片结构':
+      'prefix': 'ui-pic'
+      'body': """
+<div class="bui-pic">
+    <div class="bui-pic-img"><img src="images/list-img1.png" alt="" ></div>
+    <div class="bui-pic-title">图片标题</div>
+</div>
+    '图片列表结构':
+      'prefix': 'ui-list-pic'
+      'body': """
+<ul class="bui-list-pic bui-fluid-space-2">
+    <li>
+        <div class="bui-pic">
+            <div class="bui-pic-img"><img src="images/list-img1.png" alt="" ></div>
+            <div class="bui-pic-title">图片标题</div>
+        </div>
+    </li>
+    <li>
+        <div class="bui-pic">
+            <div class="bui-pic-img"><img src="images/list-img1.png" alt="" ></div>
+            <div class="bui-pic-title">图片标题</div>
+        </div>
+    </li>
+</ul>
 """
 
 

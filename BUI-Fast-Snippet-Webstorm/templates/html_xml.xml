@@ -234,7 +234,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-list-photo" value="&lt;ul class=&quot;bui-list-photo bui-fluid-space-2&quot;&gt;&#10;    &lt;li&gt;&#10;        &lt;div class=&quot;bui-thumbnail&quot;&gt;&#10;            &lt;img src=&quot;images/list-img1.png&quot; alt=&quot;&quot; &gt;&#10;            &lt;div class=&quot;bui-thumbnail-title&quot;&gt;图片标题&lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="图片列表" toReformat="false" toShortenFQNames="true">
+  <template name="ui-list-pic" value="&lt;ul class=&quot;bui-list-pic bui-fluid-space-2&quot;&gt;&#10;    &lt;li&gt;&#10;        &lt;div class=&quot;bui-pic&quot;&gt;&#10;            &lt;div class=&quot;bui-pic-img&quot;&gt;&lt;img src=&quot;images/list-img1.png&quot; alt=&quot;&quot; &gt;&lt;/div&gt;&#10;            &lt;div class=&quot;bui-pic-title&quot;&gt;图片标题&lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;div class=&quot;bui-pic&quot;&gt;&#10;            &lt;div class=&quot;bui-pic-img&quot;&gt;&lt;img src=&quot;images/list-img1.png&quot; alt=&quot;&quot; &gt;&lt;/div&gt;&#10;            &lt;div class=&quot;bui-pic-title&quot;&gt;图片标题&lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="图片列表" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -245,6 +245,11 @@
     </context>
   </template>
   <template name="ui-levelselect" value="&lt;!-- 级联菜单 html 对应的结构: --&gt;&#10;&lt;ul class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box clearactive&quot;&gt;&#10;        &lt;div class=&quot;bui-label&quot;&gt;所在地区&lt;/div&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;div id=&quot;chooseCity&quot; class=&quot;bui-box&quot;&gt;&#10;                &lt;div class=&quot;selected-val&quot;&gt;&lt;/div&gt;&#10;                &lt;div class=&quot;selected-val&quot;&gt;&lt;/div&gt;&#10;                &lt;div class=&quot;selected-val&quot;&gt;&lt;/div&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt; " description="级联菜单结构" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ui-pic" value="&lt;div class=&quot;bui-pic&quot;&gt;&#10;    &lt;div class=&quot;bui-pic-img&quot;&gt;&lt;img src=&quot;images/list-img1.png&quot; alt=&quot;&quot; &gt;&lt;/div&gt;&#10;    &lt;div class=&quot;bui-pic-title&quot;&gt;图片标题&lt;/div&gt;&#10;&lt;/div&gt;" description="图片结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
