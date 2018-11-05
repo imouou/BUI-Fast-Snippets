@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+<ul class="bui-list bui-list-thumbnail">
+    <li class="bui-btn bui-box">
+        <div class="bui-thumbnail"><img src="images/list-img1.png" alt=""></div>
+        <div class="span1">
+            <h3 class="item-title">商品标题</h3>
+            <p class="item-text">天河区岑村</p>
+            <p class="item-text">3公里</p>
+        </div>
+        <span class="price"><i>￥</i>50</span>
+    </li>
+</ul>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-list-thumbnail</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>图文列表结构</description> 
+</snippet>

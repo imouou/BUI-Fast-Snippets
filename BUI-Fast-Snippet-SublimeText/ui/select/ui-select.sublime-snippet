@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+<ul class="bui-list">
+    <li class="bui-btn bui-box" id="uiSelect">
+        <label>请选择区域</label>
+        <div class="span1">
+            <div class="bui-value"></div>
+        </div>
+        <i class="icon-listright"></i>
+    </li>
+</ul>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-select</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>select按钮结构</description> 
+</snippet>

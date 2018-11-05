@@ -2,7 +2,7 @@
 <snippet>
     <content><![CDATA[
 var uiStorage = bui.storage();
-var username = uiStorage.get("${1:username}");
+var username = uiStorage.get("username");
 
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

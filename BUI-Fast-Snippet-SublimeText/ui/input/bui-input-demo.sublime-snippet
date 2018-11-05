@@ -1,0 +1,22 @@
+<snippet>
+    <content><![CDATA[
+// input js 初始化: 
+bui.input({
+    id: "#userInput",
+    callback: function (e) {
+        // 清空数据
+        this.empty();
+    }
+})
+
+<!-- input html 对应的结构: -->
+<div id="userInput" class="bui-input">
+    <input type="text" value="" placeholder="请输入">
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-input-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>input删除-完整示例</description> 
+</snippet>

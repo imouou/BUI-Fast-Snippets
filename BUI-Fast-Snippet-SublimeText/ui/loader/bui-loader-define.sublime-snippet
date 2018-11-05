@@ -1,0 +1,16 @@
+
+<snippet>
+    <content><![CDATA[
+loader.define(function(require,exports,module){
+
+    var pageview = {};
+
+    return pageview;
+})
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>loader-define</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>模块-定义模块</description>
+</snippet>

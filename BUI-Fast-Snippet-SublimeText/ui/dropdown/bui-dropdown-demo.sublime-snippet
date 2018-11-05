@@ -1,0 +1,29 @@
+<snippet>
+    <content><![CDATA[
+// 下拉菜单 js 初始化:
+var uiDoropdown = bui.dropdown({
+    id: "#uiDropdown",
+    data: [{
+        name:"广州",
+        value:"广州"
+    }],
+    //设置relative为false,二级菜单继承父层宽度
+    relative: false,
+    callback: function (e) {
+    }
+})
+                
+<!-- // 下拉菜单 html 对应的结构: -->
+<div id="uiDropdown" class="bui-dropdown">
+  <div class="bui-btn bui-box" >
+    <div class="span1">下拉菜单</div>
+    <i class="icon-dropdown"></i>
+  </div>
+</div>       
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-dropdown-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>下拉菜单-完整示例</description> 
+</snippet>

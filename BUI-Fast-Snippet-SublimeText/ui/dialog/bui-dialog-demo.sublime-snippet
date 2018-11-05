@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+// 弹出框 js 初始化:// 计算列表的高度
+var uiDialog = bui.dialog({
+    id: "#uiDialog"
+});
+
+                
+<!-- // 弹出框 html 对应的结构: -->
+<div id="uiDialog" class="bui-dialog" style="display:none;">
+    <div class="bui-dialog-head">标题</div>
+    <div class="bui-dialog-main">提示内容</div>
+    <div class="bui-dialog-close">
+        <i class="icon-close"></i>
+    </div>
+</div>       
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-dialog-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>弹出框-完整示例</description> 
+</snippet>

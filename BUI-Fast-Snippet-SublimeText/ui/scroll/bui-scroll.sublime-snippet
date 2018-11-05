@@ -1,24 +1,32 @@
 
 <snippet>
     <content><![CDATA[
+// 列表滚动加载 js 初始化: 
 var uiScroll = bui.scroll({
-    id: "#${1:uiScroll}",
+    id: "#uiScroll",
+    children: ".bui-list",
     page:1,
-    pageSize:10,
-    //children: ".bui-list li",
-    onRefresh: onRefreshData,
-    onLoad: onLoadData
-});
+    pageSize:5,
+    onRefresh: function () {
+        var page = 1;
+        var pagesize = 5;
+        getData(page,pagesize,"html");
+    },
+    onLoad: getData
+})
 
-// 下拉刷新
-function onRefreshData(){
-  $2
-};
 
-// 上拉加载
-function onLoadData(){
-  $3
-};
+//新增下一页数据
+function getData(page,pagesize,command){
+  var command = command || "append";
+  
+  // 更新分页信息,如果高度不足会自动请求下一页
+  uiScroll.updateCache(page,res.data);
+
+  // 刷新的时候返回位置
+  uiScroll.reverse();
+
+}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-scroll</tabTrigger>

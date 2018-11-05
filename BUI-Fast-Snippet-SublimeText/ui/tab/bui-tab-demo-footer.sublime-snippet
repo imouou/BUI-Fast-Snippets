@@ -1,0 +1,50 @@
+<snippet>
+    <content><![CDATA[
+// 选项卡 js 初始化:
+var tab = bui.tab({
+    id:"#tabDynamic",
+    menu:"#tabDynamicNav",
+    // 1: 声明是动态加载的tab
+    autoload: true,
+})
+
+// 2: 监听跳转的时候触发
+tab.on("to",function (index) {
+    // 根据索引加载对应的脚本
+    switch(index){
+        case 0:
+        loader.require(["pages/main/home"],function(main){
+            console.log("有回调每次都执行")
+        })
+        break;
+        case 1:
+        console.log("没回调只加载一次")
+        loader.require(["pages/main/news"])
+    }
+}).to(0);
+
+                
+<!-- 选项卡 html 对应的结构: 分别替换main,footer标签, 如果main有其它内容,则复制bui-tab的结构-->
+<main>
+    <div id="tabDynamic" class="bui-tab">
+        <div class="bui-tab-main">
+            <ul>
+                <li><!-- Tab1 --></li>
+                <li style="display: none;"><!-- Tab2 --></li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer>
+    <ul id="tabDynamicNav" class="bui-nav">
+        <li class="bui-btn bui-box-vertical active" href="pages/main/home.html"><i class="icon-home"><span class="bui-badges">5</span></i><div class="span1">Tab1</div></li>
+        <li class="bui-btn bui-box-vertical" href="pages/main/news.html"><i class="icon-edit"></i><div class="span1">Tab2</div></li>
+    </ul>
+</footer>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-tab-demo-footer</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>底部动态选项卡-完整示例</description> 
+</snippet>

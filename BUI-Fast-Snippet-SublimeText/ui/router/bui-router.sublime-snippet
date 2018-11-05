@@ -1,0 +1,25 @@
+
+<snippet>
+    <content><![CDATA[
+window.router = bui.router();
+
+bui.ready(function () {
+
+    router.init({
+        id: "#bui-router",
+        progress: true,
+        // 动画优先
+        // firstAnimate: true,
+        // webapp部署的时候改为true, 这样物理刷新缓存还在
+        reloadCache: false
+    })
+
+})
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-router</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>路由-初始化</description>
+</snippet>

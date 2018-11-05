@@ -2,12 +2,12 @@
 <snippet>
     <content><![CDATA[
 var uiActionsheet = bui.actionsheet({
-    trigger: "#${1:uiActionsheet}",
+    trigger: "#btnOpen",
     buttons: [{ name:"分享到微博",value:"weibo" }],
-    callback: function (e,ui) {
-        var val = \$(this).attr("value");
+    callback: function (e) {
+        var val = \$(e.target).attr("value");
         if( val == "cancel"){
-            ui.hide();
+            this.hide();
         }
     }
 })

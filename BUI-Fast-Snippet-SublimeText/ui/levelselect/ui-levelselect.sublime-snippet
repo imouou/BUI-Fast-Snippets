@@ -1,0 +1,21 @@
+<snippet>
+    <content><![CDATA[
+<ul class="bui-list">
+    <li class="bui-btn bui-box clearactive">
+        <div class="bui-label">所在地区</div>
+        <div class="span1">
+            <div id="chooseCity" class="bui-box">
+                <div class="selected-val"></div>
+                <div class="selected-val"></div>
+                <div class="selected-val"></div>
+            </div>
+        </div>
+    </li>
+</ul>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-levelselect</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>级联菜单-结构</description> 
+</snippet>

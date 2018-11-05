@@ -15,6 +15,8 @@
 | 王伟深       | 新增 webstorm插件  | 2018-04-19   |
 | 王伟深       | 新增 tab 的几种不同位置, bui-slide-tab-head-demo,bui-slide-tab-foot-demo,bui-slide-tab-side-demo,bui-slide-tab-scroll-demo,  | 2018-05-30   |
 | 王伟深       | 去除生成控件方法,比方之前有 bui-accordion-show 现在只有 bui-accordion ,只保留最简单的初始化,其它查API   | 2018-06-04   |
+| 王伟深       | 优化简化,按1.5.0修改   | 2018-09-28   |
+
 
 ## 目录
 [TOC]
@@ -22,7 +24,7 @@
 ---
 ## 简介
 
-BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APICloud Studio2 ,Webstorm中集成BUI控件及方法的代码提示，为快速开发助力. 里面封装了控件的常用参数及常用方法的语法补全, 版本对应 BUI的版本.
+BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,VSCode,APICloud Studio2 ,Webstorm中集成BUI控件及方法的代码提示，为快速开发助力. 里面封装了控件的常用参数及常用方法的语法补全, 版本对应 BUI的版本.
 > 1.3.1版本新增 控件名加"-demo" 快速生成控件初始化及结构,只要把结构复制到body对应的位置就行.
 
 ---
@@ -54,6 +56,15 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,APIClou
 - 输入`open your snippets`, 回车;
 打开下载的 `bui-fast-snippet-atom/snippets.cson` 文件, 复制内容到 `snippets.cson` 文件里面, 保存即可.
 
+### 在VScode安装
+
+方法1:
+在应用市场输入 `bui-fast` , 安装即可.
+
+方法2: 
+使用快捷键 mac: `command + shift + p` , windows: `ctrl + shift + p`;
+- 输入`Install from VSIX`, 回车 ;
+找到 `BUI-Fast-Snippet-Vscode/bui-fast-0.0.1.vsix` 文件安装即可, 再按提示reload. 
 
 ### 在Webstorm安装
 
@@ -194,95 +205,7 @@ bui.ajax({
 ```
 
 ---
-## BUI HTML结构缩写一览
 
-html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kbd>Tab</kbd>键即可进行补全
-
-### 控件结构缩写
-
-| **缩写代码**   | **描述**            |
-|:------------- |:-------------------|
-| ui-accordion  | 折叠菜单结构       |
-| ui-actionsheet  | 上拉菜单结构       |
-| ui-dialog  | 弹出框结构       |
-| ui-dropdown  | 下拉菜单结构       |
-| ui-listview  | 列表侧滑结构       |
-| ui-listview-custom  | 列表侧滑静态结构       |
-| ui-number  | 数字条结构       |
-| ui-pickerdate  | 日期结构       |
-| ui-rating  | 星级评分结构       |
-| ui-list  | 列表滚动控件结构       |
-| ui-scroll  | 滚动控件结构       |
-| ui-sidebar  | 滚动控件结构       |
-| ui-slide  | 滑动控件结构       |
-| ui-slide-tab  | 滑动Tab控件结构  |
-| ui-swipe  | 抽屉菜单结构       |
-
-### 页面结构缩写
-
-| **缩写代码**   | **描述**            |
-|:------------- |:-------------------|
-| ui-router  <span style="color:red">新</span>     | BUI 单页标准结构    |
-| ui-html       | BUI HTML标准结构    |
-| ui-page       | BUI 页面标准结构    |
-| ui-header        | 生成header结构        |
-| ui-header-side   | 生成header左对齐结构   |
-| ui-btn             | 按钮                         |
-| ui-btn-icon        | 图标按钮                         |
-| ui-btn-round        | 圆角按钮                         |
-| ui-btn-badges        | 按钮数字提醒                         |
-| ui-btn-disabled        | 按钮禁止点击                         |
-| ui-panel      | panel结构          |
-| ui-table      | 表格结构            |
-| ui-form       | 表单结构            |
-| ui-form-edit  | 表单填写结构        |
-| ui-form-btn| 表单底部结构        |
-| ui-nav | 导航菜单        |
-| ui-nav-icon | 导航菜单带图标        |
-| ui-list  | 列表结构       |
-| ui-list-arrow  | 列表带箭头结构       |
-| ui-list-checkbox  | 列表多选结构       |
-| ui-list-radio  | 列表单选结构       |
-| ui-list-group  | 列表分组结构       |
-| ui-list-icon  | 列表带图标结构       |
-| ui-list-thumbnail  | 列表多行带缩略图结构       |
-
-
-### 布局结构缩写
-
-| **缩写代码**   | **描述**            |
-|:------------- |:-------------------|
-| ui-box        | 弹性布局结构       |
-| ui-box-space  | 弹性布局留白结构    |
-| ui-box-center  | 块元素水平垂直居中结构    |
-| ui-box-align-top  | 块元素顶部对齐结构    |
-| ui-box-align-bottom  | 块元素底部对齐结构    |
-| ui-box-align-left  | 块元素左对齐结构    |
-| ui-box-align-right  | 块元素右对齐结构    |
-| ui-box-align-center  | 块元素水平居中结构    |
-| ui-box-align-middle  | 块元素垂直居中结构    |
-| ui-box-align-justify  | 块元素两端分布结构    |
-| ui-box-align-stretch  | 块元素上下拉伸结构    |
-| ui-fluid      | 百分比布局结构      |
-| ui-fluid-space| 百分比留白布局结构    |
-| ui-fluid-2    | 2列布局结构        |
-| ui-fluid-3    | 3列布局结构        |
-| ui-fluid-4    | 4列布局结构        |
-
-
-### 表单元素结构缩写
-
-| **缩写代码**        | **描述**                      |
-|:-------------      |:-------------------          |
-| ui-radio           | 单选框                        |
-| ui-checkbox        | 多选框                        |
-| ui-checkbox-custom | 多选框自定义结构,便于修改样式    |
-| ui-choose | 单选多选的不同样式                       |
-| ui-input | 输入框                                    |  
-| ui-input-custom | 输入框弹性布局结构                   |
-| ui-switch | 开关切换                                  |
-| ui-range | 拖动条                                    |
-| ui-progress  | 进度条结构       |
 
 ## BUI JS方法及控件缩写
 
@@ -291,39 +214,7 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 #### 控件简单初始化
 
 控件名: bui.accordion 
-我们只需要输入 __bui-accordion__ <kbd>Tab</kbd> 就会生成最简单的初始化脚本
-
-| **缩写代码**   | **描述**            |
-|:------------- |:-------------------|
-| bui-router  <span style="color:red">新</span> | BUI 单页初始化 |
-| bui-router-load  <span style="color:red">新</span> | 单页跳转 |
-| bui-router-refresh  <span style="color:red">新</span> | 单页刷新 |
-| bui-router-replace  <span style="color:red">新</span> | 单页替换 |
-| bui-router-back  <span style="color:red">新</span> | 单页后退 |
-| bui-router-getPageParams  <span style="color:red">新</span> | 获取页面参数 |
-| bui-router-loadPart  <span style="color:red">新</span> | 局部加载 |
-| bui-loader-define  <span style="color:red">新</span> | 模块定义 |
-| bui-loader-require  <span style="color:red">新</span> | 模块加载 |
-| bui-loader-import  <span style="color:red">新</span> | 脚本及样式资源动态引入 |
-| bui-loader-map  <span style="color:red">新</span> | 单个模块配置 |
-| bui-loader-mapall  <span style="color:red">新</span> | 多个模块配置 |
-| bui-accordion  | 折叠菜单初始化       |
-| bui-actionsheet  | 上拉菜单初始化       |
-| bui-dialog  | 弹出框初始化       |
-| bui-dropdown  | 下拉菜单初始化       |
-| bui-list  | 列表初始化       |
-| bui-listview  | 列表侧滑初始化       |
-| bui-pullrefresh  | 下拉刷新初始化       |
-| bui-scroll  | 滚动加载初始化       |
-| bui-number  | 数字条初始化       |
-| bui-pickerdate  | 日期初始化       |
-| bui-rating  | 星级评分初始化       |
-| bui-searchbar  | 搜索控件初始化       |
-| bui-sidebar  | 滚动控件初始化       |
-| bui-slide  | 滑动控件初始化       |
-| bui-slide-tab  | 滑动Tab控件初始化  |
-| bui-swipe  | 抽屉菜单初始化       |
-
+我们只需要输入 __bui-accordion-demo__ <kbd>Tab</kbd> 就会生成完整的示例
 
 ### 控件完整demo缩写一览 (推荐 1.3.0新增)
 
@@ -344,12 +235,140 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 | bui-scroll-demo  | 滚动控件完整示例       |
 | bui-sidebar-demo  | 滚动控件完整示例       |
 | bui-slide-demo  | 焦点图滑动完整示例       |
-| bui-slide-pic-demo  | 多图滑动完整示例       |
-| bui-slide-tab-demo  | 选项卡完整示例       |
-| bui-slide-tab-scroll-demo  | Tab控件菜单滚动-示例  |
-| bui-slide-tab-head-demo  | Tab控件菜单在头部-示例  |
-| bui-slide-tab-foot-demo  | Tab控件菜单在底部滚动-示例  |
-| bui-slide-tab-side-demo  | Tab控件菜单在侧边滚动-示例  |
+| bui-tab-demo  | Tab控件-示例  |
+| bui-tab-demo-footer  | Tab控件菜单在底部滚动-示例  |
 | bui-swipe-demo  | 抽屉菜单完整示例       |
+| bui-levelselect-demo  | 级联菜单完整示例       |
+| bui-input-demo  | 输入框完整示例       |
+| bui-searchbar-demo  | 搜索完整示例       |
+| bui-select-demo  | 选择列表完整示例       |
+| bui-stepbar-demo  | 步骤条完整示例       |
+| bui-upload-demo  | 上传完整示例       |
+
+控件名: bui.accordion 
+我们只需要输入 __bui-accordion__ <kbd>Tab</kbd> 就会生成最简单的初始化脚本
 
 
+| **缩写代码**   | **描述**            |
+|:------------- |:-------------------|
+| bui-accordion  | 折叠菜单初始化       |
+| bui-actionsheet  | 上拉菜单初始化       |
+| bui-dialog  | 弹出框初始化       |
+| bui-dropdown  | 下拉菜单初始化       |
+| bui-list  | 列表初始化       |
+| bui-listview  | 列表侧滑初始化       |
+| bui-pullrefresh  | 下拉刷新初始化       |
+| bui-scroll  | 滚动加载初始化       |
+| bui-number  | 数字条初始化       |
+| bui-pickerdate  | 日期初始化       |
+| bui-rating  | 星级评分初始化       |
+| bui-searchbar  | 搜索控件初始化       |
+| bui-sidebar  | 滚动控件初始化       |
+| bui-slide  | 滑动控件初始化       |
+| bui-tab  | 滑动Tab控件初始化  |
+| bui-swipe  | 抽屉菜单初始化       |
+| bui-levelselect  | 级联菜单初始化       |
+| bui-input  | 输入框初始化       |
+| bui-searchbar  | 搜索初始化       |
+| bui-select  | 选择列表初始化       |
+| bui-stepbar  | 步骤条初始化       |
+| bui-upload  | 上传初始化       |
+| bui-router  <span style="color:red">新</span> | BUI 单页初始化 |
+| router-load  <span style="color:red">新</span> | 单页跳转 |
+| router-refresh  <span style="color:red">新</span> | 单页刷新 |
+| router-replace  <span style="color:red">新</span> | 单页替换 |
+| router-back  <span style="color:red">新</span> | 单页后退 |
+| router-getPageParams  <span style="color:red">新</span> | 获取页面参数 |
+| router-loadPart  <span style="color:red">新</span> | 局部加载 |
+| loader-define  <span style="color:red">新</span> | 模块定义 |
+| loader-require  <span style="color:red">新</span> | 模块加载 |
+| loader-import  <span style="color:red">新</span> | 脚本及样式资源动态引入 |
+| loader-map  <span style="color:red">新</span> | 单个模块配置 |
+| loader-mapall  <span style="color:red">新</span> | 多个模块配置 |
+
+
+## BUI HTML结构缩写一览
+
+html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kbd>Tab</kbd>键即可进行补全
+
+
+
+### 控件结构缩写
+
+| **缩写代码**   | **描述**            |
+|:------------- |:-------------------|
+| ui-accordion  | 折叠菜单结构       |
+| ui-actionsheet  | 上拉菜单结构       |
+| ui-dialog  | 弹出框结构       |
+| ui-dropdown  | 下拉菜单结构       |
+| ui-listview  | 列表侧滑结构       |
+| ui-listview-custom  | 列表侧滑静态结构       |
+| ui-number  | 数字条结构       |
+| ui-pickerdate  | 日期结构       |
+| ui-rating  | 星级评分结构       |
+| ui-list  | 列表滚动控件结构       |
+| ui-scroll  | 滚动控件结构       |
+| ui-sidebar  | 滚动控件结构       |
+| ui-slide  | 滑动控件结构       |
+| ui-slide-tab  | 滑动Tab控件结构  |
+| ui-swipe  | 抽屉菜单结构       |
+| ui-searchbar  | 搜索结构       |
+| ui-range  | 滑动条结构       |
+| ui-switch  | 切换按钮结构       |
+| ui-select  | 选择列表结构       |
+| ui-stepbar  | 步骤条结构       |
+| ui-btn             | 按钮                         |
+| ui-levelselect  <span style="color:red">新</span>| 级联控件结构       |
+| ui-tab  <span style="color:red">新</span>| 选项卡结构       |
+| ui-upload  <span style="color:red">新</span>| 上传结构       |
+| ui-input | 输入框                                    |  
+
+### 页面结构缩写
+
+| **缩写代码**   | **描述**            |
+|:------------- |:-------------------|
+| ui-router  <span style="color:red">新</span>     | BUI 单页标准结构    |
+| ui-html       | BUI HTML标准结构    |
+| ui-page       | BUI 页面标准结构    |
+| ui-header        | 生成header结构        |
+| ui-header-side   | 生成header左对齐结构   |
+| ui-panel      | panel结构          |
+| ui-table      | 表格结构            |
+| ui-form       | 表单结构            |
+| ui-form-edit  | 表单填写结构        |
+| ui-form-submit| 表单底部结构        |
+| ui-nav | 导航菜单        |
+| ui-nav-icon | 导航菜单带图标        |
+| ui-list-arrow  | 箭头列表结构       |
+| ui-list-checkbox  | 多选列表结构       |
+| ui-list-radio  | 单选列表结构       |
+| ui-list-group  | 分组列表结构       |
+| ui-list-icon  | 图标列表结构       |
+| ui-list-photo  | 图片列表结构       |
+| ui-list-thumbnail  | 列表多行带缩略图结构       |
+
+
+### 布局结构缩写
+
+| **缩写代码**   | **描述**            |
+|:------------- |:-------------------|
+| ui-box        | 弹性布局结构       |
+| ui-box-space  | 弹性布局留白结构    |
+| ui-box-center  | 块元素水平垂直居中结构    |
+| ui-fluid      | 百分比布局结构      |
+| ui-fluid-space| 百分比留白布局结构    |
+| ui-fluid-5    | 5列布局结构        |
+
+
+### 表单元素结构缩写
+
+| **缩写代码**        | **描述**                      |
+|:-------------      |:-------------------          |
+| ui-radio           | 单选框                        |
+| ui-checkbox        | 多选框                        |
+| ui-checkbox-custom | 多选框自定义结构,便于修改样式    |
+| ui-choose | 单选多选的不同样式                       |
+| ui-switch | 开关切换                                  |
+| ui-range | 拖动条                                    |
+| ui-progress  | 进度条结构       |
+| ui-check  <span style="color:red">新</span>| 选择按钮结构       |

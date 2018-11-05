@@ -2,7 +2,15 @@
 <snippet>
     <content><![CDATA[
 var uiDropdown = bui.dropdown({
-    id: "#${1:uiDropdown}"
+    id: "#uiDropdown",
+    data: [{
+        name:"广州",
+        value:"广州"
+    }],
+    //设置relative为false,二级菜单继承父层宽度
+    relative: false,
+    callback: function (e) {
+    }
 });
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

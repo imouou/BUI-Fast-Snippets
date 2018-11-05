@@ -4,27 +4,27 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-page" value="&lt;div class=&quot;bui-page&quot;&gt;&#10;    &lt;header class=&quot;bui-bar&quot;&gt;&#10;        &lt;div class=&quot;bui-bar-left&quot;&gt;&#10;            &lt;!-- 左边按钮 --&gt;&#10;            &lt;a class=&quot;bui-btn&quot; onclick=&quot;bui.back();&quot;&gt;&lt;i class=&quot;icon-back&quot;&gt;&lt;/i&gt;&lt;/a&gt;&#10;        &lt;/div&gt;&#10;        &lt;div class=&quot;bui-bar-main&quot;&gt;页面标题&lt;/div&gt;&#10;        &lt;div class=&quot;bui-bar-right&quot;&gt;&#10;            &lt;!-- 右边按钮 --&gt;&#10;        &lt;/div&gt;&#10;    &lt;/header&gt;&#10;    &lt;main&gt;&#10;        &lt;!-- 正文内容 --&gt;&#10;    &lt;/main&gt;&#10;    &lt;footer&gt;&#10;        &lt;!-- 底部内容 --&gt;&#10;    &lt;/footer&gt;&#10;&lt;/div&gt;" description="bui标准页面结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-page" value="&lt;div class=&quot;bui-page&quot;&gt;&#10;    &lt;header class=&quot;bui-bar&quot;&gt;&#10;        &lt;div class=&quot;bui-bar-left&quot;&gt;&#10;            &lt;a class=&quot;bui-btn&quot; onclick=&quot;bui.back();&quot;&gt;&lt;i class=&quot;icon-back&quot;&gt;&lt;/i&gt;&lt;/a&gt;&#10;        &lt;/div&gt;&#10;        &lt;div class=&quot;bui-bar-main&quot;&gt;页面标题&lt;/div&gt;&#10;        &lt;div class=&quot;bui-bar-right&quot;&gt;&#10;            &lt;!-- 右边按钮 --&gt;&#10;        &lt;/div&gt;&#10;    &lt;/header&gt;&#10;    &lt;main&gt;&#10;        &lt;!-- 正文内容 --&gt;&#10;    &lt;/main&gt;&#10;    &lt;footer&gt;&#10;        &lt;!-- 底部内容 --&gt;&#10;    &lt;/footer&gt;&#10;&lt;/div&gt;" description="bui标准页面结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-router" value="&lt;!DOCTYPE HTML&gt;&#10;&lt;html lang=&quot;en-US&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot; /&gt;&#10;    &lt;title&gt;BUI-单页模板&lt;/title&gt;&#10;    &lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&quot;&gt;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bui.css&quot; /&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;    &lt;div id=&quot;bui-router&quot;&gt;&lt;/div&gt;&#10;    &lt;script src=&quot;js/zepto.js&quot;&gt;&lt;/script&gt;&#10;    &lt;script src=&quot;js/plugins/fastclick.js&quot;&gt;&lt;/script&gt;&#10;    &lt;script src=&quot;js/bui.js&quot;&gt;&lt;/script&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;" description="单页路由结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-router" value="&lt;!DOCTYPE HTML&gt;&#10;&lt;html lang=&quot;en-US&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot; /&gt;&#10;    &lt;title&gt;BUI-单页模板&lt;/title&gt;&#10;    &lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&quot;&gt;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bui.css&quot; /&gt;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; /&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;    &lt;div id=&quot;bui-router&quot;&gt;&lt;/div&gt;&#10;    &lt;script src=&quot;js/zepto.js&quot;&gt;&lt;/script&gt;&#10;    &lt;script src=&quot;js/bui.js&quot;&gt;&lt;/script&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;" description="单页路由结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-list" value="&lt;div id=&quot;uiScroll&quot; class=&quot;bui-scroll&quot;&gt;&#10;    &lt;div class=&quot;bui-scroll-head&quot;&gt;&lt;/div&gt;&#10;    &lt;div class=&quot;bui-scroll-main&quot;&gt;&#10;        &lt;!-- 这里是滚动的内容区,如果不是ul,则需要修改对应的参数 --&gt;&#10;        &lt;ul class=&quot;bui-list&quot;&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;bui-scroll-foot&quot;&gt;&lt;/div&gt;&#10;&lt;/div&gt;" description="下拉刷新列表结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-list" value="&lt;!-- 列表控件 html 对应的结构:  --&gt;&#10;&lt;div id=&quot;uiList&quot; class=&quot;bui-scroll&quot;&gt;&#10;    &lt;div class=&quot;bui-scroll-head&quot;&gt;&lt;/div&gt;&#10;    &lt;div class=&quot;bui-scroll-main&quot;&gt;&#10;        &lt;ul class=&quot;bui-list&quot;&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;bui-scroll-foot&quot;&gt;&lt;/div&gt;&#10;&lt;/div&gt;" description="下拉刷新列表结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-list-thumbnail" value="&lt;ul class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box&quot;&gt;&#10;        &lt;div class=&quot;thumbnail&quot;&gt;&lt;img src=&quot;../images/applogo.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;h3 class=&quot;item-title&quot;&gt;标题&lt;/h3&gt;&#10;            &lt;p class=&quot;item-text&quot;&gt;内容描述&lt;/p&gt;&#10;        &lt;/div&gt;&#10;        &lt;i class=&quot;icon-listright&quot;&gt;&lt;/i&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="缩略图列表" toReformat="false" toShortenFQNames="true">
+  <template name="ui-list-thumbnail" value="&lt;ul class=&quot;bui-list bui-list-thumbnail&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box&quot;&gt;&#10;        &lt;div class=&quot;bui-thumbnail&quot;&gt;&lt;img src=&quot;images/list-img1.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;h3 class=&quot;item-title&quot;&gt;商品标题&lt;/h3&gt;&#10;            &lt;p class=&quot;item-text&quot;&gt;天河区岑村&lt;/p&gt;&#10;            &lt;p class=&quot;item-text&quot;&gt;3公里&lt;/p&gt;&#10;        &lt;/div&gt;&#10;        &lt;span class=&quot;price&quot;&gt;&lt;i&gt;￥&lt;/i&gt;50&lt;/span&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="缩略图列表" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-list-radio" value="&lt;ul class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box bui-btn-line&quot;&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;label for=&quot;choose&quot;&gt;单选&lt;/label&gt;&#10;        &lt;/div&gt;&#10;        &lt;input id=&quot;choose&quot; type=&quot;radio&quot; class=&quot;bui-choose&quot; name=&quot;interest&quot; value=&quot;&quot; text=&quot;&quot; checked=&quot;checked&quot;&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="单选列表" toReformat="false" toShortenFQNames="true">
+  <template name="ui-list-radio" value="&lt;ul class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box bui-btn-line&quot;&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;label class=&quot;bui-label&quot;&gt;单选&lt;/label&gt;&#10;        &lt;/div&gt;&#10;        &lt;input type=&quot;radio&quot; class=&quot;bui-choose&quot; name=&quot;interest&quot; value=&quot;&quot; text=&quot;&quot;&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="单选列表" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -39,7 +39,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-list-checkbox" value="&lt;ul class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box bui-btn-line&quot;&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;label for=&quot;${1:choose}&quot;&gt;多选&lt;/label&gt;&#10;        &lt;/div&gt;&#10;        &lt;input id=&quot;${1:choose}&quot; type=&quot;checkbox&quot; class=&quot;bui-choose&quot; name=&quot;interest&quot; value=&quot;&quot; text=&quot;&quot; checked=&quot;checked&quot;&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="多选列表" toReformat="false" toShortenFQNames="true">
+  <template name="ui-list-checkbox" value="&lt;ul class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box bui-btn-line&quot;&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;label class=&quot;bui-label&quot;&gt;多选&lt;/label&gt;&#10;        &lt;/div&gt;&#10;        &lt;input type=&quot;checkbox&quot; class=&quot;bui-choose&quot; name=&quot;interest&quot; value=&quot;&quot; text=&quot;&quot;&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="多选列表" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -64,12 +64,12 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-form-edit" value="&lt;ul class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box clearactive&quot;&gt;&#10;        &lt;label class=&quot;bui-label&quot; for=&quot;username&quot;&gt;帐号&lt;/label&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;input id=&quot;username&quot; type=&quot;text&quot; class=&quot;bui-input&quot; value=&quot;&quot; placeholder=&quot;请输入帐号&quot;&gt;&#10;        &lt;/div&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="表单编辑" toReformat="false" toShortenFQNames="true">
+  <template name="ui-form-edit" value="&lt;ul class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box clearactive&quot;&gt;&#10;        &lt;label class=&quot;bui-label&quot;&gt;帐号&lt;/label&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;input type=&quot;text&quot; class=&quot;bui-input&quot; value=&quot;&quot; placeholder=&quot;请输入帐号&quot;&gt;&#10;        &lt;/div&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="表单编辑" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-form-btn" value="&lt;div class=&quot;container-y&quot;&gt;&#10;    &lt;div class=&quot;bui-box-space&quot;&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;div class=&quot;bui-btn round&quot;&gt;重置&lt;/div&gt;&#10;        &lt;/div&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;div class=&quot;bui-btn round primary&quot;&gt;提交&lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="表单底部按钮" toReformat="false" toShortenFQNames="true">
+  <template name="ui-form-submit" value="&lt;div class=&quot;container-y&quot;&gt;&#10;    &lt;div class=&quot;bui-box-space&quot;&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;div class=&quot;bui-btn round&quot;&gt;重置&lt;/div&gt;&#10;        &lt;/div&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;div class=&quot;bui-btn round primary&quot;&gt;提交&lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="表单底部按钮" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -94,7 +94,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-input" value="&lt;input type=&quot;text&quot; class=&quot;bui-input&quot; value=&quot;&quot; placeholder=&quot;请输入关键字&quot;&gt;" description="输入框" toReformat="false" toShortenFQNames="true">
+  <template name="ui-input" value="&lt;div class=&quot;bui-input&quot;&gt;&#10;    &lt;input type=&quot;text&quot; value=&quot;&quot; placeholder=&quot;请输入关键字&quot;&gt;&#10;&lt;/div&gt;" description="输入框" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -164,7 +164,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-dropdown" value="&lt;div id=&quot;uiDropdown&quot; class=&quot;bui-dropdown&quot;&gt;&#10;    &lt;div class=&quot;bui-btn bui-box&quot; &gt;&#10;        &lt;div class=&quot;span1&quot;&gt;菜单名称&lt;/div&gt;&#10;        &lt;i class=&quot;icon-dropdown&quot;&gt;&lt;/i&gt;&#10;    &lt;/div&gt;&#10;    &lt;ul class=&quot;bui-list&quot;&gt;&#10;        &lt;li class=&quot;bui-btn bui-box&quot; value=&quot;&quot;&gt;&#10;            &lt;div class=&quot;span1&quot;&gt;&#10;                下拉菜单1&#10;            &lt;/div&gt;&#10;            &lt;i class=&quot;icon-listright&quot;&gt;&lt;/i&gt;&#10;        &lt;/li&gt;&#10;    &lt;/ul&gt;&#10;&lt;/div&gt;" description="下拉菜单结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-dropdown" value="&lt;div id=&quot;uiDropdown&quot; class=&quot;bui-dropdown&quot;&gt;&#10;  &lt;div class=&quot;bui-btn bui-box&quot; &gt;&#10;    &lt;div class=&quot;span1&quot;&gt;下拉菜单&lt;/div&gt;&#10;    &lt;i class=&quot;icon-dropdown&quot;&gt;&lt;/i&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt; " description="下拉菜单结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -179,7 +179,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-number" value="&lt;div id=&quot;uiNumber&quot; class=&quot;bui-number&quot;&gt;&#10;    &lt;div class=&quot;bui-number-prev&quot;&gt;&lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;&lt;/div&gt;&#10;    &lt;input type=&quot;text&quot; value=&quot;&quot;/&gt;&#10;    &lt;div class=&quot;bui-number-next&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;/div&gt;&#10;&lt;/div&gt;" description="数字条结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-number" value="&lt;div id=&quot;uiNumber&quot; class=&quot;bui-number&quot;&gt;&lt;/div&gt;" description="数字条结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -189,12 +189,12 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-pickerdate" value="&lt;input type=&quot;text&quot; id=&quot;pickerdateInput&quot; readonly&gt;&#10;" description="日期控件结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-pickerdate" value="&lt;input type=&quot;text&quot; id=&quot;uiPickerdate&quot; readonly&gt;" description="日期控件结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-progress" value="&lt;div class=&quot;bui-progress&quot;&gt;&#10;    &lt;div class=&quot;bui-progress-cell&quot; style=&quot;width:30%&quot;&gt;&lt;/div&gt;&#10;&lt;/div&gt;" description="进度条结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-progress" value="&lt;progress class=&quot;bui-progress&quot; max=&quot;100&quot; value=&quot;30&quot;&gt;&lt;/progress&gt;" description="进度条结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -204,7 +204,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-select-list" value="&lt;ul id=&quot;uiSelect&quot; class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box bui-btn-line&quot;&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;label for=&quot;choose&quot;&gt;多选&lt;/label&gt;&#10;        &lt;/div&gt;&#10;        &lt;input id=&quot;choose&quot; type=&quot;checkbox&quot; class=&quot;bui-choose&quot; name=&quot;interest&quot; value=&quot;&quot; text=&quot;&quot; checked=&quot;checked&quot;&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="选择列表自定义结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-select-list" value="&lt;ul id=&quot;uiSelect&quot; class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box bui-btn-line&quot;&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;label class=&quot;bui-label&quot;&gt;多选&lt;/label&gt;&#10;        &lt;/div&gt;&#10;        &lt;input type=&quot;checkbox&quot; class=&quot;bui-choose&quot; name=&quot;interest&quot; value=&quot;&quot; text=&quot;&quot;&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="选择列表自定义结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -214,12 +214,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-slide-tab" value="&lt;div id=&quot;uiSlideTab&quot; class=&quot;bui-tab&quot;&gt;&#10;    &lt;div class=&quot;bui-tab-head&quot;&gt;&#10;        &lt;ul class=&quot;bui-nav&quot;&gt;&#10;            &lt;!-- 分屏菜单 active 是激活的TAB样式 --&gt;&#10;            &lt;li class=&quot;bui-btn active&quot;&gt;Tab1&lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;bui-tab-main&quot;&gt;&#10;        &lt;ul&gt;&#10;            &lt;li&gt;&#10;                第1屏&#10;            &lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="选项卡结构" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="HTML" value="true" />
-    </context>
-  </template>
-  <template name="ui-slide" value="&lt;div id=&quot;uiSlide&quot; class=&quot;bui-slide&quot;&gt;&#10;    &lt;div class=&quot;bui-slide-main&quot;&gt;&#10;        &lt;ul&gt;&#10;            &lt;li&gt;&#10;                &lt;!--第1屏--&gt;&#10;                &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&#10;                &lt;div class=&quot;bui-slide-title&quot;&gt;图片标题&lt;/div&gt;&#10;            &lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;!-- 分屏菜单 --&gt;&#10;    &lt;div class=&quot;bui-slide-head&quot;&gt;&#10;        &lt;ul &gt;&#10;            &lt;li&gt;1&lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="焦点图结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-slide" value="&lt;div id=&quot;uiSlide&quot; class=&quot;bui-slide&quot;&gt;&#10;    &lt;div class=&quot;bui-slide-main&quot;&gt;&#10;        &lt;ul&gt;&#10;            &lt;li&gt;&#10;                &lt;!--第1屏--&gt;&#10;                &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&#10;                &lt;div class=&quot;bui-slide-title&quot;&gt;图片标题&lt;/div&gt;&#10;            &lt;/li&gt;&#10;            &lt;li style=&quot;display:none;&quot;&gt;&#10;                &lt;!--第2屏--&gt;&#10;                &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&#10;                &lt;div class=&quot;bui-slide-title&quot;&gt;图片标题&lt;/div&gt;&#10;            &lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="焦点图结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
@@ -235,6 +230,26 @@
     </context>
   </template>
   <template name="ui-accordion" value="&lt;dl id=&quot;uiAccordion&quot; class=&quot;bui-accordion&quot;&gt;&#10;    &lt;dt class=&quot;bui-btn bui-box&quot;&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;折叠菜单&lt;/div&gt;&#10;        &lt;i class=&quot;icon-accordion&quot;&gt;&lt;/i&gt;&#10;    &lt;/dt&gt;&#10;    &lt;dd&gt;&#10;        折叠菜单内容&#10;    &lt;/dd&gt;&#10;&lt;/dl&gt;" description="折叠菜单结构" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ui-list-pic" value="&lt;ul class=&quot;bui-list-pic bui-fluid-space-2&quot;&gt;&#10;    &lt;li&gt;&#10;        &lt;div class=&quot;bui-pic&quot;&gt;&#10;            &lt;div class=&quot;bui-pic-img&quot;&gt;&lt;img src=&quot;images/list-img1.png&quot; alt=&quot;&quot; &gt;&lt;/div&gt;&#10;            &lt;div class=&quot;bui-pic-title&quot;&gt;图片标题&lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/li&gt;&#10;    &lt;li&gt;&#10;        &lt;div class=&quot;bui-pic&quot;&gt;&#10;            &lt;div class=&quot;bui-pic-img&quot;&gt;&lt;img src=&quot;images/list-img1.png&quot; alt=&quot;&quot; &gt;&lt;/div&gt;&#10;            &lt;div class=&quot;bui-pic-title&quot;&gt;图片标题&lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt;" description="图片列表" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ui-tab" value="&lt;div id=&quot;uiTab&quot; class=&quot;bui-tab&quot;&gt;&#10;    &lt;div class=&quot;bui-tab-head&quot;&gt;&#10;        &lt;ul class=&quot;bui-nav&quot;&gt;&#10;            &lt;li class=&quot;bui-btn&quot;&gt;Tab1&lt;/li&gt;&#10;            &lt;li class=&quot;bui-btn&quot;&gt;Tab2&lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;bui-tab-main&quot;&gt;&#10;        &lt;ul&gt;&#10;            &lt;li&gt;&lt;img src=&quot;images/placeholder-list.png&quot; alt=&quot;占位图&quot;&gt;&lt;/li&gt;&#10;            &lt;li style=&quot;display: none;&quot;&gt;&lt;img src=&quot;images/placeholder-list.png&quot; alt=&quot;占位图&quot;&gt;&lt;/li&gt;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="选项卡结构" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ui-levelselect" value="&lt;!-- 级联菜单 html 对应的结构: --&gt;&#10;&lt;ul class=&quot;bui-list&quot;&gt;&#10;    &lt;li class=&quot;bui-btn bui-box clearactive&quot;&gt;&#10;        &lt;div class=&quot;bui-label&quot;&gt;所在地区&lt;/div&gt;&#10;        &lt;div class=&quot;span1&quot;&gt;&#10;            &lt;div id=&quot;chooseCity&quot; class=&quot;bui-box&quot;&gt;&#10;                &lt;div class=&quot;selected-val&quot;&gt;&lt;/div&gt;&#10;                &lt;div class=&quot;selected-val&quot;&gt;&lt;/div&gt;&#10;                &lt;div class=&quot;selected-val&quot;&gt;&lt;/div&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/li&gt;&#10;&lt;/ul&gt; " description="级联菜单结构" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ui-pic" value="&lt;div class=&quot;bui-pic&quot;&gt;&#10;    &lt;div class=&quot;bui-pic-img&quot;&gt;&lt;img src=&quot;images/list-img1.png&quot; alt=&quot;&quot; &gt;&lt;/div&gt;&#10;    &lt;div class=&quot;bui-pic-title&quot;&gt;图片标题&lt;/div&gt;&#10;&lt;/div&gt;" description="图片结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>

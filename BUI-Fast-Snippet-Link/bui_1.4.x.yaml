@@ -44,12 +44,12 @@
        desc: 
        code: |
         var uiActionsheet = bui.actionsheet({
-            trigger: "#${1:uiActionsheet}",
+            trigger: "#btnOpen",
             buttons: [{ name:"分享到微博",value:"weibo" }],
-            callback: function (e,ui) {
-                var val = \$(this).attr("value");
+            callback: function (e) {
+                var val = \$(e.target).attr("value");
                 if( val == "cancel"){
-                    ui.hide();
+                    this.hide();
                 }
             }
         })
@@ -63,17 +63,18 @@
         var uiActionsheet = bui.actionsheet({
           trigger: "#btnOpen",
           buttons: [{ name:"分享到微博",value:"weibo" },{ name:"分享到微信",value:"weixin" },{ name:"分享到QQ",value:"QQ" }],
-          callback: function (e,ui) {
-
-            var val = $(this).attr("value");
-
+          callback: function (e) {
+            
+            var val = \$(e.target).attr("value");
+            
             if( val == "cancel"){
-              ui.hide();
+              this.hide();
             }
           }
         })
+                        
 
-        // 上拉菜单 html 对应的结构:
+        <!-- 上拉菜单 html 对应的结构: -->
         <div id="btnOpen" class="bui-btn">打开下拉菜单</div>
 
      - name: bui-btn-load
@@ -81,15 +82,15 @@
        display: false
        desc: 
        code: |
-        bui.btn({id:"${1:#page}",handle:"${2:.bui-btn}"}).load();
+        bui.btn({id:"#page",handle:".bui-btn"}).load();
 
      - name: bui-btn-submit
        displayName:  绑定按钮提交
        display: false
        desc: 
        code: |
-        bui.btn("${1:#btn}").submit(function(loading){
-          ${2:loading.stop();}
+        bui.btn("#btn").submit(function(loading){
+          loading.stop();
         });
 
      - name: bui-alert
@@ -97,20 +98,20 @@
        display: false
        desc: 
        code: |
-        bui.alert("${1:提醒内容}");
+        bui.alert("提醒内容");
 
      - name: bui-confirm
        displayName:  确认框
        display: false
        desc: 
        code: |
-        bui.confirm("${1:提醒内容}",function(ui){
+        bui.confirm("提醒内容",function(ui){
             // this 为底部按钮
             var text = \$(this).text();
             if( text == "确定" ){
               //do something
             }
-          ${2:ui.close();}
+          uiclose();}
         });
 
      - name: bui-dialog
@@ -119,7 +120,7 @@
        desc: 
        code: |
         var uiDialog = bui.dialog({
-            id: "#${1:uiDialog}"
+            id: "#uiDialog"
         });
 
      - name: bui-dialog-demo
@@ -146,7 +147,7 @@
        display: false
        desc: 
        code: |
-        bui.hint("${1:提醒内容}");
+        bui.hint("提醒内容");
 
      - name: bui-dropdown
        displayName:  下拉菜单初始化
@@ -154,7 +155,7 @@
        desc: 
        code: |
         var uiDropdown = bui.dropdown({
-            id: "#${1:uiDropdown}"
+            id: "#uiDropdown"
         });
 
      - name: bui-dropdown-demo
@@ -185,8 +186,8 @@
        desc: 
        code: |
         var uiList = bui.list({
-            id: "#${1:uiScroll}",
-            url: "${2:userlist.json}",
+            id: "#uiScroll",
+            url: "userlistjson}",
             data: {},
             template: template,
             onLoad: function (scroll) {
@@ -255,7 +256,7 @@
        desc: 
        code: |
         var uiListview = bui.listview({
-            id: "#${1:uiListview}",
+            id: "#uiListview",
             data: [{ "text": "删除", "classname":"danger"}],
             callback: function (e,ui) {
                 // this 滑动出来的操作按钮
@@ -263,7 +264,7 @@
                 if( text == "删除" ){
                     //do something
                 }
-                ${2:ui.close();}
+                uiclose();}
             }
         });
 
@@ -340,7 +341,7 @@
        display: false
        desc: 
        code: |
-        var uiLoading = bui.loading($1);
+        var uiLoading = bui.loading();
             uiLoading.show();
 
      - name: bui-mask
@@ -348,7 +349,7 @@
        display: false
        desc: 
        code: |
-        var uiMask = bui.mask($1);
+        var uiMask = bui.mask();
             uiMask.show();
 
      - name: bui-number
@@ -497,7 +498,7 @@
        desc: 
        code: |
         var uiScroll = bui.scroll({
-            id: "#${1:uiScroll}",
+            id: "#uiScroll",
             page:1,
             pageSize:10,
             //children: ".bui-list li",
@@ -506,7 +507,7 @@
         });
         // 下拉刷新
         function onRefreshData(){
-          $2
+          
         };
         // 上拉加载
         function onLoadData(){
@@ -560,7 +561,7 @@
        desc: 
        code: |
         var uiSearchbar = bui.searchbar({
-            id:"#${1:uiSearchbar}",
+            id:"#uiSearchbar",
             callback: function (ui,keyword) {
               // 点击搜索
             },
@@ -654,9 +655,9 @@
        desc: 
        code: |
         var uiSelect = bui.select({
-            trigger:"#${1:uiSelect}",
-            type:"${2:checkbox}",
-            popup: ${3:true},
+            trigger:"#uiSelect",
+            type:"checkbox",
+            popup: true,
             data: [{
               "name":"广东",
               "value":"11"
@@ -705,8 +706,8 @@
        desc: 
        code: |
         var uiSidebar = bui.sidebar({
-            id: "#${1:uiSidebar}",
-            trigger : "#${2:menu}"
+            id: "#uiSidebar",
+            trigger : "#menu"
         });
 
      - name: bui-sidebar-demo
@@ -735,8 +736,8 @@
        desc: 
        code: |
         var uiSlide = bui.slide({
-            id:"#${1:uiSlide}",
-            height:${2:200},
+            id:"#uiSlide",
+            height:200,
             zoom: true
         })
 
@@ -778,7 +779,7 @@
        desc: 
        code: |
         var uiSlideTab = bui.slide({
-            id:"#${1:uiSlideTab}",
+            id:"#uiSlideTab",
             menu:".bui-nav",
             children:".bui-tab-main > ul",
             scroll: true
@@ -1018,7 +1019,7 @@
        desc: 
        code: |
         var uiStepbar = bui.stepbar({
-          id: "#${1:uiStepbar}",
+          id: "#uiStepbar",
           data: [{
             title: "预立项申请",
             subtitle: "2016-04-2 10:30",
@@ -1112,7 +1113,7 @@
        displayName:  页面跳转传参
        desc: 
        code: |
-        bui.load({url:"$1",param:${2:{\} }});
+        bui.load({url:"",param:{\ }});
 
 
      - name: bui-getPageParams
@@ -1121,22 +1122,22 @@
        code: |
         var getParams = bui.getPageParams();
             getParams.done(function(result){
-                ${1:console.log(result);}
+                consolelog(result);}
             })
 
      - name: bui-back
        displayName:  页面后退
        desc: 
        code: |
-        bui.back($1);
+        bui.back();
 
      - name: bui-ajax
        displayName:  数据请求
        desc: 
        code: |
         bui.ajax({
-            url: "${1:http://}",
-            data: {$2},//接口请求的参数
+            url: "http//}",
+            data: {},//接口请求的参数
             // 可选参数
             method: "GET"
         }).then(function(result){
@@ -1184,8 +1185,8 @@
        desc: 
        code: |
         /* 动画示例,支持链式动画,最后需要执行start(); */
-        var uiAnimatePage = bui.animate(${1:"#page"});
-            uiAnimatePage.left(${2:100}).start();
+        var uiAnimatePage = bui.animate("#page});
+            uiAnimatePage.left(100).start();
 
      - name: bui-toggle
        displayName:  动画切换
@@ -1202,7 +1203,7 @@
        desc: 
        code: |
         // 允许存储2条数据,默认1条
-        var ${1:uiStorage} = bui.storage($2);
+        var uiStorage = bui.storage();
             // 保存第1条数据
             uiStorage.set("code","123");
 
@@ -1303,13 +1304,13 @@
        displayName:   单页路由跳转传参
        desc: 
        code: |
-        router.load({url:"$1",param:{}});
+        router.load({url:"",param:{}});
 
      - name: bui-router-preload
        displayName:   单页路由预加载
        desc: 
        code: |
-        router.preload([{url:"$1"}]).then(function(e){
+        router.preload([{url:""}]).then(function(e){
           // 预加载成功以后执行
         });
 
@@ -1324,14 +1325,14 @@
        displayName:   单页路由局部加载
        desc: 
        code: |
-        router.loadPart({id:"$1",url:""});
+        router.loadPart({id:"",url:""});
 
 
      - name: bui-router-replace
        displayName:   单页路由页面替换
        desc: 
        code: |
-        router.replace({url:"$1",param:{}});
+        router.replace({url:"",param:{}});
 
 
      - name: bui-router-refresh
@@ -1377,7 +1378,7 @@
        displayName:  模块资源引入
        desc: 
        code: |
-        loader.import(["$1"],function(){
+        loader.import([""],function(){
           // 创建成功以后执行回调
         });
 
@@ -1386,7 +1387,7 @@
        desc: 
        code: |
         loader.map({
-            moduleName: "$1",
+            moduleName: "",
             template: "",
             script: ""
         })
@@ -1431,7 +1432,7 @@
               <script>
                   bui.ready(function () {
                       // 这里写业务及控件初始化
-                      $1
+                      
                   })
               </script>
           </body>
@@ -1526,9 +1527,9 @@
           <ul class="bui-list">
               <li class="bui-btn bui-box bui-btn-line">
                   <div class="span1">
-                      <label for="${1:choose}">单选</label>
+                      <label for="choose">单选</label>
                   </div>
-                  <input id="${1:choose}" type="radio" class="bui-choose" name="interest" value="" text="" checked="checked">
+                  <input id="choose" type="radio" class="bui-choose" name="interest" value="" text="" checked="checked">
               </li>
           </ul>
 
@@ -1559,9 +1560,9 @@
           <ul class="bui-list">
               <li class="bui-btn bui-box bui-btn-line">
                   <div class="span1">
-                      <label for="${1:choose}">多选</label>
+                      <label for="choose">多选</label>
                   </div>
-                  <input id="${1:choose}" type="checkbox" class="bui-choose" name="interest" value="" text="" checked="checked">
+                  <input id="choose" type="checkbox" class="bui-choose" name="interest" value="" text="" checked="checked">
               </li>
           </ul>
 
@@ -1622,9 +1623,9 @@
         code: |
           <ul class="bui-list">
               <li class="bui-btn bui-box clearactive">
-                  <label class="bui-label" for="${1:username}">帐号</label>
+                  <label class="bui-label" for="username">帐号</label>
                   <div class="span1">
-                      <input id="${1:username}" type="text" class="bui-input" value="" placeholder="请输入帐号">
+                      <input id="username" type="text" class="bui-input" value="" placeholder="请输入帐号">
                   </div>
               </li>
           </ul>
@@ -1646,12 +1647,12 @@
       - name: ui-radio
         displayName:   单选框
         code: |
-          <input type="radio" class="bui-radio" name="$1" value="">
+          <input type="radio" class="bui-radio" name="" value="">
 
       - name: ui-choose
         displayName:   多选圆圈
         code: |
-          <input type="${1:checkbox}" class="bui-choose" name="" value="">
+          <input type="checkbox" class="bui-choose" name="" value="">
 
       - name: ui-checkbox
         displayName:   多选框
@@ -1662,7 +1663,7 @@
         displayName:   自定义多选框
         code: |
           <div class="bui-check">
-              <input id="${1:uid}" type="radio" ><label for="${1:uid}">3:50元</label>
+              <input id="uid" type="radio" ><label for="uid">3:50元</label>
           </div>
 
       - name: ui-input
@@ -1687,42 +1688,42 @@
       - name: ui-switch
         displayName:   切换按钮
         code: |
-          <input type="checkbox" class="bui-switch" name="$1" value="">
+          <input type="checkbox" class="bui-switch" name="" value="">
 
 
       - name: ui-btn
         displayName:   按钮
         code: |
-          <div class="bui-btn" href="$1">按钮</div>
+          <div class="bui-btn" href="">按钮</div>
 
       - name: ui-box
         displayName:   弹性布局
         code: |
           <div class="bui-box">
-            <div class="span1">${1:<!--自适应内容-->}</div>
+            <div class="span1"><!--自适应内容->}</div>
           </div>
 
       - name: ui-box-space
         displayName:   弹性布局有间隙
         code: |
           <div class="bui-box-space">
-              <div class="span1">${1:<!--自适应内容-->}</div>
+              <div class="span1"><!--自适应内容->}</div>
           </div>
 
       - name: ui-fluid
         displayName:    百分比布12等分
         code: |
           <div class="bui-fluid">
-            <div class="span6">${1:内容}</div>
-            <div class="span6">${1:内容}</div>
+            <div class="span6">内容</div>
+            <div class="span6">内容</div>
           </div>
 
       - name: ui-fluid-space
         displayName:    百分比布间隙
         code: |
           <div class="bui-fluid-space">
-            <div class="span6">${1:内容}</div>
-            <div class="span6">${1:内容}</div>
+            <div class="span6">内容</div>
+            <div class="span6">内容</div>
           </div>
 
       - name: ui-accordion
@@ -1741,7 +1742,7 @@
       - name: ui-actionsheet
         displayName:   上拉菜单结构
         code: |
-          <div id="${1:uiActionsheet}" class="bui-actionsheet container-x">
+          <div id="uiActionsheet" class="bui-actionsheet container-x">
               <ul class="bui-list round">
                   <li class="bui-btn">示例菜单</li>
               </ul>
@@ -1806,7 +1807,7 @@
       - name: ui-dialog
         displayName:   自定义对话框结构
         code: |
-          <div id="${1:uiDialog}" class="bui-dialog">
+          <div id="uiDialog" class="bui-dialog">
               <div class="bui-dialog-head">对话框标题</div>
               <div class="bui-dialog-main">对话框内容</div>
               <div class="bui-dialog-close"><i class="icon-close"></i></div>
@@ -1815,7 +1816,7 @@
       - name: ui-dropdown
         displayName:   下拉菜单结构
         code: |
-          <div id="${1:uiDropdown}" class="bui-dropdown">
+          <div id="uiDropdown" class="bui-dropdown">
               <div class="bui-btn bui-box" >
                   <div class="span1">菜单名称</div>
                   <i class="icon-dropdown"></i>
@@ -1833,7 +1834,7 @@
       - name: ui-listview
         displayName:   侧滑列表结构
         code: |
-          <ul id="${1:uiListview}" class="bui-listview">
+          <ul id="uiListview" class="bui-listview">
               <li>
                   <div class="bui-btn bui-box">
                       <div class="span1">左滑动出现菜单</div>
@@ -1845,7 +1846,7 @@
       - name: ui-listview-custom
         displayName:    侧滑列表结自定义按钮
         code: |
-          <ul id="${1:uiListview}" class="bui-listview">
+          <ul id="uiListview" class="bui-listview">
               <li status="1">
                   <div class="bui-btn bui-box">
                       <div class="span1">手动渲染</div>
@@ -1860,7 +1861,7 @@
       - name: ui-number
         displayName:   数字条结构
         code: |
-          <div id="${1:uiNumber}" class="bui-number">
+          <div id="uiNumber" class="bui-number">
               <div class="bui-number-prev"><i class="icon-minus"></i></div>
               <input type="text" value=""/>
               <div class="bui-number-next"><i class="icon-plus"></i></div>
@@ -1901,7 +1902,7 @@
       - name: ui-searchbar
         displayName:   搜索条结构
         code: |
-          <div id="${1:uiSearchbar}" class="bui-searchbar">
+          <div id="uiSearchbar" class="bui-searchbar">
               <div class="bui-input">
                   <i class="icon-search"></i>
                   <input type="text" placeholder="请输入关键字搜索" value=""/>
@@ -1911,7 +1912,7 @@
       - name: ui-select
         displayName:   选择列表按钮结构
         code: |
-          <div id="${1:uiSelect}" class="bui-select bui-box">
+          <div id="uiSelect" class="bui-select bui-box">
               <div class="span1">请选择</div>
               <i class="icon-listright"></i>
           </div>
@@ -1919,12 +1920,12 @@
       - name: ui-select-list
         displayName:   选择列表自定义结构
         code: |
-          <ul id="${1:uiSelect}" class="bui-list">
+          <ul id="uiSelect" class="bui-list">
               <li class="bui-btn bui-box bui-btn-line">
                   <div class="span1">
-                      <label for="${1:choose}">多选</label>
+                      <label for="choose">多选</label>
                   </div>
-                  <input id="${1:choose}" type="checkbox" class="bui-choose" name="interest" value="" text="" checked="checked">
+                  <input id="choose" type="checkbox" class="bui-choose" name="interest" value="" text="" checked="checked">
               </li>
           </ul>
 
@@ -1944,7 +1945,7 @@
       - name: ui-slide-tab
         displayName:   选项卡结构
         code: |
-          <div id="${1:uiSlideTab}" class="bui-tab">
+          <div id="uiSlideTab" class="bui-tab">
               <div class="bui-tab-head">
                   <ul class="bui-nav">
                       <!-- 分屏菜单 active 是激活的TAB样式 -->
@@ -1963,12 +1964,12 @@
       - name: ui-slide
         displayName:   焦点图结构
         code: |
-          <div id="${1:uiSlide}" class="bui-slide">
+          <div id="uiSlide" class="bui-slide">
               <div class="bui-slide-main">
                   <ul>
                       <li>
                           <!--第1屏-->
-                          <img src="$2" alt="">
+                          <img src="" alt="">
                           <div class="bui-slide-title">图片标题</div>
                       </li>
                   </ul>
@@ -1985,7 +1986,7 @@
       - name: ui-stepbar
         displayName:   步骤条结构
         code: |
-          <div id="${1:uiStepbar}" class="bui-stepbar"></div>
+          <div id="uiStepbar" class="bui-stepbar"></div>
 
       - name: ui-swipe
         displayName:   抽屉滑动结构
