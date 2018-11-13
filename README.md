@@ -1,22 +1,22 @@
 # BUI Fast 使用说明
 
-| **修订者**   | **描述**            | **修改日期**            |
-|:------------- |:-------------------|-------------------:|
-| 王伟深       | 更新API 1.0.6    | 2016-07-25    |
-| 王伟深       | 更新API 1.0.7    | 2016-08-30    |
-| 王伟深       | 更新API 1.2    | 2016-11-04    |
-| 王伟深       | 更新API 1.3.1 新增事件,更新参数,新增完整示例缩写   | 2017-03-20    | 
-| 王伟深       | 取消大部分自动定位到预编辑的内容   | 2017-03-30    |
-| 王伟深       | 修改 bui-slide-demo-pic,bui-slide-demo-tab 为bui-slide-pic-demo,bui-slide-tab-demo   | 2017-05-27    |
-| 王伟深       | 修改 bui-searchbar-demo ui-list  | 2017-06-08    |
-| 王伟深       | 新增 ui-router bui-router bui-loader 等相关内容  | 2017-12-20    |
-| 王伟深       | 新增 ATOM, APICloud 插件支持  | 2018-03-14   |
-| 王伟深       | 新增 router preload 方法  | 2018-03-27   |
-| 王伟深       | 新增 webstorm插件  | 2018-04-19   |
-| 王伟深       | 新增 tab 的几种不同位置, bui-slide-tab-head-demo,bui-slide-tab-foot-demo,bui-slide-tab-side-demo,bui-slide-tab-scroll-demo,  | 2018-05-30   |
-| 王伟深       | 去除生成控件方法,比方之前有 bui-accordion-show 现在只有 bui-accordion ,只保留最简单的初始化,其它查API   | 2018-06-04   |
-| 王伟深       | 优化简化,按1.5.0修改   | 2018-09-28   |
-
+|**描述**            | **修改日期**            |
+|:-------------------|-------------------:|
+| 更新API 1.0.6    | 2016-07-25    |
+| 更新API 1.0.7    | 2016-08-30    |
+| 更新API 1.2    | 2016-11-04    |
+| 更新API 1.3.1 新增事件,更新参数,新增完整示例缩写   | 2017-03-20    | 
+| 取消大部分自动定位到预编辑的内容   | 2017-03-30    |
+| 修改 bui-slide-demo-pic,bui-slide-demo-tab 为bui-slide-pic-demo,bui-slide-tab-demo   | 2017-05-27    |
+| 修改 bui-searchbar-demo ui-list  | 2017-06-08    |
+| 新增 ui-router bui-router bui-loader 等相关内容  | 2017-12-20    |
+| 新增 ATOM, APICloud 插件支持  | 2018-03-14   |
+| 新增 router preload 方法  | 2018-03-27   |
+| 新增 webstorm插件  | 2018-04-19   |
+| 新增 tab 的几种不同位置, bui-slide-tab-head-demo,bui-slide-tab-foot-demo,bui-slide-tab-side-demo,bui-slide-tab-scroll-demo,  | 2018-05-30   |
+| 去除生成控件方法,比方之前有 bui-accordion-show 现在只有 bui-accordion ,只保留最简单的初始化,其它查API   | 2018-06-04   |
+| 优化简化,按1.5.0修改   | 2018-09-28   |
+| 新增 ui-icon等相关布局, vscode,atom,sublimetext     | 2018-11-12     |
 
 ## 目录
 [TOC]
@@ -35,6 +35,11 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,VSCode,
 > 下载解压以后,找到对应的编辑器插件
 
 <a href="https://github.com/imouou/BUI-Fast-Snippets/releases/latest" target="_blank">点击下载 BUI Fast 插件</a>
+
+### 在VScode安装 `推荐`
+
+方法1:
+在应用市场输入 `bui-fast` , 安装即可. 
 
 
 ### 在Sublimetext安装
@@ -55,16 +60,6 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,VSCode,
 
 - 输入`open your snippets`, 回车;
 打开下载的 `bui-fast-snippet-atom/snippets.cson` 文件, 复制内容到 `snippets.cson` 文件里面, 保存即可.
-
-### 在VScode安装
-
-方法1:
-在应用市场输入 `bui-fast` , 安装即可.
-
-方法2: 
-使用快捷键 mac: `command + shift + p` , windows: `ctrl + shift + p`;
-- 输入`Install from VSIX`, 回车 ;
-找到 `BUI-Fast-Snippet-Vscode/bui-fast-0.0.1.vsix` 文件安装即可, 再按提示reload. 
 
 ### 在Webstorm安装
 
