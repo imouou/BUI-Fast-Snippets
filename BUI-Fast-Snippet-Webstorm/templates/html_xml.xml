@@ -189,7 +189,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="ui-pickerdate" value="&lt;input type=&quot;text&quot; id=&quot;uiPickerdate&quot; readonly&gt;" description="日期控件结构" toReformat="false" toShortenFQNames="true">
+  <template name="ui-pickerdate" value="&lt;input type=&quot;text&quot; id=&quot;pickerdateInput&quot; readonly&gt;" description="日期控件结构" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>

@@ -2108,7 +2108,7 @@ loader.map({
     '日期控件结构':
       'prefix': 'ui-pickerdate'
       'body': """
-<input type="text" id="uiPickerdate" readonly>
+<input type="text" id="pickerdateInput" readonly>
 """
 
     '进度条结构':
