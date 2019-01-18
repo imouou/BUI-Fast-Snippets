@@ -21,7 +21,7 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
 #----- BUI Fast Snippets----start ----------
-# v 1.5.0 20181101
+# v 1.5.1 20190117
 # UI 控件
 '.source.js':
    '折叠菜单初始化':
@@ -2381,4 +2381,114 @@ loader.map({
         <div class="span1">图片导航</div>
     </li>
 </ul>
+"""
+
+    '图标图片类九宫格':
+      'prefix': 'ui-icon-img'
+      'body': """
+<ul class="bui-nav-icon bui-fluid-3">
+    <li class="bui-btn">
+        <div class="icon"><img src="images/icon-pyq.png" alt=""><span class="bui-badges">5</span></div>
+        <div class="span1">图片导航</div>
+    </li>
+    <li class="bui-btn">
+        <div class="icon"><img src="images/icon-pyq.png" alt=""></div>
+        <div class="span1">图片导航</div>
+    </li>
+    <li class="bui-btn">
+        <div class="icon"><img src="images/icon-pyq.png" alt=""></div>
+        <div class="span1">图片导航</div>
+    </li>
+</ul>
+"""
+
+    '数据行为存储': 
+        'prefix': 'bui-store',
+        'body': """
+// 初始化数据行为存储
+var bs = bui.store({
+    scope: "page",
+    data: {
+       a: 1,
+    },
+    methods: {},
+    watch: {},
+    computed: {},
+    templates: {},
+    mounted: function(){
+        // 数据解析后执行
+    }
+})
+"""
+
+    '数据行为存储demo': 
+        'prefix': 'bui-store-demo',
+        'body': """
+// 初始化数据行为存储
+var bs = bui.store({
+    scope: "page",
+    data: {
+       a: 1,
+    },
+    methods: {},
+    watch: {},
+    computed: {},
+    templates: {},
+    mounted: function(){
+        // 数据解析后执行
+    }
+})
+<!-- html 结构 -->
+<b b-text="page.a"></b>
+"""
+
+    '设置文本': 
+        'prefix': 'b-text'
+        'body': """
+<b b-text="page.a"></b>
+"""
+    '设置value': 
+        'prefix': 'b-value'
+        'body': """
+<input type="text" b-value="page.a"/>
+"""
+    '双向绑定': 
+        'prefix': 'b-model'
+        'body': """
+<input type="text" b-model="page.a"/>
+"""
+    '渲染HTML': 
+        'prefix': 'b-html'
+        'body': """
+<div b-html="page.a"></div>
+"""
+    '显示隐藏': 
+        'prefix': 'b-show'
+        'body': """
+<b b-show="page.a"></b>
+"""
+    '渲染模板': 
+        'prefix': 'b-template'
+        'body': """
+<ul b-template="page.a"></ul>
+"""
+    '渲染模板': 
+        'prefix': 'b-click'
+        'body': """
+<b b-click="page.a"></b>
+"""
+    '绑定属性': 
+        'prefix': 'b-bind'
+        'body': """
+<b b-bind=\"page.a\"></b>
+"""
+    '绑定Class': 
+        'prefix': 'b-class'
+        'body': """
+<b b-class=\"page.a\"></b>
+"""
+    '绑定Style': 
+        'prefix': 'b-style'
+        'body': """
+<b b-style=\"page.a\"></b>
 """

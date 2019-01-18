@@ -1,0 +1,24 @@
+
+<snippet>
+    <content><![CDATA[
+// 初始化数据行为存储
+var bs = bui.store({
+    scope: "page",
+    data: {
+       a: 1,
+    },
+    methods: {},
+    watch: {},
+    computed: {},
+    templates: {},
+    mounted: function(){
+        // 数据解析后执行
+    }
+})
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-store</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>数据行为存储-初始化</description>
+</snippet>

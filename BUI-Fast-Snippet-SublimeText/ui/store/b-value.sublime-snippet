@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+<input type="text" b-value="page.a"/>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>b-value</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>设置value</description> 
+</snippet>

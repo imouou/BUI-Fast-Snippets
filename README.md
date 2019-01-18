@@ -17,6 +17,7 @@
 | 去除生成控件方法,比方之前有 bui-accordion-show 现在只有 bui-accordion ,只保留最简单的初始化,其它查API   | 2018-06-04   |
 | 优化简化,按1.5.0修改   | 2018-09-28   |
 | 新增 ui-icon等相关布局, vscode,atom,sublimetext     | 2018-11-12     |
+| 新增 bui-store 初始化, b- 开头结构     | 2019-1-17     |
 
 ## 目录
 [TOC]
@@ -280,6 +281,8 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 | loader-import  <span style="color:red">新</span> | 脚本及样式资源动态引入 |
 | loader-map  <span style="color:red">新</span> | 单个模块配置 |
 | loader-mapall  <span style="color:red">新</span> | 多个模块配置 |
+| bui-store  <span style="color:red">新</span> | 数据行为存储器 |
+| bui-store-demo  <span style="color:red">新</span> | 数据行为存储器 |
 
 
 ## BUI HTML结构缩写一览
@@ -341,6 +344,15 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 | ui-list-icon  | 图标列表结构       |
 | ui-list-photo  | 图片列表结构       |
 | ui-list-thumbnail  | 列表多行带缩略图结构       |
+| ui-icon  | 图标       |
+| ui-icon-bg  | 背景图标       |
+| ui-icon-grid  | 九宫格图标结构       |
+| ui-icon-round  | 九宫格背景图标结构       |
+| ui-icon-img  | 九宫格图标图片类结构       |
+| ui-hint  | 静态提醒       |
+| ui-tag  | 标签类       |
+| ui-sub  | 角标       |
+| ui-badges  | 红点提醒       |
 
 
 ### 布局结构缩写
@@ -367,3 +379,19 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 | ui-range | 拖动条                                    |
 | ui-progress  | 进度条结构       |
 | ui-check  <span style="color:red">新</span>| 选择按钮结构       |
+
+
+### 新增结合数据驱动的标签
+
+| **缩写代码**        | **描述**                      |
+|:-------------      |:-------------------          |
+| b-text          | 设置文本                        |
+| b-html        | 设置html                        |
+| b-value | 设置value    |
+| b-show  |  显示当前dom  |
+| b-model  |  双向绑定  |
+| b-bind  |  设置属性  |
+| b-style  |  设置style的样式  |
+| b-class  |  设置class的样式  |
+| b-template  |  绑定模板  |
+| b-click  |  点击事件  |

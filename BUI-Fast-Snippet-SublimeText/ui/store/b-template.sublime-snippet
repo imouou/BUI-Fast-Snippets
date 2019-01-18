@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+<ul b-template="page.a"></ul>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>b-template</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>绑定模板</description> 
+</snippet>
