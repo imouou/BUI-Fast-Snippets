@@ -1623,6 +1623,47 @@ loader.map({
     }
 })
 """
+
+    '数据行为存储':
+        'prefix': 'bui-store',
+        'body': """
+// 初始化数据行为存储
+var bs = bui.store({
+    scope: "page",
+    data: {
+       a: 1,
+    },
+    methods: {},
+    watch: {},
+    computed: {},
+    templates: {},
+    mounted: function(){
+        // 数据解析后执行
+    }
+})
+"""
+
+    '数据行为存储demo':
+        'prefix': 'bui-store-demo',
+        'body': """
+// 初始化数据行为存储
+var bs = bui.store({
+    scope: "page",
+    data: {
+       a: 1,
+    },
+    methods: {},
+    watch: {},
+    computed: {},
+    templates: {},
+    mounted: function(){
+        // 数据解析后执行
+    }
+})
+<!-- html 结构 -->
+<b b-text="page.a"></b>
+"""
+
 #----- BUI 控件-end ----------
 
 #----- BUI 常用html结构-start ----------
@@ -2381,46 +2422,6 @@ loader.map({
         <div class="span1">图片导航</div>
     </li>
 </ul>
-"""
-
-    '数据行为存储':
-        'prefix': 'bui-store',
-        'body': """
-// 初始化数据行为存储
-var bs = bui.store({
-    scope: "page",
-    data: {
-       a: 1,
-    },
-    methods: {},
-    watch: {},
-    computed: {},
-    templates: {},
-    mounted: function(){
-        // 数据解析后执行
-    }
-})
-"""
-
-    '数据行为存储demo':
-        'prefix': 'bui-store-demo',
-        'body': """
-// 初始化数据行为存储
-var bs = bui.store({
-    scope: "page",
-    data: {
-       a: 1,
-    },
-    methods: {},
-    watch: {},
-    computed: {},
-    templates: {},
-    mounted: function(){
-        // 数据解析后执行
-    }
-})
-<!-- html 结构 -->
-<b b-text="page.a"></b>
 """
 
     '设置文本':
