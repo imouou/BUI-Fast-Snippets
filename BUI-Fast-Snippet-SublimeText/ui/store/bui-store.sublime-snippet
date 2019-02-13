@@ -11,6 +11,10 @@ var bs = bui.store({
     watch: {},
     computed: {},
     templates: {},
+    beforeMount: function(){
+        // 数据解析前执行, 修改data的数据示例
+        // this.\$data.a = 2
+    },
     mounted: function(){
         // 数据解析后执行
     }

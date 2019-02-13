@@ -449,13 +449,13 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-store-demo" value="// 初始化数据行为存储&#10;var bs = bui.store({&#10;    scope: &quot;page&quot;,&#10;    data: {&#10;       a: 1,&#10;    },&#10;    methods: {},&#10;    watch: {},&#10;    computed: {},&#10;    templates: {},&#10;    mounted: function(){&#10;        // 数据解析后执行&#10;    }&#10;})&#10;&lt;!-- html 结构 --&gt;&#10;&lt;b b-text=&quot;page.a&quot;&gt;&lt;/b&gt;" description="数据行为存储-demo" toReformat="false" toShortenFQNames="true">
+  <template name="bui-store-demo" value="// 初始化数据行为存储&#10;var bs = bui.store({&#10;    scope: &quot;page&quot;,&#10;    data: {&#10;       a: 1,&#10;    },&#10;    methods: {},&#10;    watch: {},&#10;    computed: {},&#10;    templates: {},&#10;    beforeMount: function(){&#10;        // 数据解析前执行, 修改data的数据示例&#10;        // this.$data.a = 2&#10;    },&#10;    mounted: function(){&#10;        // 数据解析后执行&#10;    }&#10;})&#10;&lt;!-- html 结构 --&gt;&#10;&lt;b b-text=&quot;page.a&quot;&gt;&lt;/b&gt;" description="数据行为存储-demo" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-store" value="// 初始化数据行为存储&#10;var bs = bui.store({&#10;    scope: &quot;page&quot;,&#10;    data: {&#10;       a: 1,&#10;    },&#10;    methods: {},&#10;    watch: {},&#10;    computed: {},&#10;    templates: {},&#10;    mounted: function(){&#10;        // 数据解析后执行&#10;    }&#10;})" description="数据行为存储初始化" toReformat="false" toShortenFQNames="true">
+  <template name="bui-store" value="// 初始化数据行为存储&#10;var bs = bui.store({&#10;    scope: &quot;page&quot;,&#10;    data: {&#10;       a: 1,&#10;    },&#10;    methods: {},&#10;    watch: {},&#10;    computed: {},&#10;    templates: {},&#10;    beforeMount: function(){&#10;        // 数据解析前执行, 修改data的数据示例&#10;        // this.$data.a = 2&#10;    },&#10;    mounted: function(){&#10;        // 数据解析后执行&#10;    }&#10;})" description="数据行为存储初始化" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />

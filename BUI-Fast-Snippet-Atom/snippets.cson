@@ -934,7 +934,7 @@ var uiSidebar = bui.sidebar({
      'body': """
 // 焦点图 js 初始化:
 var uiSlide = bui.slide({
-    id:"#slide",
+    id:"#uiSlide",
     height:380,
     autopage: true,
     loop: true
@@ -1637,6 +1637,10 @@ var bs = bui.store({
     watch: {},
     computed: {},
     templates: {},
+    beforeMount: function(){
+        // 数据解析前执行, 修改data的数据示例
+        // this.\$data.a = 2
+    },
     mounted: function(){
         // 数据解析后执行
     }
@@ -1656,6 +1660,10 @@ var bs = bui.store({
     watch: {},
     computed: {},
     templates: {},
+    beforeMount: function(){
+        // 数据解析前执行, 修改data的数据示例
+        // this.\$data.a = 2
+    },
     mounted: function(){
         // 数据解析后执行
     }

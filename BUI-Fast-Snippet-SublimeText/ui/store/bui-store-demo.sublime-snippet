@@ -10,6 +10,10 @@ var bs = bui.store({
     watch: {},
     computed: {},
     templates: {},
+    beforeMount: function(){
+        // 数据解析前执行, 修改data的数据示例
+        // this.\$data.a = 2
+    },
     mounted: function(){
         // 数据解析后执行
     }
@@ -21,5 +25,5 @@ var bs = bui.store({
     <tabTrigger>bui-store-demo</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
-    <description>数据行为存储-完整示例</description> 
+    <description>数据行为存储-完整示例</description>
 </snippet>
