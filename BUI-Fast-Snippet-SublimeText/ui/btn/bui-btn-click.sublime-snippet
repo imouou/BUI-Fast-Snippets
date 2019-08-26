@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[
+bui.btn("#btn").click(function(e){
+	
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-btn-submit</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>绑定按钮点击</description>
+</snippet>

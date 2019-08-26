@@ -1,5 +1,5 @@
  - name: BT_APP
-   ver: '1.4.x'
+   ver: '1.5.x'
    scope: BT_APP
    lang: javascript
    groups:

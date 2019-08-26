@@ -117,6 +117,16 @@ bui.btn("#btn").submit(function(loading){
 });
 """
 
+   '绑定按钮点击':
+     'prefix': 'bui-btn-click'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.btn.html'
+     'body': """
+bui.btn("#btn").click(function(e){
+
+});
+"""
+
    '对话框':
      'prefix': 'bui-alert'
      'description': ''
@@ -1177,7 +1187,7 @@ var uiLevelSelect = bui.levelselect({
      'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.input.html'
      'body': """
 // input js 初始化:
-bui.input({
+var uiInput = bui.input({
     id: "#userInput",
     callback: function (e) {
         // 清空数据
@@ -1188,6 +1198,62 @@ bui.input({
 <!-- input html 对应的结构: -->
 <div id="userInput" class="bui-input">
     <input type="text" value="" placeholder="请输入">
+</div>
+
+"""
+
+   '密码框-初始化':
+     'prefix': 'bui-input-password'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.input.html'
+     'body': """
+// input js 初始化:
+var uiInputPassword = bui.input({
+    id: ".password-input",
+    iconClass: ".icon-eye",
+    onBlur: function(e) {
+
+        if (e.target.value == '') { return false; }
+        // 注册的时候校验只能4-18位密码
+        var rule = /^[a-zA-Z0-9_-]{4,18}$/;
+        if (!rule.test(e.target.value)) {
+            bui.hint("密码只能由4-18位字母或者数字上下横杠组成");
+            return false;
+        }
+
+        return true;
+    },
+    callback: function(e) {
+        //切换类型
+        this.toggleType();
+        // 给图标加上样式
+        $(e.target).toggleClass("active")
+    }
+})
+
+<!-- input html 对应的结构: -->
+<div class="bui-input password-input">
+    <input type="password" value="" placeholder="请输入">
+</div>
+
+"""
+
+   '评论框-初始化':
+     'prefix': 'bui-input-textarea'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.input.html'
+     'body': """
+// input js 初始化:
+var uiInputText = bui.input({
+    id: "#commentContent",
+    showLength: true,
+    showIcon: false,
+    maxLength: 100
+})
+
+<!-- input html 对应的结构: -->
+<div id="commentContent" class="bui-input">
+	<textarea class="bui-input" cols="30" rows="4" placeholder="请输入内容"></textarea>
 </div>
 
 """
@@ -1563,6 +1629,24 @@ router.refresh();
 router.back();
 """
 
+   '单页$选择器':
+     'prefix': 'router-$'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+router.$("")
+"""
+
+   '单页$绑定事件':
+     'prefix': 'router-click'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.router.html'
+     'body': """
+router.$("").on("click",function(e){
+
+});
+"""
+
    '模块定义':
      'prefix': 'loader-define'
      'description': ''
@@ -1715,6 +1799,30 @@ var bs = bui.store({
         <div class="bui-bar-main">页面标题</div>
         <div class="bui-bar-right">
             <!-- 右边按钮 -->
+        </div>
+    </header>
+    <main>
+        <!-- 正文内容 -->
+    </main>
+    <footer>
+        <!-- 底部内容 -->
+    </footer>
+</div>
+"""
+
+    'bui标准页面结构':
+      'prefix': 'ui-page-box'
+      'body': """
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">页面标题</div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮 -->
+            </div>
         </div>
     </header>
     <main>
