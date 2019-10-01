@@ -1789,28 +1789,6 @@ var bs = bui.store({
 """
 
     'bui标准页面结构':
-      'prefix': 'ui-page'
-      'body': """
-<div class="bui-page">
-    <header class="bui-bar">
-        <div class="bui-bar-left">
-            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
-        </div>
-        <div class="bui-bar-main">页面标题</div>
-        <div class="bui-bar-right">
-            <!-- 右边按钮 -->
-        </div>
-    </header>
-    <main>
-        <!-- 正文内容 -->
-    </main>
-    <footer>
-        <!-- 底部内容 -->
-    </footer>
-</div>
-"""
-
-    'bui标准页面结构':
       'prefix': 'ui-page-box'
       'body': """
 <div class="bui-page bui-box-vertical">
