@@ -18,6 +18,7 @@
 | 优化简化,按1.5.0修改   | 2018-09-28   |
 | 新增 ui-icon等相关布局, vscode,atom,sublimetext     | 2018-11-12     |
 | 新增 bui-store 初始化, b- 开头结构     | 2019-1-17     |
+| 新增 hbuilderx 编辑器的支持     | 2019-10-28     |
 
 ## 目录
 [TOC]
@@ -42,6 +43,10 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,VSCode,
 方法1:
 在应用市场输入 `bui-fast` , 安装即可. 
 
+### 在HBuilderX的安装
+
+1. 顶部菜单--工具--html代码块, 把下载解压的 BUI-Fast-Snippet-HbuilderX 目录的 bui-html-snippets.json 复制进去,保存;
+2. 顶部菜单--工具--javascript代码块, 把下载解压的 BUI-Fast-Snippet-HbuilderX 目录的 bui-js-snippets.json 复制进去,保存;
 
 ### 在Sublimetext安装
 
