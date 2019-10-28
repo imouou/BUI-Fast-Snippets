@@ -1810,7 +1810,7 @@ var bs = bui.store({
 </div>
 """
 
-    'bui标准页面结构':
+    'bui标准页面box布局结构':
       'prefix': 'ui-page-box'
       'body': """
 <div class="bui-page bui-box-vertical">
