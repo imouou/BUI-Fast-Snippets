@@ -1,0 +1,1699 @@
+{
+
+    "折叠菜单初始化": {
+        "prefix": "bui-accordion",
+        "description": "",
+        "body": [
+            "var uiAccordion = bui.accordion({",
+            " id:\"#uiAccordion\"",
+            "});"
+        ]
+    },
+
+    "折叠菜单-示例": {
+        "prefix": "bui-accordion-demo",
+        "description": "",
+        "body": [
+            "// 折叠菜单 js 初始化: ",
+            "var uiAccordion = bui.accordion({",
+            "    id:\"#uiAccordion\"",
+            "});",
+            "                ",
+            "",
+            "<!-- 折叠菜单 html 对应的结构: -->",
+            "<dl id=\"uiAccordion\" class=\"bui-accordion\">",
+            "  <dt class=\"bui-btn bui-box\">",
+            "    <div class=\"span1\">标题</div>",
+            "    <i class=\"icon-accordion\"></i>",
+            "  </dt>",
+            "  <dd>",
+            "   折叠内容",
+            "  </dd>",
+            "</dl>"
+        ]
+    },
+
+    "上拉菜单初始化": {
+        "prefix": "bui-actionsheet",
+        "description": "",
+        "body": [
+            "var uiActionsheet = bui.actionsheet({",
+            "    trigger: \"#btnOpen\",",
+            "    buttons: [{ name:\"分享到微博\",value:\"weibo\" }],",
+            "    callback: function (e) {",
+            "        var val = $(e.target).attr(\"value\");",
+            "        if( val == \"cancel\"){",
+            "            this.hide();",
+            "        }",
+            "    }",
+            "})"
+        ]
+    },
+
+    "上拉菜单-示例": {
+        "prefix": "bui-actionsheet-demo",
+        "description": "",
+        "body": [
+            "// 上拉菜单 js 初始化: ",
+            "var uiActionsheet = bui.actionsheet({",
+            "  trigger: \"#btnOpen\",",
+            "  buttons: [{ name:\"分享到微博\",value:\"weibo\" },{ name:\"分享到微信\",value:\"weixin\" },{ ",
+            "name:\"分享到QQ\",value:\"QQ\" }],",
+            "  callback: function (e) {",
+            "    ",
+            "    var val = $(e.target).attr(\"value\");",
+            "    ",
+            "    if( val == \"cancel\"){",
+            "      this.hide();",
+            "    }",
+            "  }",
+            "})",
+            "                ",
+            "",
+            "<!-- 上拉菜单 html 对应的结构: -->",
+            "<div id=\"btnOpen\" class=\"bui-btn\">打开下拉菜单</div>"
+
+        ]
+    },
+
+    "绑定按钮跳转": {
+        "prefix": "bui-btn-load",
+        "description": "",
+        "body": [
+            "bui.btn({id:\"#page\",handle:\".bui-btn\"}).load();"
+        ]
+    },
+
+    "绑定按钮提交": {
+        "prefix": "bui-btn-submit",
+        "description": "",
+        "body": [
+            "bui.btn(\"#btn\").submit(function(loading){",
+            "  loading.stop();",
+            "});"
+        ]
+    },
+
+    "绑定按钮点击": {
+        "prefix": "bui-btn-click",
+        "description": "",
+        "body": [
+            "bui.btn(\"#btn\").click(function(e){",
+            "    $1",
+            "});"
+        ]
+    },
+
+    "对话框": {
+        "prefix": "bui-alert",
+        "description": "",
+        "body": [
+            "bui.alert(\"提醒内容\");"
+        ]
+    },
+
+    "确认框": {
+        "prefix": "bui-confirm",
+        "description": "",
+        "body": [
+            "bui.confirm(\"提醒内容\",function(e){",
+            "    ",
+            "    var text = $(e.target).text();",
+            "    if( text == \"确定\" ){",
+            "      //do something",
+            "    }",
+            "  this.close();",
+            "});"
+        ]
+    },
+
+    "自定义对话框初始化": {
+        "prefix": "bui-dialog",
+        "description": "",
+        "body": [
+            "var uiDialog = bui.dialog({",
+            "    id: \"#uiDialog\"",
+            "});"
+        ]
+    },
+
+    "自定义对话框-示例": {
+        "prefix": "bui-dialog-demo",
+        "description": "",
+        "body": [
+            "// 弹出框 js 初始化:// 计算列表的高度",
+            "var uiDialog = bui.dialog({",
+            "    id: \"#uiDialog\"",
+            "});",
+            "",
+            "                ",
+            "<!-- 弹出框 html 对应的结构: -->",
+            "<div id=\"uiDialog\" class=\"bui-dialog\" style=\"display:none;\">",
+            "    <div class=\"bui-dialog-head\">标题</div>",
+            "    <div class=\"bui-dialog-main\">提示内容</div>",
+            "    <div class=\"bui-dialog-close\">",
+            "        <i class=\"icon-close\"></i>",
+            "    </div>",
+            "</div>"
+        ]
+    },
+
+    "自动消失提醒": {
+        "prefix": "bui-hint",
+        "description": "",
+        "body": [
+            "bui.hint(\"提醒内容\");"
+        ]
+    },
+
+    "下拉菜单初始化": {
+        "prefix": "bui-dropdown",
+        "description": "",
+        "body": [
+            "var uiDropdown = bui.dropdown({",
+            "    id: \"#uiDropdown\",",
+            "    data: [{",
+            "        name:\"广州\",",
+            "        value:\"广州\"",
+            "    }],",
+            "    //设置relative为false,二级菜单继承父层宽度",
+            "    relative: false,",
+            "    callback: function (e) {",
+            "    }",
+            "});"
+        ]
+    },
+
+    "下拉菜单初始化-示例": {
+        "prefix": "bui-dropdown-demo",
+        "description": "",
+        "body": [
+            "// 下拉菜单 js 初始化:",
+            "var uiDoropdown = bui.dropdown({",
+            "    id: \"#uiDropdown\",",
+            "    data: [{",
+            "        name:\"广州\",",
+            "        value:\"广州\"",
+            "    }],",
+            "    //设置relative为false,二级菜单继承父层宽度",
+            "    relative: false,",
+            "    callback: function (e) {",
+            "    }",
+            "})",
+            "                ",
+            "<!-- 下拉菜单 html 对应的结构: -->",
+            "<div id=\"uiDropdown\" class=\"bui-dropdown\">",
+            "  <div class=\"bui-btn bui-box\" >",
+            "    <div class=\"span1\">下拉菜单</div>",
+            "    <i class=\"icon-dropdown\"></i>",
+            "  </div>",
+            "</div> "
+        ]
+    },
+
+    "下拉刷新加载列表初始化": {
+        "prefix": "bui-list",
+        "description": "",
+        "body": [
+            "// 列表控件 js 初始化: ",
+            "var uiList = bui.list({",
+            "    id: \"#uiList\",",
+            "    url: \"http://rap2api.taobao.org/app/mock/84605/example/getNews\",",
+            "    pageSize:5,",
+            "    data: {},",
+            "    //如果分页的字段名不一样,通过field重新定义",
+            "    field: {",
+            "        page: \"page\",",
+            "        size: \"pageSize\",",
+            "        data: \"data\"",
+            "    },",
+            "    callback: function (e) {},",
+            "    template: function (data) {",
+            "        var html = \"\";",
+            "        data.forEach(function(el, index) {",
+            "",
+            "            html +=`<li class=\"bui-btn bui-box\">",
+            "                <div class=\"bui-thumbnail\"><img src=\"${el.image}\" alt=\"\"></div>",
+            "                <div class=\"span1\">",
+            "                    <h3 class=\"item-title\">${el.name}</h3>",
+            "                    <p class=\"item-text\">${el.address}</p>",
+            "                    <p class=\"item-text\">${el.distance}公里</p>",
+            "                </div>",
+            "                <span class=\"price\"><i>￥</i>${el.price}</span>",
+            "            </li>`",
+            "        });",
+            "",
+            "        return html;",
+            "    }",
+            "});"
+
+        ]
+    },
+
+    "下拉刷新加载列表-示例": {
+        "prefix": "bui-list-demo",
+        "description": "",
+        "body": [
+            "// 列表控件 js 初始化: ",
+            "var uiList = bui.list({",
+            "    id: \"#uiList\",",
+            "    url: \"http://rap2api.taobao.org/app/mock/84605/example/getNews\",",
+            "    pageSize:5,",
+            "    data: {},",
+            "    //如果分页的字段名不一样,通过field重新定义",
+            "    field: {",
+            "        page: \"page\",",
+            "        size: \"pageSize\",",
+            "        data: \"data\"",
+            "    },",
+            "    callback: function (e) {},",
+            "    template: function (data) {",
+            "        var html = \"\";",
+            "        data.forEach(function(el, index) {",
+            "",
+            "            html +=`<li class=\"bui-btn bui-box\">",
+            "                <div class=\"bui-thumbnail\"><img src=\"${el.image}\" alt=\"\"></div>",
+            "                <div class=\"span1\">",
+            "                    <h3 class=\"item-title\">${el.name}</h3>",
+            "                    <p class=\"item-text\">${el.address}</p>",
+            "                    <p class=\"item-text\">${el.distance}公里</p>",
+            "                </div>",
+            "                <span class=\"price\"><i>￥</i>${el.price}</span>",
+            "            </li>`",
+            "        });",
+            "",
+            "        return html;",
+            "    }",
+            "});",
+            "",
+            "<!-- 列表控件 html 对应的结构:  -->",
+            "<div id=\"uiList\" class=\"bui-scroll\">",
+            "    <div class=\"bui-scroll-head\"></div>",
+            "    <div class=\"bui-scroll-main\">",
+            "        <ul class=\"bui-list\">",
+            "        </ul>",
+            "    </div>",
+            "    <div class=\"bui-scroll-foot\"></div>",
+            "</div>"
+        ]
+    },
+
+    "侧滑列表初始化": {
+        "prefix": "bui-listview",
+        "description": "",
+        "body": [
+            "// 侧滑列表 js 初始化: ",
+            "var uiListview = bui.listview({",
+            "    id: \"#uiListview\",",
+            "    data: [{ \"text\": \"删除\", \"classname\":\"danger\"}],",
+            "    callback: function (e) {",
+            "        // e.target 为滑动出来的操作按钮",
+            "        var target = $(e.target);",
+            "        var text = target.text();",
+            "            if( text == \"删除\" ){",
+            "                bui.confirm(\"确定要删除吗\",function (e) {",
+            "                    var text2 = $(e.target).text();",
+            "                    if( text2 == \"确定\"){",
+            "                        // 执行删除整行操作",
+            "                        target.parents(\"li\").fadeOut(300,function () {",
+            "                            $(this).remove();",
+            "                        });",
+            "                    }",
+            "                })",
+            "            }",
+            "        // 不管做什么操作,先关闭按钮",
+            "        this.close();",
+            "    }",
+            "});"
+
+        ]
+    },
+
+    "侧滑列表-示例": {
+        "prefix": "bui-listview-demo",
+        "description": "",
+        "body": [
+            "// 侧滑列表 js 初始化: ",
+            "var uiListview = bui.listview({",
+            "    id: \"#uiListview\",",
+            "    data: [{ \"text\": \"删除\", \"classname\":\"danger\"}],",
+            "    callback: function (e) {",
+            "        // e.target 为滑动出来的操作按钮",
+            "        var target = $(e.target);",
+            "        var text = target.text();",
+            "            if( text == \"删除\" ){",
+            "                bui.confirm(\"确定要删除吗\",function (e) {",
+            "                    var text2 = $(e.target).text();",
+            "                    if( text2 == \"确定\"){",
+            "                        // 执行删除整行操作",
+            "                        target.parents(\"li\").fadeOut(300,function () {",
+            "                            $(this).remove();",
+            "                        });",
+            "                    }",
+            "                })",
+            "            }",
+            "        // 不管做什么操作,先关闭按钮",
+            "        this.close();",
+            "    }",
+            "});",
+            "",
+            "// 侧滑列表 html 对应的结构:",
+            "<ul id=\"uiListview\" class=\"bui-listview\">",
+            "  <li>",
+            "    <div class=\"bui-btn bui-box\">",
+            "      <div class=\"span1\">左滑动出现菜单</div>",
+            "      <i class=\"icon-listright\"></i>",
+            "    </div>",
+            "  </li>",
+            "</ul>"
+
+        ]
+    },
+
+    "侧滑列表-demo-自定义按钮": {
+        "prefix": "bui-listview-demo-custom",
+        "description": "",
+        "body": [
+            "// 侧滑列表自定义结构 js 初始化:",
+            "var uiListview = bui.listview({",
+            "    id: \"#uiListview\",",
+            "    callback: function (e,menu) {",
+            "        //关闭菜单",
+            "        menu.close();",
+            "    }",
+            "});",
+            "",
+            "// 侧滑列表自定义结构 html 对应的结构:",
+            "<ul id=\"uiListview\" class=\"bui-listview\">",
+            "    <!-- 设置status属性可以避免重复渲染菜单 -->",
+            "    <li status=\"1\">",
+            "        <div class=\"bui-btn bui-box\">",
+            "            <div class=\"span1\">左右菜单</div>",
+            "            <i class=\"icon-listright\"></i>",
+            "        </div>",
+            "        <!-- data-moving 自定义左滑的距离 -->",
+            "        <div class=\"bui-listview-menu swipeleft\" data-moving=\"240\">",
+            "            <div class=\"bui-btn primary\">置顶</div>",
+            "            <div class=\"bui-btn primary\">修改</div>",
+            "            <div class=\"bui-btn danger\">删除</div>",
+            "        </div>",
+            "        <div class=\"bui-listview-menu swiperight\">",
+            "            <div class=\"bui-btn primary\">修改</div>",
+            "            <div class=\"bui-btn danger\">删除</div>",
+            "        </div>",
+            "    </li>",
+            "</ul>"
+
+        ]
+    },
+
+    "页面正在加载": {
+        "prefix": "bui-loading",
+        "description": "",
+        "body": [
+            "var uiLoading = bui.loading();",
+            "    uiLoading.show();"
+        ]
+    },
+
+    "页面遮罩初始化": {
+        "prefix": "bui-mask",
+        "description": "",
+        "body": [
+            "var uiMask = bui.mask();",
+            "    uiMask.show();"
+        ]
+    },
+
+    "数字条初始化": {
+        "prefix": "bui-number",
+        "description": "",
+        "body": [
+            "// 数字条 js 初始化:",
+            "var uiNumber = bui.number({",
+            "    id: \"#number\"",
+            "})"
+        ]
+    },
+
+    "数字加减条-示例": {
+        "prefix": "bui-number-demo",
+        "description": "",
+        "body": [
+            "// 数字条 js 初始化:",
+            "var uiNumber = bui.number({",
+            "    id: \"#number\"",
+            "})",
+            "",
+            "// 数字条 html 对应的结构:",
+            "<div id=\"number\" class=\"bui-number\"></div> "
+        ]
+    },
+
+    "日期控件初始化": {
+        "prefix": "bui-pickerdate",
+        "description": "",
+        "body": [
+            "// 日期控件 js 初始化:",
+            "var pickerdateInput = $(\"#pickerdateInput\");",
+            "var uiPickerdate = bui.pickerdate({",
+            "    handle:\"#pickerdateInput\",",
+            "    onChange: function(value) {",
+            "      pickerdateInput.val(value);",
+            "    }",
+            "  });"
+
+        ]
+    },
+
+    "日期控件-示例": {
+        "prefix": "bui-pickerdate-demo",
+        "description": "",
+        "body": [
+            "// 日期控件 js 初始化:",
+            "var pickerdateInput = $(\"#pickerdateInput\");",
+            "var uiPickerdate = bui.pickerdate({",
+            "    handle:\"#pickerdateInput\",",
+            "    onChange: function(value) {",
+            "      pickerdateInput.val(value);",
+            "    }",
+            "  });",
+            "                ",
+            "<!-- 日期控件 html 对应的结构: -->",
+            "<input type=\"text\" id=\"pickerdateInput\" class=\"bui-input\" readonly>"
+
+        ]
+    },
+
+    "下拉刷新初始化": {
+        "prefix": "bui-pullrefresh",
+        "description": "",
+        "body": [
+            "// 下拉刷新 js 初始化: ",
+            "",
+            "var uiPullRefresh = bui.pullrefresh({",
+            "    id: \"#uiPullrefresh\",",
+            "    onRefresh: getData",
+            "})",
+            "",
+            "//请求数据 或者其它操作",
+            "function getData(){",
+            "    bui.ajax({",
+            "      url: \"\",",
+            "      data: {}",
+            "    }).then(function(res){",
+            "",
+            "      //请求成功以后还原刷新前状态",
+            "      uiPullRefresh.reverse();",
+            "    },function(res){",
+            "",
+            "      //请求失败以后还原刷新前状态",
+            "      uiPullRefresh.reverse();",
+            "    })",
+            "}"
+
+        ]
+    },
+
+    "下拉刷新-示例": {
+        "prefix": "bui-pullrefresh-demo",
+        "description": "",
+        "body": [
+            "// 下拉刷新 js 初始化: ",
+            "",
+            "var uiPullRefresh = bui.pullrefresh({",
+            "    id: \"#uiPullrefresh\",",
+            "    onRefresh: getData",
+            "})",
+            "",
+            "//请求数据 或者其它操作",
+            "function getData(){",
+            "    bui.ajax({",
+            "      url: \"\",",
+            "      data: {}",
+            "    }).then(function(res){",
+            "",
+            "      //请求成功以后还原刷新前状态",
+            "      uiPullRefresh.reverse();",
+            "    },function(res){",
+            "",
+            "      //请求失败以后还原刷新前状态",
+            "      uiPullRefresh.reverse();",
+            "    })",
+            "}",
+            "",
+            "<!-- 下拉刷新 html 对应的结构: -->",
+            "<div id=\"uiPullrefresh\" class=\"bui-scroll\">",
+            "    <div class=\"bui-scroll-head\"></div>",
+            "    <div class=\"bui-scroll-main\">",
+            "        <ul class=\"bui-list\">",
+            "        </ul>",
+            "    </div>",
+            "</div>"
+
+        ]
+    },
+
+    "星级评分初始化": {
+        "prefix": "bui-rating",
+        "description": "",
+        "body": [
+            "// 评分星星 js 初始化:",
+            "var uiRating = bui.rating({",
+            "    id: \"#uiRating\",",
+            "    value: 3",
+            "});  "
+
+        ]
+    },
+
+    "星级评分-示例": {
+        "prefix": "bui-rating-demo",
+        "description": "",
+        "body": [
+            "// 评分星星 js 初始化:",
+            "var uiRating = bui.rating({",
+            "    id: \"#uiRating\",",
+            "    value: 3",
+            "});  ",
+            "                ",
+            "<!-- 评分星星 html 对应的结构: -->",
+            "<div id=\"uiRating\" class=\"bui-rating\"></div>"
+        ]
+    },
+
+    "列表滚动加载初始化": {
+        "prefix": "bui-scroll",
+        "description": "",
+        "body": [
+            "// 列表滚动加载 js 初始化: ",
+            "var uiScroll = bui.scroll({",
+            "    id: \"#uiScroll\",",
+            "    children: \".bui-list\",",
+            "    page:1,",
+            "    pageSize:5,",
+            "    onRefresh: function () {",
+            "        var page = 1;",
+            "        var pagesize = 5;",
+            "        getData(page,pagesize,\"html\");",
+            "    },",
+            "    onLoad: getData",
+            "})",
+            "",
+            "",
+            "//新增下一页数据",
+            "function getData(page,pagesize,command){",
+            "  var command = command || \"append\";",
+            "  ",
+            "  // 更新分页信息,如果高度不足会自动请求下一页",
+            "  uiScroll.updatePage(page,res.data);",
+            "",
+            "  // 刷新的时候返回位置",
+            "  uiScroll.reverse();",
+            "",
+            "}"
+
+        ]
+    },
+
+    "列表滚动加载-示例": {
+        "prefix": "bui-scroll-demo",
+        "description": "",
+        "body": [
+            "// 列表滚动加载 js 初始化: ",
+            "var uiScroll = bui.scroll({",
+            "    id: \"#uiScroll\",",
+            "    children: \".bui-list\",",
+            "    page:1,",
+            "    pageSize:5,",
+            "    onRefresh: function () {",
+            "        var page = 1;",
+            "        var pagesize = 5;",
+            "        getData(page,pagesize,\"html\");",
+            "    },",
+            "    onLoad: getData",
+            "})",
+            "",
+            "",
+            "//新增下一页数据",
+            "function getData(page,pagesize,command){",
+            "  var command = command || \"append\";",
+            "  ",
+            "  // 更新分页信息,如果高度不足会自动请求下一页",
+            "  uiScroll.updateCache(page,res.data);",
+            "",
+            "  // 刷新的时候返回位置",
+            "  uiScroll.reverse();",
+            "",
+            "}",
+            "",
+            "<!-- 列表滚动加载 html 对应的结构: -->",
+            "<div id=\"uiScroll\" class=\"bui-scroll\">",
+            "    <div class=\"bui-scroll-head\"></div>",
+            "    <div class=\"bui-scroll-main\">",
+            "        <ul class=\"bui-list\">",
+            "        </ul>",
+            "    </div>",
+            "    <div class=\"bui-scroll-foot\"></div>",
+            "</div>"
+        ]
+    },
+
+    "搜索条初始化": {
+        "prefix": "bui-searchbar",
+        "description": "",
+        "body": [
+            "// 搜索条 js 初始化:",
+            "var uiList = bui.list({",
+            "    id: \"#scrollSearch\",",
+            "    url: \"http://rap2api.taobao.org/app/mock/84605/example/getNews\",",
+            "    pageSize:5,",
+            "    data: {},",
+            "    //如果分页的字段名不一样,通过field重新定义",
+            "    field: {",
+            "        page: \"page\",",
+            "        size: \"pageSize\",",
+            "        data: \"data\"",
+            "    },",
+            "    callback: function (e) {},",
+            "    template: function (data) {",
+            "        var html = \"\";",
+            "        data.forEach(function(el, index) {",
+            "",
+            "            html +=`<li class=\"bui-btn bui-box\">",
+            "                <div class=\"bui-thumbnail\"><img src=\"${el.image}\" alt=\"\"></div>",
+            "                <div class=\"span1\">",
+            "                    <h3 class=\"item-title\">${el.name}</h3>",
+            "                    <p class=\"item-text\">${el.address}</p>",
+            "                    <p class=\"item-text\">${el.distance}公里</p>",
+            "                </div>",
+            "                <span class=\"price\"><i>￥</i>${el.price}</span>",
+            "            </li>`",
+            "        });",
+            "",
+            "        return html;",
+            "    }",
+            "});",
+            "",
+            "var uiSearchbar = bui.searchbar({",
+            "        id:\"#searchbar\",",
+            "        onInput: function(ui,keyword) {",
+            "            //实时搜索",
+            "            // console.log(++n)",
+            "        },",
+            "        onRemove: function(ui,keyword) {",
+            "            //删除关键词需要做什么其它处理",
+            "            // console.log(keyword);",
+            "        },",
+            "        callback: function (ui,keyword) {",
+            "            if( uiList ){",
+            "                //点击搜索清空数据",
+            "                uiList.empty();",
+            "                // 重新初始化数据",
+            "                uiList.init({",
+            "                    page: 1,",
+            "                    data: {",
+            "                        \"keyword\":keyword",
+            "                    }",
+            "                });",
+            "            }",
+            "        }",
+            "",
+            "    }); "
+        ]
+    },
+
+    "搜索条-示例": {
+        "prefix": "bui-searchbar-demo",
+        "description": "",
+        "body": [
+            "// 搜索条 js 初始化:",
+            "var uiList = bui.list({",
+            "    id: \"#scrollSearch\",",
+            "    url: \"http://rap2api.taobao.org/app/mock/84605/example/getNews\",",
+            "    pageSize:5,",
+            "    data: {},",
+            "    //如果分页的字段名不一样,通过field重新定义",
+            "    field: {",
+            "        page: \"page\",",
+            "        size: \"pageSize\",",
+            "        data: \"data\"",
+            "    },",
+            "    callback: function (e) {},",
+            "    template: function (data) {",
+            "        var html = \"\";",
+            "        data.forEach(function(el, index) {",
+            "",
+            "            html +=`<li class=\"bui-btn bui-box\">",
+            "                <div class=\"bui-thumbnail\"><img src=\"${el.image}\" alt=\"\"></div>",
+            "                <div class=\"span1\">",
+            "                    <h3 class=\"item-title\">${el.name}</h3>",
+            "                    <p class=\"item-text\">${el.address}</p>",
+            "                    <p class=\"item-text\">${el.distance}公里</p>",
+            "                </div>",
+            "                <span class=\"price\"><i>￥</i>${el.price}</span>",
+            "            </li>`",
+            "        });",
+            "",
+            "        return html;",
+            "    }",
+            "});",
+            "",
+            "var uiSearchbar = bui.searchbar({",
+            "        id:\"#searchbar\",",
+            "        onInput: function(ui,keyword) {",
+            "            //实时搜索",
+            "            // console.log(++n)",
+            "        },",
+            "        onRemove: function(ui,keyword) {",
+            "            //删除关键词需要做什么其它处理",
+            "            // console.log(keyword);",
+            "        },",
+            "        callback: function (ui,keyword) {",
+            "            if( uiList ){",
+            "                //点击搜索清空数据",
+            "                uiList.empty();",
+            "                // 重新初始化数据",
+            "                uiList.init({",
+            "                    page: 1,",
+            "                    data: {",
+            "                        \"keyword\":keyword",
+            "                    }",
+            "                });",
+            "            }",
+            "        }",
+            "",
+            "    });     ",
+            "      ",
+            "<!-- 搜索条控件结构 -->",
+            "<div id=\"searchbar\" class=\"bui-searchbar bui-box\">",
+            "    <div class=\"span1\">",
+            "        <div class=\"bui-input\">",
+            "            <i class=\"icon-search\"></i>",
+            "            <input type=\"search\" value=\"\" placeholder=\"请输入关键字\" />",
+            "        </div>",
+            "    </div>",
+            "    <div class=\"btn-search\">搜索</div>",
+            "</div>",
+            "<!-- 列表控件结构 -->",
+            "<div id=\"scrollSearch\" class=\"bui-scroll\">",
+            "    <div class=\"bui-scroll-head\"></div>",
+            "    <div class=\"bui-scroll-main\">",
+            "        <ul class=\"bui-list\">",
+            "        </ul>",
+            "    </div>",
+            "    <div class=\"bui-scroll-foot\"></div>",
+            "</div>"
+        ]
+    },
+
+    "选择列表初始化": {
+        "prefix": "bui-select",
+        "description": "",
+        "body": [
+            "// 选择列表 js 初始化:",
+            "var uiSelect = bui.select({",
+            "    trigger:\"#uiSelect\",",
+            "    title:\"请选择区域\",",
+            "    type:\"checkbox\",",
+            "    data: [{",
+            "        \"name\":\"广东\",",
+            "        \"value\":\"gd\"",
+            "    }],",
+            "    buttons: [{name:\"重置\",className:\"\"},{name:\"确定\",className:\"primary-reverse\"}],",
+            "    callback: function (e) {",
+            "",
+            "        var text = $(e.target).text();",
+            "        if( text == \"重置\" ){",
+            "            uiSelect.selectNone();",
+            "        }else{",
+            "            uiSelect.hide();",
+            "        }",
+            "    }",
+            "})"
+
+        ]
+    },
+
+    "选择列表-示例": {
+        "prefix": "bui-select-demo",
+        "description": "",
+        "body": [
+            "// 选择列表 js 初始化:",
+            "var uiSelect = bui.select({",
+            "    trigger:\"#uiSelect\",",
+            "    triggerChildren:\".bui-value\",",
+            "    title:\"请选择区域\",",
+            "    type:\"checkbox\",",
+            "    data: [{",
+            "        \"name\":\"广东\",",
+            "        \"value\":\"gd\"",
+            "    }],",
+            "    buttons: [{name:\"重置\",className:\"\"},{name:\"确定\",className:\"primary-reverse\"}],",
+            "    callback: function (e) {",
+            "",
+            "        var text = $(e.target).text();",
+            "        if( text == \"重置\" ){",
+            "            uiSelect.selectNone();",
+            "        }else{",
+            "            uiSelect.hide();",
+            "        }",
+            "    }",
+            "})",
+            "                ",
+            "<!-- 选择列表 html 对应的结构: -->",
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-box\" id=\"uiSelect\">",
+            "        <label>请选择区域</label>",
+            "        <div class=\"span1\">",
+            "            <div class=\"bui-value\"></div>",
+            "        </div>",
+            "        <i class=\"icon-listright\"></i>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "侧滑栏初始化": {
+        "prefix": "bui-sidebar",
+        "description": "",
+        "body": [
+            "// 侧边栏 js 初始化: ",
+            "var uiSidebar = bui.sidebar({",
+            "    id: \"#sidebarWrap\",",
+            "    width: 644,",
+            "    trigger : \"#menu\"",
+            "})"
+
+        ]
+    },
+
+    "侧滑栏-示例": {
+        "prefix": "bui-sidebar-demo",
+        "description": "",
+        "body": [
+            "// 侧边栏 js 初始化: ",
+            "var uiSidebar = bui.sidebar({",
+            "    id: \"#sidebarWrap\",",
+            "    width: 644,",
+            "    trigger : \"#menu\"",
+            "})",
+            "                ",
+            "// 侧边栏 html 对应的结构:",
+            "<div id=\"sidebarWrap\" class=\"bui-sidebar-wrap\">",
+            "  <!-- 侧滑菜单 -->",
+            "  <div class=\"bui-sidebar swiperight\">",
+            "    <img src=\"images/placeholder-sidebar.jpg\" alt=\"占位图\">",
+            "  </div>",
+            "  <!-- 正文内容 -->",
+            "  <div class=\"bui-page\">",
+            "      <div id=\"menu\" class=\"menu\"><i class=\"icon-menu\"></i></div>",
+            "  </div>",
+            "</div>"
+        ]
+    },
+
+    "焦点图初始化": {
+        "prefix": "bui-slide",
+        "description": "",
+        "body": [
+            "// 焦点图 js 初始化:",
+            "var uiSlide = bui.slide({",
+            "    id:\"#uiSlide\",",
+            "    height:380,",
+            "    autopage: true,",
+            "    loop: true",
+            "})"
+        ]
+    },
+
+    "焦点图-示例": {
+        "prefix": "bui-slide-demo",
+        "description": "",
+        "body": [
+            "// 焦点图 js 初始化:",
+            "var uiSlide = bui.slide({",
+            "    id:\"#uiSlide\",",
+            "    height:380,",
+            "    autopage: true,",
+            "    loop: true,",
+            "    data: [{",
+            "        image: \"images/banner01.png\",",
+            "        url: \"pages/ui_controls/bui.slide_title.html\",",
+            "    },{",
+            "        image: \"images/banner02.png\",",
+            "        url: \"pages/ui_controls/bui.slide_title.html\",",
+            "    }]",
+            "})",
+            "                ",
+            "// 焦点图 html 对应的结构:",
+            "<div id=\"uiSlide\" class=\"bui-slide bui-slide-skin01\"></div>"
+        ]
+    },
+
+    "步骤条初始化": {
+        "prefix": "bui-stepbar",
+        "description": "",
+        "body": [
+            "// 步骤条 js 初始化:",
+            "var uiStepbar = bui.stepbar({",
+            "    id: \"#uiStepbar\",",
+            "    data: [{",
+            "        title: \"预立项申请\",",
+            "        subtitle: \"2016-04-2 10:30\",",
+            "        content: \"成功创建申请,已经提交至XX部门经理审批,请耐心等待\"",
+            "    },{",
+            "        title: \"立项审批\",",
+            "        subtitle: \"2016-04-21 10:30\",",
+            "        content: \"审批完成,资料递交中\"",
+            "    }]",
+            "});"
+        ]
+    },
+
+    "步骤条-示例": {
+        "prefix": "bui-stepbar-demo",
+        "description": "",
+        "body": [
+            "// 步骤条 js 初始化:",
+            "var uiStepbar = bui.stepbar({",
+            "    id: \"#uiStepbar\",",
+            "    data: [{",
+            "        title: \"预立项申请\",",
+            "        subtitle: \"2016-04-2 10:30\",",
+            "        content: \"成功创建申请,已经提交至XX部门经理审批,请耐心等待\"",
+            "    },{",
+            "        title: \"立项审批\",",
+            "        subtitle: \"2016-04-21 10:30\",",
+            "        content: \"审批完成,资料递交中\"",
+            "    }]",
+            "});",
+            "",
+            "//激活第2步",
+            "uiStepbar.value(1);   ",
+            "                ",
+            "<!-- 步骤条 html 对应的结构: -->",
+            "<div id=\"uiStepbar\" class=\"bui-stepbar\"></div>  "
+        ]
+    },
+
+    "抽屉滑动控件初始化": {
+        "prefix": "bui-swipe",
+        "description": "",
+        "body": [
+            "var uiSwipe = bui.swipe({",
+            "    id: \"#uiSwipe\",",
+            "    handle: \".bui-page\",",
+            "    movingDistance: 200,",
+            "    direction: \"xy\",",
+            "});"
+        ]
+    },
+
+    "抽屉滑动控件-示例": {
+        "prefix": "bui-swipe-demo",
+        "description": "",
+        "body": [
+            "// 抽屉滑动控件 js 初始化:",
+            "var uiSwipe = bui.swipe({",
+            "    id: \"#uiSwipe\",",
+            "    handle: \".bui-page\",",
+            "    movingDistance: 400,",
+            "    direction: \"xy\",",
+            "}); ",
+            "                ",
+            "<!-- 抽屉滑动控件 html 对应的结构: -->",
+            "<div id=\"uiSwipe\" class=\"wrap\">",
+            "    <!-- 侧滑菜单 -->",
+            "    <div class=\"swipeleft\" data-moving=\"300\">",
+            "        右边菜单",
+            "    </div>",
+            "    <div class=\"swiperight\" >",
+            "        左边菜单",
+            "    </div>",
+            "    <div class=\"swipeup\" >",
+            "        底部菜单",
+            "    </div>",
+            "    <div class=\"swipedown\">",
+            "        顶部菜单",
+            "    </div>",
+            "    <!-- 正文内容 -->",
+            "    <div id=\"page\" class=\"bui-page\">",
+            "        正文内容",
+            "    </div>",
+            "</div>"
+        ]
+    },
+
+    "选项卡底部动态加载": {
+        "prefix": "bui-tab-demo-footer",
+        "description": "",
+        "body": [
+            "// 选项卡 js 初始化:",
+            "var tab = bui.tab({",
+            "    id:\"#tabDynamic\",",
+            "    menu:\"#tabDynamicNav\",",
+            "    // 1: 声明是动态加载的tab",
+            "    autoload: true,",
+            "})",
+            "",
+            "// 2: 监听跳转的时候触发",
+            "tab.on(\"to\",function (index) {",
+            "    // 根据索引加载对应的脚本",
+            "    switch(index){",
+            "        case 0:",
+            "        loader.require([\"pages/main/home\"],function(main){",
+            "            console.log(\"有回调每次都执行\")",
+            "        })",
+            "        break;",
+            "        case 1:",
+            "        console.log(\"没回调只加载一次\")",
+            "        loader.require([\"pages/main/news\"])",
+            "    }",
+            "}).to(0);",
+            "",
+            "                ",
+            "<!-- 选项卡 html 对应的结构: 分别替换main,footer标签, 如果main有其它内容,则复制bui-tab的结构-->",
+            "<main>",
+            "    <div id=\"tabDynamic\" class=\"bui-tab\">",
+            "        <div class=\"bui-tab-main\">",
+            "            <ul>",
+            "                <li><!-- Tab1 --></li>",
+            "                <li style=\"display: none;\"><!-- Tab2 --></li>",
+            "            </ul>",
+            "        </div>",
+            "    </div>",
+            "</main>",
+            "<footer>",
+            "<ul id=\"tabDynamicNav\" class=\"bui-nav\">",
+            "    <li class=\"bui-btn bui-box-vertical active\" href=\"pages/main/home.html\"><i class=\"icon-home\"><span class=\"bui-badges\">5</span></i><div class=\"span1\">Tab1</div></li>",
+            "    <li class=\"bui-btn bui-box-vertical\" href=\"pages/main/news.html\"><i class=\"icon-edit\"></i><div class=\"span1\">Tab2</div></li>",
+            "</ul>",
+            "</footer>"
+        ]
+    },
+
+    "选项卡控件-示例": {
+        "prefix": "bui-tab-demo",
+        "description": "",
+        "body": [
+            "// 选项卡 js 初始化:",
+            "var uiTab = bui.tab({",
+            "    id:\"#uiTab\"",
+            "});",
+            "                ",
+            "<!-- 选项卡 html 对应的结构: -->",
+            "<div id=\"uiTab\" class=\"bui-tab\">",
+            "    <div class=\"bui-tab-head\">",
+            "        <ul class=\"bui-nav\">",
+            "            <li class=\"bui-btn\">Tab1</li>",
+            "            <li class=\"bui-btn\">Tab2</li>",
+            "        </ul>",
+            "    </div>",
+            "    <div class=\"bui-tab-main\">",
+            "        <ul>",
+            "            <li><img src=\"images/placeholder-list.png\" alt=\"占位图\"></li>",
+            "            <li style=\"display: none;\">",
+            "                <img src=\"images/placeholder-list.png\" alt=\"占位图\"></li>",
+            "        </ul>",
+            "    </div>",
+            "</div> "
+        ]
+    },
+
+    "选项卡-初始化": {
+        "prefix": "bui-tab",
+        "description": "",
+        "body": [
+            "// 选项卡 js 初始化:",
+            "var uiTab = bui.tab({",
+            "    id:\"#uiTab\"",
+            "});"
+
+        ]
+    },
+
+    "级联菜单-初始化": {
+        "prefix": "bui-levelselect-demo",
+        "description": "",
+        "body": [
+            "// 级联菜单 js 初始化:",
+            "var uiLevelSelect = bui.levelselect({",
+            "   data: [{",
+            "    \"n\":\"北京\",",
+            "    \"c\":[{\"a\":[\"城区\",\"城区以外\"],\"n\":\"密云区\"}]",
+            "    }],",
+            "   title: \"所在地区\",",
+            "   trigger: \".selected-val\",",
+            "   level: 3,",
+            "   field:{",
+            "       name: \"n\",",
+            "       data: [\"c\",\"a\"],",
+            "   }",
+            "})",
+            "",
+            "$(\"#chooseCity\").on(\"click\",function (e) {",
+            "    uiLevelSelect.show();",
+            "})",
+            "                ",
+            "<!-- 级联菜单 html 对应的结构: -->",
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-box clearactive\">",
+            "        <div class=\"bui-label\">所在地区</div>",
+            "        <div class=\"span1\">",
+            "            <div id=\"chooseCity\" class=\"bui-box\">",
+            "                <div class=\"selected-val\"></div>",
+            "                <div class=\"selected-val\"></div>",
+            "                <div class=\"selected-val\"></div>",
+            "            </div>",
+            "        </div>",
+            "    </li>",
+            "</ul> "
+
+        ]
+    },
+
+    "输入框-初始化": {
+        "prefix": "bui-input-demo",
+        "description": "",
+        "body": [
+            "// input js 初始化: ",
+            "bui.input({",
+            "    id: \"#userInput\",",
+            "    callback: function (e) {",
+            "        // 清空数据",
+            "        this.empty();",
+            "    }",
+            "})",
+            "",
+            "<!-- input html 对应的结构: -->",
+            "<div id=\"userInput\" class=\"bui-input\">",
+            "    <input type=\"text\" value=\"\" placeholder=\"请输入\">",
+            "</div>"
+
+        ]
+    },
+    "上传-示例": {
+        "prefix": "bui-upload-demo",
+        "description": "",
+        "body": [
+            "// 拍照上传",
+            "var photos = $(\"#buiPhoto\");",
+            "var uiUpload = bui.upload();",
+            "",
+            "",
+            "// 上拉菜单 js 初始化: ",
+            "var uiActionsheet = bui.actionsheet({",
+            "  trigger: \"#btnUpload\",",
+            "  buttons: [{ name:\"拍照上传\",value:\"camera\" },{ name:\"从相册选取\",value:\"photo\" }],",
+            "  callback: function (e) {",
+            "    var ui = this;",
+            "    var val = $(e.target).attr(\"value\");",
+            "    switch( val ){",
+            "        case \"camera\":",
+            "        ui.hide();",
+            "        uiUpload.add({",
+            "            \"from\": \"camera\",",
+            "            \"onSuccess\": function (val,data) {",
+            "                // 展示本地图片",
+            "                this.toBase64({",
+            "                    onSuccess: function (url) {",
+            "                        photos.prepend(templatePhoto(url))",
+            "                   ",
+            "                    }",
+            "                });",
+            "",
+            "                // 也可以直接调用start上传图片",
+            "            }",
+            "        })",
+            "        ",
+            "        break;",
+            "        case \"photo\":",
+            "        ui.hide();",
+            "        uiUpload.add({",
+            "            \"from\": \"\",",
+            "            \"onSuccess\": function (val,data) {",
+            "                // 展示本地图片",
+            "                this.toBase64({",
+            "                    onSuccess: function (url) {",
+            "                        photos.prepend(templatePhoto(url))",
+            "                    }",
+            "                });",
+            "                // 也可以直接调用start上传图片",
+            "            }",
+            "        })",
+            "",
+            "        break;",
+            "        case \"cancel\":",
+            "        ui.hide();",
+            "        break;",
+            "    }",
+            "  }",
+            "})",
+            "",
+            "function templatePhoto(url) {",
+            "    return `<div class=\"span1\">",
+            "            <div class=\"bui-upload-thumbnail\"><img src=\"${url}\" alt=\"\" /></div>",
+            "        </div>`",
+            "}   ",
+            "",
+            "<!-- 上传的结构 -->",
+            "<div id=\"buiPhoto\" class=\"bui-upload bui-fluid-space-4\">",
+            "    <div class=\"span1\">",
+            "        <div id=\"btnUpload\" class=\"bui-btn\">",
+            "            <i class=\"icon-plus large\"></i>",
+            "        </div>",
+            "    </div>",
+            "</div> "
+        ]
+    },
+
+    "页面刷新": {
+        "prefix": "bui-refresh",
+        "description": "",
+        "body": [
+            "bui.refresh();"
+        ]
+    },
+
+    "页面跳转传参": {
+        "prefix": "bui-load",
+        "description": "",
+        "body": [
+            "bui.load({url:\"\",param:{} });"
+        ]
+    },
+
+    "页面接收参数": {
+        "prefix": "bui-getPageParams",
+        "description": "",
+        "body": [
+            "var getParams = bui.getPageParams();",
+            "    getParams.done(function(result){",
+            "        console.log(result)",
+            "    })"
+        ]
+    },
+
+    "页面后退": {
+        "prefix": "bui-back",
+        "description": "",
+        "body": [
+            "bui.back();"
+        ]
+    },
+
+    "数据请求": {
+        "prefix": "bui-ajax",
+        "description": "",
+        "body": [
+            "bui.ajax({",
+            "    url: \"http://\",",
+            "    data: {},//接口请求的参数",
+            "    // 可选参数",
+            "    method: \"GET\"",
+            "}).then(function(result){",
+            "    // 成功",
+            "},function(result,status){",
+            "    // 失败 console.log(status)",
+            "});"
+        ]
+    },
+
+    "设备都准备完毕-原生事件初始化": {
+        "prefix": "bui-ready",
+        "description": "",
+        "body": [
+            "var uiReady = bui.ready(function(){",
+            "    // 原生事件初始化",
+            "});"
+        ]
+    },
+
+    "检查新版": {
+        "prefix": "bui-checkVersion",
+        "description": "",
+        "body": [
+            "bui.checkVersion({",
+            "    id: \"#checkVersion\",",
+            "    url: \"versionUpdate.json\",",
+            "    currentVersion: \"\",",
+            "    currentVersionCode: \"\"",
+            "});",
+            "",
+            "// versionUpdate.json 示例",
+            "/*",
+            "{",
+            "    \"versionName\" : \"1.4.1\",",
+            "    \"versionCode\" : 20180118,",
+            "    \"minVersionCode\" : 20171010,",
+            "    \"isForced\" : false,",
+            "    \"downloadUrl\" : \"http://www.easybui.com/downloads/source/bui/bui_latest.zip\",",
+            "    \"iosDownloadUrl\" : \"https://itunes.apple.com/cn/app/id1362470378?mt=8\",",
+            "    \"remark\" : \"<div style=\"text-align:left;\"><p>1. 新增单页路由</p><p>2. 新增模块化开发</p><p>3. 支持路由切换动画</p><p>4. 修复已知bug</p></div>\"",
+            "}",
+            "*/"
+        ]
+    },
+
+    "动画处理": {
+        "prefix": "bui-animate",
+        "description": "",
+        "body": [
+            "/* 动画示例,支持链式动画,最后需要执行start(); */",
+            "var uiAnimatePage = bui.animate(\"#page\");",
+            "    uiAnimatePage.left(100).start();"
+        ]
+    },
+
+    "动画切换": {
+        "prefix": "bui-toggle",
+        "description": "",
+        "body": [
+            "/* toggle动画示例 */",
+            "var uiToggle = bui.toggle({id:\"#page\"});",
+            "    //在需要的地方使用显示隐藏效果,支持自定义动画",
+            "    //uiToggle.show();",
+            "    //uiToggle.hide();"
+        ]
+    },
+
+    "数据存储": {
+        "prefix": "bui-storage",
+        "description": "",
+        "body": [
+            "// 允许存储2条数据,默认1条",
+            "var uiStorage = bui.storage();",
+            "    // 保存第1条数据",
+            "    uiStorage.set(\"code\",\"123\");"
+        ]
+    },
+
+    "检测字符是否存在数组,返回索引": {
+        "prefix": "bui-array-index",
+        "description": "",
+        "body": [
+            "var arr = [\"a\",\"b\"],",
+            "    index = bui.array.index(\"a\", arr);"
+        ]
+    },
+
+    "检测字符是否存在数组,返回所有索引的数组": {
+        "prefix": "bui-array-indexs",
+        "description": "",
+        "body": [
+            "var arr = [\"a\",\"b\",\"a\"],",
+            "    index = bui.array.indexs(\"a\", arr);"
+        ]
+    },
+
+    "检测字符是否存在数组,返回布尔值": {
+        "prefix": "bui-array-compare",
+        "description": "",
+        "body": [
+            "var arr = [\"a\",\"b\"],",
+            "    index = bui.array.compare(a, arr);"
+        ]
+    },
+
+    "去除数组的重复值,返回数组": {
+        "prefix": "bui-array-excess",
+        "description": "",
+        "body": [
+            "var arr = [\"a\",\"b\",\"a\",\"c\"],",
+            "    newArr = bui.array.excess(\"a\", arr);"
+        ]
+    },
+
+    "过滤数组,返回符合条件的数组": {
+        "prefix": "bui-array-filter",
+        "description": "",
+        "body": [
+            "var arr = [\"a\",\"b\"],",
+            "    data = bui.array.filter(\"a\",arr);"
+        ]
+    },
+
+    "删除数组的某个值,返回剩下的数组": {
+        "prefix": "bui-array-remove",
+        "description": "",
+        "body": [
+            "var arr = [\"a\",\"b\"],",
+            "    data = bui.array.remove(\"a\", arr);"
+        ]
+    },
+
+    "图片及文件资源初始完毕触发onload事件": {
+        "prefix": "bui-on-onload",
+        "description": "",
+        "body": [
+            "bui.on(\"onload\",function(){",
+            "    //图片及文件资源初始完毕",
+            "})"
+        ]
+    },
+
+    "DOM及BUI初始完毕触发pageinit事件": {
+        "prefix": "bui-on-pageinit",
+        "description": "",
+        "body": [
+            "bui.on(\"pageinit\",function(){",
+            "    //DOM及BUI初始完毕",
+            "})"
+        ]
+    },
+
+    "原生事件初始完毕触发pageready事件": {
+        "prefix": "bui-on-pageready",
+        "description": "",
+        "body": [
+            "bui.on(\"pageready\",function(){",
+            "    //DOM 及 BUI 及 原生方法 初始完毕",
+            "})"
+        ]
+    },
+
+    "BUI初始完前触发pagebefore事件": {
+        "prefix": "bui-on-pagebefore",
+        "description": "",
+        "body": [
+            "bui.on(\"pagebefore\",function(){",
+            "    //DOM初始完毕",
+            "})"
+        ]
+    },
+
+    "单页路由": {
+        "prefix": "bui-router",
+        "description": "",
+        "body": [
+            "window.router = bui.router();",
+            "",
+            "bui.ready(function () {",
+            "",
+            "    router.init({",
+            "        id: \"#bui-router\",",
+            "        progress: true,",
+            "        // 动画优先",
+            "        // firstAnimate: true,",
+            "        // webapp部署的时候改为true, 这样物理刷新缓存还在",
+            "        reloadCache: false",
+            "    })",
+            "",
+            "})"
+        ]
+    },
+
+    "单页路由--跳转传参": {
+        "prefix": "router-load",
+        "description": "",
+        "body": [
+            "router.load({url:\"\",param:{}});"
+        ]
+    },
+    "单页路由--预加载": {
+        "prefix": "router-preload",
+        "description": "",
+        "body": [
+            "router.preload([{url:\"\"}]).then(function(e){",
+            "  // 预加载成功以后执行",
+            "});"
+        ]
+    },
+
+    "单页路由--获取参数": {
+        "prefix": "router-getPageParams",
+        "description": "",
+        "body": [
+            "var pageParams = router.getPageParams();"
+        ]
+    },
+
+    "单页路由--局部加载": {
+        "prefix": "router-loadPart",
+        "description": "",
+        "body": [
+            "router.loadPart({id:\"\",url:\"\"});"
+        ]
+    },
+
+    "单页路由--页面替换": {
+        "prefix": "router-replace",
+        "description": "",
+        "body": [
+            "router.replace({url:\"\",param:{}});"
+        ]
+    },
+
+    "单页路由--页面刷新": {
+        "prefix": "router-refresh",
+        "description": "",
+        "body": [
+            "router.refresh();"
+        ]
+    },
+
+    "单页路由--页面后退": {
+        "prefix": "router-back",
+        "description": "",
+        "body": [
+            "router.back();"
+        ]
+    },
+
+    "模块定义": {
+        "prefix": "loader-define",
+        "description": "",
+        "body": [
+            "loader.define(function(require,exports,module){",
+            "",
+            "    var pageview = {};",
+            "",
+            "    return pageview;",
+            "})"
+        ]
+    },
+
+    "模块加载": {
+        "prefix": "loader-require",
+        "description": "",
+        "body": [
+            "loader.require([],function(){",
+            "    // 加载某个模块",
+            "})"
+        ]
+    },
+
+    "模块资源引入": {
+        "prefix": "loader-import",
+        "description": "",
+        "body": [
+            "loader.import([\"\"],function(){",
+            "  // 创建成功以后执行回调",
+            "});"
+        ]
+    },
+
+    "模块配置": {
+        "prefix": "loader-map",
+        "description": "",
+        "body": [
+            "loader.map({",
+            "    moduleName: \"\",",
+            "    template: \"\",",
+            "    script: \"\"",
+            "})"
+        ]
+    },
+
+    "模块配置多个": {
+        "prefix": "loader-mapall",
+        "description": "",
+        "body": [
+            "loader.map({",
+            "    modules: {",
+            "        main: {",
+            "            moduleName: \"main\",",
+            "            template: \"\",",
+            "            script: \"\"",
+            "        }",
+            "    }",
+            "})"
+        ]
+    },
+    "路由Dom选择器": {
+        "prefix": "router-$",
+        "description": "",
+        "body": [
+            "router.$(\"$1\")"
+        ]
+    },
+    "路由Dom事件绑定": {
+        "prefix": "router-$-on",
+        "description": "",
+        "body": [
+            "router.$(\"$1\").on(\"click\",function(e){",
+            "    console.log(e.target)",
+            "})"
+        ]
+    },
+    "路由全局事件绑定": {
+        "prefix": "router-on",
+        "description": "",
+        "body": [
+            "router.on(\"back\",function(e){",
+            "    console.log(e.target)",
+            "})"
+        ]
+    },
+    "数据行为存储": {
+        "prefix": "bui-store",
+        "description": "",
+        "body": [
+            "// 初始化数据行为存储",
+            "var bs = bui.store({",
+            "    scope: \"page\",",
+            "    data: {",
+            "       a: 1,",
+            "    },",
+            "    methods: {},",
+            "    watch: {},",
+            "    computed: {},",
+            "    templates: {},",
+            "    beforeMount: function(){",
+            "        // 数据解析前执行, 修改data的数据示例",
+            "        // this.$$data.a = 2",
+            "    },",
+            "    mounted: function(){",
+            "        // 数据解析后执行",
+            "    }",
+            "})"
+        ]
+    },
+    "数据行为存储demo": {
+        "prefix": "bui-store-demo",
+        "description": "",
+        "body": [
+            "// 初始化数据行为存储",
+            "var bs = bui.store({",
+            "    scope: \"page\",",
+            "    data: {",
+            "       a: 1,",
+            "    },",
+            "    methods: {},",
+            "    watch: {},",
+            "    computed: {},",
+            "    templates: {},",
+            "    beforeMount: function(){",
+            "        // 数据解析前执行, 修改data的数据示例",
+            "        // this.$$data.a = 2",
+            "    },",
+            "    mounted: function(){",
+            "        // 数据解析后执行",
+            "    }",
+            "})",
+            "<!-- html 结构 -->",
+            "<b b-text=\"page.a\"></b>"
+        ]
+    }
+}

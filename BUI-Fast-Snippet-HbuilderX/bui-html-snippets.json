@@ -1,0 +1,989 @@
+{
+    "页面标准结构": {
+        "prefix": "ui-html",
+        "body": [
+            "<!DOCTYPE HTML>",
+            "<html>",
+            "<head>",
+            "    <meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />",
+            "    <title>BUI</title>",
+            "    <meta name=\"format-detection\" content=\"telephone=no\" />",
+            "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no\">",
+            "    <link rel=\"stylesheet\" href=\"css/bui.css\" />",
+            "    <link rel=\"stylesheet\" href=\"css/style.css\" />",
+            "</head>",
+            "<body>",
+            "",
+            "    <!-- 依赖库 手机调试的js引用顺序如下 -->",
+            "    <script src=\"js/zepto.js\"></script>",
+            "    <script src=\"js/bui.js\"></script>",
+            "    <script>",
+            "        bui.ready(function () {",
+            "            // 这里写业务及控件初始化",
+            "            ",
+            "        })",
+            "    </script>",
+            "</body>",
+            "</html>"
+        ]
+    },
+
+    "bui标准页面结构": {
+        "prefix": "ui-page",
+        "body": [
+            "<div class=\"bui-page\">",
+            "    <header class=\"bui-bar\">",
+            "        <div class=\"bui-bar-left\">",
+            "            <a class=\"bui-btn\" onclick=\"bui.back();\"><i class=\"icon-back\"></i></a>",
+            "        </div>",
+            "        <div class=\"bui-bar-main\">页面标题</div>",
+            "        <div class=\"bui-bar-right\">",
+            "            <!-- 右边按钮 -->",
+            "        </div>",
+            "    </header>",
+            "    <main>",
+            "        <!-- 正文内容 -->",
+            "    </main>",
+            "    <footer>",
+            "        <!-- 底部内容 -->",
+            "    </footer>",
+            "</div>"
+        ]
+    },
+
+    "bui标准页面box布局结构": {
+        "prefix": "ui-page-box",
+        "body": [
+            "<div class=\"bui-page\">",
+            "    <header>",
+            "       <div class=\"bui-bar\">",
+            "          <div class=\"bui-bar-left\">",
+            "              <a class=\"bui-btn\" onclick=\"bui.back();\"><i class=\"icon-back\"></i></a>",
+            "          </div>",
+            "          <div class=\"bui-bar-main\">页面标题</div>",
+            "          <div class=\"bui-bar-right\">",
+            "            <!-- 右边按钮 -->",
+            "          </div>",
+            "        </div>",
+            "    </header>",
+            "    <main>",
+            "        <!-- 正文内容 -->",
+            "    </main>",
+            "    <footer>",
+            "        <!-- 底部内容 -->",
+            "    </footer>",
+            "</div>"
+        ]
+    },
+
+    "折叠菜单结构": {
+        "prefix": "ui-accordion",
+        "body": [
+            "<dl id=\"uiAccordion\" class=\"bui-accordion\">",
+            "    <dt class=\"bui-btn bui-box\">",
+            "        <div class=\"span1\">折叠菜单</div>",
+            "        <i class=\"icon-accordion\"></i>",
+            "    </dt>",
+            "    <dd>",
+            "        折叠菜单内容",
+            "    </dd>",
+            "</dl>"
+        ]
+    },
+
+    "单页路由结构": {
+        "prefix": "ui-router",
+        "body": [
+            "<!DOCTYPE HTML>",
+            "<html lang=\"en-US\">",
+            "<head>",
+            "    <meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />",
+            "    <title>BUI-单页模板</title>",
+            "    <meta name=\"format-detection\" content=\"telephone=no\" />",
+            "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no\">",
+            "    <link rel=\"stylesheet\" href=\"css/bui.css\" />",
+            "    <link rel=\"stylesheet\" href=\"css/style.css\" />",
+            "</head>",
+            "<body>",
+            "    <div id=\"bui-router\"></div>",
+            "    <script src=\"js/zepto.js\"></script>",
+            "    <script src=\"js/bui.js\"></script>",
+            "</body>",
+            "</html>"
+        ]
+    },
+
+    "下拉刷新列表结构": {
+        "prefix": "ui-list",
+        "body": [
+            "<!-- 列表控件 html 对应的结构:  -->",
+            "<div id=\"uiList\" class=\"bui-scroll\">",
+            "    <div class=\"bui-scroll-head\"></div>",
+            "    <div class=\"bui-scroll-main\">",
+            "        <ul class=\"bui-list\">",
+            "        </ul>",
+            "    </div>",
+            "    <div class=\"bui-scroll-foot\"></div>",
+            "</div>"
+        ]
+    },
+
+    "缩略图列表": {
+        "prefix": "ui-list-thumbnail",
+        "body": [
+            "<ul class=\"bui-list bui-list-thumbnail\">",
+            "    <li class=\"bui-btn bui-box\">",
+            "        <div class=\"bui-thumbnail\"><img src=\"images/list-img1.png\" alt=\"\"></div>",
+            "        <div class=\"span1\">",
+            "            <h3 class=\"item-title\">商品标题</h3>",
+            "            <p class=\"item-text\">天河区岑村</p>",
+            "            <p class=\"item-text\">3公里</p>",
+            "        </div>",
+            "        <span class=\"price\"><i>￥</i>50</span>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "单选列表": {
+        "prefix": "ui-list-radio",
+        "body": [
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-box bui-btn-line\">",
+            "        <div class=\"span1\">",
+            "            <label class=\"bui-label\">单选</label>",
+            "        </div>",
+            "        <input type=\"radio\" class=\"bui-choose\" name=\"interest\" value=\"\" text=\"\">",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "图标列表": {
+        "prefix": "ui-list-icon",
+        "body": [
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-box\">",
+            "        <div class=\"icon\"><img src=\"../images/applogo.png\" alt=\"\"></div>",
+            "        <div class=\"span1\">文本</div>",
+            "        <i class=\"icon-listright\"></i>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "箭头列表": {
+        "prefix": "ui-list-arrow",
+        "body": [
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-box\">",
+            "        <div class=\"span1\">文本</div>",
+            "        <i class=\"icon-listright\"></i>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "多选列表": {
+        "prefix": "ui-list-checkbox",
+        "body": [
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-box bui-btn-line\">",
+            "        <div class=\"span1\">",
+            "            <label class=\"bui-label\">多选</label>",
+            "        </div>",
+            "        <input type=\"checkbox\" class=\"bui-choose\" name=\"interest\" value=\"\" text=\"\">",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "分组列表": {
+        "prefix": "ui-list-group",
+        "body": [
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-btn-title\">",
+            "        分组标题",
+            "    </li>",
+            "    <li class=\"bui-btn bui-box\">",
+            "        <div class=\"span1\">文本</div>",
+            "        <i class=\"icon-listright\"></i>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "横向滚动导航": {
+        "prefix": "ui-navbar",
+        "body": [
+            "<div class=\"bui-navbar\">",
+            "  <ul class=\"bui-nav\">",
+            "    <!-- <li>之间不能有空隙 -->",
+            "    <li class=\"bui-btn\">首页</li><li class=\"bui-btn\">新闻</li>",
+            "  </ul>",
+            "</div>"
+        ]
+    },
+
+    "导航菜单结构": {
+        "prefix": "ui-nav",
+        "body": [
+            "<ul class=\"bui-nav\">",
+            "    <li class=\"bui-btn\">文本</li>",
+            "</ul>"
+        ]
+    },
+    "导航菜单图标结构": {
+        "prefix": "ui-nav-icon",
+        "body": [
+            "<ul class=\"bui-nav\">",
+            "    <li class=\"bui-btn bui-box-vertical\">",
+            "        <i class=\"icon-home\"></i>",
+            "        <div class=\"span1\">文本</div>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "表单展示": {
+        "prefix": "ui-form",
+        "body": [
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-box\">",
+            "        <label class=\"bui-label\">帐号</label>",
+            "        <div class=\"span1\">",
+            "            <div class=\"bui-value\">username</div>",
+            "        </div>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "表单编辑": {
+        "prefix": "ui-form-edit",
+        "body": [
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-box clearactive\">",
+            "        <label class=\"bui-label\">帐号</label>",
+            "        <div class=\"span1\">",
+            "            <input type=\"text\" class=\"bui-input\" value=\"\" placeholder=\"请输入帐号\">",
+            "        </div>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "表单底部按钮": {
+        "prefix": "ui-form-submit",
+        "body": [
+            "<div class=\"container-y\">",
+            "    <div class=\"bui-box-space\">",
+            "        <div class=\"span1\">",
+            "            <div class=\"bui-btn round\">重置</div>",
+            "        </div>",
+            "        <div class=\"span1\">",
+            "            <div class=\"bui-btn round primary\">提交</div>",
+            "        </div>",
+            "    </div>",
+            "</div>"
+        ]
+    },
+
+    "单选框": {
+        "prefix": "ui-radio",
+        "body": [
+            "<input type=\"radio\" class=\"bui-radio\" name=\"\" value=\"\">"
+        ]
+    },
+
+    "多选框-圆圈": {
+        "prefix": "ui-choose",
+        "body": [
+            "<input type=\"checkbox\" class=\"bui-choose\" name=\"\" value=\"\">"
+        ]
+    },
+
+    "多选框": {
+        "prefix": "ui-checkbox",
+        "body": [
+            "<input type=\"checkbox\" class=\"bui-checkbox\" name=\"\" value=\"\">"
+        ]
+    },
+    "选择按钮": {
+        "prefix": "ui-check",
+        "body": [
+            "<input type=\"radio\" class=\"bui-check\" uncheck=\"关注\" check=\"已关注\" value=\"\">"
+        ]
+    },
+
+    "自定义多选框": {
+        "prefix": "ui-checkbox-custom",
+        "body": [
+            "<div class=\"bui-check\">",
+            "    <input id=\"uid\" type=\"radio\" ><label for=\"uid\">3:50元</label>",
+            "</div>"
+        ]
+    },
+
+    "输入框": {
+        "prefix": "ui-input",
+        "body": [
+            "<div class=\"bui-input\">",
+            "  <input type=\"text\" value=\"\" placeholder=\"请输入\">",
+            "</div>"
+        ]
+    },
+
+    "图标输入框": {
+        "prefix": "ui-input-icon",
+        "body": [
+            "<div class=\"bui-input\">",
+            "    <i class=\"icon-search\"></i>",
+            "    <input type=\"text\" value=\"\" placeholder=\"请输入关键字\">",
+            "</div>"
+        ]
+    },
+
+    "滑动条": {
+        "prefix": "ui-range",
+        "body": [
+            "<input type=\"range\" class=\"bui-range\" min=\"0\" max=\"255\" value=\"100\">"
+        ]
+    },
+
+    "切换按钮": {
+        "prefix": "ui-switch",
+        "body": [
+            "<input type=\"checkbox\" class=\"bui-switch\" name=\"\" value=\"\">"
+        ]
+    },
+
+    "按钮": {
+        "prefix": "ui-btn",
+        "body": [
+            "<div class=\"bui-btn\" href=\"\">按钮</div>"
+        ]
+    },
+
+    "弹性布局": {
+        "prefix": "ui-box",
+        "body": [
+            "<div class=\"bui-box\">",
+            "  <div class=\"span1\"><!--自适应内容--></div>",
+            "</div>"
+        ]
+    },
+
+    "弹性布局有间隙": {
+        "prefix": "ui-box-space",
+        "body": [
+            "<div class=\"bui-box-space\">",
+            "    <div class=\"span1\"><!--自适应内容--></div>",
+            "</div>"
+        ]
+    },
+
+    "百分比布局-12等分": {
+        "prefix": "ui-fluid",
+        "body": [
+            "<div class=\"bui-fluid\">",
+            "  <div class=\"span6\">内容</div>",
+            "  <div class=\"span6\">内容</div>",
+            "</div>"
+        ]
+    },
+
+    "百分比布局-间隙": {
+        "prefix": "ui-fluid-space",
+        "body": [
+            "<div class=\"bui-fluid-space\">",
+            "  <div class=\"span6\">内容</div>",
+            "  <div class=\"span6\">内容</div>",
+            "</div>"
+        ]
+    },
+
+
+    "上拉菜单结构": {
+        "prefix": "ui-actionsheet",
+        "body": [
+            "<div id=\"btnOpen\" class=\"bui-btn\">打开下拉菜单</div>"
+        ]
+    },
+
+    "横条结构": {
+        "prefix": "ui-bar",
+        "body": [
+            "<div class=\"bui-bar\">",
+            "    <div class=\"bui-bar-left\">",
+            "        <a class=\"bui-btn\"><i class=\"icon-back\"></i></a>",
+            "    </div>",
+            "    <div class=\"bui-bar-main\">标题</div>",
+            "    <div class=\"bui-bar-right\">",
+            "        <a class=\"bui-btn\"><i class=\"icon-menu\"></i></a>",
+            "    </div>",
+            "</div>"
+        ]
+    },
+
+    "横条-左对齐结构": {
+        "prefix": "ui-bar-side",
+        "body": [
+            "<div class=\"bui-bar bui-bar-side\">",
+            "    <div class=\"bui-bar-left\">",
+            "        <a class=\"bui-btn\"><i class=\"icon-back\"></i></a>",
+            "    </div>",
+            "    <div class=\"bui-bar-main\">标题</div>",
+            "    <div class=\"bui-bar-right\">",
+            "        <a class=\"bui-btn\"><i class=\"icon-search\"></i></a>",
+            "        <a class=\"bui-btn\"><i class=\"icon-menu\"></i></a>",
+            "    </div>",
+            "</div>"
+        ]
+    },
+
+    "header结构": {
+        "prefix": "ui-header",
+        "body": [
+            "<header class=\"bui-bar\">",
+            "    <div class=\"bui-bar-left\">",
+            "        <a class=\"bui-btn\"><i class=\"icon-back\"></i></a>",
+            "    </div>",
+            "    <div class=\"bui-bar-main\">标题</div>",
+            "    <div class=\"bui-bar-right\">",
+            "        <a class=\"bui-btn\"><i class=\"icon-menu\"></i></a>",
+            "    </div>",
+            "</header>"
+        ]
+    },
+    "header-左对齐结构": {
+        "prefix": "ui-header-side",
+        "body": [
+            "<header class=\"bui-bar bui-bar-side\">",
+            "    <div class=\"bui-bar-left\">",
+            "        <a class=\"bui-btn\"><i class=\"icon-back\"></i></a>",
+            "    </div>",
+            "    <div class=\"bui-bar-main\">标题</div>",
+            "    <div class=\"bui-bar-right\">",
+            "        <a class=\"bui-btn\"><i class=\"icon-search\"></i></a>",
+            "        <a class=\"bui-btn\"><i class=\"icon-menu\"></i></a>",
+            "    </div>",
+            "</header>"
+        ]
+    },
+
+    "自定义对话框结构": {
+        "prefix": "ui-dialog",
+        "body": [
+            "<div id=\"uiDialog\" class=\"bui-dialog\">",
+            "    <div class=\"bui-dialog-head\">对话框标题</div>",
+            "    <div class=\"bui-dialog-main\">对话框内容</div>",
+            "    <div class=\"bui-dialog-close\"><i class=\"icon-close\"></i></div>",
+            "</div>"
+        ]
+    },
+
+    "下拉菜单结构": {
+        "prefix": "ui-dropdown",
+        "body": [
+            "<div id=\"uiDropdown\" class=\"bui-dropdown\">",
+            "    <div class=\"bui-btn bui-box\" >",
+            "        <div class=\"span1\">菜单名称</div>",
+            "        <i class=\"icon-dropdown\"></i>",
+            "    </div>",
+            "</div>"
+        ]
+    },
+
+    "侧滑列表结构": {
+        "prefix": "ui-listview",
+        "body": [
+            "<ul id=\"uiListview\" class=\"bui-listview\">",
+            "    <li>",
+            "        <div class=\"bui-btn bui-box\">",
+            "            <div class=\"span1\">左滑动出现菜单</div>",
+            "            <i class=\"icon-listright\"></i>",
+            "        </div>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "侧滑列表结构-自定义按钮": {
+        "prefix": "ui-listview-custom",
+        "body": [
+            "<ul id=\"uiListview\" class=\"bui-listview\">",
+            "    <li status=\"1\">",
+            "        <div class=\"bui-btn bui-box\">",
+            "            <div class=\"span1\">手动渲染</div>",
+            "            <i class=\"icon-listright\"></i>",
+            "        </div>",
+            "        <div class=\"bui-listview-menu swipeleft\" data-moving=\"200\">",
+            "            <div class=\"bui-btn btn-red\">删除</div>",
+            "        </div>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "数字条结构": {
+        "prefix": "ui-number",
+        "body": [
+            "<div id=\"uiNumber\" class=\"bui-number\"></div>"
+        ]
+    },
+
+    "面板结构": {
+        "prefix": "ui-panel",
+        "body": [
+            "<div class=\"bui-panel\">",
+            "    <div class=\"bui-panel-head\">面板标题</div>",
+            "    <div class=\"bui-panel-main\">面板内容</div>",
+            "    <div class=\"bui-panel-foot\">面板底部</div>",
+            "</div>"
+        ]
+    },
+
+    "日期控件结构": {
+        "prefix": "ui-pickerdate",
+        "body": [
+            "<input type=\"text\" id=\"pickerdateInput\" readonly>"
+        ]
+    },
+
+    "进度条结构": {
+        "prefix": "ui-progress",
+        "body": [
+            "<progress class=\"bui-progress\" max=\"100\" value=\"30\"></progress>"
+        ]
+    },
+
+    "进度条自定义结构": {
+        "prefix": "ui-progress-custom",
+        "body": [
+            "<div class=\"bui-progress\">",
+            "   <div class=\"bui-progress-cell\" style=\"width:80%\"></div>",
+            "</div>"
+        ]
+    },
+
+    "星级评分": {
+        "prefix": "ui-rating",
+        "body": [
+            "<div id=\"uiRating\" class=\"bui-rating\"></div>"
+        ]
+    },
+
+    "滚动加载列表结构": {
+        "prefix": "ui-scroll",
+        "body": [
+            "<div id=\"uiScroll\" class=\"bui-scroll\">",
+            "    <div class=\"bui-scroll-head\"></div>",
+            "    <div class=\"bui-scroll-main\">",
+            "        <ul class=\"bui-list\"></ul>",
+            "    </div>",
+            "    <div class=\"bui-scroll-foot\"></div>",
+            "</div>"
+        ]
+    },
+
+    "搜索条结构": {
+        "prefix": "ui-searchbar",
+        "body": [
+            "<!-- 搜索条控件结构 -->",
+            "<div id=\"searchbar\" class=\"bui-searchbar bui-box\">",
+            "    <div class=\"span1\">",
+            "        <div class=\"bui-input\">",
+            "            <i class=\"icon-search\"></i>",
+            "            <input type=\"search\" value=\"\" placeholder=\"请输入关键字\" />",
+            "        </div>",
+            "    </div>",
+            "    <div class=\"btn-search\">搜索</div>",
+            "</div>",
+            "<!-- 列表控件结构 -->",
+            "<div id=\"scrollSearch\" class=\"bui-scroll\">",
+            "    <div class=\"bui-scroll-head\"></div>",
+            "    <div class=\"bui-scroll-main\">",
+            "        <ul class=\"bui-list\">",
+            "        </ul>",
+            "    </div>",
+            "    <div class=\"bui-scroll-foot\"></div>",
+            "</div>"
+        ]
+    },
+
+    "选择列表按钮结构": {
+        "prefix": "ui-select",
+        "body": [
+            "<div id=\"uiSelect\" class=\"bui-select bui-box\">",
+            "    <div class=\"span1\">请选择</div>",
+            "    <i class=\"icon-listright\"></i>",
+            "</div>"
+        ]
+    },
+
+    "选择列表自定义结构": {
+        "prefix": "ui-select-list",
+        "body": [
+            "<ul id=\"uiSelect\" class=\"bui-list\">",
+            "    <li class=\"bui-btn bui-box bui-btn-line\">",
+            "        <div class=\"span1\">",
+            "            <label for=\"choose\">多选</label>",
+            "        </div>",
+            "        <input id=\"choose\" type=\"checkbox\" class=\"bui-choose\" name=\"interest\" value=\"\" text=\"\" checked=\"checked\">",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+    "侧滑栏结构": {
+        "prefix": "ui-sidebar",
+        "body": [
+            "<div id=\"sidebarWrap\" class=\"bui-sidebar-wrap\">",
+            "  <div class=\"bui-sidebar swiperight\">",
+            "    侧滑栏内容 swiperight 为滑动的方向,不同位置修改不同方向",
+            "  </div>",
+            "  <div class=\"bui-page\">",
+            "    页面内容",
+            "  </div>",
+            "</div>"
+        ]
+    },
+
+    "选项卡结构": {
+        "prefix": "ui-tab",
+        "body": [
+            "<div id=\"uiTab\" class=\"bui-tab\">",
+            "    <div class=\"bui-tab-head\">",
+            "        <ul class=\"bui-nav\">",
+            "            <!-- 分屏菜单 active 是激活的TAB样式 -->",
+            "            <li class=\"bui-btn active\">Tab1</li>",
+            "            <li class=\"bui-btn\">Tab2</li>",
+            "        </ul>",
+            "    </div>",
+            "    <div class=\"bui-tab-main\">",
+            "        <ul>",
+            "            <li>",
+            "                第1屏",
+            "            </li>",
+            "            <li style=\"display:none;\">",
+            "                第2屏",
+            "            </li>",
+            "        </ul>",
+            "    </div>",
+            "</div>"
+        ]
+    },
+
+    "焦点图结构": {
+        "prefix": "ui-slide",
+        "body": [
+            "<div id=\"uiSlide\" class=\"bui-slide\">",
+            "    <div class=\"bui-slide-main\">",
+            "        <ul>",
+            "            <li>",
+            "                <!--第1屏-->",
+            "                <img src=\"\" alt=\"\">",
+            "                <div class=\"bui-slide-title\">图片标题</div>",
+            "            </li>",
+            "            <li style=\"display:none;\">",
+            "                <!--第2屏-->",
+            "                <img src=\"\" alt=\"\">",
+            "                <div class=\"bui-slide-title\">图片标题</div>",
+            "            </li>",
+            "        </ul>",
+            "    </div>",
+            "</div>"
+        ]
+    },
+
+    "步骤条结构": {
+        "prefix": "ui-stepbar",
+        "body": [
+            "<div id=\"uiStepbar\" class=\"bui-stepbar\"></div>"
+
+        ]
+    },
+
+    "抽屉滑动结构": {
+        "prefix": "ui-swipe",
+        "body": [
+            "<div id=\"uiSwipe\" class=\"bui-swipe\">",
+            "  <div class=\"swiperight\">",
+            "    菜单在左边",
+            "  </div>",
+            "  <div class=\"swipeleft\">",
+            "    菜单在右边",
+            "  </div>",
+            "  <div class=\"swipeup\">",
+            "    菜单在上边",
+            "  </div>",
+            "  <div class=\"swipedown\">",
+            "    菜单在下边",
+            "  </div>",
+            "  <div class=\"bui-page\">",
+            "    页面正文",
+            "  </div>",
+            "</div>"
+        ]
+    },
+
+    "表格结构": {
+        "prefix": "ui-table",
+        "body": [
+            "<table class=\"bui-table\">",
+            "    <tr>",
+            "        <td>1</td>",
+            "    </tr>",
+            "</table>"
+        ]
+    },
+
+    "图片结构": {
+        "prefix": "ui-pic",
+        "body": [
+            "<div class=\"bui-pic\">",
+            "    <div class=\"bui-pic-img\"><img src=\"images/list-img1.png\" ></div>",
+            "    <div class=\"bui-pic-title\">图片标题</div>",
+            "</div>"
+        ]
+    },
+
+    "图片列表结构": {
+        "prefix": "ui-list-pic",
+        "body": [
+            "<ul class=\"bui-list-pic bui-fluid-space-2\">",
+            "    <li>",
+            "        <div class=\"bui-pic\">",
+            "            <div class=\"bui-pic-img\"><img src=\"images/list-img1.png\" ></div>",
+            "            <div class=\"bui-pic-title\">图片标题</div>",
+            "        </div>",
+            "    </li>",
+            "    <li>",
+            "        <div class=\"bui-pic\">",
+            "            <div class=\"bui-pic-img\"><img src=\"images/list-img1.png\" alt=\"\" ></div>",
+            "            <div class=\"bui-pic-title\">图片标题</div>",
+            "        </div>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+
+
+    "红点提醒": {
+        "prefix": "ui-badges",
+        "body": [
+            "<span class=\"bui-badges\">5</span>"
+        ]
+    },
+    "静态提醒": {
+        "prefix": "ui-hint",
+        "body": [
+            "<div class=\"bui-hint primary\"><i class=\"icon-successfill\"></i>消息提醒</div>"
+        ]
+    },
+    "角标": {
+        "prefix": "ui-sub",
+        "body": [
+            "<div class=\"bui-sub\" data-sub=\"new\">div必须有宽高才能正确展示</div>"
+        ]
+    },
+    "标签": {
+        "prefix": "ui-tag",
+        "body": [
+            "<div class=\"bui-fluid-space-5\">",
+            "   <div class=\"span1\"><input type=\"radio\" name=\"tag\" class=\"bui-check\" uncheck=\"标签1\" check=\"标签1\" value=\"tag1\"></div>",
+            "   <div class=\"span1\"><input type=\"radio\" name=\"tag\" class=\"bui-check\" uncheck=\"标签2\" check=\"标签2\" value=\"tag2\"></div>",
+            "   <div class=\"span1\"><input type=\"radio\" name=\"tag\" class=\"bui-check\" uncheck=\"标签3\" check=\"标签3\" value=\"tag3\"></div>",
+            "   <div class=\"span1\"><input type=\"radio\" name=\"tag\" class=\"bui-check\" uncheck=\"标签4\" check=\"标签4\" value=\"tag4\"></div>",
+            "   <div class=\"span1\"><input type=\"radio\" name=\"tag\" class=\"bui-check\" uncheck=\"标签5\" check=\"标签5\" value=\"tag5\"></div>",
+            "</div>"
+        ]
+    },
+    "图标": {
+        "prefix": "ui-icon",
+        "body": [
+            "<i class=\"icon-success\"></i>"
+        ]
+    },
+    "图标背景": {
+        "prefix": "ui-icon-bg",
+        "body": [
+            "<div class=\"bui-icon primary\">",
+            "   <i class=\"icon-success\"></i>",
+            "</div>"
+        ]
+    },
+    "图标九宫格": {
+        "prefix": "ui-icon-grid",
+        "body": [
+            "<ul class=\"bui-nav-icon bui-fluid-3\">",
+            "   <li class=\"bui-btn\">",
+            "       <i class=\"icon-doubt primary\"><span class=\"bui-badges\">5</span></i>",
+            "       <div class=\"span1\">线条图标</div>",
+            "   </li>",
+            "   <li class=\"bui-btn\">",
+            "       <i class=\"icon-doubt primary\"></i>",
+            "       <div class=\"span1\">线条图标</div>",
+            "   </li>",
+            "   <li class=\"bui-btn\">",
+            "       <i class=\"icon-doubt primary\"></i>",
+            "       <div class=\"span1\">线条图标</div>",
+            "   </li>",
+            "</ul>"
+        ]
+    },
+
+    "图标背景九宫格": {
+        "prefix": "ui-icon-round",
+        "body": [
+            "<ul class=\"bui-nav-icon bui-fluid-3\">",
+            "   <li class=\"bui-btn\">",
+            "       <div class=\"bui-icon round primary\"><i class=\"icon-success\"><span class=\"bui-badges\">5</span></i></div>",
+            "       <div class=\"span1\">大圆图标</div>",
+            "   </li>",
+            "   <li class=\"bui-btn\">",
+            "       <div class=\"bui-icon round primary\"><i class=\"icon-success\"></i></div>",
+            "       <div class=\"span1\">大圆图标</div>",
+            "   </li>",
+            "   <li class=\"bui-btn\">",
+            "       <div class=\"bui-icon round primary\"><i class=\"icon-success\"></i></div>",
+            "       <div class=\"span1\">大圆图标</div>",
+            "   </li>",
+            "</ul>"
+        ]
+    },
+
+    "图标图片类九宫格": {
+        "prefix": "ui-icon-img",
+        "body": [
+            "<ul class=\"bui-nav-icon bui-fluid-3\">",
+            "   <li class=\"bui-btn\">",
+            "       <div class=\"icon\"><img src=\"images/icon-pyq.png\" alt=\"\"><span class=\"bui-badges\">5</span></div>",
+            "       <div class=\"span1\">图片导航</div>",
+            "   </li>",
+            "   <li class=\"bui-btn\">",
+            "       <div class=\"icon\"><img src=\"images/icon-pyq.png\" alt=\"\"></div>",
+            "       <div class=\"span1\">图片导航</div>",
+            "   </li>",
+            "   <li class=\"bui-btn\">",
+            "       <div class=\"icon\"><img src=\"images/icon-pyq.png\" alt=\"\"></div>",
+            "       <div class=\"span1\">图片导航</div>",
+            "   </li>",
+            "</ul>"
+        ]
+    },
+    "上传结构": {
+        "prefix": "ui-upload",
+        "description": "",
+        "body": [
+            "<!-- 上传的结构 -->",
+            "<div id=\"buiPhoto\" class=\"bui-upload bui-fluid-space-4\">",
+            "    <div class=\"span1\">",
+            "        <div id=\"btnUpload\" class=\"bui-btn\">",
+            "            <i class=\"icon-plus large\"></i>",
+            "        </div>",
+            "    </div>",
+            "</div> "
+        ]
+    },
+    "表单-输入框": {
+        "prefix": "ui-form-input",
+        "description": "",
+        "body": [
+            "<li class=\"bui-btn bui-box clearactive\">",
+            "    <label class=\"bui-label\">描述:</label>",
+            "    <div class=\"span1\">",
+            "        <div class=\"bui-input user-input\">",
+            "            <input type=\"number\" value=\"\" placeholder=\"请输入\">",
+            "        </div>",
+            "    </div>",
+            "</li>"
+        ]
+    },
+    "表单-文本框": {
+        "prefix": "ui-form-textarea",
+        "description": "",
+        "body": [
+            "<h3 class=\"section-title\">描述</h3>",
+            "<ul class=\"bui-list\">",
+            "    <li class=\"bui-btn clearactive\">",
+            "        <div class=\"bui-input\">",
+            "            <textarea class=\"bui-input\" cols=\"30\" rows=\"4\" placeholder=\"请输入\"></textarea>",
+            "        </div>",
+            "    </li>",
+            "</ul>"
+        ]
+    },
+    "设置文本": {
+        "prefix": "b-text",
+        "description": "",
+        "body": [
+            "<b b-text=\"page.a\"></b>"
+        ]
+    },
+    "设置value": {
+        "prefix": "b-value",
+        "description": "",
+        "body": [
+            "<input type=\"text\" b-value=\"page.a\" name=\"\" value=\"\" />"
+        ]
+    },
+    "双向绑定": {
+        "prefix": "b-model",
+        "description": "",
+        "body": [
+            "<input type=\"text\" b-model=\"page.a\" name=\"\" value=\"\" />"
+        ]
+    },
+    "渲染HTML": {
+        "prefix": "b-html",
+        "description": "",
+        "body": [
+            "<div b-html=\"page.a\"></div>"
+        ]
+    },
+    "显示隐藏": {
+        "prefix": "b-show",
+        "description": "",
+        "body": [
+            "<b b-show=\"page.a\"></b>"
+        ]
+    },
+    "渲染模板": {
+        "prefix": "b-template",
+        "description": "",
+        "body": [
+            "<ul b-template=\"page.a\" class=\"bui-list\"></ul>"
+        ]
+    },
+    "绑定事件": {
+        "prefix": "b-click",
+        "description": "",
+        "body": [
+            "<b b-click=\"page.a\"></b>"
+        ]
+    },
+    "绑定属性": {
+        "prefix": "b-bind",
+        "description": "",
+        "body": [
+            "<b b-bind=\"page.a\"></b>"
+        ]
+    },
+    "绑定Class": {
+        "prefix": "b-class",
+        "description": "",
+        "body": [
+            "<b b-class=\"page.a\"></b>"
+        ]
+    },
+    "绑定Style": {
+        "prefix": "b-style",
+        "description": "",
+        "body": [
+            "<b b-style=\"page.a\"></b>"
+        ]
+    }
+
+}
