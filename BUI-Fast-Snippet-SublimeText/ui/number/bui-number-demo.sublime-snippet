@@ -2,11 +2,11 @@
     <content><![CDATA[
 // 数字条 js 初始化:
 var uiNumber = bui.number({
-    id: "#number"
+    id: "#uiNumber"
 })
                 
 <!-- 数字条 html 对应的结构: -->
-<div id="number" class="bui-number"></div> 
+<div id="uiNumber" class="bui-number"></div> 
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-number-demo</tabTrigger>

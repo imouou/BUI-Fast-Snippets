@@ -455,7 +455,7 @@ var uiMask = bui.mask();
      'body': """
 // 数字条 js 初始化:
 var uiNumber = bui.number({
-    id: "#number"
+    id: "#uiNumber"
 })
 """
 
@@ -466,11 +466,11 @@ var uiNumber = bui.number({
      'body': """
 // 数字条 js 初始化:
 var uiNumber = bui.number({
-    id: "#number"
+    id: "#uiNumber"
 })
 
 // 数字条 html 对应的结构:
-<div id="number" class="bui-number"></div>
+<div id="uiNumber" class="bui-number"></div>
 """
 
    '日期控件初始化':
@@ -479,13 +479,13 @@ var uiNumber = bui.number({
      'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.pickerdate.html'
      'body': """
 // 日期控件 js 初始化:
-var pickerdateInput = \$("#pickerdateInput");
 var uiPickerdate = bui.pickerdate({
     handle:"#pickerdateInput",
+    bindValue: true,
     onChange: function(value) {
-      pickerdateInput.val(value);
+        console.log(value);
     }
-  });
+});
 
 """
 
@@ -495,13 +495,13 @@ var uiPickerdate = bui.pickerdate({
      'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.pickerdate.html'
      'body': """
 // 日期控件 js 初始化:
-var pickerdateInput = \$("#pickerdateInput");
 var uiPickerdate = bui.pickerdate({
     handle:"#pickerdateInput",
+    bindValue: true,
     onChange: function(value) {
-      pickerdateInput.val(value);
+        console.log(value);
     }
-  });
+});
 
 <!-- 日期控件 html 对应的结构: -->
 <input type="text" id="pickerdateInput" class="bui-input" readonly>
@@ -987,7 +987,7 @@ var uiSlide = bui.slide({
      'body': """
 // 步骤条 js 初始化:
 var uiStepbar = bui.stepbar({
-    id: "#step",
+    id: "#uiStepbar",
     data: [{
         title: "预立项申请",
         subtitle: "2016-04-2 10:30",
@@ -1003,7 +1003,28 @@ var uiStepbar = bui.stepbar({
 uiStepbar.value(1);
 
 <!-- 步骤条 html 对应的结构: -->
-<div id="step" class="bui-stepbar"></div>
+<div id="uiStepbar" class="bui-stepbar"></div>
+"""
+
+   '步骤条':
+     'prefix': 'bui-stepbar'
+     'description': ''
+     'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.stepbar.html'
+     'body': """
+// 步骤条 js 初始化:
+var uiStepbar = bui.stepbar({
+    id: "#uiStepbar",
+    data: [{
+        title: "预立项申请",
+        subtitle: "2016-04-2 10:30",
+        content: "成功创建申请,已经提交至XX部门经理审批,请耐心等待"
+    },{
+        title: "立项审批",
+        subtitle: "2016-04-21 10:30",
+        content: "审批完成,资料递交中"
+    }]
+});
+
 """
 
    '抽屉滑动控件初始化':
@@ -1401,20 +1422,26 @@ var uiReady = bui.ready(function(){
      'description': ''
      'descriptionMoreURL': 'http://www.easybui.com/demo/api/classes/bui.checkVersion.html'
      'body': """
+// 当前版本的配置, name 为提示的版本信息名, code 一般为当前日期数字类型,用于比对新版.
+var currentVersion = {
+    name: "1.0",
+    code: 20191204  
+}
+// 请求接口地址
 bui.checkVersion({
     id: "#checkVersion",
     url: "versionUpdate.json",
-    currentVersion: "",
-    currentVersionCode: ""
+    currentVersion: currentVersion.name,
+    currentVersionCode: currentVersion.code
 });
 
-// versionUpdate.json 示例
+// versionUpdate.json 示例, 区分大小写
 /*
 {
     "versionName" : "1.4.1",
     "versionCode" : 20180118,
     "minVersionCode" : 20171010,
-    "isForced" : false,
+    "forced" : false,
     "downloadUrl" : "http://www.easybui.com/downloads/source/bui/bui_latest.zip",
     "iosDownloadUrl" : "https://itunes.apple.com/cn/app/id1362470378?mt=8",
     "remark" : "<div style='text-align:left;'><p>1. 新增单页路由</p><p>2. 新增模块化开发</p><p>3. 支持路由切换动画</p><p>4. 修复已知bug</p></div>"
@@ -1713,6 +1740,7 @@ loader.map({
         'body': """
 // 初始化数据行为存储
 var bs = bui.store({
+    el: ".bui-page",
     scope: "page",
     data: {
        a: 1,
@@ -1736,6 +1764,7 @@ var bs = bui.store({
         'body': """
 // 初始化数据行为存储
 var bs = bui.store({
+    el: ".bui-page",
     scope: "page",
     data: {
        a: 1,
@@ -1791,14 +1820,16 @@ var bs = bui.store({
     'bui标准页面结构':
       'prefix': 'ui-page'
       'body': """
-<div class="bui-page">
-    <header class="bui-bar">
-        <div class="bui-bar-left">
-            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
-        </div>
-        <div class="bui-bar-main">页面标题</div>
-        <div class="bui-bar-right">
-            <!-- 右边按钮 -->
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">BUI页面标题</div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮 -->
+            </div>
         </div>
     </header>
     <main>
@@ -1819,7 +1850,7 @@ var bs = bui.store({
             <div class="bui-bar-left">
                 <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
             </div>
-            <div class="bui-bar-main">页面标题</div>
+            <div class="bui-bar-main">BUI页面标题</div>
             <div class="bui-bar-right">
                 <!-- 右边按钮 -->
             </div>
@@ -1917,7 +1948,7 @@ var bs = bui.store({
       'body': """
 <ul class="bui-list">
     <li class="bui-btn bui-box">
-        <div class="icon"><img src="../images/applogo.png" alt=""></div>
+        <div class="icon"><img src="images/applogo.png" alt=""></div>
         <div class="span1">文本</div>
         <i class="icon-listright"></i>
     </li>
@@ -2407,7 +2438,7 @@ var bs = bui.store({
     '选项卡结构':
       'prefix': 'ui-tab'
       'body': """
-<div id="uiTab" class="bui-tab">
+<div id="uiTab" class="bui-tab bui-box-vertical">
     <div class="bui-tab-head">
         <ul class="bui-nav">
             <li class="bui-btn">Tab1</li>
@@ -2541,47 +2572,248 @@ var bs = bui.store({
 """
 
     '设置文本':
-        'prefix': 'b-text'
+        'prefix': 'ui-b-text'
         'body': """
 <b b-text="page.a"></b>
 """
     '设置value':
-        'prefix': 'b-value'
+        'prefix': 'ui-b-value'
         'body': """
 <input type="text" b-value="page.a"/>
 """
     '双向绑定':
-        'prefix': 'b-model'
+        'prefix': 'ui-b-model'
         'body': """
 <input type="text" b-model="page.a"/>
 """
     '渲染HTML':
-        'prefix': 'b-html'
+        'prefix': 'ui-b-html'
         'body': """
 <div b-html="page.a"></div>
 """
     '显示隐藏':
-        'prefix': 'b-show'
+        'prefix': 'ui-b-show'
         'body': """
 <b b-show="page.a"></b>
 """
     '渲染模板':
-        'prefix': 'b-template'
+        'prefix': 'ui-b-template'
         'body': """
-<ul b-template="page.a"></ul>
+<ul b-template="page.tplA(page.a)"></ul>
 """
     '绑定属性':
-        'prefix': 'b-bind'
+        'prefix': 'ui-b-bind'
         'body': """
 <b b-bind=\"page.a\"></b>
 """
     '绑定Class':
-        'prefix': 'b-class'
+        'prefix': 'ui-b-class'
         'body': """
 <b b-class=\"page.a\"></b>
 """
     '绑定Style':
-        'prefix': 'b-style'
+        'prefix': 'ui-b-style'
         'body': """
 <b b-style=\"page.a\"></b>
+"""
+
+    "获取路由历史": 
+        'prefix': "bui-history-get",
+        'body':"""
+var allHistory = bui.history.get();
+"""
+
+    "最后一条历史": 
+        'prefix': "bui-history-getlast",
+        'body':"""
+var lastHistory = bui.history.getLast();
+"""
+
+    "获取页面参数": 
+        'prefix': "bui-history-getparams",
+        'body':"""
+var params = bui.history.getParams(module.id);
+"""
+
+    "刷新": 
+        'prefix': "bui-history-refresh",
+        'body':"""
+bui.history.refresh();
+"""
+
+    "检测页面是否加载": 
+        'prefix': "bui-history-check",
+        'body':"""
+var bool = bui.history.check("pages/login/login");
+"""
+
+    "检测模块是否以component加载": 
+        'prefix': "bui-history-checkComponent",
+        'body':"""
+// tab1为id",
+var bool = bui.history.checkComponent("tab1");
+"""
+
+    "检测模块是否以page加载": 
+        'prefix': "bui-history-checkPage",
+        'body':"""
+// page1为id",
+var bool = bui.history.checkPage("page1");
+"""
+
+    "加载组件": 
+        'prefix': "loader-load",
+        'body':"""
+loader.load({
+    id:"#tab1",
+    url:"pages/main/home.html"
+})
+"""
+
+    "加载延迟组件": 
+        'prefix': "loader-delay",
+        'body':"""
+loader.delay({
+    id:"#tab1"
+})
+"""
+
+    "加载component":
+        'prefix': "loader-component",
+        'body':"""
+loader.component({
+    id:"#tab1",
+})
+"""
+
+    "加载view":
+        'prefix': "loader-view",
+        'body':"""
+loader.view({
+    id:"#tab1",
+})
+"""
+
+    "模块资源同步导入":
+        'prefix': "loader-importSync",
+        'body':"""
+loader.importSync([""],function(res){
+  // 创建成功以后执行回调
+});
+"""
+
+    "插入页面":
+        'prefix': "bui-page",
+        'body':"""
+var uiPage = bui.page({
+    url:"pages/login/login.html",
+    param: {}
+})
+"""
+
+    "日期格式化":
+        'prefix': "bui-date-formate",
+        'body':"""
+var date = bui.date.format("2020-3-20","MM/dd");
+"""
+
+    "转日期对象":
+        'prefix': "bui-date-convert",
+        'body':"""
+var date = bui.date.convert(1584781609309);
+"""
+
+    "几天后":
+        'prefix': "bui-date-after",
+        'body':"""
+var date = bui.date.after("2020-3-20",5); // 5天后,负数是5天前
+"""
+
+    "几小时后":
+        'prefix': "bui-date-afterTime",
+        'body':"""
+var time = bui.date.afterTime("15:00",30); // 30分钟后
+"""
+
+    "日期转成星期几":
+        'prefix': "bui-date-toWeek",
+        'body':"""
+var week = bui.date.toWeek("2020-3-20");
+"""
+
+    "倒计时":
+        'prefix': "bui-timer",
+        'body':"""
+var timer = bui.timer({
+    type: "number"
+    time: 10
+    onEnd: function() {
+        bui.alert("时间到")
+    }
+})
+timer.start();
+"""
+
+    "楼层组件":
+        'prefix': "bui-floor",
+        'body':"""
+// 初始化
+var uiFloor = bui.floor({
+    id: "#uiFloor",
+    menu: "#floorNav", 
+    floorItem: ".bui-floor-item",
+})
+"""
+
+    "楼层组件-demo":
+        'prefix': "bui-floor-demo",
+        'body':"""
+// 初始化
+var uiFloor = bui.floor({
+    id: "#uiFloor",
+    menu: "#floorNav", 
+    floorItem: ".bui-floor-item", 
+})
+                
+<!-- 菜单 html 对应的结构: -->
+<ul id="floorNav" class="bui-nav">
+    <li class="bui-btn active">表单</li>
+    <li class="bui-btn">正文</li>
+    <li class="bui-btn">附件</li>
+</ul>
+<!-- 楼层 html 对应的结构: -->
+<div id="uiFloor" class="bui-floor">
+  <div class="bui-floor-main">
+      <div class="bui-panel bui-floor-item">
+      </div>
+      <div class="bui-panel bui-floor-item">
+      </div>
+      <div class="bui-panel bui-floor-item">
+      </div>
+  </div>
+  <div class="bui-floor-foot"></div>
+</div>
+"""
+
+    "楼层组件结构":
+        'prefix': "ui-floor",
+        'body':"""
+<!-- 菜单 html 对应的结构: -->
+<ul id="floorNav" class="bui-nav">
+    <li class="bui-btn active">表单</li>
+    <li class="bui-btn">正文</li>
+    <li class="bui-btn">附件</li>
+</ul>
+<!-- 楼层 html 对应的结构: -->
+<div id="uiFloor" class="bui-floor">
+  <div class="bui-floor-main">
+      <div class="bui-panel bui-floor-item">
+      </div>
+      <div class="bui-panel bui-floor-item">
+      </div>
+      <div class="bui-panel bui-floor-item">
+      </div>
+  </div>
+  <div class="bui-floor-foot"></div>
+</div>
 """

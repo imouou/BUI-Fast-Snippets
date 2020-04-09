@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<div id="uiTab" class="bui-tab">
+<div id="uiTab" class="bui-tab bui-box-vertical">
     <div class="bui-tab-head">
         <ul class="bui-nav">
             <li class="bui-btn">Tab1</li>

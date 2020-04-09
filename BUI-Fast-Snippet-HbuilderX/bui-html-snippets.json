@@ -31,14 +31,16 @@
     "bui标准页面结构": {
         "prefix": "ui-page",
         "body": [
-            "<div class=\"bui-page\">",
-            "    <header class=\"bui-bar\">",
-            "        <div class=\"bui-bar-left\">",
-            "            <a class=\"bui-btn\" onclick=\"bui.back();\"><i class=\"icon-back\"></i></a>",
-            "        </div>",
-            "        <div class=\"bui-bar-main\">页面标题</div>",
-            "        <div class=\"bui-bar-right\">",
+            "<div class=\"bui-page bui-box-vertical\">",
+            "    <header>",
+            "       <div class=\"bui-bar\">",
+            "          <div class=\"bui-bar-left\">",
+            "              <a class=\"bui-btn\" onclick=\"bui.back();\"><i class=\"icon-back\"></i></a>",
+            "          </div>",
+            "          <div class=\"bui-bar-main\">页面标题</div>",
+            "          <div class=\"bui-bar-right\">",
             "            <!-- 右边按钮 -->",
+            "          </div>",
             "        </div>",
             "    </header>",
             "    <main>",
@@ -54,7 +56,7 @@
     "bui标准页面box布局结构": {
         "prefix": "ui-page-box",
         "body": [
-            "<div class=\"bui-page\">",
+            "<div class=\"bui-page bui-box-vertical\">",
             "    <header>",
             "       <div class=\"bui-bar\">",
             "          <div class=\"bui-bar-left\">",
@@ -164,7 +166,7 @@
         "body": [
             "<ul class=\"bui-list\">",
             "    <li class=\"bui-btn bui-box\">",
-            "        <div class=\"icon\"><img src=\"../images/applogo.png\" alt=\"\"></div>",
+            "        <div class=\"icon\"><img src=\"images/applogo.png\" alt=\"\"></div>",
             "        <div class=\"span1\">文本</div>",
             "        <i class=\"icon-listright\"></i>",
             "    </li>",
@@ -653,7 +655,7 @@
     "选项卡结构": {
         "prefix": "ui-tab",
         "body": [
-            "<div id=\"uiTab\" class=\"bui-tab\">",
+            "<div id=\"uiTab\" class=\"bui-tab bui-box-vertical\">",
             "    <div class=\"bui-tab-head\">",
             "        <ul class=\"bui-nav\">",
             "            <!-- 分屏菜单 active 是激活的TAB样式 -->",
@@ -916,73 +918,97 @@
         ]
     },
     "设置文本": {
-        "prefix": "b-text",
+        "prefix": "ui-b-text",
         "description": "",
         "body": [
             "<b b-text=\"page.a\"></b>"
         ]
     },
     "设置value": {
-        "prefix": "b-value",
+        "prefix": "ui-b-value",
         "description": "",
         "body": [
             "<input type=\"text\" b-value=\"page.a\" name=\"\" value=\"\" />"
         ]
     },
     "双向绑定": {
-        "prefix": "b-model",
+        "prefix": "ui-b-model",
         "description": "",
         "body": [
             "<input type=\"text\" b-model=\"page.a\" name=\"\" value=\"\" />"
         ]
     },
     "渲染HTML": {
-        "prefix": "b-html",
+        "prefix": "ui-b-html",
         "description": "",
         "body": [
             "<div b-html=\"page.a\"></div>"
         ]
     },
     "显示隐藏": {
-        "prefix": "b-show",
+        "prefix": "ui-b-show",
         "description": "",
         "body": [
             "<b b-show=\"page.a\"></b>"
         ]
     },
     "渲染模板": {
-        "prefix": "b-template",
+        "prefix": "ui-b-template",
         "description": "",
         "body": [
-            "<ul b-template=\"page.a\" class=\"bui-list\"></ul>"
+            "<ul b-template=\"page.tplA(page.a)\" class=\"bui-list\"></ul>"
         ]
     },
     "绑定事件": {
-        "prefix": "b-click",
+        "prefix": "ui-b-click",
         "description": "",
         "body": [
             "<b b-click=\"page.a\"></b>"
         ]
     },
     "绑定属性": {
-        "prefix": "b-bind",
+        "prefix": "ui-b-bind",
         "description": "",
         "body": [
             "<b b-bind=\"page.a\"></b>"
         ]
     },
     "绑定Class": {
-        "prefix": "b-class",
+        "prefix": "ui-b-class",
         "description": "",
         "body": [
             "<b b-class=\"page.a\"></b>"
         ]
     },
     "绑定Style": {
-        "prefix": "b-style",
+        "prefix": "ui-b-style",
         "description": "",
         "body": [
             "<b b-style=\"page.a\"></b>"
+        ]
+    },
+    "楼层组件结构": {
+        "prefix": "ui-floor",
+        "description": "",
+        "body": [
+            "<!-- 菜单 html 对应的结构: -->",
+            "<ul id=\"floorNav\" class=\"bui-nav\">",
+            "    <li class=\"bui-btn active\">表单</li>",
+            "    <li class=\"bui-btn\">正文</li>",
+            "    <li class=\"bui-btn\">附件</li>",
+            "</ul>",
+            "<!-- 楼层 html 对应的结构: -->",
+            "<div id=\"uiFloor\" class=\"bui-floor\">",
+            "  <div class=\"bui-floor-main\">",
+            "      <div class=\"bui-panel bui-floor-item\">",
+            "      </div>",
+            "      <div class=\"bui-panel bui-floor-item\">",
+            "      </div>",
+            "      <div class=\"bui-panel bui-floor-item\">",
+            "      </div>",
+            "  </div>",
+            "  <div class=\"bui-floor-foot\"></div>",
+            "</div>"
         ]
     }
 

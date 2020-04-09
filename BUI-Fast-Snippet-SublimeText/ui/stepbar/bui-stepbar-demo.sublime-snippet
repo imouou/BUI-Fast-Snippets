@@ -2,7 +2,7 @@
     <content><![CDATA[
 // 步骤条 js 初始化:
 var uiStepbar = bui.stepbar({
-    id: "#step",
+    id: "#uiStepbar",
     data: [{
         title: "预立项申请",
         subtitle: "2016-04-2 10:30",
@@ -18,7 +18,7 @@ var uiStepbar = bui.stepbar({
 uiStepbar.value(1);   
                 
 <!-- 步骤条 html 对应的结构: -->
-<div id="step" class="bui-stepbar"></div>   
+<div id="uiStepbar" class="bui-stepbar"></div>   
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-stepbar-demo</tabTrigger>

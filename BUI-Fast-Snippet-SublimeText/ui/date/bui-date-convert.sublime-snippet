@@ -1,14 +1,11 @@
 
 <snippet>
     <content><![CDATA[
-// 数字条 js 初始化:
-var uiNumber = bui.number({
-    id: "#uiNumber"
-})
+var date = bui.date.convert(1584781609309);
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-number</tabTrigger>
+    <tabTrigger>bui-date-convert</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
-    <description>数字条-初始化</description>
+    <description>转日期对象</description>
 </snippet>

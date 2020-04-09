@@ -2,13 +2,13 @@
 <snippet>
     <content><![CDATA[
 // 日期初始化
-var pickerdateInput = \$("#pickerdateInput");
 var uiPickerdate = bui.pickerdate({
-      handle:"#pickerdateInput",
-      onChange: function(value) {
-        pickerdateInput.val(value);
-      }
-    });
+    handle:"#pickerdateInput",
+    bindValue: true,
+    onChange: function(value) {
+        console.log(value);
+    }
+});
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>bui-pickerdate</tabTrigger>

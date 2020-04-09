@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<div id="number" class="bui-number"></div> 
+<div id="uiNumber" class="bui-number"></div> 
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>ui-number</tabTrigger>

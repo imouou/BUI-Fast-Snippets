@@ -26,7 +26,7 @@ tab.on("to",function (index) {
                 
 <!-- 选项卡 html 对应的结构: 分别替换main,footer标签, 如果main有其它内容,则复制bui-tab的结构-->
 <main>
-    <div id="tabDynamic" class="bui-tab">
+    <div id="tabDynamic" class="bui-tab bui-box-vertical">
         <div class="bui-tab-main">
             <ul>
                 <li><!-- Tab1 --></li>

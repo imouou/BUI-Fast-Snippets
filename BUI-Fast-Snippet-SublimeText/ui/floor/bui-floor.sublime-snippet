@@ -1,0 +1,15 @@
+
+<snippet>
+    <content><![CDATA[
+var uiFloor = bui.floor({
+    id: "#uiFloor",
+    menu: "#floorNav", // id两个单词必须驼峰氏写法,不能中横杠
+    floorItem: ".bui-floor-item", // 默认,可不填
+})
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-floor</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>楼层-初始化</description>
+</snippet>

@@ -431,7 +431,7 @@
         "body": [
             "// 数字条 js 初始化:",
             "var uiNumber = bui.number({",
-            "    id: \"#number\"",
+            "    id: \"#uiNumber\"",
             "})"
         ]
     },
@@ -442,11 +442,11 @@
         "body": [
             "// 数字条 js 初始化:",
             "var uiNumber = bui.number({",
-            "    id: \"#number\"",
+            "    id: \"#uiNumber\"",
             "})",
             "",
             "// 数字条 html 对应的结构:",
-            "<div id=\"number\" class=\"bui-number\"></div> "
+            "<div id=\"uiNumber\" class=\"bui-number\"></div> "
         ]
     },
 
@@ -455,14 +455,13 @@
         "description": "",
         "body": [
             "// 日期控件 js 初始化:",
-            "var pickerdateInput = $(\"#pickerdateInput\");",
             "var uiPickerdate = bui.pickerdate({",
             "    handle:\"#pickerdateInput\",",
+            "    bindValue: true,",
             "    onChange: function(value) {",
-            "      pickerdateInput.val(value);",
+            "        console.log(value);",
             "    }",
-            "  });"
-
+            "});"
         ]
     },
 
@@ -471,13 +470,13 @@
         "description": "",
         "body": [
             "// 日期控件 js 初始化:",
-            "var pickerdateInput = $(\"#pickerdateInput\");",
             "var uiPickerdate = bui.pickerdate({",
             "    handle:\"#pickerdateInput\",",
+            "    bindValue: true,",
             "    onChange: function(value) {",
-            "      pickerdateInput.val(value);",
+            "        console.log(value);",
             "    }",
-            "  });",
+            "});",
             "                ",
             "<!-- 日期控件 html 对应的结构: -->",
             "<input type=\"text\" id=\"pickerdateInput\" class=\"bui-input\" readonly>"
@@ -1103,7 +1102,7 @@
             "});",
             "                ",
             "<!-- 选项卡 html 对应的结构: -->",
-            "<div id=\"uiTab\" class=\"bui-tab\">",
+            "<div id=\"uiTab\" class=\"bui-tab bui-box-vertical\">",
             "    <div class=\"bui-tab-head\">",
             "        <ul class=\"bui-nav\">",
             "            <li class=\"bui-btn\">Tab1</li>",
@@ -1334,20 +1333,25 @@
         "prefix": "bui-checkVersion",
         "description": "",
         "body": [
+            "// 当前版本的配置, name 为提示的版本信息名, code 一般为当前日期数字类型,用于比对新版.",
+            "var currentVersion = {",
+            "    name: \"1.0\",",
+            "    code: 20191204 ",
+            "}",
             "bui.checkVersion({",
             "    id: \"#checkVersion\",",
             "    url: \"versionUpdate.json\",",
-            "    currentVersion: \"\",",
-            "    currentVersionCode: \"\"",
+            "    currentVersion: currentVersion.name,",
+            "    currentVersionCode: currentVersion.code",
             "});",
             "",
-            "// versionUpdate.json 示例",
+            "// versionUpdate.json 示例, 区分大小写",
             "/*",
             "{",
             "    \"versionName\" : \"1.4.1\",",
             "    \"versionCode\" : 20180118,",
             "    \"minVersionCode\" : 20171010,",
-            "    \"isForced\" : false,",
+            "    \"forced\" : false,",
             "    \"downloadUrl\" : \"http://www.easybui.com/downloads/source/bui/bui_latest.zip\",",
             "    \"iosDownloadUrl\" : \"https://itunes.apple.com/cn/app/id1362470378?mt=8\",",
             "    \"remark\" : \"<div style=\"text-align:left;\"><p>1. 新增单页路由</p><p>2. 新增模块化开发</p><p>3. 支持路由切换动画</p><p>4. 修复已知bug</p></div>\"",
@@ -1652,6 +1656,7 @@
         "body": [
             "// 初始化数据行为存储",
             "var bs = bui.store({",
+            "    el: \".bui-page\",",
             "    scope: \"page\",",
             "    data: {",
             "       a: 1,",
@@ -1676,6 +1681,7 @@
         "body": [
             "// 初始化数据行为存储",
             "var bs = bui.store({",
+            "    el: \".bui-page\",",
             "    scope: \"page\",",
             "    data: {",
             "       a: 1,",
@@ -1694,6 +1700,203 @@
             "})",
             "<!-- html 结构 -->",
             "<b b-text=\"page.a\"></b>"
+        ]
+    },
+    "获取路由历史": {
+        "prefix": "bui-history-get",
+        "description": "",
+        "body": [
+            "var allHistory = bui.history.get();"
+        ]
+    },
+    "最后一条历史": {
+        "prefix": "bui-history-getlast",
+        "description": "",
+        "body": [
+            "var lastHistory = bui.history.getLast();"
+        ]
+    },
+    "获取页面参数": {
+        "prefix": "bui-history-getparams",
+        "description": "",
+        "body": [
+            "var params = bui.history.getParams(module.id);"
+        ]
+    },
+    "刷新": {
+        "prefix": "bui-history-refresh",
+        "description": "",
+        "body": [
+            "bui.history.refresh();"
+        ]
+    },
+    "检测页面是否加载": {
+        "prefix": "bui-history-check",
+        "description": "",
+        "body": [
+            "var bool = bui.history.check(\"pages/login/login\");"
+        ]
+    },
+    "检测模块是否以component加载": {
+        "prefix": "bui-history-checkComponent",
+        "description": "",
+        "body": [
+            "// tab1为id",
+            "var bool = bui.history.checkComponent(\"tab1\");"
+        ]
+    },
+    "检测模块是否以page加载": {
+        "prefix": "bui-history-checkPage",
+        "description": "",
+        "body": [
+            "// page1为id",
+            "var bool = bui.history.checkPage(\"page1\");"
+        ]
+    },
+    "加载组件": {
+        "prefix": "loader-load",
+        "description": "",
+        "body": [
+            "loader.load({",
+            "    id:\"#tab1\",",
+            "    url:\"pages/main/home.html\" ",
+            "});"
+        ]
+    },
+    "加载component": {
+        "prefix": "loader-component",
+        "description": "",
+        "body": [
+            "loader.component({",
+            "    id:\"#tab1\",",
+            "});"
+        ]
+    },
+    "加载延迟component": {
+        "prefix": "loader-delay",
+        "description": "",
+        "body": [
+            "loader.delay({",
+            "    id:\"#tab1\",",
+            "});"
+        ]
+    },
+    "加载view": {
+        "prefix": "loader-view",
+        "description": "",
+        "body": [
+            "loader.view({",
+            "    id:\"#tab1\",",
+            "});"
+        ]
+    },
+    "模块资源同步导入": {
+        "prefix": "loader-importSync",
+        "description": "",
+        "body": [
+            "loader.importSync([\"\"],function(res){",
+            "  // 创建成功以后执行回调",
+            "});"
+        ]
+    },
+    "插入页面": {
+        "prefix": "bui-page",
+        "description": "",
+        "body": [
+            "var uiPage = bui.page({",
+            "    url:\"pages/login/login.html\",",
+            "   param: {}",
+            "})"
+        ]
+    },
+    "日期格式化": {
+        "prefix": "bui-date-formate",
+        "description": "",
+        "body": [
+            "var date = bui.date.format(\"2020-3-20\",\"MM/dd\")"
+        ]
+    },
+    "转日期对象": {
+        "prefix": "bui-date-convert",
+        "description": "",
+        "body": [
+            "var date = bui.date.convert(1584781609309)"
+        ]
+    },
+    "几天后": {
+        "prefix": "bui-date-after",
+        "description": "",
+        "body": [
+            "var date = bui.date.after(\"2020-3-20\",5); // 5天后,负数是5天前"
+        ]
+    },
+    "几小时后": {
+        "prefix": "bui-date-afterTime",
+        "description": "",
+        "body": [
+            "var time = bui.date.afterTime(\"15:00\",30); // 30分钟后"
+        ]
+    },
+    "日期转成星期几": {
+        "prefix": "bui-date-toWeek",
+        "description": "",
+        "body": [
+            "var week = bui.date.toWeek(\"2020-3-20\"); "
+        ]
+    },
+    "倒计时": {
+        "prefix": "bui-timer",
+        "description": "",
+        "body": [
+            "var timer = bui.timer({",
+            "    type: \"number\"",
+            "    time: 10",
+            "    onEnd: function() {",
+            "        bui.alert(\"时间到\")",
+            "    }",
+            "})",
+            "timer.start();"
+        ]
+    },
+    "楼层组件": {
+        "prefix": "bui-floor",
+        "description": "",
+        "body": [
+            "var uiFloor = bui.floor({",
+            "    id: \"#uiFloor\",",
+            "    menu: \"#floorNav\", ",
+            "    floorItem: \".bui-floor-item\",",
+            "})"
+        ]
+    },
+    "楼层组件-demo": {
+        "prefix": "bui-floor-demo",
+        "description": "",
+        "body": [
+            "// 初始化",
+            "var uiFloor = bui.floor({",
+            "    id: \"#uiFloor\",",
+            "    menu: \"#floorNav\", ",
+            "    floorItem: \".bui-floor-item\",",
+            "})",
+            "<!-- 菜单 html 对应的结构: -->",
+            "<ul id=\"floorNav\" class=\"bui-nav\">",
+            "    <li class=\"bui-btn active\">表单</li>",
+            "    <li class=\"bui-btn\">正文</li>",
+            "    <li class=\"bui-btn\">附件</li>",
+            "</ul>",
+            "<!-- 楼层 html 对应的结构: -->",
+            "<div id=\"uiFloor\" class=\"bui-floor\">",
+            "  <div class=\"bui-floor-main\">",
+            "      <div class=\"bui-panel bui-floor-item\">",
+            "      </div>",
+            "      <div class=\"bui-panel bui-floor-item\">",
+            "      </div>",
+            "      <div class=\"bui-panel bui-floor-item\">",
+            "      </div>",
+            "  </div>",
+            "  <div class=\"bui-floor-foot\"></div>",
+            "</div>"
         ]
     }
 }

@@ -3,7 +3,7 @@
     <content><![CDATA[
 //初始化控件
 var uiStepbar = bui.stepbar({
-    id: "#step",
+    id: "#uiStepbar",
     data: [{
         title: "预立项申请",
         subtitle: "2016-04-2 10:30",

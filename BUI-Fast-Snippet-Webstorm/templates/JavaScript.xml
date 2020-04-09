@@ -119,13 +119,13 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-number" value="// 数字条 js 初始化:&#10;var uiNumber = bui.number({&#10;    id: &quot;#number&quot;&#10;})&#10; " description="数字加减条初始化" toReformat="false" toShortenFQNames="true">
+  <template name="bui-number" value="// 数字条 js 初始化:&#10;var uiNumber = bui.number({&#10;    id: &quot;#uiNumber&quot;&#10;})&#10; " description="数字加减条初始化" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-number-demo" value="// 数字条 js 初始化:&#10;var uiNumber = bui.number({&#10;    id: &quot;#number&quot;&#10;})&#10;&#10;// 数字条 html 对应的结构:&#10;&lt;div id=&quot;number&quot; class=&quot;bui-number&quot;&gt;&lt;/div&gt; " description="数字加减条-demo" toReformat="false" toShortenFQNames="true">
+  <template name="bui-number-demo" value="// 数字条 js 初始化:&#10;var uiNumber = bui.number({&#10;    id: &quot;#uiNumber&quot;&#10;})&#10;&#10;// 数字条 html 对应的结构:&#10;&lt;div id=&quot;uiNumber&quot; class=&quot;bui-number&quot;&gt;&lt;/div&gt; " description="数字加减条-demo" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />
@@ -227,13 +227,13 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-stepbar" value="// 步骤条 js 初始化:&#10;var uiStepbar = bui.stepbar({&#10;    id: &quot;#step&quot;,&#10;    data: [{&#10;        title: &quot;预立项申请&quot;,&#10;        subtitle: &quot;2016-04-2 10:30&quot;,&#10;        content: &quot;成功创建申请,已经提交至XX部门经理审批,请耐心等待&quot;&#10;    },{&#10;        title: &quot;立项审批&quot;,&#10;        subtitle: &quot;2016-04-21 10:30&quot;,&#10;        content: &quot;审批完成,资料递交中&quot;&#10;    }]&#10;});&#10;&#10;//激活第2步&#10;uiStepbar.value(1);   " description="步骤条初始化" toReformat="false" toShortenFQNames="true">
+  <template name="bui-stepbar" value="// 步骤条 js 初始化:&#10;var uiStepbar = bui.stepbar({&#10;    id: &quot;#uiStepbar&quot;,&#10;    data: [{&#10;        title: &quot;预立项申请&quot;,&#10;        subtitle: &quot;2016-04-2 10:30&quot;,&#10;        content: &quot;成功创建申请,已经提交至XX部门经理审批,请耐心等待&quot;&#10;    },{&#10;        title: &quot;立项审批&quot;,&#10;        subtitle: &quot;2016-04-21 10:30&quot;,&#10;        content: &quot;审批完成,资料递交中&quot;&#10;    }]&#10;});&#10;&#10;//激活第2步&#10;uiStepbar.value(1);   " description="步骤条初始化" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-stepbar-demo" value="// 步骤条 js 初始化:&#10;var uiStepbar = bui.stepbar({&#10;    id: &quot;#step&quot;,&#10;    data: [{&#10;        title: &quot;预立项申请&quot;,&#10;        subtitle: &quot;2016-04-2 10:30&quot;,&#10;        content: &quot;成功创建申请,已经提交至XX部门经理审批,请耐心等待&quot;&#10;    },{&#10;        title: &quot;立项审批&quot;,&#10;        subtitle: &quot;2016-04-21 10:30&quot;,&#10;        content: &quot;审批完成,资料递交中&quot;&#10;    }]&#10;});&#10;&#10;//激活第2步&#10;uiStepbar.value(1);   &#10;                &#10;&lt;!-- 步骤条 html 对应的结构: --&gt;&#10;&lt;div id=&quot;step&quot; class=&quot;bui-stepbar&quot;&gt;&lt;/div&gt;  " description="步骤条-demo" toReformat="false" toShortenFQNames="true">
+  <template name="bui-stepbar-demo" value="// 步骤条 js 初始化:&#10;var uiStepbar = bui.stepbar({&#10;    id: &quot;#uiStepbar&quot;,&#10;    data: [{&#10;        title: &quot;预立项申请&quot;,&#10;        subtitle: &quot;2016-04-2 10:30&quot;,&#10;        content: &quot;成功创建申请,已经提交至XX部门经理审批,请耐心等待&quot;&#10;    },{&#10;        title: &quot;立项审批&quot;,&#10;        subtitle: &quot;2016-04-21 10:30&quot;,&#10;        content: &quot;审批完成,资料递交中&quot;&#10;    }]&#10;});&#10;&#10;//激活第2步&#10;uiStepbar.value(1);   &#10;                &#10;&lt;!-- 步骤条 html 对应的结构: --&gt;&#10;&lt;div id=&quot;uiStepbar&quot; class=&quot;bui-stepbar&quot;&gt;&lt;/div&gt;  " description="步骤条-demo" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />
@@ -281,7 +281,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="bui-checkVersion" value="bui.checkVersion({&#10;    id: &quot;#checkVersion&quot;,&#10;    url: &quot;versionUpdate.json&quot;,&#10;    currentVersion: &quot;&quot;,&#10;    currentVersionCode: &quot;&quot;&#10;});&#10;&#10;// versionUpdate.json 示例&#10;/*&#10;{&#10;    &quot;versionName&quot; : &quot;1.4.1&quot;,&#10;    &quot;versionCode&quot; : 20180118,&#10;    &quot;minVersionCode&quot; : 20171010,&#10;    &quot;isForced&quot; : false,&#10;    &quot;downloadUrl&quot; : &quot;http://www.easybui.com/downloads/source/bui/bui_latest.zip&quot;,&#10;    &quot;iosDownloadUrl&quot; : &quot;https://itunes.apple.com/cn/app/id1362470378?mt=8&quot;,&#10;    &quot;remark&quot; : &quot;&lt;div style='text-align:left;'&gt;&lt;p&gt;1. 新增单页路由&lt;/p&gt;&lt;p&gt;2. 新增模块化开发&lt;/p&gt;&lt;p&gt;3. 支持路由切换动画&lt;/p&gt;&lt;p&gt;4. 修复已知bug&lt;/p&gt;&lt;/div&gt;&quot;&#10;}&#10;*/" description="检查新版" toReformat="false" toShortenFQNames="true">
+  <template name="bui-checkVersion" value="bui.checkVersion({&#10;    id: &quot;#checkVersion&quot;,&#10;    url: &quot;versionUpdate.json&quot;,&#10;    currentVersion: &quot;&quot;,&#10;    currentVersionCode: &quot;&quot;&#10;});&#10;&#10;// versionUpdate.json 示例&#10;/*&#10;{&#10;    &quot;versionName&quot; : &quot;1.4.1&quot;,&#10;    &quot;versionCode&quot; : 20180118,&#10;    &quot;minVersionCode&quot; : 20171010,&#10;    &quot;forced&quot; : false,&#10;    &quot;downloadUrl&quot; : &quot;http://www.easybui.com/downloads/source/bui/bui_latest.zip&quot;,&#10;    &quot;iosDownloadUrl&quot; : &quot;https://itunes.apple.com/cn/app/id1362470378?mt=8&quot;,&#10;    &quot;remark&quot; : &quot;&lt;div style='text-align:left;'&gt;&lt;p&gt;1. 新增单页路由&lt;/p&gt;&lt;p&gt;2. 新增模块化开发&lt;/p&gt;&lt;p&gt;3. 支持路由切换动画&lt;/p&gt;&lt;p&gt;4. 修复已知bug&lt;/p&gt;&lt;/div&gt;&quot;&#10;}&#10;*/" description="检查新版" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="JAVA_SCRIPT" value="true" />

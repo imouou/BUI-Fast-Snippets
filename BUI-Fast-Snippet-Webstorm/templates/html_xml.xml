@@ -254,52 +254,52 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-text" value="&lt;b b-text=&quot;page.a&quot;&gt;&lt;/b&gt;" description="设置文本" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-text" value="&lt;b b-text=&quot;page.a&quot;&gt;&lt;/b&gt;" description="设置文本" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-html" value="&lt;div b-html=&quot;page.a&quot;&gt;&lt;/div&gt;" description="设置HTML" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-html" value="&lt;div b-html=&quot;page.a&quot;&gt;&lt;/div&gt;" description="设置HTML" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-value" value="&lt;input type=&quot;text&quot; b-value=&quot;page.a&quot;/&gt;" description="设置Value" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-value" value="&lt;input type=&quot;text&quot; b-value=&quot;page.a&quot;/&gt;" description="设置Value" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-model" value="&lt;input type=&quot;text&quot; b-model=&quot;page.a&quot;/&gt;" description="双向绑定" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-model" value="&lt;input type=&quot;text&quot; b-model=&quot;page.a&quot;/&gt;" description="双向绑定" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-bind" value="&lt;b b-bind=&quot;page.a&quot;&gt;&lt;/b&gt;" description="绑定属性" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-bind" value="&lt;b b-bind=&quot;page.a&quot;&gt;&lt;/b&gt;" description="绑定属性" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-style" value="&lt;b b-style=&quot;page.a&quot;&gt;&lt;/b&gt;" description="绑定样式" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-style" value="&lt;b b-style=&quot;page.a&quot;&gt;&lt;/b&gt;" description="绑定样式" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-class" value="&lt;b b-class=&quot;page.a&quot;&gt;&lt;/b&gt;" description="绑定Class" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-class" value="&lt;b b-class=&quot;page.a&quot;&gt;&lt;/b&gt;" description="绑定Class" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-click" value="&lt;b b-click=&quot;page.a&quot;&gt;&lt;/b&gt;" description="绑定事件" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-click" value="&lt;b b-click=&quot;page.a&quot;&gt;&lt;/b&gt;" description="绑定事件" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-show" value="&lt;b b-show=&quot;page.a&quot;&gt;&lt;/b&gt;" description="显示隐藏" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-show" value="&lt;b b-show=&quot;page.a&quot;&gt;&lt;/b&gt;" description="显示隐藏" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="b-template" value="&lt;ul b-template=&quot;page.a&quot;&gt;&lt;/ul&gt;" description="绑定模板" toReformat="false" toShortenFQNames="true">
+  <template name="ui-b-template" value="&lt;ul b-template=&quot;page.a&quot;&gt;&lt;/ul&gt;" description="绑定模板" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
     </context>

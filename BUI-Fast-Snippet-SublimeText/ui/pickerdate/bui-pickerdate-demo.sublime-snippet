@@ -1,13 +1,13 @@
 <snippet>
     <content><![CDATA[
 // 日期控件 js 初始化:
-var pickerdateInput = \$("#pickerdateInput");
 var uiPickerdate = bui.pickerdate({
     handle:"#pickerdateInput",
+    bindValue: true,
     onChange: function(value) {
-      pickerdateInput.val(value);
+        console.log(value);
     }
-  });
+});
                 
 <!-- 日期控件 html 对应的结构: -->
 <input type="text" id="pickerdateInput" class="bui-input" readonly>

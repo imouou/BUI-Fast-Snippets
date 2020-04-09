@@ -3,6 +3,7 @@
     <content><![CDATA[
 // 初始化数据行为存储
 var bs = bui.store({
+    el: ".bui-page",
     scope: "page",
     data: {
        a: 1,

@@ -1,0 +1,36 @@
+<snippet>
+    <content><![CDATA[
+// 初始化
+var uiFloor = bui.floor({
+    id: "#uiFloor",
+    menu: "#floorNav", // id两个单词必须驼峰氏写法,不能中横杠
+    floorItem: ".bui-floor-item", // 默认,可不填
+})
+                
+
+<!-- 菜单 html 对应的结构: -->
+<ul id="floorNav" class="bui-nav">
+    <li class="bui-btn active">表单</li>
+    <li class="bui-btn">正文</li>
+    <li class="bui-btn">附件</li>
+</ul>
+<!-- 楼层 html 对应的结构: -->
+<div id="uiFloor" class="bui-floor">
+  <div class="bui-floor-main">
+      <div class="bui-panel bui-floor-item">
+      </div>
+      <div class="bui-panel bui-floor-item">
+      </div>
+      <div class="bui-panel bui-floor-item">
+      </div>
+  </div>
+  <div class="bui-floor-foot"></div>
+</div>
+                
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bui-floor-demo</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js,text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>楼层-完整示例</description> 
+</snippet>

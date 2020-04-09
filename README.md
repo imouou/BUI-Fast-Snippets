@@ -19,6 +19,7 @@
 | 新增 ui-icon等相关布局, vscode,atom,sublimetext     | 2018-11-12     |
 | 新增 bui-store 初始化, b- 开头结构     | 2019-1-17     |
 | 新增 hbuilderx 编辑器的支持     | 2019-10-28     |
+| 新增1.6.0的代码支持     | 2020-04-07     |
 
 ## 目录
 [TOC]
@@ -28,6 +29,8 @@
 
 BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,VSCode,APICloud Studio2 ,Webstorm中集成BUI控件及方法的代码提示，为快速开发助力. 里面封装了控件的常用参数及常用方法的语法补全, 版本对应 BUI的版本.
 > 1.3.1版本新增 控件名加"-demo" 快速生成控件初始化及结构,只要把结构复制到body对应的位置就行.
+
+> 重要: `LinkIDE`, `Webstorm` 这两个编辑器的代码不再更新. 推荐使用 `vscode` 编辑器.
 
 ---
 ## 安装
@@ -67,7 +70,7 @@ BUI Fast 是BUI提供的快速书写代码提示插件，在Sublime,Atom,VSCode,
 - 输入`open your snippets`, 回车;
 打开下载的 `bui-fast-snippet-atom/snippets.cson` 文件, 复制内容到 `snippets.cson` 文件里面, 保存即可.
 
-### 在Webstorm安装
+### 在Webstorm安装 (1.6.x 不再单独更新)
 
 *Webstorm 安装 BUI-Fast*
 
@@ -245,6 +248,7 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 | bui-select-demo  | 选择列表完整示例       |
 | bui-stepbar-demo  | 步骤条完整示例       |
 | bui-upload-demo  | 上传完整示例       |
+| bui-floor-demo<span style="color:red">新</span>  | 楼层完整demo       |
 
 控件名: bui.accordion 
 我们只需要输入 __bui-accordion__ <kbd>Tab</kbd> 就会生成最简单的初始化脚本
@@ -274,20 +278,38 @@ JS触发代码片段的指令格式为： 'bui-控件名'，之后点击<kbd>Tab
 | bui-select  | 选择列表初始化       |
 | bui-stepbar  | 步骤条初始化       |
 | bui-upload  | 上传初始化       |
-| bui-router  <span style="color:red">新</span> | BUI 单页初始化 |
-| router-load  <span style="color:red">新</span> | 单页跳转 |
-| router-refresh  <span style="color:red">新</span> | 单页刷新 |
-| router-replace  <span style="color:red">新</span> | 单页替换 |
-| router-back  <span style="color:red">新</span> | 单页后退 |
-| router-getPageParams  <span style="color:red">新</span> | 获取页面参数 |
-| router-loadPart  <span style="color:red">新</span> | 局部加载 |
-| loader-define  <span style="color:red">新</span> | 模块定义 |
-| loader-require  <span style="color:red">新</span> | 模块加载 |
-| loader-import  <span style="color:red">新</span> | 脚本及样式资源动态引入 |
-| loader-map  <span style="color:red">新</span> | 单个模块配置 |
-| loader-mapall  <span style="color:red">新</span> | 多个模块配置 |
-| bui-store  <span style="color:red">新</span> | 数据行为存储器 |
-| bui-store-demo  <span style="color:red">新</span> | 数据行为存储器 |
+| bui-router  | BUI 单页初始化 |
+| router-load  | 单页跳转 |
+| router-refresh  | 单页刷新 |
+| router-replace  | 单页替换 |
+| router-back  | 单页后退 |
+| router-getPageParams  | 获取页面参数 |
+| router-loadPart  | 局部加载 |
+| bui-store   | 数据行为存储器 |
+| bui-store-demo   | 数据行为存储器 |
+| loader-define  | 模块定义 |
+| loader-require  | 模块加载 |
+| loader-import  | 脚本及样式资源动态引入 |
+| loader-map  | 单个模块配置 |
+| loader-mapall  | 多个模块配置 |
+| loader-delay  <span style="color:red">新</span> | 编译延迟组件 |
+| loader-component  <span style="color:red">新</span> | 编译组件 |
+| loader-view  <span style="color:red">新</span> | 编译模板 |
+| loader-load  <span style="color:red">新</span> | 加载组件 |
+| bui-timer   <span style="color:red">新</span> | 倒计时 |
+| bui-page   <span style="color:red">新</span> | 插入页面 |
+| bui-date-formate  <span style="color:red">新</span> | 日期格式化 |
+| bui-date-convert  <span style="color:red">新</span> | 日期转对象 |
+| bui-date-after  <span style="color:red">新</span> | 几天后 |
+| bui-date-afterTime  <span style="color:red">新</span> | 几小时后 |
+| bui-date-toWeek  <span style="color:red">新</span> | 日期转星期 |
+| bui-history-get  <span style="color:red">新</span> | 获取历史记录 |
+| bui-history-getLast  <span style="color:red">新</span> | 获取最后一条历史记录 |
+| bui-history-getParams  <span style="color:red">新</span> | 获取通用传参,支持多种类型 |
+| bui-history-getParams  <span style="color:red">新</span> | 获取通用传参,支持多种类型 |
+| bui-history-check  <span style="color:red">新</span> | 检测路由页面有没有加载 |
+| bui-history-checkComponent  <span style="color:red">新</span> | 检测组件有没有加载 |
+| bui-history-refresh  <span style="color:red">新</span> | 刷新 |
 
 
 ## BUI HTML结构缩写一览
@@ -325,6 +347,7 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 | ui-tab  <span style="color:red">新</span>| 选项卡结构       |
 | ui-upload  <span style="color:red">新</span>| 上传结构       |
 | ui-input | 输入框                                    |  
+| ui-floor | 楼层结构                                    |  
 
 ### 页面结构缩写
 
@@ -386,17 +409,17 @@ html触发结构代码片段的指令格式为: 'ui-控件名'，之后点击<kb
 | ui-check  <span style="color:red">新</span>| 选择按钮结构       |
 
 
-### 新增结合数据驱动的标签
+### 新增结合数据驱动的标签, 1.6.x 从 `b-text` 改成 `ui-b-text`
 
 | **缩写代码**        | **描述**                      |
 |:-------------      |:-------------------          |
-| b-text          | 设置文本                        |
-| b-html        | 设置html                        |
-| b-value | 设置value    |
-| b-show  |  显示当前dom  |
-| b-model  |  双向绑定  |
-| b-bind  |  设置属性  |
-| b-style  |  设置style的样式  |
-| b-class  |  设置class的样式  |
-| b-template  |  绑定模板  |
-| b-click  |  点击事件  |
+| ui-b-text          | 设置文本                        |
+| ui-b-html        | 设置html                        |
+| ui-b-value | 设置value    |
+| ui-b-show  |  显示当前dom  |
+| ui-b-model  |  双向绑定  |
+| ui-b-bind  |  设置属性  |
+| ui-b-style  |  设置style的样式  |
+| ui-b-class  |  设置class的样式  |
+| ui-b-template  |  绑定模板  |
+| ui-b-click  |  点击事件  |

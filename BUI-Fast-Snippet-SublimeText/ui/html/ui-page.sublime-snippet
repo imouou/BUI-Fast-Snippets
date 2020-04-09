@@ -1,13 +1,15 @@
 <snippet>
     <content><![CDATA[
-<div class="bui-page">
-    <header class="bui-bar">
-        <div class="bui-bar-left">
-            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
-        </div>
-        <div class="bui-bar-main">页面标题</div>
-        <div class="bui-bar-right">
-            <!-- 右边按钮位置 -->
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">页面标题</div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮位置 -->
+            </div>
         </div>
     </header>
     <main>

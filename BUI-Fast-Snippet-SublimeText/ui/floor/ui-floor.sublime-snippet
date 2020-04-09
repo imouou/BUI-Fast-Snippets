@@ -1,0 +1,27 @@
+<snippet>
+    <content><![CDATA[
+<!-- 菜单 html 对应的结构: -->
+<ul id="floorNav" class="bui-nav">
+    <li class="bui-btn active">表单</li>
+    <li class="bui-btn">正文</li>
+    <li class="bui-btn">附件</li>
+</ul>
+<!-- 楼层 html 对应的结构: -->
+<div id="uiFloor" class="bui-floor">
+  <div class="bui-floor-main">
+      <div class="bui-panel bui-floor-item">
+      </div>
+      <div class="bui-panel bui-floor-item">
+      </div>
+      <div class="bui-panel bui-floor-item">
+      </div>
+  </div>
+  <div class="bui-floor-foot"></div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ui-floor</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html.basic,text.html.asp,text.html.jsp,source.php,text.html.textile</scope>
+    <description>楼层结构</description> 
+</snippet>
