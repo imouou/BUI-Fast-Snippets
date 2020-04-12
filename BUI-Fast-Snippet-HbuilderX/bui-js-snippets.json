@@ -1753,6 +1753,30 @@
             "var bool = bui.history.checkPage(\"page1\");"
         ]
     },
+    "获取component的实例": {
+        "prefix": "bui-history-getComponent",
+        "description": "",
+        "body": [
+            "// list1为id",
+            "var distace = bui.history.getComponent(\"list1\");"
+        ]
+    },
+    "获取page的实例": {
+        "prefix": "bui-history-getPage",
+        "description": "",
+        "body": [
+            "// page1为id, 不知道id传模块名",
+            "var distace = bui.history.getPage(\"page1\");"
+        ]
+    },
+    "模块内部获取page的弹窗实例": {
+        "prefix": "bui-history-getPageDialog",
+        "description": "",
+        "body": [
+            "// module.id 为模块内部的id",
+            "var dialog = bui.history.getPageDialog(module.id);"
+        ]
+    },
     "加载组件": {
         "prefix": "loader-load",
         "description": "",

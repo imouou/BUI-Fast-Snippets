@@ -2650,15 +2650,36 @@ var bool = bui.history.check("pages/login/login");
     "检测模块是否以component加载": 
         'prefix': "bui-history-checkComponent",
         'body':"""
-// tab1为id",
+// tab1为id
 var bool = bui.history.checkComponent("tab1");
 """
 
     "检测模块是否以page加载": 
         'prefix': "bui-history-checkPage",
         'body':"""
-// page1为id",
+// page1为id
 var bool = bui.history.checkPage("page1");
+"""
+
+    "获取component的实例": 
+        'prefix': "bui-history-getComponent",
+        'body':"""
+// list1为id 或者模块名
+var distance = bui.history.getComponent("list1");
+"""
+
+    "获取page的实例": 
+        'prefix': "bui-history-getPage",
+        'body':"""
+// page1为id 或者模块名
+var distance = bui.history.getPage("page1");
+"""
+
+    "模块内部获取page的弹窗实例": 
+        'prefix': "bui-history-getPageDialog",
+        'body':"""
+// module.id 为模块内部的id
+var dialog = bui.history.getPageDialog(module.id);
 """
 
     "加载组件": 

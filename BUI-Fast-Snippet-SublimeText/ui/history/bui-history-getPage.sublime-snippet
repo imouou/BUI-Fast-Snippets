@@ -1,11 +1,11 @@
 
 <snippet>
     <content><![CDATA[
-bui.dahistoryte.refresh();
+var distace = bui.history.getPage("pags/list");;
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>bui-history-refresh</tabTrigger>
+    <tabTrigger>bui-history-getPage</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
-    <description>刷新模块</description>
+    <description>获取page的实例</description>
 </snippet>
