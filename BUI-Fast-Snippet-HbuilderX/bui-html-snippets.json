@@ -549,7 +549,7 @@
     "日期控件结构": {
         "prefix": "ui-pickerdate",
         "body": [
-            "<input type=\"text\" id=\"pickerdateInput\" readonly>"
+            "<input type=\"text\" id=\"pickerdateInput\" class=\"bui-input\" readonly>"
         ]
     },
 
@@ -601,15 +601,6 @@
             "        </div>",
             "    </div>",
             "    <div class=\"btn-search\">搜索</div>",
-            "</div>",
-            "<!-- 列表控件结构 -->",
-            "<div id=\"scrollSearch\" class=\"bui-scroll\">",
-            "    <div class=\"bui-scroll-head\"></div>",
-            "    <div class=\"bui-scroll-main\">",
-            "        <ul class=\"bui-list\">",
-            "        </ul>",
-            "    </div>",
-            "    <div class=\"bui-scroll-foot\"></div>",
             "</div>"
         ]
     },
